@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" fill="none">
+  <defs>
+    <linearGradient id="crnGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFDF2" />
+      <stop offset="35%" stop-color="#FCE588" />
+      <stop offset="70%" stop-color="#D4A028" />
+      <stop offset="100%" stop-color="#8C6510" />
+    </linearGradient>
+    <linearGradient id="crnWhite" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="70%" stop-color="#FFF8E8" />
+      <stop offset="100%" stop-color="#F5D061" />
+    </linearGradient>
+  </defs>
+
+  <!-- Outer L-Framing Borders -->
+  <path d="M6,154 L6,42 Q6,6 42,6 L154,6" stroke="url(#crnGold)" stroke-width="3" stroke-linecap="round" fill="none" />
+  <path d="M16,154 L16,46 Q16,16 46,16 L154,16" stroke="url(#crnGold)" stroke-width="1.4" stroke-dasharray="4 3" opacity="0.85" fill="none" />
+
+  <!-- Corner Filigree Scrolls (Pakkalu-kalu) -->
+  <path d="M16,70 C30,60 38,40 60,38 C75,36 85,20 80,16" stroke="url(#crnGold)" stroke-width="1.8" fill="none" />
+  <path d="M70,16 C60,30 40,38 38,60 C36,75 20,85 16,80" stroke="url(#crnGold)" stroke-width="1.8" fill="none" />
+
+  <!-- Corner Vertex: The Master Sulapa Eppa Diamond Crest (4 Facets of Nature & Virtue) -->
+  <g transform="translate(36, 36)">
+    <!-- 4 Facets of Sulapa Eppa' -->
+    <!-- North: Api / Warani -->
+    <polygon points="0,0 8,-18 0,-32 -8,-18" stroke="url(#crnGold)" stroke-width="1.5" fill="#14181F" />
+    <circle cx="0" cy="-18" r="2.5" fill="#FFFDF2" />
+
+    <!-- South: Tanah / Lempu' -->
+    <polygon points="0,0 8,18 0,32 -8,18" stroke="url(#crnGold)" stroke-width="1.5" fill="#14181F" />
+    <circle cx="0" cy="18" r="2.5" fill="#FFFDF2" />
+
+    <!-- East: Angin / Acca -->
+    <polygon points="0,0 18,-8 32,0 18,8" stroke="url(#crnGold)" stroke-width="1.5" fill="#14181F" />
+    <circle cx="18" cy="0" r="2.5" fill="#FFFDF2" />
+
+    <!-- West: Air / Getteng -->
+    <polygon points="0,0 -18,-8 -32,0 -18,8" stroke="url(#crnGold)" stroke-width="1.5" fill="#14181F" />
+    <circle cx="-18" cy="0" r="2.5" fill="#FFFDF2" />
+
+    <!-- Center Blooming Jasmine Flower (Bunga Melati Kehormatan) -->
+    <circle cx="0" cy="0" r="9" fill="url(#crnWhite)" stroke="#D4A028" stroke-width="1" />
+    <circle cx="0" cy="0" r="4" fill="#F5D061" stroke="#8C6510" stroke-width="0.8" />
+    <circle cx="0" cy="0" r="1.8" fill="#FFFDF2" />
+  </g>
+
+  <!-- Secondary Jasmine Blossoms along border -->
+  <g transform="translate(105, 16)">
+    <circle cx="0" cy="0" r="7.5" fill="url(#crnWhite)" stroke="#D4A028" stroke-width="0.8" />
+    <circle cx="0" cy="0" r="2.5" fill="#F5D061" />
+  </g>
+  <g transform="translate(16, 105)">
+    <circle cx="0" cy="0" r="7.5" fill="url(#crnWhite)" stroke="#D4A028" stroke-width="0.8" />
+    <circle cx="0" cy="0" r="2.5" fill="#F5D061" />
+  </g>
+
+  <!-- Corner Tip Crest -->
+  <g transform="translate(12, 12)">
+    <polygon points="0,-7 7,0 0,7 -7,0" stroke="url(#crnGold)" stroke-width="1.4" fill="#0C0E12" />
+    <circle cx="0" cy="0" r="2" fill="#FFFDF2" />
+  </g>
+</svg>

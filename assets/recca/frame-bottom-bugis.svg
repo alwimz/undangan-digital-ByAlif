@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 110" fill="none">
+  <defs>
+    <linearGradient id="botGold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8C6510" stop-opacity="0.2" />
+      <stop offset="15%" stop-color="#D4A028" />
+      <stop offset="35%" stop-color="#FCE588" />
+      <stop offset="50%" stop-color="#FFFDF2" />
+      <stop offset="65%" stop-color="#FCE588" />
+      <stop offset="85%" stop-color="#D4A028" />
+      <stop offset="100%" stop-color="#8C6510" stop-opacity="0.2" />
+    </linearGradient>
+    <linearGradient id="petalW2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="70%" stop-color="#FFF8E8" />
+      <stop offset="100%" stop-color="#F5D061" />
+    </linearGradient>
+  </defs>
+
+  <!-- Horizontal Framing Lines -->
+  <line x1="20" y1="95" x2="440" y2="95" stroke="url(#botGold)" stroke-width="2.5" />
+  <line x1="760" y1="95" x2="1180" y2="95" stroke="url(#botGold)" stroke-width="2.5" />
+  <line x1="40" y1="87" x2="420" y2="87" stroke="url(#botGold)" stroke-width="1.2" stroke-dasharray="6 4" opacity="0.8" />
+  <line x1="780" y1="87" x2="1160" y2="87" stroke="url(#botGold)" stroke-width="1.2" stroke-dasharray="6 4" opacity="0.8" />
+
+  <!-- Repeated Sulapa Eppa Diamond Nodes along Bottom Border -->
+  <g fill="none" stroke="url(#botGold)" stroke-width="1.2">
+    <!-- Left nodes -->
+    <polygon points="120,95 126,89 132,95 126,101" fill="#0C0E12" />
+    <circle cx="126" cy="95" r="1.8" fill="#FFFDF2" />
+    <polygon points="220,95 226,89 232,95 226,101" fill="#0C0E12" />
+    <circle cx="226" cy="95" r="1.8" fill="#FFFDF2" />
+    <polygon points="320,95 326,89 332,95 326,101" fill="#0C0E12" />
+    <circle cx="326" cy="95" r="1.8" fill="#FFFDF2" />
+
+    <!-- Right nodes -->
+    <polygon points="880,95 886,89 892,95 886,101" fill="#0C0E12" />
+    <circle cx="886" cy="95" r="1.8" fill="#FFFDF2" />
+    <polygon points="980,95 986,89 992,95 986,101" fill="#0C0E12" />
+    <circle cx="986" cy="95" r="1.8" fill="#FFFDF2" />
+    <polygon points="1080,95 1086,89 1092,95 1086,101" fill="#0C0E12" />
+    <circle cx="1086" cy="95" r="1.8" fill="#FFFDF2" />
+  </g>
+
+  <!-- Centerpiece: Royal Bugis Medallion & Lontara Script -->
+  <g transform="translate(600, 75)">
+    <!-- Central Sulapa Eppa Crest -->
+    <polygon points="0,-35 45,0 0,35 -45,0" stroke="url(#botGold)" stroke-width="1.8" fill="#0C0E12" />
+    <polygon points="0,-24 30,0 0,24 -30,0" stroke="url(#botGold)" stroke-width="1.2" fill="none" opacity="0.8" />
+    <circle cx="0" cy="0" r="5" fill="url(#botGold)" />
+    <circle cx="0" cy="0" r="2.5" fill="#FFFDF2" />
+
+    <!-- Left & Right Royal Badik Silhouettes in gold -->
+    <!-- Left Badik Gecong -->
+    <path d="M-60,0 C-95,-12 -130,-10 -160,2 C-145,5 -115,2 -80,8 Z" fill="url(#botGold)" opacity="0.9" />
+    <path d="M-55,-2 C-45,-6 -48,-15 -58,-12 Z" fill="url(#botGold)" />
+
+    <!-- Right Badik Gecong -->
+    <path d="M60,0 C95,-12 130,-10 160,2 C145,5 115,2 80,8 Z" fill="url(#botGold)" opacity="0.9" />
+    <path d="M55,-2 C45,-6 48,-15 58,-12 Z" fill="url(#botGold)" />
+
+    <!-- Symmetrical Jasmine Blossoms -->
+    <g transform="translate(-50, 0)">
+      <circle cx="0" cy="0" r="7" fill="url(#petalW2)" stroke="#D4A028" stroke-width="0.7" />
+      <circle cx="0" cy="0" r="2.5" fill="#F5D061" />
+    </g>
+    <g transform="translate(50, 0)">
+      <circle cx="0" cy="0" r="7" fill="url(#petalW2)" stroke="#D4A028" stroke-width="0.7" />
+      <circle cx="0" cy="0" r="2.5" fill="#F5D061" />
+    </g>
+
+    <!-- Upward Finial -->
+    <polygon points="0,-48 4,-38 -4,-38" fill="url(#botGold)" />
+    <circle cx="0" cy="-51" r="2.5" fill="#FFFDF2" />
+  </g>
+
+  <!-- Pakkalu-kalu Flourishes -->
+  <g stroke="url(#botGold)" stroke-width="1.4" fill="none">
+    <path d="M435,95 C410,78 370,82 340,68 C320,58 305,64 310,74 C315,84 330,86 345,78" />
+    <path d="M765,95 C790,78 830,82 860,68 C880,58 895,64 890,74 C885,84 870,86 855,78" />
+  </g>
+</svg>

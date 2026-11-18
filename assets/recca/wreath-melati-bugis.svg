@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" fill="none">
+  <defs>
+    <linearGradient id="wrGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFDF2" />
+      <stop offset="35%" stop-color="#FCE588" />
+      <stop offset="70%" stop-color="#D4A028" />
+      <stop offset="100%" stop-color="#8C6510" />
+    </linearGradient>
+    <linearGradient id="wrWhite" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="65%" stop-color="#FFF9EA" />
+      <stop offset="100%" stop-color="#F5D061" />
+    </linearGradient>
+  </defs>
+
+  <!-- Circular Vine Rings -->
+  <circle cx="120" cy="120" r="102" stroke="url(#wrGold)" stroke-width="2" stroke-dasharray="4 3" opacity="0.85" />
+  <circle cx="120" cy="120" r="108" stroke="url(#wrGold)" stroke-width="1.2" opacity="0.6" />
+
+  <!-- 12 Symmetrical Jasmine Flowers (Bunga Melati Adat Bugis) Around the Perimeter -->
+  <!-- Top 12 o'clock -->
+  <g transform="translate(120, 16)">
+    <circle cx="0" cy="0" r="8" fill="url(#wrWhite)" stroke="#D4A028" stroke-width="0.8" />
+    <circle cx="0" cy="0" r="3" fill="#F5D061" />
+    <path d="M-10,-4 C-14,-10 -6,-14 0,-10 Z" fill="url(#wrGold)" />
+    <path d="M10,-4 C14,-10 6,-14 0,-10 Z" fill="url(#wrGold)" />
+  </g>
+  <!-- 1 o'clock -->
+  <g transform="translate(172, 30) rotate(30)">
+    <circle cx="0" cy="0" r="6.5" fill="url(#wrWhite)" stroke="#D4A028" stroke-width="0.7" />
+    <circle cx="0" cy="0" r="2.5" fill="#F5D061" />
+  </g>
+  <!-- 2 o'clock -->
+  <g transform="translate(210, 68) rotate(60)">
+    <circle cx="0" cy="0" r="7" fill="url(#wrWhite)" stroke="#D4A028" stroke-width="0.8" />
+    <circle cx="0" cy="0" r="2.8" fill="#F5D061" />
+    <path d="M0,-8 C4,-12 10,-8 6,-2 Z" fill="url(#wrGold)" />
+  </g>
+  <!-- 3 o'clock -->
+  <g transform="translate(224, 120)">
+    <circle cx="0" cy="0" r="8" fill="url(#wrWhite)" stroke="#D4A028" stroke-width="0.8" />
+    <circle cx="0" cy="0" r="3" fill="#F5D061" />
+  </g>
+  <!-- 4 o'clock -->
+  <g transform="translate(210, 172) rotate(120)">
+    <circle cx="0" cy="0" r="7" fill="url(#wrWhite)" stroke="#D4A028" stroke-width="0.8" />
+    <circle cx="0" cy="0" r="2.8" fill="#F5D061" />
+  </g>
+  <!-- 5 o'clock -->
+  <g transform="translate(172, 210) rotate(150)">
+    <circle cx="0" cy="0" r="6.5" fill="url(#wrWhite)" stroke="#D4A028" stroke-width="0.7" />
+    <circle cx="0" cy="0" r="2.5" fill="#F5D061" />
+  </g>
+  <!-- 6 o'clock -->
+  <g transform="translate(120, 224)">
+    <circle cx="0" cy="0" r="8" fill="url(#wrWhite)" stroke="#D4A028" stroke-width="0.8" />
+    <circle cx="0" cy="0" r="3" fill="#F5D061" />
+    <path d="M-10,4 C-14,10 -6,14 0,10 Z" fill="url(#wrGold)" />
+    <path d="M10,4 C14,10 6,14 0,10 Z" fill="url(#wrGold)" />
+  </g>
+  <!-- 7 o'clock -->
+  <g transform="translate(68, 210) rotate(-150)">
+    <circle cx="0" cy="0" r="6.5" fill="url(#wrWhite)" stroke="#D4A028" stroke-width="0.7" />
+    <circle cx="0" cy="0" r="2.5" fill="#F5D061" />
+  </g>
+  <!-- 8 o'clock -->
+  <g transform="translate(30, 172) rotate(-120)">
+    <circle cx="0" cy="0" r="7" fill="url(#wrWhite)" stroke="#D4A028" stroke-width="0.8" />
+    <circle cx="0" cy="0" r="2.8" fill="#F5D061" />
+  </g>
+  <!-- 9 o'clock -->
+  <g transform="translate(16, 120)">
+    <circle cx="0" cy="0" r="8" fill="url(#wrWhite)" stroke="#D4A028" stroke-width="0.8" />
+    <circle cx="0" cy="0" r="3" fill="#F5D061" />
+  </g>
+  <!-- 10 o'clock -->
+  <g transform="translate(30, 68) rotate(-60)">
+    <circle cx="0" cy="0" r="7" fill="url(#wrWhite)" stroke="#D4A028" stroke-width="0.8" />
+    <circle cx="0" cy="0" r="2.8" fill="#F5D061" />
+    <path d="M0,-8 C-4,-12 -10,-8 -6,-2 Z" fill="url(#wrGold)" />
+  </g>
+  <!-- 11 o'clock -->
+  <g transform="translate(68, 30) rotate(-30)">
+    <circle cx="0" cy="0" r="6.5" fill="url(#wrWhite)" stroke="#D4A028" stroke-width="0.7" />
+    <circle cx="0" cy="0" r="2.5" fill="#F5D061" />
+  </g>
+</svg>

@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 130" fill="none">
+  <defs>
+    <linearGradient id="topGold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8C6510" stop-opacity="0.2" />
+      <stop offset="15%" stop-color="#D4A028" />
+      <stop offset="35%" stop-color="#FCE588" />
+      <stop offset="50%" stop-color="#FFFDF2" />
+      <stop offset="65%" stop-color="#FCE588" />
+      <stop offset="85%" stop-color="#D4A028" />
+      <stop offset="100%" stop-color="#8C6510" stop-opacity="0.2" />
+    </linearGradient>
+    <linearGradient id="roofWood" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2A2218" />
+      <stop offset="100%" stop-color="#0F0C08" />
+    </linearGradient>
+    <linearGradient id="petalW" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="70%" stop-color="#FFF8E8" />
+      <stop offset="100%" stop-color="#F5D061" />
+    </linearGradient>
+  </defs>
+
+  <!-- Horizontal Framing Lines -->
+  <line x1="20" y1="12" x2="480" y2="12" stroke="url(#topGold)" stroke-width="2.5" />
+  <line x1="720" y1="12" x2="1180" y2="12" stroke="url(#topGold)" stroke-width="2.5" />
+  <line x1="40" y1="20" x2="460" y2="20" stroke="url(#topGold)" stroke-width="1.2" stroke-dasharray="6 4" opacity="0.8" />
+  <line x1="740" y1="20" x2="1160" y2="20" stroke="url(#topGold)" stroke-width="1.2" stroke-dasharray="6 4" opacity="0.8" />
+
+  <!-- Repeated Sulapa Eppa Diamond Nodes along Top Border -->
+  <g fill="none" stroke="url(#topGold)" stroke-width="1.2">
+    <!-- Left nodes -->
+    <polygon points="120,12 126,6 132,12 126,18" fill="#0C0E12" />
+    <circle cx="126" cy="12" r="1.8" fill="#FFFDF2" />
+    <polygon points="220,12 226,6 232,12 226,18" fill="#0C0E12" />
+    <circle cx="226" cy="12" r="1.8" fill="#FFFDF2" />
+    <polygon points="320,12 326,6 332,12 326,18" fill="#0C0E12" />
+    <circle cx="326" cy="12" r="1.8" fill="#FFFDF2" />
+    <polygon points="420,12 426,6 432,12 426,18" fill="#0C0E12" />
+    <circle cx="426" cy="12" r="1.8" fill="#FFFDF2" />
+
+    <!-- Right nodes -->
+    <polygon points="780,12 786,6 792,12 786,18" fill="#0C0E12" />
+    <circle cx="786" cy="12" r="1.8" fill="#FFFDF2" />
+    <polygon points="880,12 886,6 892,12 886,18" fill="#0C0E12" />
+    <circle cx="886" cy="12" r="1.8" fill="#FFFDF2" />
+    <polygon points="980,12 986,6 992,12 986,18" fill="#0C0E12" />
+    <circle cx="986" cy="12" r="1.8" fill="#FFFDF2" />
+    <polygon points="1080,12 1086,6 1092,12 1086,18" fill="#0C0E12" />
+    <circle cx="1086" cy="12" r="1.8" fill="#FFFDF2" />
+  </g>
+
+  <!-- ========================================================
+       CENTERPIECE: TIMPA' LAJA' BONE & SULAPA EPPA CROWN
+       ======================================================== -->
+  <g transform="translate(600, 10)">
+    <!-- 5-Tier Timpa' Laja' Royal Gable (Atap Kehormatan Bugis Bone) -->
+    <!-- Tier 5 (Base) -->
+    <polygon points="-110,65 110,65 95,50 -95,50" fill="url(#roofWood)" stroke="url(#topGold)" stroke-width="1.5" />
+    <!-- Tier 4 -->
+    <polygon points="-95,50 95,50 80,36 -80,36" fill="url(#roofWood)" stroke="url(#topGold)" stroke-width="1.5" />
+    <!-- Tier 3 -->
+    <polygon points="-80,36 80,36 65,24 -65,24" fill="url(#roofWood)" stroke="url(#topGold)" stroke-width="1.5" />
+    <!-- Tier 2 -->
+    <polygon points="-65,24 65,24 48,13 -48,13" fill="url(#roofWood)" stroke="url(#topGold)" stroke-width="1.5" />
+    <!-- Tier 1 (Peak) -->
+    <polygon points="-48,13 48,13 0,-4" fill="url(#roofWood)" stroke="url(#topGold)" stroke-width="1.8" />
+
+    <!-- Mustaka Finial at Peak -->
+    <path d="M0,-24 L4,-12 L2,-12 L5,0 L-5,0 L-2,-12 L-4,-12 Z" fill="url(#topGold)" />
+    <circle cx="0" cy="-25" r="3.5" fill="#FFFDF2" />
+
+    <!-- Anjong Saoraja (Wing Horns) -->
+    <path d="M-48,13 C-80,4 -115,8 -145,28 C-155,34 -158,42 -153,47 C-148,51 -140,48 -138,42 C-130,28 -100,18 -48,24" fill="url(#topGold)" />
+    <path d="M48,13 C80,4 115,8 145,28 C155,34 158,42 153,47 C148,51 140,48 138,42 C130,28 100,18 48,24" fill="url(#topGold)" />
+
+    <!-- Center Sulapa Eppa Diamond & Jasmine -->
+    <polygon points="0,42 16,30 0,18 -16,30" stroke="url(#topGold)" stroke-width="1.8" fill="#0C0E12" />
+    <circle cx="0" cy="30" r="4" fill="url(#topGold)" />
+    <circle cx="0" cy="30" r="2" fill="#FFFDF2" />
+
+    <!-- Hanging Ronce Melati (Untaian Bunga Melati Bawah Atap) -->
+    <g fill="url(#petalW)" stroke="#8C6510" stroke-width="0.6">
+      <circle cx="-50" cy="72" r="3.5" /><circle cx="-50" cy="80" r="2.8" /><circle cx="-50" cy="87" r="2" />
+      <circle cx="-25" cy="74" r="4" /><circle cx="-25" cy="83" r="3.2" /><circle cx="-25" cy="91" r="2.4" />
+      <circle cx="0" cy="76" r="4.5" /><circle cx="0" cy="86" r="3.5" /><circle cx="0" cy="95" r="2.5" /><circle cx="0" cy="103" r="1.8" />
+      <circle cx="25" cy="74" r="4" /><circle cx="25" cy="83" r="3.2" /><circle cx="25" cy="91" r="2.4" />
+      <circle cx="50" cy="72" r="3.5" /><circle cx="50" cy="80" r="2.8" /><circle cx="50" cy="87" r="2" />
+    </g>
+
+    <!-- Side Jasmine Flowers -->
+    <g transform="translate(-115, 60)">
+      <circle cx="0" cy="0" r="8" fill="url(#petalW)" stroke="#D4A028" stroke-width="0.8" />
+      <circle cx="0" cy="0" r="3" fill="#F5D061" />
+    </g>
+    <g transform="translate(115, 60)">
+      <circle cx="0" cy="0" r="8" fill="url(#petalW)" stroke="#D4A028" stroke-width="0.8" />
+      <circle cx="0" cy="0" r="3" fill="#F5D061" />
+    </g>
+  </g>
+
+  <!-- Pakkalu-kalu (Sulur Melingkar Bugis) Left & Right -->
+  <g stroke="url(#topGold)" stroke-width="1.4" fill="none">
+    <path d="M475,12 C440,28 400,24 370,38 C350,48 335,42 340,32 C345,22 360,20 375,28" />
+    <path d="M725,12 C760,28 800,24 830,38 C850,48 865,42 860,32 C855,22 840,20 825,28" />
+  </g>
+</svg>

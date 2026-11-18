@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 50" fill="none">
+  <defs>
+    <linearGradient id="jawaGoldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#D4AF37" stop-opacity="0" />
+      <stop offset="25%" stop-color="#C59B27" stop-opacity="0.6" />
+      <stop offset="50%" stop-color="#F7E7A9" stop-opacity="1" />
+      <stop offset="75%" stop-color="#C59B27" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#D4AF37" stop-opacity="0" />
+    </linearGradient>
+    <linearGradient id="goldGleam" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#9A7B2C" />
+      <stop offset="50%" stop-color="#E5C579" />
+      <stop offset="100%" stop-color="#FFF3C4" />
+    </linearGradient>
+  </defs>
+
+  <!-- Horizontal divider lines -->
+  <line x1="25" y1="25" x2="205" y2="25" stroke="url(#jawaGoldGrad)" stroke-width="1.4" />
+  <line x1="295" y1="25" x2="475" y2="25" stroke="url(#jawaGoldGrad)" stroke-width="1.4" />
+
+  <!-- Side lung-lungan floral flourishes -->
+  <path d="M 185 25 C 195 20 205 18 215 25 C 205 28 198 25 190 25" stroke="#D4AF37" stroke-width="1.2" fill="none" />
+  <circle cx="218" cy="25" r="2.2" fill="#F7E7A9" />
+  <path d="M 315 25 C 305 20 295 18 285 25 C 295 28 302 25 310 25" stroke="#D4AF37" stroke-width="1.2" fill="none" />
+  <circle cx="282" cy="25" r="2.2" fill="#F7E7A9" />
+
+  <!-- Centerpiece: Gunungan Wayang (Kayon) & Pohon Hayat silhouette -->
+  <g transform="translate(250, 25)">
+    <!-- Gunungan outline -->
+    <path d="M 0,-21 C 6,-16 14,-8 18,2 C 21,8 18,17 14,20 C 6,17 4,14 0,14 C -4,14 -6,17 -14,20 C -18,17 -21,8 -18,2 C -14,-8 -6,-16 0,-21 Z" 
+          stroke="url(#goldGleam)" stroke-width="1.5" fill="#2C1A0E" fill-opacity="0.8" />
+    <!-- Pohon Hayat central trunk and branches -->
+    <path d="M 0,13 L 0,-14 M 0,-6 Q 7,-10 11,-4 M 0,-6 Q -7,-10 -11,-4 M 0,2 Q 8,0 12,6 M 0,2 Q -8,0 -12,6" 
+          stroke="#E5C579" stroke-width="1.2" stroke-linecap="round" fill="none" />
+    <!-- Crown tip jewel -->
+    <circle cx="0" cy="-21" r="2" fill="#FFF3C4" />
+    <circle cx="0" cy="-5" r="1.5" fill="#E5C579" />
+  </g>
+</svg>

@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120">
+  <defs>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d4af37" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#fff2a3" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#aa771c" stop-opacity="0.8"/>
+    </linearGradient>
+    <linearGradient id="maroon" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5c0612" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#300207" stop-opacity="0.8"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Diamond Grid (Tenun Sabbe Bugis) -->
+  <path d="M60 0 L120 60 L60 120 L0 60 Z" fill="none" stroke="url(#gold)" stroke-width="1.2" opacity="0.6"/>
+  <path d="M60 10 L110 60 L60 110 L10 60 Z" fill="none" stroke="url(#gold)" stroke-width="0.7" opacity="0.4" stroke-dasharray="3,2"/>
+
+  <!-- Secondary Grid -->
+  <line x1="0" y1="0" x2="120" y2="120" stroke="url(#gold)" stroke-width="0.5" opacity="0.25"/>
+  <line x1="120" y1="0" x2="0" y2="120" stroke="url(#gold)" stroke-width="0.5" opacity="0.25"/>
+
+  <!-- Central Flower Lagosi (Bunga Lagosi) -->
+  <g transform="translate(60,60)">
+    <!-- Petals -->
+    <path d="M0 -18 C-6 -10 -6 -4 0 0 C6 -4 6 -10 0 -18 Z" fill="#b91c1c" stroke="url(#gold)" stroke-width="0.8"/>
+    <path d="M0 18 C-6 10 -6 4 0 0 C6 4 6 10 0 18 Z" fill="#b91c1c" stroke="url(#gold)" stroke-width="0.8"/>
+    <path d="M-18 0 C-10 -6 -4 -6 0 0 C-4 6 -10 6 -18 0 Z" fill="#b91c1c" stroke="url(#gold)" stroke-width="0.8"/>
+    <path d="M18 0 C10 -6 4 -6 0 0 C4 6 10 6 18 0 Z" fill="#b91c1c" stroke="url(#gold)" stroke-width="0.8"/>
+
+    <!-- Diagonal Mini Petals -->
+    <circle cx="-9" cy="-9" r="2.8" fill="url(#gold)"/>
+    <circle cx="9" cy="-9" r="2.8" fill="url(#gold)"/>
+    <circle cx="-9" cy="9" r="2.8" fill="url(#gold)"/>
+    <circle cx="9" cy="9" r="2.8" fill="url(#gold)"/>
+
+    <!-- Center Pistil -->
+    <circle cx="0" cy="0" r="4.5" fill="url(#gold)"/>
+    <circle cx="0" cy="0" r="2" fill="#4a040b"/>
+  </g>
+
+  <!-- Corner Quarter Flowers -->
+  <g transform="translate(0,0)">
+    <circle cx="0" cy="0" r="6" fill="url(#gold)" opacity="0.7"/>
+    <circle cx="0" cy="0" r="3" fill="#800a16"/>
+  </g>
+  <g transform="translate(120,0)">
+    <circle cx="0" cy="0" r="6" fill="url(#gold)" opacity="0.7"/>
+    <circle cx="0" cy="0" r="3" fill="#800a16"/>
+  </g>
+  <g transform="translate(0,120)">
+    <circle cx="0" cy="0" r="6" fill="url(#gold)" opacity="0.7"/>
+    <circle cx="0" cy="0" r="3" fill="#800a16"/>
+  </g>
+  <g transform="translate(120,120)">
+    <circle cx="0" cy="0" r="6" fill="url(#gold)" opacity="0.7"/>
+    <circle cx="0" cy="0" r="3" fill="#800a16"/>
+  </g>
+</svg>

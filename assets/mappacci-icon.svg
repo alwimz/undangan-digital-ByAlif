@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <defs>
+    <linearGradient id="pGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCF6BA" />
+      <stop offset="50%" stop-color="#BF953F" />
+      <stop offset="100%" stop-color="#AA771C" />
+    </linearGradient>
+  </defs>
+
+  <!-- Circular background badge -->
+  <circle cx="60" cy="60" r="54" fill="#38040a" stroke="url(#pGold)" stroke-width="2"/>
+  <circle cx="60" cy="60" r="48" fill="none" stroke="url(#pGold)" stroke-width="1" stroke-dasharray="3,2" opacity="0.6"/>
+
+  <!-- Alasa' / Bantal 7 Rangkap Sarung Sutra Adat Bugis -->
+  <rect x="26" y="80" width="68" height="8" rx="2" fill="#800a16" stroke="url(#pGold)" stroke-width="1"/>
+  <rect x="29" y="73" width="62" height="7" rx="2" fill="#991124" stroke="url(#pGold)" stroke-width="1"/>
+  <rect x="32" y="66" width="56" height="7" rx="2" fill="#5c0612" stroke="url(#pGold)" stroke-width="1"/>
+  <rect x="35" y="59" width="50" height="7" rx="2" fill="#800a16" stroke="url(#pGold)" stroke-width="1"/>
+
+  <!-- Daun Pisang & Daun Nangka Simbol Kebaikan -->
+  <path d="M40 59 C45 42 55 35 60 30 C65 35 75 42 80 59 Z" fill="#15803d" stroke="url(#pGold)" stroke-width="1"/>
+  <line x1="60" y1="30" x2="60" y2="59" stroke="#86efac" stroke-width="1"/>
+
+  <!-- Bekka Pacci (Wadah Daun Pacar Emas) -->
+  <ellipse cx="60" cy="56" rx="18" ry="6" fill="url(#pGold)"/>
+  <ellipse cx="60" cy="54" rx="14" ry="4" fill="#800a16"/>
+
+  <!-- Lilin Pabbetta (Lilin Kembar Penerang Hidup) -->
+  <rect x="58" y="24" width="4" height="24" fill="#fef08a"/>
+  <!-- Candle Flame -->
+  <path d="M60 14 C58 18 56 21 60 24 C64 21 62 18 60 14 Z" fill="#f59e0b"/>
+  <circle cx="60" cy="20" r="1.5" fill="#fef08a"/>
+</svg>

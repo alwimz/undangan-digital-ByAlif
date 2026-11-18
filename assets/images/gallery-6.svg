@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 600" width="100%" height="100%">
+  <defs>
+    <radialGradient id="royalGlow" cx="50%" cy="45%" r="55%">
+      <stop offset="0%" stop-color="#720915" />
+      <stop offset="60%" stop-color="#3b040a" />
+      <stop offset="100%" stop-color="#120103" />
+    </radialGradient>
+    <linearGradient id="gMahkota" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF2A3" />
+      <stop offset="35%" stop-color="#D4AF37" />
+      <stop offset="70%" stop-color="#AA771C" />
+      <stop offset="100%" stop-color="#55390A" />
+    </linearGradient>
+  </defs>
+  <rect width="500" height="600" fill="url(#royalGlow)"/>
+
+  <!-- Ornamen Kemilau Lingkaran Emas -->
+  <circle cx="250" cy="240" r="180" fill="none" stroke="url(#gMahkota)" stroke-width="2" stroke-dasharray="8,5" opacity="0.6"/>
+  <circle cx="250" cy="240" r="150" fill="none" stroke="url(#gMahkota)" stroke-width="1" opacity="0.4"/>
+
+  <!-- Mahkota Saloko Bugis Kemilau Emas Terang -->
+  <g transform="translate(140, 160)">
+    <path d="M10 130 C30 50 190 50 210 130 Z" fill="url(#gMahkota)" stroke="#3b040a" stroke-width="2"/>
+    <rect x="0" y="125" width="220" height="20" rx="4" fill="url(#gMahkota)"/>
+    <!-- Tusuk Kembang Goyang Saloko Bunga Emas -->
+    <line x1="110" y1="60" x2="110" y2="-15" stroke="url(#gMahkota)" stroke-width="4"/>
+    <polygon points="110,-28 122,-15 110,-2 98,-15" fill="url(#gMahkota)"/>
+    <circle cx="110" cy="-15" r="5" fill="#FFF2A3"/>
+
+    <line x1="75" y1="75" x2="50" y2="10" stroke="url(#gMahkota)" stroke-width="3"/>
+    <polygon points="50,0 60,10 50,20 40,10" fill="url(#gMahkota)"/>
+
+    <line x1="145" y1="75" x2="170" y2="10" stroke="url(#gMahkota)" stroke-width="3"/>
+    <polygon points="170,0 180,10 170,20 160,10" fill="url(#gMahkota)"/>
+
+    <!-- Rumbai Ronce Bunga Melati Pengantin Bugis -->
+    <g stroke="url(#gMahkota)" stroke-width="2" fill="#FFFBEB">
+      <circle cx="2" cy="150" r="6"/>
+      <circle cx="-2" cy="175" r="6.5"/>
+      <circle cx="-6" cy="202" r="7"/>
+      <circle cx="-8" cy="230" r="7.5"/>
+      <circle cx="218" cy="150" r="6"/>
+      <circle cx="222" cy="175" r="6.5"/>
+      <circle cx="226" cy="202" r="7"/>
+      <circle cx="228" cy="230" r="7.5"/>
+    </g>
+  </g>
+
+  <!-- Caption -->
+  <rect x="0" y="520" width="500" height="80" fill="rgba(18, 1, 3, 0.9)"/>
+  <text x="250" y="555" fill="#FFF2A3" font-family="'Cinzel', serif" font-size="18" text-anchor="middle" font-weight="bold">MAHKOTA SALOKO KEMILAU</text>
+  <text x="250" y="578" fill="#FDE68A" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" text-anchor="middle" letter-spacing="2">AKASIH & KEMULIAAN ADAT</text>
+</svg>

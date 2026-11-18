@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="gGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCF6BA" />
+      <stop offset="50%" stop-color="#BF953F" />
+      <stop offset="100%" stop-color="#AA771C" />
+    </linearGradient>
+    <radialGradient id="bgGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#640915" />
+      <stop offset="100%" stop-color="#240206" />
+    </radialGradient>
+    <pattern id="reccaPat" width="6" height="6" patternUnits="userSpaceOnUse">
+      <rect width="6" height="6" fill="#181206"/>
+      <path d="M0 0L6 6M6 0L0 6" stroke="#BF953F" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="400" height="400" fill="url(#bgGlow)"/>
+
+  <!-- Ornamen Lingkaran Emas Belakang -->
+  <circle cx="200" cy="200" r="160" fill="none" stroke="url(#gGold)" stroke-width="2" stroke-dasharray="8,6" opacity="0.6"/>
+
+  <!-- Jas Tutu' Bahu & Dada -->
+  <path d="M100 330 C130 270 270 270 300 330 L320 400 L80 400 Z" fill="#4a040b" stroke="url(#gGold)" stroke-width="2.5"/>
+  <path d="M165 260 L235 260 L235 400 L165 400 Z" fill="#300307"/>
+  <line x1="200" y1="260" x2="200" y2="400" stroke="url(#gGold)" stroke-width="3"/>
+  <circle cx="200" cy="290" r="4.5" fill="url(#gGold)"/>
+  <circle cx="200" cy="325" r="4.5" fill="url(#gGold)"/>
+  <circle cx="200" cy="360" r="4.5" fill="url(#gGold)"/>
+
+  <!-- Selempang Emas Rante Khas Bugis -->
+  <path d="M125 280 Q190 350 255 400" stroke="url(#gGold)" stroke-width="7" fill="none"/>
+  <path d="M125 280 Q190 350 255 400" stroke="#FFF" stroke-width="1.5" stroke-dasharray="3,3" fill="none"/>
+
+  <!-- Leher & Kepala -->
+  <rect x="180" y="225" width="40" height="40" rx="4" fill="#E8B58E"/>
+  <ellipse cx="200" cy="180" rx="46" ry="54" fill="#F3C39D"/>
+
+  <!-- Alis & Mata Gagah -->
+  <path d="M170 170 Q182 165 192 169" stroke="#3b1d0c" stroke-width="3" fill="none"/>
+  <path d="M208 169 Q218 165 230 170" stroke="#3b1d0c" stroke-width="3" fill="none"/>
+  <circle cx="182" cy="178" r="4" fill="#1b120c"/>
+  <circle cx="218" cy="178" r="4" fill="#1b120c"/>
+  <path d="M188 206 Q200 216 212 206" stroke="#994433" stroke-width="3" fill="none"/>
+
+  <!-- Songkok Recca / Pamiring Emas Khas Bugis Bone -->
+  <path d="M152 155 C152 85 248 85 248 155 Z" fill="url(#reccaPat)" stroke="#9c7820" stroke-width="2.5"/>
+  <rect x="150" y="142" width="100" height="15" rx="3" fill="url(#gGold)"/>
+  <rect x="165" y="118" width="70" height="10" rx="2" fill="url(#gGold)" opacity="0.9"/>
+  <circle cx="200" cy="98" r="5" fill="url(#gGold)"/>
+</svg>

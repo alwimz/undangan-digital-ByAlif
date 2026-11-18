@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Walimatul 'Ursy - Aswandi & Wira | Undangan Pernikahan Adat Bugis-Makassar</title>
+  <meta name="description" content="Undangan Pernikahan Adat Bugis-Makassar Aswandi Syam & Wira Kartika Putri">
+  <meta name="theme-color" content="#4a040b">
+
+  <!-- Google Fonts: Cinzel, Playfair Display, Great Vibes, Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Great+Vibes&family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/switcher.css">
+  <script src="js/switcher.js" defer></script>
+</head>
+<body class="lock-scroll">
+
+  <!-- ==========================================================================
+       THEME SWITCHER FLOATING BUTTON & DROPDOWN (5 PILIHAN TEMA)
+       ========================================================================== -->
+  <div class="theme-switch-bar">
+    <button id="btnThemeSwitcher" class="btn-theme-switcher" aria-label="Ganti Tema Undangan">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path></svg>
+      Pilih Tema
+      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+    </button>
+
+    <div id="themeDropdown" class="theme-dropdown">
+      <a href="bulukumba.html" class="theme-option">
+        <span>⛵</span>
+        <span>Adat Bugis Bulukumba</span>
+        <span class="theme-badge" style="background:#0ea5e9;color:#fff;">Baru</span>
+      </a>
+
+      <a href="jawa.html" class="theme-option">
+        <span>🏛️</span>
+        <span>Adat Jawa Klasik Modern</span>
+        <span class="theme-badge" style="background:#8b5a2b;color:#fff;">Baru</span>
+      </a>
+
+      <a href="studio.html" class="theme-option">
+        <span>📸</span>
+        <span>Studio Adat Bugis</span>
+        <span class="theme-badge" style="background:#fbbf24;color:#000;">Baru</span>
+      </a>
+      <a href="bugis.html" class="theme-option active">
+        <span>👑</span>
+        <span>Adat Bugis Klasik</span>
+        <span class="theme-badge" style="background:#d97706;color:#fff;">Aktif</span>
+      </a>
+      <a href="toraja.html" class="theme-option">
+        <span>🏛️</span>
+        <span>Adat Toraja Tongkonan</span>
+      </a>
+      <a href="kajang.html" class="theme-option">
+        <span>🖤</span>
+        <span>Adat Ammatoa Kajang</span>
+      </a>
+      <a href="bira.html" class="theme-option">
+        <span>⛵</span>
+        <span>Pantai Pasir Putih Bira</span>
+      </a>
+      <a href="islamic.html" class="theme-option">
+        <span>🕌</span>
+        <span>Islamic Modern</span>
+      </a>
+      <a href="donggia.html" class="theme-option">
+        <span>⛰️</span>
+        <span>Pegunungan Donggia Bugis</span>
+        <span class="theme-badge" style="background:#2d6a4f;color:#fff;">Baru</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Audio Backsound Element (Lagu Pernikahan dari Desktop) -->
+  <audio id="weddingAudio" loop preload="auto" src="assets/lagu.aac">
+    <source src="assets/lagu.aac" type="audio/aac">
+  </audio>
+
+  <!-- Background Ambient Layar Lebar (Auto-Responsive Desktop) -->
+  <div class="bg-bugis-ambient"></div>
+
+  <!-- Background Utama Auto-Responsive Bugis (Mobile & Desktop) -->
+  <div class="bg-bugis-backdrop"></div>
+
+  <!-- Pola Tekstur Sarung Sutera Bugis Lagosi -->
+  <div class="bg-lagosi-overlay"></div>
+
+  <!-- ==========================================================================
+       COVER PEMBUKA UNDANGAN (WELCOME ENVELOPE / GATEWAY)
+       ========================================================================== -->
+  <div id="openingCover">
+    <div class="cover-card">
+      <!-- Ornamen Sudut Emas Khas Kerajaan Bugis -->
+      <img src="assets/corner-ornament.svg" alt="Ornamen Emas" class="corner-ornament corner-tl">
+      <img src="assets/corner-ornament.svg" alt="Ornamen Emas" class="corner-ornament corner-tr">
+      <img src="assets/corner-ornament.svg" alt="Ornamen Emas" class="corner-ornament corner-bl">
+      <img src="assets/corner-ornament.svg" alt="Ornamen Emas" class="corner-ornament corner-br">
+
+      <!-- Logo Rumah Adat Bugis Pilihan Desktop -->
+      <img src="assets/logo-bugis-custom.png" alt="Logo Adat Bugis" class="cover-saoraja">
+
+      <p class="cover-subheading">Walimatul 'Ursy</p>
+      <div class="cover-arabic">وَلِيمَةُ العُرْسِ</div>
+      <p class="lontara-script">ᨔᨗᨄᨀᨈᨕᨘ ᨔᨗᨄᨀᨒᨛᨅᨗ ᨔᨗᨄᨀᨕᨗᨂᨛ</p>
+      
+      <h1 class="cover-title">Aswandi <span class="cover-ampersand">&amp;</span> Wira</h1>
+      
+      <div class="guest-card">
+        <p class="guest-label">Kepada Yth. Bapak/Ibu/Saudara/i:</p>
+        <p class="guest-name dynamic-guest-name">Tamu Undangan Yang Terhormat</p>
+      </div>
+
+      <p class="cover-invitation-text">
+        Tanpa mengurangi rasa hormat, kami mengundang Anda untuk hadir dan memberikan doa restu pada pernikahan kami.
+      </p>
+
+      <button id="btnOpenInvitation" class="btn-open-invitation">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+        Buka Undangan
+      </button>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       FLOATING AUDIO BUTTON & BOTTOM NAVIGATION
+       ========================================================================== -->
+  <button id="musicToggleBtn" class="music-toggle-btn" aria-label="Putar Musik">
+    <!-- Equalizer Wave Bars -->
+    <div class="sound-waves">
+      <div class="wave-bar"></div>
+      <div class="wave-bar"></div>
+      <div class="wave-bar"></div>
+    </div>
+    <!-- Piringan Emas / Gong Kecapi -->
+    <svg class="disc-icon" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="3"></circle></svg>
+  </button>
+
+  <nav class="bottom-nav">
+    <a href="#hero" class="nav-link active">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
+      <span>Awal</span>
+    </a>
+    <a href="#couple" class="nav-link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+      <span>Mempelai</span>
+    </a>
+    <a href="#adat" class="nav-link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+      <span>Adat</span>
+    </a>
+    <a href="#acara" class="nav-link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+      <span>Acara</span>
+    </a>
+    <a href="#galeri" class="nav-link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+      <span>Galeri</span>
+    </a>
+    <a href="#rsvp" class="nav-link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+      <span>RSVP</span>
+    </a>
+  </nav>
+
+  <!-- ==========================================================================
+       HERO SECTION (BANNER UTAMA)
+       ========================================================================== -->
+  <section id="hero" class="hero-section">
+    <div class="container hero-content">
+      <!-- Logo Rumah Adat Bugis Pilihan Desktop -->
+      <img src="assets/logo-bugis-custom.png" alt="Logo Rumah Adat Bugis" class="hero-saoraja">
+
+      <p class="hero-bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
+      <span class="gold-badge">THE WEDDING CELEBRATION</span>
+
+      <h1 class="hero-names">Aswandi Syam &amp; Wira Kartika</h1>
+      <p class="lontara-script">ᨅᨗᨔᨛᨆᨗᨒᨛᨒᨊᨛ ᨑᨖᨛᨆᨊᨗ ᨑᨖᨗᨆᨛ - ᨕᨀᨀᨒᨛᨅᨗᨑᨛ</p>
+
+      <!-- Falsafah Luhur Suku Bugis Makassar -->
+      <div class="hero-quote-box reveal-on-scroll">
+        <p class="bugis-aphorism">
+          "Narekko siri' tapakaraja, deceng muturusi, passimparang sipaddua silapporenna tinulu."
+        </p>
+        <p class="bugis-meaning">
+          (Jika siri' dan kehormatan dijunjung tinggi, serta kebajikan senantiasa diikuti, maka ikatan dua insan adalah lambang ketulusan dan keteguhan abadi.)
+        </p>
+      </div>
+
+      <!-- Firman Allah QS Ar-Rum 21 -->
+      <div class="bugis-card" style="padding: 1.5rem 1.8rem; margin: 1.5rem auto; max-width: 680px;">
+        <p style="font-size: 0.95rem; font-style: italic; color: #fef3c7; line-height: 1.8;">
+          "Dan di antara tanda-tanda kebesaran-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda bagi kaum yang berpikir."
+        </p>
+        <p style="font-weight: 700; color: var(--gold-light); font-size: 0.85rem; margin-top: 0.6rem;">
+          — QS. Ar-Rum: 21
+        </p>
+      </div>
+
+      <div class="hero-date-highlight">
+        SABTU, 12 DESEMBER 2026
+      </div>
+
+      <!-- COUNTDOWN TIMER -->
+      <div class="countdown-box reveal-on-scroll">
+        <div class="time-card">
+          <span id="cdDays" class="time-num">00</span>
+          <span class="time-label">Hari</span>
+        </div>
+        <div class="time-card">
+          <span id="cdHours" class="time-num">00</span>
+          <span class="time-label">Jam</span>
+        </div>
+        <div class="time-card">
+          <span id="cdMinutes" class="time-num">00</span>
+          <span class="time-label">Menit</span>
+        </div>
+        <div class="time-card">
+          <span id="cdSeconds" class="time-num">00</span>
+          <span class="time-label">Detik</span>
+        </div>
+      </div>
+
+      <!-- Tombol Simpan Tanggal Kalender -->
+      <div style="margin-top: 2rem;">
+        <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Pernikahan+Aswandi+Syam+%26+Wira+Kartika+Putri&dates=20261212T010000Z/20261212T140000Z&details=Undangan+Pernikahan+Adat+Bugis+Makassar+Aswandi+%26+Wira+di+Grand+Ballroom+Phinisi+Claro+Hotel+Makassar&location=Claro+Hotel+Makassar" target="_blank" rel="noopener noreferrer" class="btn-gold-outline">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+          Simpan ke Google Calendar
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PROFIL MEMPELAI (THE HAPPY COUPLE)
+       ========================================================================== -->
+  <section id="couple" class="section-wrapper">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-subtitle">Mempelai Pengantin</span>
+        <h2 class="section-title">Sang Mempelai (Botting)</h2>
+        <img src="assets/divider-gold.svg" alt="Pemisah Emas" class="gold-divider">
+        <p class="lontara-script">ᨅᨚᨈᨗ ᨅᨘᨑᨊᨛ ᨔᨗᨅᨓ ᨅᨚᨈᨗ ᨆᨀᨘᨊᨑᨕᨗ</p>
+        <p style="color: var(--text-muted); font-size: 0.95rem; max-width: 600px; margin: 0.5rem auto 0;">
+          Dengan memohon rahmat dan ridho Allah Subhanahu Wa Ta'ala, kami menyatukan dua keluarga besar dalam ikatan suci pernikahan adat Bugis-Makassar:
+        </p>
+      </div>
+
+      <div class="couple-showcase">
+        <!-- Mempelai Pria -->
+        <div class="bugis-card mempelai-card reveal-on-scroll">
+          <img src="assets/corner-ornament.svg" alt="Ornamen" class="corner-ornament corner-tl">
+          <img src="assets/corner-ornament.svg" alt="Ornamen" class="corner-ornament corner-tr">
+          
+          <div class="mempelai-photo-frame">
+            <img src="assets/images/groom.jpeg" alt="Aswandi Syam">
+          </div>
+          
+          <h3 class="mempelai-nama">Aswandi Syam</h3>
+          <p class="mempelai-title">Mempelai Pria (Botting Bura'ne)</p>
+          
+          <p class="mempelai-parents">
+            Putra pertama dari:<br>
+            <strong>Bpk. Andi Muhammad Yusuf, S.Sos.</strong><br>
+            &amp; <strong>Ibu Hj. Andi Sitti Aminah</strong><br>
+            <span style="font-size: 0.8rem; color: var(--gold-light);">(Keluarga Besar Suku Bugis - Bone)</span>
+          </p>
+
+          <div class="mempelai-social">
+            <a href="https://instagram.com/aswandi.syam" target="_blank" rel="noopener noreferrer" class="social-badge">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+              @aswandi.syam
+            </a>
+          </div>
+        </div>
+
+        <!-- Center Ampersand -->
+        <div class="couple-center-divider reveal-on-scroll">
+          <span class="ampersand-big">&amp;</span>
+          <img src="assets/divider-gold.svg" alt="Pemisah" style="width: 140px; transform: rotate(90deg); margin: 1rem 0;">
+        </div>
+
+        <!-- Mempelai Wanita -->
+        <div class="bugis-card mempelai-card reveal-on-scroll">
+          <img src="assets/corner-ornament.svg" alt="Ornamen" class="corner-ornament corner-tl">
+          <img src="assets/corner-ornament.svg" alt="Ornamen" class="corner-ornament corner-tr">
+          
+          <div class="mempelai-photo-frame">
+            <img src="assets/images/bride.jpeg" alt="Wira Kartika Putri">
+          </div>
+          
+          <h3 class="mempelai-nama">Wira Kartika Putri</h3>
+          <p class="mempelai-title">Mempelai Wanita (Botting Makkunrai)</p>
+          
+          <p class="mempelai-parents">
+            Putri tercinta dari:<br>
+            <strong>Bpk. Ambo</strong><br>
+            &amp; <strong>Ibu Agustina</strong><br>
+            <span style="font-size: 0.8rem; color: var(--gold-light);">(Keluarga Besar Suku Bugis - Bulukumba)</span>
+          </p>
+
+          <div class="mempelai-social">
+            <a href="https://instagram.com/wirakartikaputri_" target="_blank" rel="noopener noreferrer" class="social-badge">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+              @wirakartikaputri_
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ilustrasi Adat Lengkap Baju Bodo & Jas Tutu' -->
+      <div class="couple-illustration-box reveal-on-scroll">
+        <h4 style="font-family: var(--font-serif); font-size: 1.35rem; color: #fff2a3; margin-bottom: 0.35rem;">
+          Kemegahan Busana Adat Pengantin Bugis-Makassar
+        </h4>
+        <p style="font-size: 0.85rem; color: #fbcfe8; margin-bottom: 1.25rem;">
+          Memadukan Jas Tutu', Songkok Recca Pamiring, Baju Bodo Sutra Lagosi, dan Mahkota Saloko Emas.
+        </p>
+        <img src="assets/images/couple.jpeg" alt="Foto Pasangan Pengantin Aswandi & Wira" style="max-width: 360px; width: 100%; height: auto; margin: 0 auto; display: block;">
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       ADAT & KEARIFAN SUKU BUGIS MAKASSAR
+       ========================================================================== -->
+  <section id="adat" class="section-wrapper">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-subtitle">Tradisi Luhur Leluhur</span>
+        <h2 class="section-title">Kearifan Adat Bugis-Makassar</h2>
+        <img src="assets/divider-gold.svg" alt="Pemisah Emas" class="gold-divider">
+        <p class="lontara-script">ᨔᨗᨄᨀᨈᨕᨘ • ᨔᨗᨄᨀᨒᨛᨅᨗ • ᨔᨗᨄᨀᨕᨗᨂᨛ</p>
+        <p style="color: var(--text-muted); font-size: 0.95rem; max-width: 640px; margin: 0.5rem auto 0;">
+          Pernikahan Bugis-Makassar bukan sekadar perayaan dua insan, melainkan perpaduan doa, pensucian diri, dan penghormatan adat yang dijaga turun-temurun:
+        </p>
+      </div>
+
+      <div class="adat-grid">
+        <!-- 1. Mappacci -->
+        <div class="bugis-card adat-card reveal-on-scroll">
+          <div class="adat-icon-wrapper">
+            <img src="assets/mappacci-icon.svg" alt="Ritual Mappacci" style="width: 70px; height: 70px;">
+          </div>
+          <h3 class="adat-title">Mappacci / Tudang Sipulung</h3>
+          <p class="adat-lontara">ᨆᨄᨌᨗ (Pensucian Lahir &amp; Batin)</p>
+          <p class="adat-desc">
+            Malam pembersihan diri calon pengantin menggunakan daun pacar (kaci) yang diletakkan di telapak tangan di atas bantal berlapis 7 susun sarung sutera Bugis (alasa'), diiringi lantunan doa restu dari para sesepuh keluarga.
+          </p>
+        </div>
+
+        <!-- 2. Mappasikarawa -->
+        <div class="bugis-card adat-card reveal-on-scroll">
+          <div class="adat-icon-wrapper">
+            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
+          </div>
+          <h3 class="adat-title">Mappasikarawa</h3>
+          <p class="adat-lontara">ᨆᨄᨔᨗᨀᨑᨓ (Sentuhan Pertama yang Sah)</p>
+          <p class="adat-desc">
+            Prosesi sakral usai akad nikah, di mana mempelai pria dipandu menuntun dan menyentuh ubun-ubun atau pundak sang istri untuk pertama kalinya sebagai simbol kepemimpinan cinta yang membimbing dalam ridho Ilahi.
+          </p>
+        </div>
+
+        <!-- 3. Falsafah Siri' na Pacce -->
+        <div class="bugis-card adat-card reveal-on-scroll">
+          <div class="adat-icon-wrapper">
+            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          </div>
+          <h3 class="adat-title">Siri' na Pacce</h3>
+          <p class="adat-lontara">ᨔᨗᨑᨗ ᨊ ᨄᨌᨛ (Kehormatan &amp; Empati Jiwa)</p>
+          <p class="adat-desc">
+            Pedoman hidup agung Bugis-Makassar: <em>Sipakatau</em> (saling memanusiakan), <em>Sipakalebbi</em> (saling menghormati dan memuliakan), dan <em>Sipakainge</em> (saling menasihati dalam kebaikan lahir batin).
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       RANGKAIAN ACARA (EVENT SCHEDULE & LOCATIONS)
+       ========================================================================== -->
+  <section id="acara" class="section-wrapper">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-subtitle">Waktu &amp; Lokasi</span>
+        <h2 class="section-title">Rangkaian Acara Pernikahan</h2>
+        <img src="assets/divider-gold.svg" alt="Pemisah Emas" class="gold-divider">
+        <p class="lontara-script">ᨕᨀᨍᨗᨀᨁᨗ ᨔᨗᨅᨓ ᨄᨚᨔᨗᨈᨗᨂᨛ</p>
+      </div>
+
+      <div class="events-grid">
+        <!-- Acara 1: Malam Mappacci -->
+        <div class="bugis-card event-card reveal-on-scroll">
+          <img src="assets/corner-ornament.svg" alt="Ornamen" class="corner-ornament corner-tl">
+          <img src="assets/corner-ornament.svg" alt="Ornamen" class="corner-ornament corner-tr">
+          
+          <div class="event-icon-badge">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7z"></path><circle cx="12" cy="9" r="3"></circle></svg>
+          </div>
+
+          <span class="gold-badge">RITUAL ADAT</span>
+          <h3 class="event-title">Malam Mappacci</h3>
+          <p style="font-size: 0.85rem; color: #fbcfe8; margin-bottom: 0.5rem;">(Tudang Sipulung Pembersihan Diri)</p>
+          
+          <div class="event-date">Jumat, 11 Desember 2026</div>
+          <div class="event-time">Pukul 19.30 WITA - Selesai</div>
+
+          <div class="event-venue">Kediaman Mempelai Wanita (Saoraja)</div>
+          <p class="event-address">
+            Jl. Sultan Hasanuddin No. 45, Somba Opu, Kab. Gowa, Sulawesi Selatan
+          </p>
+
+          <a href="https://maps.google.com/?q=Somba+Opu+Gowa" target="_blank" rel="noopener noreferrer" class="btn-gold-outline">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg>
+            Petunjuk Arah Lokasi
+          </a>
+        </div>
+
+        <!-- Acara 2: Akad Nikah -->
+        <div class="bugis-card event-card reveal-on-scroll">
+          <img src="assets/corner-ornament.svg" alt="Ornamen" class="corner-ornament corner-tl">
+          <img src="assets/corner-ornament.svg" alt="Ornamen" class="corner-ornament corner-tr">
+          
+          <div class="event-icon-badge">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          </div>
+
+          <span class="gold-badge">PROSESI SAKRAL</span>
+          <h3 class="event-title">Akad Nikah</h3>
+          <p style="font-size: 0.85rem; color: #fbcfe8; margin-bottom: 0.5rem;">(Ijab Qabul &amp; Khutbah Nikah)</p>
+          
+          <div class="event-date">Sabtu, 12 Desember 2026</div>
+          <div class="event-time">Pukul 08.30 - 10.30 WITA</div>
+
+          <div class="event-venue">Grand Ballroom Phinisi (Lantai 2)</div>
+          <p class="event-address">
+            Claro Hotel Makassar, Jl. A. P. Pettarani No. 03, Kota Makassar, Sulawesi Selatan
+          </p>
+
+          <a href="https://maps.google.com/?q=Claro+Hotel+Makassar" target="_blank" rel="noopener noreferrer" class="btn-gold-outline">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg>
+            Petunjuk Arah Lokasi
+          </a>
+        </div>
+
+        <!-- Acara 3: Resepsi Pernikahan -->
+        <div class="bugis-card event-card reveal-on-scroll">
+          <img src="assets/corner-ornament.svg" alt="Ornamen" class="corner-ornament corner-tl">
+          <img src="assets/corner-ornament.svg" alt="Ornamen" class="corner-ornament corner-tr">
+          
+          <div class="event-icon-badge">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          </div>
+
+          <span class="gold-badge">JAMUAN MAHA BESAR</span>
+          <h3 class="event-title">Resepsi Adat</h3>
+          <p style="font-size: 0.85rem; color: #fbcfe8; margin-bottom: 0.5rem;">(Mappasikarawa &amp; Syukuran)</p>
+          
+          <div class="event-date">Sabtu, 12 Desember 2026</div>
+          <div class="event-time">Sesi 1: 11.30 - 14.30 WITA | Sesi 2: 19.00 - 22.00 WITA</div>
+
+          <div class="event-venue">Grand Ballroom Phinisi (Full Hall)</div>
+          <p class="event-address">
+            Claro Hotel Makassar, Jl. A. P. Pettarani No. 03, Kota Makassar, Sulawesi Selatan
+          </p>
+
+          <a href="https://maps.google.com/?q=Claro+Hotel+Makassar" target="_blank" rel="noopener noreferrer" class="btn-gold-outline">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg>
+            Petunjuk Arah Lokasi
+          </a>
+        </div>
+      </div>
+
+      <!-- PETA GOOGLE MAPS EMBED -->
+      <div class="map-container reveal-on-scroll">
+        <iframe 
+          title="Lokasi Pernikahan Claro Hotel Makassar"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3973.7145785055627!2d119.43100347587784!3d-5.149591494827827!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dbee2c589b2db97%3A0xe54ef9fa0e8b28cf!2sClaro%20Makassar!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       LOVE STORY (KISAH KASIH KAMI)
+       ========================================================================== -->
+  <section id="story" class="section-wrapper">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-subtitle">Perjalanan Kasih</span>
+        <h2 class="section-title">Kisah Cinta &amp; Pinangan</h2>
+        <img src="assets/divider-gold.svg" alt="Pemisah Emas" class="gold-divider">
+        <p class="lontara-script">ᨆᨄᨈᨅᨛ • ᨆᨉᨘᨈ • ᨆᨄᨙᨈᨘᨕᨉ</p>
+      </div>
+
+      <div class="timeline">
+        <!-- 2022 -->
+        <div class="timeline-item left reveal-on-scroll">
+          <div class="timeline-content">
+            <span class="timeline-year">2022</span>
+            <h4 class="timeline-title">Mappatabe' (Pertemuan Pertama)</h4>
+            <p class="timeline-desc">
+              Di pelataran kampus Merah Universitas Hasanuddin Makassar, takdir mempertemukan tatap pertama. Berawal dari rasa segan dan saling menghormati, terjalin persahabatan yang sarat akan kesamaan cita dan nilai kesopanan.
+            </p>
+          </div>
+        </div>
+
+        <!-- 2024 -->
+        <div class="timeline-item right reveal-on-scroll">
+          <div class="timeline-content">
+            <span class="timeline-year">2024</span>
+            <h4 class="timeline-title">Madduta (Meminang Secara Resmi)</h4>
+            <p class="timeline-desc">
+              Dengan niat tulus berlandaskan agama dan restu orang tua, pihak keluarga pria mengirimkan utusan (To Madduta) untuk menghadap keluarga wanita dengan penuh tata krama adat Bugis Makassar.
+            </p>
+          </div>
+        </div>
+
+        <!-- Awal 2026 -->
+        <div class="timeline-item left reveal-on-scroll">
+          <div class="timeline-content">
+            <span class="timeline-year">Awal 2026</span>
+            <h4 class="timeline-title">Mappetuada (Penetapan Hari Baik)</h4>
+            <p class="timeline-desc">
+              Kedua keluarga besar duduk bersama bermusyawarah (Tudang Sipulung) menetapkan hari bahagia, menyepakati sompa serta mahar kasih yang mengikat erat dua rumpun keluarga besar.
+            </p>
+          </div>
+        </div>
+
+        <!-- 12 Desember 2026 -->
+        <div class="timeline-item right reveal-on-scroll">
+          <div class="timeline-content">
+            <span class="timeline-year">12 Desember 2026</span>
+            <h4 class="timeline-title">Walimatul 'Ursy (Penyatuan Abadi)</h4>
+            <p class="timeline-desc">
+              Bersanding di atas pelaminan megah dalam balutan busana adat Bugis Makassar, mengikat janji suci di hadapan Allah SWT, disaksikan keluarga, kerabat, dan para sahabat tercinta.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       GALERI FOTO PREWEDDING BUGIS MAKASSAR
+       ========================================================================== -->
+  <section id="galeri" class="section-wrapper">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-subtitle">Momen Berharga</span>
+        <h2 class="section-title">Galeri Prewedding Adat</h2>
+        <img src="assets/divider-gold.svg" alt="Pemisah Emas" class="gold-divider">
+        <p class="lontara-script">ᨁᨒᨙᨑᨗ ᨄᨚᨈᨚ ᨅᨚᨈᨗ ᨅᨘᨁᨗᨔᨛ</p>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item reveal-on-scroll">
+          <img src="assets/images/gallery-1.jpeg" alt="Galeri Foto Prewedding 1">
+          <div class="gallery-overlay">
+            <span class="gallery-caption">Momen Bersejarah Prewedding</span>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal-on-scroll">
+          <img src="assets/images/gallery-2.jpeg" alt="Galeri Foto Prewedding 2">
+          <div class="gallery-overlay">
+            <span class="gallery-caption">Kehangatan Kasih Menuju Hari Bahagia</span>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal-on-scroll">
+          <img src="assets/images/gallery-3.jpeg" alt="Galeri Foto Prewedding 3">
+          <div class="gallery-overlay">
+            <span class="gallery-caption">Ikatan Suci Dua Insan</span>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal-on-scroll">
+          <img src="assets/images/gallery-4.jpeg" alt="Galeri Foto Prewedding 4">
+          <div class="gallery-overlay">
+            <span class="gallery-caption">Keindahan Harmoni &amp; Senyuman</span>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal-on-scroll">
+          <img src="assets/images/gallery-5.jpeg" alt="Galeri Foto Prewedding 5">
+          <div class="gallery-overlay">
+            <span class="gallery-caption">Kemesraan Penuh Makna</span>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal-on-scroll">
+          <img src="assets/images/gallery-6.jpeg" alt="Galeri Foto Prewedding 6">
+          <div class="gallery-overlay">
+            <span class="gallery-caption">Meniti Langkah Menuju Pelaminan</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal Lightbox Galeri -->
+  <div id="galleryModal" class="lightbox-modal">
+    <div class="lightbox-content">
+      <button id="closeLightbox" class="lightbox-close" aria-label="Tutup Galeri">&times;</button>
+      <img id="lightboxImg" src="" alt="Pratinjau Foto">
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       WEDDING GIFT / AMPLOP DIGITAL
+       ========================================================================== -->
+  <section id="kado" class="section-wrapper">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-subtitle">Tanda Kasih</span>
+        <h2 class="section-title">Amplop Digital &amp; Hadiah</h2>
+        <img src="assets/divider-gold.svg" alt="Pemisah Emas" class="gold-divider">
+        <p class="lontara-script">ᨔᨘᨆᨂᨛ ᨄᨆᨔᨙ ᨊ ᨉᨚᨕ</p>
+        <p style="color: var(--text-muted); font-size: 0.95rem; max-width: 620px; margin: 0.5rem auto 0;">
+          Doa restu Anda merupakan karunia yang tak ternilai bagi kami. Namun jika Anda berkehendak memberikan tanda kasih secara digital, Anda dapat melalui rekening di bawah ini:
+        </p>
+      </div>
+
+      <div class="gift-grid">
+        <!-- Rekening 1: BCA -->
+        <div class="bugis-card bank-card reveal-on-scroll">
+          <img src="assets/corner-ornament.svg" alt="Ornamen" class="corner-ornament corner-tl">
+          <img src="assets/corner-ornament.svg" alt="Ornamen" class="corner-ornament corner-tr">
+          
+          <div style="font-weight: 800; font-size: 1.5rem; color: #60a5fa; letter-spacing: 2px; margin-bottom: 0.75rem;">
+            BANK BCA
+          </div>
+          <div class="account-number">8735091244</div>
+          <div class="account-holder">a.n. Aswandi Syam</div>
+
+          <button class="btn-copy" data-account="8735091244">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+            Salin Nomor Rekening
+          </button>
+        </div>
+
+        <!-- Rekening 2: Mandiri -->
+        <div class="bugis-card bank-card reveal-on-scroll">
+          <img src="assets/corner-ornament.svg" alt="Ornamen" class="corner-ornament corner-tl">
+          <img src="assets/corner-ornament.svg" alt="Ornamen" class="corner-ornament corner-tr">
+          
+          <div style="font-weight: 800; font-size: 1.5rem; color: #fbbf24; letter-spacing: 2px; margin-bottom: 0.75rem;">
+            BANK MANDIRI
+          </div>
+          <div class="account-number">1520038912771</div>
+          <div class="account-holder">a.n. Wira Kartika Putri</div>
+
+          <button class="btn-copy" data-account="1520038912771">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+            Salin Nomor Rekening
+          </button>
+        </div>
+
+        <!-- Kirim Hadiah Fisik -->
+        <div class="bugis-card bank-card reveal-on-scroll">
+          <img src="assets/corner-ornament.svg" alt="Ornamen" class="corner-ornament corner-tl">
+          <img src="assets/corner-ornament.svg" alt="Ornamen" class="corner-ornament corner-tr">
+          
+          <div style="font-weight: 800; font-size: 1.5rem; color: #f472b6; letter-spacing: 2px; margin-bottom: 0.75rem;">
+            KIRIM KADO FISIK
+          </div>
+          <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 0.8rem;">
+            Kediaman Mempelai (Saoraja Hj. Tenri Olle)<br>
+            Jl. Sultan Hasanuddin No. 45, Somba Opu, Kab. Gowa 92111, Sulawesi Selatan
+          </p>
+          <div class="account-holder">Penerima: Wira Kartika Putri (0812-4455-6677)</div>
+
+          <button class="btn-copy" data-account="Jl. Sultan Hasanuddin No. 45, Somba Opu, Kab. Gowa 92111, Sulawesi Selatan">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            Salin Alamat Kirim
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       BUKU TAMU & RSVP (KONFIRMASI KEHADIRAN)
+       ========================================================================== -->
+  <section id="rsvp" class="section-wrapper">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-subtitle">Doa &amp; Konfirmasi</span>
+        <h2 class="section-title">Buku Tamu &amp; RSVP</h2>
+        <img src="assets/divider-gold.svg" alt="Pemisah Emas" class="gold-divider">
+        <p class="lontara-script">ᨔᨘᨑᨛ ᨄᨄᨍᨗᨕᨚ ᨔᨗᨅᨓ ᨉᨚᨕ</p>
+        <p style="color: var(--text-muted); font-size: 0.95rem; max-width: 600px; margin: 0.5rem auto 0;">
+          Kehadiran dan doa restu Bapak/Ibu/Saudara/i sekalian adalah kehormatan serta kebahagiaan terbesar bagi kami sekeluarga:
+        </p>
+      </div>
+
+      <div class="rsvp-wrapper">
+        <!-- Formulir RSVP -->
+        <div class="bugis-card rsvp-form-card reveal-on-scroll">
+          <form id="rsvpForm">
+            <div class="form-group">
+              <label for="rsvpName">Nama Lengkap</label>
+              <input type="text" id="rsvpName" class="form-control" placeholder="Contoh: Daeng Sanre / Puang Bau" required>
+            </div>
+
+            <div class="form-group">
+              <label for="rsvpAttendance">Konfirmasi Kehadiran</label>
+              <select id="rsvpAttendance" class="form-control" required>
+                <option value="hadir">✓ Insya Allah Saya Akan Hadir</option>
+                <option value="ragu">? Masih Ragu / Menyesuaikan</option>
+                <option value="tidak">✗ Maaf, Belum Dapat Hadir</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="rsvpGuests">Jumlah Tamu</label>
+              <select id="rsvpGuests" class="form-control">
+                <option value="1">1 Orang</option>
+                <option value="2">2 Orang</option>
+                <option value="3">3 Orang</option>
+                <option value="4">4 Orang (Sekeluarga)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="rsvpMessage">Doa &amp; Ucapan Restu</label>
+              <textarea id="rsvpMessage" class="form-control" rows="4" placeholder="Tuliskan ucapan selamat dan doa restu Anda..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-open-invitation" style="width: 100%; border-radius: 12px; margin-top: 0.5rem;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+              Kirim Ucapan &amp; Konfirmasi
+            </button>
+          </form>
+        </div>
+
+        <!-- Daftar Ucapan yang Masuk -->
+        <div class="bugis-card wishes-card reveal-on-scroll">
+          <h3 style="font-family: var(--font-serif); font-size: 1.35rem; color: #fff2a3; border-bottom: 1px solid rgba(212, 175, 55, 0.3); padding-bottom: 0.75rem;">
+            Doa Restu Tamu Undangan
+          </h3>
+          <div id="wishesList" class="wishes-list">
+            <!-- Diisi secara dinamis oleh JavaScript -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       DRESSCODE & PANDUAN PROTOKOL
+       ========================================================================== -->
+  <section class="section-wrapper" style="padding-top: 2rem;">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-subtitle">Panduan Busana &amp; Tata Tertib</span>
+        <h2 class="section-title">Dresscode &amp; Adat Bertamu</h2>
+        <img src="assets/divider-gold.svg" alt="Pemisah Emas" class="gold-divider">
+      </div>
+
+      <div class="protocol-grid">
+        <!-- 1. Dress Code -->
+        <div class="bugis-card protocol-card reveal-on-scroll">
+          <div class="protocol-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z"></path></svg>
+          </div>
+          <h4 class="protocol-title">Dresscode Acara</h4>
+          <p class="protocol-desc">
+            Disarankan mengenakan Busana Adat Bugis (Baju Bodo / Jas Tutu'), Batik/Songket Tenun, atau Busana Formal Bernuansa Marun, Emas, dan Zamrud.
+          </p>
+        </div>
+
+        <!-- 2. Sipakatau -->
+        <div class="bugis-card protocol-card reveal-on-scroll">
+          <div class="protocol-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
+          </div>
+          <h4 class="protocol-title">Mappatabe'</h4>
+          <p class="protocol-desc">
+            Senantiasa mengedepankan senyum, sapa santun, dan salam penghormatan <em>tabe'</em> kepada para sesepuh serta segenap tamu undangan.
+          </p>
+        </div>
+
+        <!-- 3. Tepat Waktu -->
+        <div class="bugis-card protocol-card reveal-on-scroll">
+          <div class="protocol-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          </div>
+          <h4 class="protocol-title">Ketepatan Waktu</h4>
+          <p class="protocol-desc">
+            Hadir tepat waktu sesuai sesi acara demi kelancaran prosesi sakral adat dan kenyamanan jamuan bersama.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FOOTER PENUTUP & KELUARGA BESAR
+       ========================================================================== -->
+  <footer class="footer-section">
+    <div class="container">
+      <img src="assets/logo-bugis-custom.png" alt="Logo Rumah Adat Bugis" style="width: 170px; height: auto; object-fit: contain; margin: 0 auto 1.5rem; display: block; opacity: 0.95; filter: drop-shadow(0 4px 12px rgba(0,0,0,0.85));">
+      
+      <p class="footer-curse">
+        "Kurru Sumange', Salama' ki tapada salama'"
+      </p>
+      <p style="color: var(--text-muted); font-size: 0.95rem; max-width: 650px; margin: 0 auto; line-height: 1.8;">
+        Merupakan suatu kehormatan dan kebahagiaan yang tak terhingga bagi kami sekeluarga, apabila Bapak/Ibu/Saudara/i berkenan hadir serta melimpahkan doa restu kepada kedua mempelai.
+      </p>
+
+      <div class="footer-names">Aswandi &amp; Wira</div>
+      <p class="lontara-script">ᨔᨒᨆ ᨀᨗ ᨈᨄᨉ ᨔᨒᨆ</p>
+
+      <div style="margin-top: 2rem; font-size: 0.9rem; color: #fef08a;">
+        <strong>Turut Mengundang Keluarga Besar:</strong><br>
+        Kel. Besar Bpk. Andi Muhammad Yusuf &amp; Hj. Andi Sitti Aminah (Bone)<br>
+        Kel. Besar Bpk. Ambo &amp; Ibu Agustina (Bulukumba)
+      </div>
+
+      <p class="footer-copyright">
+        &copy; 2026 Walimatul 'Ursy Aswandi &amp; Wira. Undangan Pernikahan Adat Bugis-Makassar.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/audio.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none">
+  <defs>
+    <linearGradient id="cornerIslGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F5E1A4" />
+      <stop offset="55%" stop-color="#D4AF37" />
+      <stop offset="100%" stop-color="#6EE7B7" stop-opacity="0.7" />
+    </linearGradient>
+  </defs>
+  <!-- Outer frame L-arch -->
+  <path d="M 8 64 L 8 14 C 8 10.7 10.7 8 14 8 L 64 8" stroke="url(#cornerIslGrad)" stroke-width="2" stroke-linecap="round" />
+  <!-- Inner geometric step -->
+  <path d="M 15 48 L 15 18 L 18 15 L 48 15" stroke="#E6C67C" stroke-width="1.2" stroke-opacity="0.7" stroke-linecap="round" />
+  <!-- Corner Octagon Accent -->
+  <rect x="10.5" y="10.5" width="9" height="9" transform="rotate(45 15 15)" stroke="#F5E1A4" stroke-width="1.2" fill="none" />
+  <circle cx="15" cy="15" r="2.2" fill="#A7F3D0" />
+  <circle cx="34" cy="11.5" r="1.4" fill="#D4AF37" />
+  <circle cx="11.5" cy="34" r="1.4" fill="#D4AF37" />
+</svg>

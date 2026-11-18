@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" fill="none">
+  <defs>
+    <linearGradient id="wmGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFDF2" />
+      <stop offset="35%" stop-color="#FCE588" />
+      <stop offset="70%" stop-color="#D4A028" />
+      <stop offset="100%" stop-color="#8C6510" />
+    </linearGradient>
+  </defs>
+
+  <!-- Outer Concentric Circles -->
+  <circle cx="300" cy="300" r="280" stroke="url(#wmGold)" stroke-width="1.8" stroke-dasharray="6 4" opacity="0.6" />
+  <circle cx="300" cy="300" r="268" stroke="url(#wmGold)" stroke-width="2.5" opacity="0.8" />
+  <circle cx="300" cy="300" r="256" stroke="url(#wmGold)" stroke-width="1.2" opacity="0.5" />
+
+  <!-- The Great Diamond Sulapa Eppa' -->
+  <polygon points="300,50 550,300 300,550 50,300" stroke="url(#wmGold)" stroke-width="2.2" fill="none" opacity="0.85" />
+  <polygon points="300,75 525,300 300,525 75,300" stroke="url(#wmGold)" stroke-width="1.2" stroke-dasharray="8 4" fill="none" opacity="0.6" />
+
+  <!-- 4 Cardinal Nodes (4 Unsur Alam Bugis) -->
+  <g fill="none" stroke="url(#wmGold)" stroke-width="1.5">
+    <!-- North: Api / Warani -->
+    <circle cx="300" cy="50" r="14" fill="#0C0E12" />
+    <circle cx="300" cy="50" r="4" fill="url(#wmGold)" />
+    <!-- East: Angin / Acca -->
+    <circle cx="550" cy="300" r="14" fill="#0C0E12" />
+    <circle cx="550" cy="300" r="4" fill="url(#wmGold)" />
+    <!-- South: Tanah / Lempu' -->
+    <circle cx="300" cy="550" r="14" fill="#0C0E12" />
+    <circle cx="300" cy="550" r="4" fill="url(#wmGold)" />
+    <!-- West: Air / Getteng -->
+    <circle cx="50" cy="300" r="14" fill="#0C0E12" />
+    <circle cx="50" cy="300" r="4" fill="url(#wmGold)" />
+  </g>
+
+  <!-- Inner Ring & Saoraja Bone / Timpa Laja 5-Tier Crest -->
+  <circle cx="300" cy="300" r="180" stroke="url(#wmGold)" stroke-width="1.8" opacity="0.75" />
+  
+  <!-- Timpa' Laja' Silhouette in Center -->
+  <g transform="translate(300, 300)">
+    <!-- 5 Tiers of Timpa' Laja' -->
+    <polygon points="-75,40 75,40 60,24 -60,24" stroke="url(#wmGold)" stroke-width="1.4" fill="none" />
+    <polygon points="-60,24 60,24 48,10 -48,10" stroke="url(#wmGold)" stroke-width="1.4" fill="none" />
+    <polygon points="-48,10 48,10 36,-2 -36,-2" stroke="url(#wmGold)" stroke-width="1.4" fill="none" />
+    <polygon points="-36,-2 36,-2 24,-14 -24,-14" stroke="url(#wmGold)" stroke-width="1.4" fill="none" />
+    <polygon points="-24,-14 24,-14 0,-28" stroke="url(#wmGold)" stroke-width="1.6" fill="none" />
+    
+    <!-- Mustaka Finial -->
+    <line x1="0" y1="-28" x2="0" y2="-45" stroke="url(#wmGold)" stroke-width="2" />
+    <circle cx="0" cy="-48" r="3.5" fill="url(#wmGold)" />
+
+    <!-- Center Diamond -->
+    <polygon points="0,15 12,0 0,-15 -12,0" stroke="url(#wmGold)" stroke-width="1.5" fill="#0C0E12" />
+    <circle cx="0" cy="0" r="3" fill="url(#wmGold)" />
+
+    <!-- Anjong Wings -->
+    <path d="M-24,-14 C-50,-24 -75,-20 -95,-5 C-85,-2 -60,-8 -24,-4" stroke="url(#wmGold)" stroke-width="1.2" fill="none" />
+    <path d="M24,-14 C50,-24 75,-20 95,-5 C85,-2 60,-8 24,-4" stroke="url(#wmGold)" stroke-width="1.2" fill="none" />
+  </g>
+
+  <!-- Pakkalu-kalu Flourishes along 4 Diagonals -->
+  <g stroke="url(#wmGold)" stroke-width="1.2" fill="none" opacity="0.6">
+    <path d="M200,200 Q250,220 230,250" />
+    <path d="M400,200 Q350,220 370,250" />
+    <path d="M200,400 Q250,380 230,350" />
+    <path d="M400,400 Q350,380 370,350" />
+  </g>
+</svg>

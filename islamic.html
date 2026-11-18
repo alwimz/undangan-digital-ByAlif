@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Walimatul 'Ursy - Aswandi &amp; Wira | Modern Islamic Wedding</title>
+  <meta name="description" content="Undangan Pernikahan Islami Modern (Walimatul 'Ursy) Aswandi Syam &amp; Wira Kartika Putri. Menggapai Keluarga Sakinah, Mawaddah, wa Rahmah.">
+  <meta name="theme-color" content="#031914">
+
+  <!-- Google Fonts: Amiri (Arabic Calligraphy), Cinzel, Playfair Display, Great Vibes, Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cinzel:wght@500;600;700;800&family=Great+Vibes&family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Modern Islamic Custom Stylesheet -->
+  <link rel="stylesheet" href="css/islamic.css">
+  <link rel="stylesheet" href="css/switcher.css">
+  <script src="js/switcher.js" defer></script>
+</head>
+<body class="lock-scroll">
+
+  <!-- ==========================================================================
+       THEME SWITCHER FLOATING BUTTON & DROPDOWN (6 PILIHAN TEMA)
+       ========================================================================== -->
+  <div class="theme-switch-bar">
+    <button id="btnThemeSwitcher" class="btn-theme-switcher" aria-label="Ganti Tema Undangan">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path></svg>
+      Pilih Tema
+      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+    </button>
+
+    <div id="themeDropdown" class="theme-dropdown">
+      <a href="bulukumba.html" class="theme-option">
+        <span>⛵</span>
+        <span>Adat Bugis Bulukumba</span>
+        <span class="theme-badge" style="background:#0ea5e9;color:#fff;">Baru</span>
+      </a>
+
+      <a href="jawa.html" class="theme-option">
+        <span>🏛️</span>
+        <span>Adat Jawa Klasik Modern</span>
+        <span class="theme-badge" style="background:#8b5a2b;color:#fff;">Baru</span>
+      </a>
+
+      <a href="islamic.html" class="theme-option active">
+        <span>🕌</span>
+        <span>Islamic Modern</span>
+        <span class="theme-badge" style="background:#10b981;color:#fff;">Aktif</span>
+      </a>
+      <a href="studio.html" class="theme-option">
+        <span>📸</span>
+        <span>Studio Adat Bugis</span>
+      </a>
+      <a href="bugis.html" class="theme-option">
+        <span>👑</span>
+        <span>Adat Bugis Klasik</span>
+      </a>
+      <a href="toraja.html" class="theme-option">
+        <span>🏛️</span>
+        <span>Adat Toraja Tongkonan</span>
+      </a>
+      <a href="kajang.html" class="theme-option">
+        <span>🖤</span>
+        <span>Adat Ammatoa Kajang</span>
+      </a>
+      <a href="bira.html" class="theme-option">
+        <span>⛵</span>
+        <span>Pantai Pasir Putih Bira</span>
+      </a>
+      <a href="donggia.html" class="theme-option">
+        <span>⛰️</span>
+        <span>Pegunungan Donggia Bugis</span>
+        <span class="theme-badge" style="background:#2d6a4f;color:#fff;">Baru</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Audio Backsound Element -->
+  <audio id="weddingAudio" loop preload="auto" src="assets/lagu.aac">
+    <source src="assets/lagu.aac" type="audio/aac">
+  </audio>
+
+  <!-- Background Ambient Layar Lebar (Desktop) & Backdrop Sanctuary Islami (Mobile & PC) -->
+  <div class="bg-islamic-ambient"></div>
+  <div class="bg-islamic-backdrop"></div>
+  <div class="bg-girih-overlay"></div>
+
+  <!-- ==========================================================================
+       COVER PEMBUKA UNDANGAN (ARCH MIHRAB GATEWAY)
+       ========================================================================== -->
+  <div id="openingCover">
+    <div class="cover-card">
+      <!-- Islamic Geometric Corner Filigree -->
+      <img src="assets/islamic/corner-islamic.svg" alt="Ornamen" class="corner-ornament corner-tl">
+      <img src="assets/islamic/corner-islamic.svg" alt="Ornamen" class="corner-ornament corner-tr">
+      <img src="assets/islamic/corner-islamic.svg" alt="Ornamen" class="corner-ornament corner-bl">
+      <img src="assets/islamic/corner-islamic.svg" alt="Ornamen" class="corner-ornament corner-br">
+
+      <!-- Rub el Hizb Islamic Wedding Medallion -->
+      <img src="assets/islamic/logo-islamic.png" alt="Logo Walimatul Ursy" class="cover-logo-islamic">
+
+      <div class="cover-arabic-salam" dir="rtl" lang="ar">السَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ</div>
+      <p class="cover-subheading">Walimatul 'Ursy • Modern Islamic Wedding</p>
+
+      <h1 class="cover-title">Aswandi <span class="cover-ampersand">&amp;</span> Wira</h1>
+      <p class="cover-date-mini">AHAD, 28 JUNI 2026 • 13 MUHARAM 1448 H</p>
+
+      <div class="guest-card">
+        <p class="guest-label">Kepada Yth. Bapak/Ibu/Saudara/i:</p>
+        <p class="guest-name dynamic-guest-name">Tamu Undangan Yang Terhormat</p>
+      </div>
+
+      <p class="cover-invitation-text">
+        Dengan memohon rahmat dan ridho Allah SWT, kami mengundang Anda untuk menghadiri serta memberikan doa restu pada acara akad dan resepsi pernikahan kami.
+      </p>
+
+      <button id="btnOpenInvitation" class="btn-open-invitation">
+        <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+        Buka Undangan
+      </button>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       FLOATING AUDIO BUTTON & BOTTOM NAVIGATION
+       ========================================================================== -->
+  <button id="musicToggleBtn" class="music-toggle-btn" aria-label="Toggle Musik">
+    <div class="sound-waves">
+      <span></span><span></span><span></span>
+    </div>
+    <svg class="disc-icon" xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="3"></circle></svg>
+  </button>
+
+  <nav class="bottom-nav">
+    <a href="#hero" class="nav-link active">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+      <span>Awal</span>
+    </a>
+    <a href="#couple" class="nav-link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+      <span>Mempelai</span>
+    </a>
+    <a href="#filosofi" class="nav-link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.5 5.5L20 10l-5.5 2.5L12 18l-2.5-5.5L4 10l5.5-2.5z"></path></svg>
+      <span>Filosofi</span>
+    </a>
+    <a href="#acara" class="nav-link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+      <span>Acara</span>
+    </a>
+    <a href="#galeri" class="nav-link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+      <span>Galeri</span>
+    </a>
+    <a href="#rsvp" class="nav-link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+      <span>RSVP</span>
+    </a>
+  </nav>
+
+  <!-- ==========================================================================
+       HERO SECTION (SANCTUARY BANNER)
+       ========================================================================== -->
+  <section id="hero" class="hero-section">
+    <div class="container hero-content">
+      <div class="hero-arch-panel">
+        <img src="assets/islamic/logo-islamic.png" alt="Medalion Islami" class="hero-logo-islamic">
+
+        <p class="hero-bismillah" dir="rtl" lang="ar">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
+        <span class="modern-badge">WALIMATUL 'URSY • PERNIKAHAN ISLAMI</span>
+
+        <h1 class="hero-names">Aswandi Syam &amp; Wira Kartika</h1>
+        <img src="assets/islamic/divider-islamic.svg" alt="Pemisah Islami" class="islamic-divider">
+
+        <!-- Doa Pernikahan Nabi SAW -->
+        <div class="hero-quote-box reveal-on-scroll">
+          <p class="hero-doa-arabic" dir="rtl" lang="ar">
+            بَارَكَ اللَّهُ لَكُمَا وَبَارَكَ عَلَيْكُمَا وَجَمَعَ بَيْنَكُمَا فِي خَيْرٍ
+          </p>
+          <p style="font-size: 0.88rem; color: var(--text-detail); line-height: 1.65;">
+            <em>"Semoga Allah memberkahi kalian berdua ketika bahagia maupun sulit, dan mengumpulkan kalian berdua dalam segala kebaikan."</em><br>
+            <span style="color: var(--islamic-mint); font-weight: 600; font-size: 0.8rem;">(HR. Abu Dawud, Tirmidzi &amp; Ibnu Majah)</span>
+          </p>
+        </div>
+
+        <!-- QS. Ar-Rum 21 -->
+        <div class="islamic-card" style="padding: 1.4rem 1.65rem; margin: 1.25rem auto; max-width: 640px;">
+          <p style="font-size: 0.93rem; font-style: italic; color: var(--text-ivory); line-height: 1.8;">
+            "Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu isteri-isteri dari jenismu sendiri, supaya kamu cenderung dan merasa tenteram kepadanya, dan dijadikan-Nya di antaramu rasa kasih dan sayang. Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda bagi kaum yang berpikir."
+          </p>
+          <p style="font-weight: 700; color: var(--islamic-gold-pearl); font-size: 0.85rem; margin-top: 0.55rem; letter-spacing: 1px;">
+            — QS. AR-RUM: 21
+          </p>
+        </div>
+
+        <div class="hero-date-highlight">
+          AHAD, 28 JUNI 2026
+          <span class="hero-hijri-sub">13 MUHARAM 1448 H</span>
+        </div>
+
+        <!-- Countdown Timer -->
+        <div class="countdown-box reveal-on-scroll">
+          <div class="time-card">
+            <span id="cdDays" class="time-num">00</span>
+            <span class="time-label">Hari</span>
+          </div>
+          <div class="time-card">
+            <span id="cdHours" class="time-num">00</span>
+            <span class="time-label">Jam</span>
+          </div>
+          <div class="time-card">
+            <span id="cdMinutes" class="time-num">00</span>
+            <span class="time-label">Menit</span>
+          </div>
+          <div class="time-card">
+            <span id="cdSeconds" class="time-num">00</span>
+            <span class="time-label">Detik</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PROFIL MEMPELAI (THE COUPLE)
+       ========================================================================== -->
+  <section id="couple" class="section-wrapper">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-subtitle">Menggenapkan Separuh Agama</span>
+        <h2 class="section-title">Pasangan Mempelai</h2>
+        <img src="assets/islamic/divider-islamic.svg" alt="Pemisah Islami" class="islamic-divider">
+        <p>
+          <em>Assalamu'alaikum Warahmatullahi Wabarakatuh.</em> Maha Suci Allah yang telah menciptakan makhluk-Nya berpasang-pasangan. Ya Allah, perkenankanlah kami merangkai kasih sayang dalam ikatan suci pernikahan:
+        </p>
+      </div>
+
+      <div class="couple-showcase">
+        <!-- Mempelai Pria -->
+        <div class="islamic-card mempelai-card reveal-on-scroll">
+          <img src="assets/islamic/corner-islamic.svg" alt="Ornamen" class="corner-ornament corner-tl">
+          <img src="assets/islamic/corner-islamic.svg" alt="Ornamen" class="corner-ornament corner-tr">
+
+          <div class="mempelai-photo-frame">
+            <img src="assets/images/groom.jpeg" alt="Aswandi Syam">
+          </div>
+          <h3 class="mempelai-name">Aswandi Syam, S.T.</h3>
+          <p class="mempelai-title">Mempelai Pria</p>
+          <p class="mempelai-parents">
+            Putra Pertama dari Pasangan Tercinta:<br>
+            <strong>Bpk. Andi Muhammad Yusuf</strong><br>
+            &amp; <strong>Ibu Hj. Andi Sitti Aminah</strong><br>
+            <span style="font-size: 0.85rem; color: var(--islamic-mint);">(Keluarga Besar Bone)</span>
+          </p>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="mempelai-social">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            @aswandi_syam
+          </a>
+        </div>
+
+        <!-- Pusat Simbol Ampersand -->
+        <div class="couple-center-divider reveal-on-scroll">
+          <div class="ampersand-circle">&amp;</div>
+          <img src="assets/islamic/divider-islamic.svg" alt="Pemisah" style="width: 140px; transform: rotate(90deg); margin: 1.2rem 0;">
+        </div>
+
+        <!-- Mempelai Wanita -->
+        <div class="islamic-card mempelai-card reveal-on-scroll">
+          <img src="assets/islamic/corner-islamic.svg" alt="Ornamen" class="corner-ornament corner-tl">
+          <img src="assets/islamic/corner-islamic.svg" alt="Ornamen" class="corner-ornament corner-tr">
+
+          <div class="mempelai-photo-frame">
+            <img src="assets/images/bride.jpeg" alt="Wira Kartika Putri">
+          </div>
+          <h3 class="mempelai-name">Wira Kartika Putri, S.Pd.</h3>
+          <p class="mempelai-title">Mempelai Wanita</p>
+          <p class="mempelai-parents">
+            Putri Kedua dari Pasangan Tercinta:<br>
+            <strong>Bpk. Ambo</strong><br>
+            &amp; <strong>Ibu Agustina</strong><br>
+            <span style="font-size: 0.85rem; color: var(--islamic-mint);">(Keluarga Besar Bulukumba)</span>
+          </p>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="mempelai-social">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            @wirakartika
+          </a>
+        </div>
+      </div>
+
+      <!-- Foto Pasangan Bersama -->
+      <div class="islamic-card reveal-on-scroll" style="margin-top: 2.8rem; padding: 1.6rem; text-align: center;">
+        <img src="assets/images/couple.jpeg" alt="Foto Pasangan Pengantin Aswandi &amp; Wira" style="max-width: 360px; width: 100%; height: auto; margin: 0 auto; display: block; border-radius: 16px; border: 1.5px solid var(--islamic-gold-soft);">
+        <p style="margin-top: 1.1rem; font-style: italic; color: var(--islamic-gold-pearl); font-size: 0.96rem;">
+          "Cinta yang tumbuh di bawah naungan ridho Ilahi adalah ikatan paling kokoh menuju Jannah-Nya."
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FILOSOFI PERNIKAHAN ISLAMI (PILAR SAKINAH)
+       ========================================================================== -->
+  <section id="filosofi" class="section-wrapper">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-subtitle">Cahaya Sunnah &amp; Al-Qur'an</span>
+        <h2 class="section-title">Pilar Keluarga Sakinah</h2>
+        <img src="assets/islamic/divider-islamic.svg" alt="Pemisah Islami" class="islamic-divider">
+        <p>
+          Meneladani tuntunan mulia Rasulullah SAW dalam membangun rumah tangga yang diberkahi, tenteram, dan senantiasa berada dalam ketaatan kepada Allah Subhanahu Wa Ta'ala:
+        </p>
+      </div>
+
+      <div class="pilar-grid">
+        <!-- 1. Sakinah -->
+        <div class="islamic-card pilar-card reveal-on-scroll">
+          <div class="pilar-icon-wrapper">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          </div>
+          <div class="pilar-arabic" dir="rtl" lang="ar">سَكِينَة</div>
+          <h3 class="pilar-title">Sakinah</h3>
+          <p class="pilar-subtitle">Ketenangan &amp; Kedamaian</p>
+          <p class="pilar-desc">
+            Hati yang selalu merasa tenteram, aman, dan pulang kepada pasangannya dalam suka maupun duka atas izin Allah Yang Maha Menenangkan.
+          </p>
+        </div>
+
+        <!-- 2. Mawaddah -->
+        <div class="islamic-card pilar-card reveal-on-scroll">
+          <div class="pilar-icon-wrapper">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+          </div>
+          <div class="pilar-arabic" dir="rtl" lang="ar">مَوَدَّة</div>
+          <h3 class="pilar-title">Mawaddah</h3>
+          <p class="pilar-subtitle">Cinta Tulus Penuh Kehormatan</p>
+          <p class="pilar-desc">
+            Rasa cinta kasih yang murni, saling menghargai, menjaga kehormatan diri, serta menerima segala kelebihan dan kekurangan pasangan dengan lapang dada.
+          </p>
+        </div>
+
+        <!-- 3. Rahmah -->
+        <div class="islamic-card pilar-card reveal-on-scroll">
+          <div class="pilar-icon-wrapper">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 2l2.5 5.5L20 10l-5.5 2.5L12 18l-2.5-5.5L4 10l5.5-2.5z"></path></svg>
+          </div>
+          <div class="pilar-arabic" dir="rtl" lang="ar">رَحْمَة</div>
+          <h3 class="pilar-title">Rahmah</h3>
+          <p class="pilar-subtitle">Keberkahan &amp; Kelembutan</p>
+          <p class="pilar-desc">
+            Curahan kasih sayang dan kelembutan budi yang menghidupkan akhlakul karimah dalam mendidik keturunan shalih serta mempererat ukhuwah keluarga.
+          </p>
+        </div>
+
+        <!-- 4. Mitsaqan Ghalizha -->
+        <div class="islamic-card pilar-card reveal-on-scroll">
+          <div class="pilar-icon-wrapper">
+            <img src="assets/islamic/logo-islamic.png" alt="Mitsaqan Ghalizha" style="width: 52px; height: 52px; object-fit: contain;">
+          </div>
+          <div class="pilar-arabic" dir="rtl" lang="ar">مِيثَاقًا غَلِيظًا</div>
+          <h3 class="pilar-title">Mitsaqan Ghalizha</h3>
+          <p class="pilar-subtitle">Perjanjian Suci Nan Kokoh</p>
+          <p class="pilar-desc">
+            Ikatan janji agung sebagaimana disebut dalam QS. An-Nisa ayat 21, menjadikan pernikahan sebagai ibadah panjang penyempurna separuh agama.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       RANGKAIAN ACARA (WALIMATUL 'URSY EVENTS)
+       ========================================================================== -->
+  <section id="acara" class="section-wrapper">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-subtitle">Waktu &amp; Tempat Pelaksanaan</span>
+        <h2 class="section-title">Agenda Walimatul 'Ursy</h2>
+        <img src="assets/islamic/divider-islamic.svg" alt="Pemisah Islami" class="islamic-divider">
+        <p>
+          Dengan memohon taufiq dan hidayah-Nya, kami mengundang Bapak/Ibu/Saudara/i untuk hadir dalam rangkaian ibadah pernikahan kami:
+        </p>
+      </div>
+
+      <div class="events-grid">
+        <!-- Acara 1: Khataman Al-Qur'an & Doa Pra-Nikah -->
+        <div class="islamic-card event-card reveal-on-scroll">
+          <img src="assets/islamic/corner-islamic.svg" alt="Ornamen" class="corner-ornament corner-tl">
+          <img src="assets/islamic/corner-islamic.svg" alt="Ornamen" class="corner-ornament corner-tr">
+          <span class="event-badge">PENGAJIAN &amp; DOA</span>
+          <h3 class="event-title">Khataman Al-Qur'an</h3>
+
+          <div class="event-datetime">
+            <div class="datetime-row">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+              <span>Sabtu Sore, 27 Juni 2026</span>
+            </div>
+            <div class="datetime-row">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              <span>Pukul 16.00 - 18.00 WITA</span>
+            </div>
+          </div>
+
+          <div class="event-venue">Kediaman Mempelai Wanita</div>
+          <div class="event-address">
+            Kec. Ujung Bulu, Kabupaten Bulukumba, Sulawesi Selatan
+          </div>
+
+          <a href="https://calendar.google.com" target="_blank" rel="noopener noreferrer" class="btn-calendar">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            Simpan ke Kalender
+          </a>
+        </div>
+
+        <!-- Acara 2: Akad Nikah -->
+        <div class="islamic-card event-card reveal-on-scroll">
+          <img src="assets/islamic/corner-islamic.svg" alt="Ornamen" class="corner-ornament corner-tl">
+          <img src="assets/islamic/corner-islamic.svg" alt="Ornamen" class="corner-ornament corner-tr">
+          <span class="event-badge">AKAD NIKAH</span>
+          <h3 class="event-title">Ijab, Qabul &amp; Khutbah</h3>
+
+          <div class="event-datetime">
+            <div class="datetime-row">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+              <span>Ahad Pagi, 28 Juni 2026</span>
+            </div>
+            <div class="datetime-row">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              <span>Pukul 09.00 - 11.00 WITA</span>
+            </div>
+          </div>
+
+          <div class="event-venue">Masjid Agung Islamic Center Dato Tiro</div>
+          <div class="event-address">
+            Jl. Sultan Hasanuddin, Kab. Bulukumba, Sulawesi Selatan
+          </div>
+
+          <a href="https://calendar.google.com" target="_blank" rel="noopener noreferrer" class="btn-calendar">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            Simpan ke Kalender
+          </a>
+        </div>
+
+        <!-- Acara 3: Walimatul 'Ursy -->
+        <div class="islamic-card event-card reveal-on-scroll">
+          <img src="assets/islamic/corner-islamic.svg" alt="Ornamen" class="corner-ornament corner-tl">
+          <img src="assets/islamic/corner-islamic.svg" alt="Ornamen" class="corner-ornament corner-tr">
+          <span class="event-badge">WALIMATUL 'URSY</span>
+          <h3 class="event-title">Resepsi &amp; Ramah Tamah</h3>
+
+          <div class="event-datetime">
+            <div class="datetime-row">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+              <span>Ahad Siang, 28 Juni 2026</span>
+            </div>
+            <div class="datetime-row">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              <span>Pukul 11.30 WITA - Selesai</span>
+            </div>
+          </div>
+
+          <div class="event-venue">Aula Serbaguna Islamic Center</div>
+          <div class="event-address">
+            Kompleks Masjid Islamic Center Dato Tiro, Kab. Bulukumba
+          </div>
+
+          <a href="https://calendar.google.com" target="_blank" rel="noopener noreferrer" class="btn-calendar">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            Simpan ke Kalender
+          </a>
+        </div>
+      </div>
+
+      <!-- Adab Menghadiri Walimah -->
+      <div class="islamic-card adab-walimah-card reveal-on-scroll">
+        <span style="color: var(--islamic-gold-pearl); font-family: var(--font-serif); font-size: 1.15rem; font-weight: 700;">
+          Adab Sunnah Menghadiri Walimatul 'Ursy
+        </span>
+        <div class="adab-list">
+          <span class="adab-pill">✦ Berpakaian Sopan &amp; Menutup Aurat</span>
+          <span class="adab-pill">✦ Mendoakan Keberkahan Kedua Mempelai</span>
+          <span class="adab-pill">✦ Memperhatikan Waktu Shalat Berjamaah</span>
+          <span class="adab-pill">✦ Menikmati Hidangan dengan Tertib &amp; Duduk</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       LOVE STORY (TA'ARUF HINGGA AKAD)
+       ========================================================================== -->
+  <section id="story" class="section-wrapper">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-subtitle">Jejak Langkah Penuh Hikmah</span>
+        <h2 class="section-title">Perjalanan Cinta Kami</h2>
+        <img src="assets/islamic/divider-islamic.svg" alt="Pemisah Islami" class="islamic-divider">
+        <p>
+          Sebuah ketetapan indah dalam Lauhul Mahfudz yang Allah pertemukan pada waktu yang paling tepat:
+        </p>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item left reveal-on-scroll">
+          <div class="islamic-card timeline-content">
+            <span class="timeline-year">2021 — Awal Silaturahmi</span>
+            <h4 class="timeline-heading">Pertemuan &amp; Ta'aruf Baik</h4>
+            <p class="timeline-desc">
+              Dengan niat tulus menjaga kesucian hati, Allah mempertemukan kami melalui ikatan silaturahmi yang penuh adab, saling mengenal visi hidup dan ketaatan.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item right reveal-on-scroll">
+          <div class="islamic-card timeline-content">
+            <span class="timeline-year">2023 — Khitbah</span>
+            <h4 class="timeline-heading">Restu Kedua Orang Tua</h4>
+            <p class="timeline-desc">
+              Memuliakan kedua orang tua sebagai pintu ridho Allah SWT, kedua keluarga besar berhimpun menyatukan restu dalam ikatan khitbah yang hangat dan khidmat.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item left reveal-on-scroll">
+          <div class="islamic-card timeline-content">
+            <span class="timeline-year">2026 — Mitsaqan Ghalizha</span>
+            <h4 class="timeline-heading">Akad Nikah Menuju Jannah</h4>
+            <p class="timeline-desc">
+              Di atas lafaz ijab qabul yang suci pada 28 Juni 2026 / 13 Muharam 1448 H, kami siap memulai perjalanan ibadah terpanjang bersama menuju surga-Nya.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       GALERI FOTO PREWEDDING (FORMAT POTRET)
+       ========================================================================== -->
+  <section id="galeri" class="section-wrapper">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-subtitle">Bingkai Momen Kebahagiaan</span>
+        <h2 class="section-title">Galeri Potret Mempelai</h2>
+        <img src="assets/islamic/divider-islamic.svg" alt="Pemisah Islami" class="islamic-divider">
+        <p>
+          Potret kebersamaan penuh kesantunan dan rasa syukur dalam menanti hari yang penuh berkah:
+        </p>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item reveal-on-scroll">
+          <img src="assets/images/gallery-1.jpeg" alt="Galeri Foto 1">
+          <div class="gallery-overlay">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+          </div>
+        </div>
+        <div class="gallery-item reveal-on-scroll">
+          <img src="assets/images/gallery-2.jpeg" alt="Galeri Foto 2">
+          <div class="gallery-overlay">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+          </div>
+        </div>
+        <div class="gallery-item reveal-on-scroll">
+          <img src="assets/images/gallery-3.jpeg" alt="Galeri Foto 3">
+          <div class="gallery-overlay">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+          </div>
+        </div>
+        <div class="gallery-item reveal-on-scroll">
+          <img src="assets/images/gallery-4.jpeg" alt="Galeri Foto 4">
+          <div class="gallery-overlay">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+          </div>
+        </div>
+        <div class="gallery-item reveal-on-scroll">
+          <img src="assets/images/gallery-5.jpeg" alt="Galeri Foto 5">
+          <div class="gallery-overlay">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+          </div>
+        </div>
+        <div class="gallery-item reveal-on-scroll">
+          <img src="assets/images/gallery-6.jpeg" alt="Galeri Foto 6">
+          <div class="gallery-overlay">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal Lightbox Pratinjau Foto -->
+  <div id="galleryLightbox" class="lightbox-modal">
+    <button id="lightboxClose" class="lightbox-close">&times;</button>
+    <img id="lightboxImg" src="" alt="Pratinjau Foto">
+  </div>
+
+  <!-- ==========================================================================
+       LOKASI ACARA & PETA
+       ========================================================================== -->
+  <section id="lokasi" class="section-wrapper">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-subtitle">Petunjuk Arah &amp; Navigasi</span>
+        <h2 class="section-title">Peta Lokasi Acara</h2>
+        <img src="assets/islamic/divider-islamic.svg" alt="Pemisah Islami" class="islamic-divider">
+        <p>
+          Kami menantikan langkah kaki dan silaturahmi Bapak/Ibu/Saudara/i menuju lokasi pelaksanaan akad &amp; walimah:
+        </p>
+      </div>
+
+      <div class="islamic-card location-card reveal-on-scroll">
+        <h3 style="font-family: var(--font-serif); font-size: 1.45rem; color: var(--islamic-gold-pearl); margin-bottom: 0.45rem;">
+          Masjid Agung Islamic Center Dato Tiro
+        </h3>
+        <p style="color: var(--text-detail); font-size: 0.94rem; line-height: 1.6;">
+          Jl. Sultan Hasanuddin, Kabupaten Bulukumba, Sulawesi Selatan
+        </p>
+
+        <div class="map-wrapper">
+          <iframe
+            src="https://maps.google.com/maps?q=Islamic%20Center%20Dato%20Tiro%20Bulukumba&t=&z=15&ie=UTF8&iwloc=&output=embed"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+
+        <a href="https://maps.google.com/?q=Islamic+Center+Dato+Tiro+Bulukumba" target="_blank" rel="noopener noreferrer" class="btn-primary-islamic">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          Buka di Google Maps
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       TANDA KASIH & AMPLOP DIGITAL
+       ========================================================================== -->
+  <section id="kado" class="section-wrapper">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-subtitle">Tanda Kasih &amp; Doa Restu</span>
+        <h2 class="section-title">Hadiah &amp; Silaturahmi</h2>
+        <img src="assets/islamic/divider-islamic.svg" alt="Pemisah Islami" class="islamic-divider">
+        <p>
+          Doa tulus dan kehadiran Anda sudah merupakan kemuliaan terbesar bagi kami. Namun jika berkenan menitipkan hadiah tanda kasih, dapat disalurkan melalui:
+        </p>
+      </div>
+
+      <div class="gift-grid">
+        <div class="islamic-card gift-card reveal-on-scroll">
+          <div class="bank-logo">BANK BCA</div>
+          <div class="account-num">1234567890</div>
+          <div class="account-holder">a.n. Aswandi Syam</div>
+          <button class="btn-copy" data-copy="1234567890">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+            Salin Nomor Rekening
+          </button>
+        </div>
+
+        <div class="islamic-card gift-card reveal-on-scroll">
+          <div class="bank-logo">BANK BNI</div>
+          <div class="account-num">0987654321</div>
+          <div class="account-holder">a.n. Wira Kartika Putri</div>
+          <button class="btn-copy" data-copy="0987654321">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+            Salin Nomor Rekening
+          </button>
+        </div>
+
+        <div class="islamic-card gift-card reveal-on-scroll">
+          <div class="bank-logo" style="font-size: 1.32rem;">KIRIM KADO FISIK</div>
+          <p style="font-size: 0.9rem; color: var(--text-detail); line-height: 1.6; margin-bottom: 1rem;">
+            Kediaman Keluarga Mempelai Wanita, Kec. Ujung Bulu, Kab. Bulukumba, Sulawesi Selatan
+          </p>
+          <button class="btn-copy" data-copy="Kediaman Keluarga Mempelai Wanita, Kec. Ujung Bulu, Kab. Bulukumba, Sulawesi Selatan">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            Salin Alamat Kirim
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       BUKU TAMU & RSVP
+       ========================================================================== -->
+  <section id="rsvp" class="section-wrapper">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-subtitle">Konfirmasi Kehadiran &amp; Doa</span>
+        <h2 class="section-title">Buku Tamu &amp; RSVP</h2>
+        <img src="assets/islamic/divider-islamic.svg" alt="Pemisah Islami" class="islamic-divider">
+        <p>
+          Setiap doa yang Anda panjatkan adalah cahaya keberkahan bagi awal perjalanan rumah tangga kami:
+        </p>
+      </div>
+
+      <div class="rsvp-wrapper">
+        <!-- Form RSVP -->
+        <div class="islamic-card rsvp-form-card reveal-on-scroll">
+          <h3 style="font-family: var(--font-serif); font-size: 1.38rem; color: var(--islamic-gold-pearl); margin-bottom: 1.4rem;">
+            Kirim Doa &amp; Konfirmasi
+          </h3>
+          <form id="rsvpForm">
+            <div class="form-group">
+              <label for="rsvpName" class="form-label">Nama Lengkap</label>
+              <input type="text" id="rsvpName" class="form-control" placeholder="Nama Anda / Keluarga" required>
+            </div>
+
+            <div class="form-group">
+              <label for="rsvpStatus" class="form-label">Konfirmasi Kehadiran</label>
+              <select id="rsvpStatus" class="form-control" required>
+                <option value="hadir">Insya Allah Hadir</option>
+                <option value="ragu">Masih Ragu / Belum Pasti</option>
+                <option value="tidak">Mohon Maaf, Berhalangan Hadir</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="rsvpMessage" class="form-label">Ucapan &amp; Doa Keberkahan</label>
+              <textarea id="rsvpMessage" class="form-control" placeholder="Tuliskan doa terbaik seperti Barakallahu lakuma untuk kedua mempelai..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary-islamic" style="width: 100%; border-radius: 10px; padding: 0.85rem;">
+              Kirim Doa Restu
+            </button>
+          </form>
+        </div>
+
+        <!-- Daftar Doa & Ucapan -->
+        <div class="islamic-card wishes-card reveal-on-scroll">
+          <h3 style="font-family: var(--font-serif); font-size: 1.38rem; color: var(--islamic-gold-pearl); margin-bottom: 1.4rem;">
+            Untaian Doa Tamu Undangan
+          </h3>
+          <div id="wishesList" class="wishes-list">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FOOTER PENUTUP & KELUARGA BESAR
+       ========================================================================== -->
+  <footer class="footer-section">
+    <div class="container">
+      <img src="assets/islamic/logo-islamic.png" alt="Logo Islami" style="width: 120px; height: auto; object-fit: contain; margin: 0 auto 1.25rem; display: block; filter: drop-shadow(0 4px 14px rgba(230, 198, 124, 0.4));">
+
+      <div class="footer-salam-arabic" dir="rtl" lang="ar">جَزَاكُمُ اللَّهُ خَيْرًا كَثِيرًا</div>
+      <p class="footer-salam-latin">
+        Wassalamu'alaikum Warahmatullahi Wabarakatuh
+      </p>
+      <p style="color: var(--text-detail); font-size: 0.94rem; max-width: 640px; margin: 0 auto; line-height: 1.8;">
+        Merupakan suatu kehormatan dan kebahagiaan yang tak terhingga bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir serta melimpahkan doa keberkahan bagi kedua mempelai.
+      </p>
+
+      <div class="footer-names">Aswandi &amp; Wira</div>
+      <p style="color: var(--islamic-gold-pearl); font-style: italic; font-size: 0.95rem;">
+        "Semoga Allah menghimpun yang terserak dari keduanya dan memberkahi kehidupan rumah tangganya"
+      </p>
+
+      <div style="margin-top: 2rem; font-size: 0.92rem; line-height: 1.7;">
+        <span style="color: var(--islamic-mint); font-weight: 700; letter-spacing: 1px; display: block; margin-bottom: 0.35rem;">Turut Mengundang Keluarga Besar:</span>
+        <span style="color: var(--text-ivory);">
+          Kel. Besar Bpk. Andi Muhammad Yusuf &amp; Hj. Andi Sitti Aminah (Bone)<br>
+          Kel. Besar Bpk. Ambo &amp; Ibu Agustina (Bulukumba)
+        </span>
+      </div>
+
+      <p class="footer-copyright">
+        &copy; 2026 Walimatul 'Ursy Modern Islamic Elegance — Aswandi &amp; Wira.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/islamic.js"></script>
+</body>
+</html>

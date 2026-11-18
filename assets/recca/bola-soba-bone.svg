@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 320" fill="none">
+  <defs>
+    <linearGradient id="sobaGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFDF2" />
+      <stop offset="25%" stop-color="#FCE588" />
+      <stop offset="60%" stop-color="#D4A028" />
+      <stop offset="100%" stop-color="#8C6510" />
+    </linearGradient>
+    <linearGradient id="sobaWood" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#221C14" />
+      <stop offset="50%" stop-color="#14110C" />
+      <stop offset="100%" stop-color="#090806" />
+    </linearGradient>
+    <linearGradient id="glowG" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F5D061" stop-opacity="0" />
+      <stop offset="50%" stop-color="#FFF5D6" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#F5D061" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+
+  <!-- Ground glow line -->
+  <line x1="80" y1="300" x2="520" y2="300" stroke="url(#glowG)" stroke-width="1.5" />
+
+  <!-- ==========================================
+       BOLA SOBA / SAORAJA BONE (RUMAH ADAT BONE)
+       ========================================== -->
+  
+  <!-- Stilt Pillars (Aliri Bola Soba) -->
+  <g stroke="url(#sobaGold)" stroke-width="2" fill="url(#sobaWood)">
+    <!-- 8 Master Pillars -->
+    <rect x="130" y="210" width="14" height="90" rx="2" />
+    <rect x="175" y="210" width="14" height="90" rx="2" />
+    <rect x="220" y="210" width="14" height="90" rx="2" />
+    <rect x="265" y="210" width="14" height="90" rx="2" />
+    <rect x="320" y="210" width="14" height="90" rx="2" />
+    <rect x="365" y="210" width="14" height="90" rx="2" />
+    <rect x="410" y="210" width="14" height="90" rx="2" />
+    <rect x="455" y="210" width="14" height="90" rx="2" />
+
+    <!-- Crossbeams & Foundation Plinths (Pattolo) -->
+    <rect x="110" y="235" width="380" height="8" rx="2" fill="url(#sobaGold)" stroke="none" />
+    <rect x="110" y="275" width="380" height="6" rx="2" fill="url(#sobaGold)" stroke="none" />
+  </g>
+
+  <!-- Front Staircase (Tangga Depan / Tamping Bola Soba) -->
+  <g stroke="url(#sobaGold)" stroke-width="1.5" fill="url(#sobaWood)">
+    <polygon points="280,210 320,210 330,300 270,300" fill="url(#sobaWood)" />
+    <!-- Steps -->
+    <line x1="272" y1="285" x2="328" y2="285" />
+    <line x1="274" y1="270" x2="326" y2="270" />
+    <line x1="276" y1="255" x2="324" y2="255" />
+    <line x1="278" y1="240" x2="322" y2="240" />
+    <line x1="280" y1="225" x2="320" y2="225" />
+  </g>
+
+  <!-- Main House Body (Watang Bola / Dinding Berukir) -->
+  <rect x="110" y="150" width="380" height="60" rx="4" fill="url(#sobaWood)" stroke="url(#sobaGold)" stroke-width="2" />
+  
+  <!-- Windows & Carved Wall Panels (Tanduk & Ukiran Bunga Pare) -->
+  <g fill="none" stroke="url(#sobaGold)" stroke-width="1">
+    <rect x="135" y="162" width="32" height="36" rx="2" />
+    <line x1="151" y1="162" x2="151" y2="198" />
+    <circle cx="151" cy="180" r="3" fill="url(#sobaGold)" />
+
+    <rect x="195" y="162" width="32" height="36" rx="2" />
+    <line x1="211" y1="162" x2="211" y2="198" />
+    <circle cx="211" cy="180" r="3" fill="url(#sobaGold)" />
+
+    <!-- Center Main Door -->
+    <rect x="282" y="158" width="36" height="52" rx="2" fill="url(#sobaWood)" stroke-width="1.8" />
+    <line x1="300" y1="158" x2="300" y2="210" />
+
+    <rect x="372" y="162" width="32" height="36" rx="2" />
+    <line x1="388" y1="162" x2="388" y2="198" />
+    <circle cx="388" cy="180" r="3" fill="url(#sobaGold)" />
+
+    <rect x="432" y="162" width="32" height="36" rx="2" />
+    <line x1="448" y1="162" x2="448" y2="198" />
+    <circle cx="448" cy="180" r="3" fill="url(#sobaGold)" />
+  </g>
+
+  <!-- Verandah Balustrade (Lego-Lego Bone) -->
+  <rect x="95" y="205" width="410" height="8" rx="2" fill="url(#sobaGold)" />
+
+  <!-- ==========================================
+       ROOF: TIMPA' LAJA' BERSUSUN 5 (SAORAJA ARUNG BONE)
+       ========================================== -->
+  <!-- Tier 5 (Base Gable) -->
+  <polygon points="80,150 520,150 480,122 120,122" fill="url(#sobaWood)" stroke="url(#sobaGold)" stroke-width="1.8" />
+  <line x1="135" y1="136" x2="465" y2="136" stroke="url(#sobaGold)" stroke-width="1" stroke-dasharray="4 4" />
+
+  <!-- Tier 4 -->
+  <polygon points="120,122 480,122 445,96 155,96" fill="url(#sobaWood)" stroke="url(#sobaGold)" stroke-width="1.8" />
+  <line x1="170" y1="109" x2="430" y2="109" stroke="url(#sobaGold)" stroke-width="1" stroke-dasharray="4 4" />
+
+  <!-- Tier 3 -->
+  <polygon points="155,96 445,96 410,72 190,72" fill="url(#sobaWood)" stroke="url(#sobaGold)" stroke-width="1.8" />
+  <line x1="205" y1="84" x2="395" y2="84" stroke="url(#sobaGold)" stroke-width="1" stroke-dasharray="4 4" />
+
+  <!-- Tier 2 -->
+  <polygon points="190,72 410,72 370,48 230,48" fill="url(#sobaWood)" stroke="url(#sobaGold)" stroke-width="1.8" />
+  
+  <!-- Tier 1 (Peak / Puncak Saoraja) -->
+  <polygon points="230,48 370,48 300,18" fill="url(#sobaWood)" stroke="url(#sobaGold)" stroke-width="2" />
+  <circle cx="300" cy="36" r="3.5" fill="url(#sobaGold)" />
+
+  <!-- Crown Finial (Mustaka Emas Saoraja Bone) -->
+  <g transform="translate(300, 18)">
+    <path d="M0,-16 L5,-8 L3,-8 L6,2 L-6,2 L-3,-8 L-5,-8 Z" fill="url(#sobaGold)" />
+    <circle cx="0" cy="-18" r="3.5" fill="#FFFDF2" />
+  </g>
+
+  <!-- Left Anjong Horns (Ukiran Sayap Atap Bugis) -->
+  <path d="M230,48 C180,32 110,40 60,65 C45,72 40,84 46,92 C52,98 62,94 65,86 C75,68 115,55 190,72" fill="url(#sobaGold)" opacity="0.9" />
+  
+  <!-- Right Anjong Horns -->
+  <path d="M370,48 C420,32 490,40 540,65 C555,72 560,84 554,92 C548,98 538,94 535,86 C525,68 485,55 410,72" fill="url(#sobaGold)" opacity="0.9" />
+
+  <!-- Sulapa Eppa Diamond Crest at Center Gable -->
+  <g transform="translate(300, 105)">
+    <polygon points="0,-12 12,0 0,12 -12,0" stroke="url(#sobaGold)" stroke-width="1.5" fill="#0C0E12" />
+    <circle cx="0" cy="0" r="2.5" fill="#FFFDF2" />
+  </g>
+</svg>

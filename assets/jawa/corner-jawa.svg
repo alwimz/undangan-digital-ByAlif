@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none">
+  <defs>
+    <linearGradient id="cornerJawaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF3C4" />
+      <stop offset="30%" stop-color="#E5C579" />
+      <stop offset="70%" stop-color="#C59B27" />
+      <stop offset="100%" stop-color="#8B5A2B" stop-opacity="0.6" />
+    </linearGradient>
+  </defs>
+
+  <!-- Outer corner framing line -->
+  <path d="M 8 68 L 8 16 C 8 11.5 11.5 8 16 8 L 68 8" 
+        stroke="url(#cornerJawaGrad)" stroke-width="2" stroke-linecap="round" />
+
+  <!-- Inner delicate accent line -->
+  <path d="M 14 56 L 14 20 C 14 16.7 16.7 14 20 14 L 56 14" 
+        stroke="#E5C579" stroke-width="1" stroke-opacity="0.7" stroke-linecap="round" />
+
+  <!-- Javanese Gebyok wood carving lung-lungan corner flourish -->
+  <path d="M 12 12 Q 22 22 28 20 C 34 18 36 26 26 26 C 20 26 18 34 20 28" 
+        stroke="url(#cornerJawaGrad)" stroke-width="1.3" fill="none" stroke-linecap="round" />
+
+  <!-- Corner jewel & accent beads -->
+  <circle cx="16" cy="16" r="2.8" fill="#FFF3C4" stroke="#9A7B2C" stroke-width="0.8" />
+  <circle cx="38" cy="11" r="1.5" fill="#E5C579" />
+  <circle cx="11" cy="38" r="1.5" fill="#E5C579" />
+  <circle cx="58" cy="14" r="1.2" fill="#C59B27" />
+  <circle cx="14" cy="58" r="1.2" fill="#C59B27" />
+</svg>

@@ -1,0 +1,1312 @@
+/* ==========================================================================
+   TEMA 9: ADAT BUGIS BULUKUMBA (NUR AKBAR & MAGFIRA)
+   Kearifan Butta Panrita Lopi, Gedung Ammatoa, Perahu Pinisi & Sutra Lipa' Sabbe
+   ========================================================================== */
+
+:root {
+  --bg-deep: #07121A;
+  --bg-card: rgba(8, 22, 33, 0.65);
+  --bg-card-hover: rgba(12, 30, 45, 0.78);
+  --gold-prada: #F5C842;
+  --gold-light: #FFF0BA;
+  --gold-bronze: #B88928;
+  --bulukumba-teal: #0EA5E9;
+  --bulukumba-emerald: #10B981;
+  --border-gold: rgba(245, 200, 66, 0.45);
+  --text-main: #FFFFFF;
+  --text-body: #F1F5F9;
+  --text-muted: #CBD5E1;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-royal: 'Cinzel', serif;
+  --font-script: 'Great Vibes', cursive;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+  --glow-gold: rgba(245, 200, 66, 0.35);
+}
+
+/* Reset & Dasar */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-deep);
+  color: var(--text-body);
+  line-height: 1.68;
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.85);
+}
+
+body.lock-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
+
+/* Background Layers: Foto Wedding Asli Gedung Ammatoa + Ambient Gradient */
+.bg-bulukumba-ambient {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at 50% 20%, rgba(14, 165, 233, 0.12) 0%, rgba(7, 18, 26, 0.45) 55%, rgba(4, 11, 16, 0.85) 100%);
+  pointer-events: none;
+  z-index: -3;
+}
+
+.bg-bulukumba-backdrop {
+  position: fixed;
+  inset: 0;
+  background-image: url('../assets/bulukumba/bg-bulukumba.jpeg');
+  background-position: center 25%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.88;
+  filter: contrast(1.05) brightness(0.95);
+  pointer-events: none;
+  z-index: -4;
+}
+
+.bg-lipasabbe-overlay {
+  position: fixed;
+  inset: 0;
+  background-image: url('../assets/lagosi-pattern.svg');
+  background-repeat: repeat;
+  background-size: 140px 140px;
+  opacity: 0.06;
+  pointer-events: none;
+  z-index: -2;
+}
+
+/* Containers */
+.container {
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.section-wrapper {
+  padding: 5rem 0 3.5rem;
+  position: relative;
+}
+
+/* Section Header Typography */
+.section-header {
+  text-align: center;
+  margin-bottom: 2.75rem;
+  position: relative;
+}
+
+.section-subtitle {
+  font-family: var(--font-royal);
+  font-size: 0.86rem;
+  letter-spacing: 3.8px;
+  text-transform: uppercase;
+  color: var(--gold-prada);
+  display: block;
+  margin-bottom: 0.45rem;
+  font-weight: 700;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.95);
+}
+
+.section-title {
+  font-family: var(--font-serif);
+  font-size: 2.3rem;
+  color: #FFFFFF;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+  text-shadow: 0 3px 14px rgba(0, 0, 0, 0.98);
+}
+
+.bulukumba-divider {
+  width: 240px;
+  max-width: 85%;
+  height: auto;
+  margin: 0.85rem auto 1rem;
+  display: block;
+  filter: drop-shadow(0 2px 10px rgba(245, 200, 66, 0.5));
+}
+
+.section-header p {
+  color: var(--text-body);
+  font-size: 1rem;
+  max-width: 640px;
+  margin: 0.5rem auto 0;
+  line-height: 1.75;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.95);
+}
+
+.lontara-script {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  letter-spacing: 2.5px;
+  color: var(--gold-light);
+  margin: 0.45rem 0;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95), 0 0 12px rgba(245, 200, 66, 0.4);
+}
+
+/* Cards Glassmorphism */
+.bulukumba-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-gold);
+  border-radius: 18px;
+  padding: 2.2rem;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.bulukumba-card:hover {
+  border-color: rgba(245, 200, 66, 0.7);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.65), 0 0 24px var(--glow-gold);
+}
+
+/* Corner Ornaments */
+.corner-ornament {
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  pointer-events: none;
+  z-index: 2;
+  opacity: 0.85;
+}
+
+.corner-tl { top: 8px; left: 8px; }
+.corner-tr { top: 8px; right: 8px; transform: scaleX(-1); }
+.corner-bl { bottom: 8px; left: 8px; transform: scaleY(-1); }
+.corner-br { bottom: 8px; right: 8px; transform: scale(-1); }
+
+/* ==========================================================================
+   COVER PEMBUKA (OPENING COVER)
+   ========================================================================== */
+#openingCover {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at 50% 30%, rgba(14, 165, 233, 0.18) 0%, rgba(7, 18, 26, 0.65) 60%, rgba(4, 10, 15, 0.88) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 1.5rem;
+  transition: opacity 0.9s cubic-bezier(0.77, 0, 0.175, 1), transform 0.9s cubic-bezier(0.77, 0, 0.175, 1), visibility 0.9s;
+}
+
+#openingCover.opened {
+  opacity: 0;
+  transform: translateY(-100%);
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.cover-card {
+  width: 100%;
+  max-width: 460px;
+  background: rgba(7, 18, 26, 0.72);
+  border: 1px solid var(--border-gold);
+  border-radius: 24px;
+  padding: 2.75rem 2rem 2.25rem;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.75), inset 0 1px 1px rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.cover-logo-pinisi {
+  width: 130px;
+  height: 130px;
+  object-fit: contain;
+  margin: 0 auto 1.25rem;
+  display: block;
+  filter: drop-shadow(0 4px 18px rgba(245, 200, 66, 0.45));
+  animation: pulseLogo 4s ease-in-out infinite;
+}
+
+@keyframes pulseLogo {
+  0%, 100% { transform: scale(1); filter: drop-shadow(0 4px 18px rgba(245, 200, 66, 0.4)); }
+  50% { transform: scale(1.03); filter: drop-shadow(0 6px 26px rgba(245, 200, 66, 0.65)); }
+}
+
+.cover-subheading {
+  font-family: var(--font-royal);
+  font-size: 0.84rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold-prada);
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.95);
+}
+
+.cover-location-tag {
+  font-size: 0.76rem;
+  letter-spacing: 2.2px;
+  color: var(--gold-light);
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.95);
+}
+
+.cover-title {
+  font-family: var(--font-serif);
+  font-size: 2.45rem;
+  color: #FFFFFF;
+  margin: 0.4rem 0 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-shadow: 0 3px 14px rgba(0, 0, 0, 0.95);
+}
+
+.cover-ampersand {
+  font-family: var(--font-script);
+  font-size: 2.8rem;
+  color: var(--gold-light);
+  font-weight: 400;
+  vertical-align: middle;
+  margin: 0 0.15rem;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9);
+}
+
+.guest-card {
+  background: rgba(10, 25, 36, 0.7);
+  border: 1px solid rgba(245, 200, 66, 0.45);
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  margin: 1.15rem 0 1.35rem;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+}
+
+.guest-label {
+  font-size: 0.82rem;
+  color: var(--gold-prada);
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+}
+
+.guest-name {
+  font-family: var(--font-serif);
+  font-size: 1.32rem;
+  color: #FFFFFF;
+  font-weight: 700;
+  word-break: break-word;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95);
+}
+
+.cover-invitation-text {
+  font-size: 0.92rem;
+  color: var(--text-body);
+  line-height: 1.7;
+  margin-bottom: 1.65rem;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.95);
+}
+
+.btn-open-invitation {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  background: linear-gradient(135deg, #F5D061 0%, #D4AF37 50%, #9A7B2C 100%);
+  color: #07121A;
+  font-family: var(--font-sans);
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  padding: 0.85rem 1.85rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(245, 200, 66, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  transition: var(--transition);
+}
+
+.btn-open-invitation:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(245, 200, 66, 0.65);
+  background: linear-gradient(135deg, #FFF0BA 0%, #F5C842 50%, #B88928 100%);
+}
+
+/* ==========================================================================
+   HERO / WELCOME SECTION
+   ========================================================================== */
+#hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 6rem 1rem 4rem;
+  position: relative;
+}
+
+.hero-content {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.hero-logo-pinisi {
+  width: 140px;
+  height: 140px;
+  object-fit: contain;
+  margin: 0 auto 1.5rem;
+  display: block;
+  filter: drop-shadow(0 4px 22px rgba(245, 200, 66, 0.5));
+}
+
+.hero-subtitle {
+  font-family: var(--font-royal);
+  font-size: 0.88rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--gold-prada);
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.95);
+}
+
+.hero-title {
+  font-family: var(--font-serif);
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 1.18;
+  margin: 0.5rem 0 1.25rem;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.98);
+}
+
+.hero-title .ampersand {
+  font-family: var(--font-script);
+  font-size: 3.8rem;
+  color: var(--gold-light);
+  font-weight: 400;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9);
+}
+
+.hero-date-box {
+  display: inline-block;
+  background: rgba(10, 25, 36, 0.7);
+  border: 1px solid rgba(245, 200, 66, 0.48);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 0.68rem 1.75rem;
+  border-radius: 50px;
+  font-family: var(--font-royal);
+  font-size: 0.9rem;
+  letter-spacing: 2.5px;
+  color: var(--gold-light);
+  font-weight: 700;
+  margin-top: 1.1rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+}
+
+/* ==========================================================================
+   COUNTDOWN TIMER SECTION
+   ========================================================================== */
+.countdown-box {
+  display: flex;
+  justify-content: center;
+  gap: 0.85rem;
+  margin-top: 2.25rem;
+}
+
+.countdown-item {
+  min-width: 72px;
+  background: rgba(10, 25, 36, 0.7);
+  border: 1px solid rgba(245, 200, 66, 0.45);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 12px;
+  padding: 0.85rem 0.5rem;
+  text-align: center;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.45);
+}
+
+.countdown-num {
+  font-family: var(--font-serif);
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  line-height: 1.1;
+  display: block;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95);
+}
+
+.countdown-label {
+  font-size: 0.72rem;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  color: var(--gold-prada);
+  font-weight: 700;
+  margin-top: 0.25rem;
+  display: block;
+}
+
+/* ==========================================================================
+   AYAT SUCI & FILOSOFI BUGIS
+   ========================================================================== */
+.quote-card {
+  text-align: center;
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.arabic-text {
+  font-size: 1.55rem;
+  line-height: 2.2;
+  color: var(--gold-light);
+  direction: rtl;
+  margin-bottom: 1.35rem;
+  font-family: 'Amiri', 'Traditional Arabic', serif;
+  font-weight: 600;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.95);
+}
+
+.quote-translation {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #FFFFFF;
+  font-style: italic;
+  margin-bottom: 1.25rem;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.95);
+}
+
+.quote-source {
+  font-family: var(--font-royal);
+  font-size: 0.86rem;
+  letter-spacing: 2px;
+  color: var(--gold-prada);
+  font-weight: 700;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+}
+
+.philosophy-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.philosophy-item {
+  background: rgba(10, 25, 36, 0.7);
+  border: 1px solid rgba(245, 200, 66, 0.42);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 14px;
+  padding: 1.6rem 1.4rem;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+}
+
+.philosophy-icon {
+  font-size: 1.9rem;
+  margin-bottom: 0.65rem;
+  display: inline-block;
+}
+
+.philosophy-title {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  color: #FFFFFF;
+  margin-bottom: 0.45rem;
+  font-weight: 700;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.95);
+}
+
+.philosophy-desc {
+  font-size: 0.92rem;
+  color: var(--text-body);
+  line-height: 1.68;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+}
+
+/* ==========================================================================
+   MEMPELAI SECTION
+   ========================================================================== */
+.couple-wrapper {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.couple-card {
+  text-align: center;
+  padding: 2.25rem 1.75rem;
+}
+
+.couple-photo-frame {
+  width: 180px;
+  height: 180px;
+  margin: 0 auto 1.4rem;
+  border-radius: 50%;
+  padding: 4px;
+  background: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.45);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.couple-photo-frame:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.6);
+}
+
+.couple-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 22%;
+  border-radius: 50%;
+  display: block;
+}
+
+.couple-role {
+  font-family: var(--font-royal);
+  font-size: 0.82rem;
+  letter-spacing: 2.8px;
+  text-transform: uppercase;
+  color: var(--gold-prada);
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+}
+
+.couple-name {
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  color: #FFFFFF;
+  font-weight: 700;
+  margin-bottom: 0.65rem;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.95);
+}
+
+.couple-parents {
+  font-size: 0.94rem;
+  color: var(--text-body);
+  line-height: 1.7;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+}
+
+.couple-parents strong {
+  color: #FFFFFF;
+  font-weight: 700;
+}
+
+.couple-separator {
+  text-align: center;
+  font-family: var(--font-script);
+  font-size: 3.8rem;
+  color: var(--gold-light);
+  line-height: 1;
+  text-shadow: 0 2px 14px rgba(245, 200, 66, 0.6);
+}
+
+/* ==========================================================================
+   ACARA & GEDUNG AMMATOA BULUKUMBA
+   ========================================================================== */
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.75rem;
+  margin-top: 1.5rem;
+}
+
+.event-card {
+  text-align: center;
+  padding: 2.5rem 1.85rem;
+}
+
+.event-icon-badge {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(245, 200, 66, 0.3) 0%, rgba(14, 165, 233, 0.5) 100%);
+  border: 1px solid var(--gold-prada);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.35rem;
+  color: #FFFFFF;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+}
+
+.event-icon-badge svg {
+  width: 28px;
+  height: 28px;
+}
+
+.event-title {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  color: #FFFFFF;
+  font-weight: 700;
+  margin-bottom: 0.85rem;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95);
+}
+
+.event-datetime {
+  background: rgba(10, 25, 36, 0.7);
+  border: 1px dashed rgba(245, 200, 66, 0.45);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 12px;
+  padding: 1rem 1.15rem;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+}
+
+.event-day {
+  font-family: var(--font-royal);
+  font-size: 0.98rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  letter-spacing: 1.5px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+}
+
+.event-date {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  color: var(--gold-prada);
+  font-weight: 800;
+  margin: 0.25rem 0;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.9);
+}
+
+.event-time {
+  font-size: 0.92rem;
+  color: var(--text-body);
+  font-weight: 600;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.85);
+}
+
+.event-location {
+  font-size: 0.94rem;
+  color: var(--text-body);
+  line-height: 1.68;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+}
+
+.event-location strong {
+  color: #FFFFFF;
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.95);
+}
+
+.btn-bulukumba {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, #F5D061 0%, #D4AF37 50%, #9A7B2C 100%);
+  color: #07121A;
+  font-weight: 700;
+  font-size: 0.88rem;
+  letter-spacing: 0.5px;
+  padding: 0.75rem 1.45rem;
+  border-radius: 50px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(245, 200, 66, 0.35);
+  transition: var(--transition);
+}
+
+.btn-bulukumba:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(245, 200, 66, 0.6);
+  color: #040A0F;
+}
+
+/* ==========================================================================
+   PROSESI ADAT BUGIS BULUKUMBA
+   ========================================================================== */
+.adat-timeline {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.adat-step {
+  background: rgba(10, 25, 36, 0.7);
+  border: 1px solid rgba(245, 200, 66, 0.4);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 14px;
+  padding: 1.45rem 1.25rem;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+  transition: var(--transition);
+}
+
+.adat-step:hover {
+  transform: translateY(-3px);
+  border-color: var(--gold-prada);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.55);
+}
+
+.adat-num {
+  display: inline-block;
+  width: 34px;
+  height: 34px;
+  line-height: 32px;
+  border-radius: 50%;
+  border: 1.5px solid var(--gold-prada);
+  color: var(--gold-prada);
+  font-family: var(--font-royal);
+  font-size: 0.9rem;
+  font-weight: 800;
+  margin-bottom: 0.6rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.adat-title {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  color: #FFFFFF;
+  margin-bottom: 0.35rem;
+  font-weight: 700;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.95);
+}
+
+.adat-desc {
+  font-size: 0.88rem;
+  color: var(--text-body);
+  line-height: 1.65;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+}
+
+/* ==========================================================================
+   KISAH KASIH (LOVE STORY)
+   ========================================================================== */
+.story-timeline {
+  max-width: 680px;
+  margin: 0 auto;
+  position: relative;
+  padding-left: 2rem;
+}
+
+.story-timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 7px;
+  width: 2px;
+  background: linear-gradient(to bottom, transparent, var(--gold-prada), var(--bulukumba-teal), transparent);
+}
+
+.story-item {
+  position: relative;
+  margin-bottom: 2.25rem;
+}
+
+.story-node {
+  position: absolute;
+  left: -2rem;
+  top: 4px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--gold-prada);
+  border: 3px solid var(--bg-deep);
+  box-shadow: 0 0 10px var(--glow-gold);
+}
+
+.story-date {
+  font-family: var(--font-royal);
+  font-size: 0.86rem;
+  letter-spacing: 1.8px;
+  color: var(--gold-prada);
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+}
+
+.story-title {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  color: #FFFFFF;
+  font-weight: 700;
+  margin-bottom: 0.45rem;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95);
+}
+
+.story-desc {
+  font-size: 0.94rem;
+  color: var(--text-body);
+  line-height: 1.7;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+}
+
+/* ==========================================================================
+   GALERI FOTO SECTION (3:4 PORTRAIT RATIO)
+   ========================================================================== */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.gallery-item {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--border-gold);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.45);
+  aspect-ratio: 3 / 4;
+  background: rgba(10, 25, 36, 0.8);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.gallery-item:hover {
+  transform: translateY(-4px) scale(1.02);
+  border-color: var(--gold-prada);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.65), 0 0 20px var(--glow-gold);
+}
+
+.gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.gallery-item:hover .gallery-img {
+  transform: scale(1.06);
+}
+
+.gallery-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(7, 18, 26, 0.85) 0%, transparent 60%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 1.25rem;
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.gallery-item:hover .gallery-overlay {
+  opacity: 1;
+}
+
+.gallery-caption {
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  color: var(--gold-light);
+  font-weight: 600;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.9);
+}
+
+/* ==========================================================================
+   TANDA KASIH / KADO DIGITAL
+   ========================================================================== */
+.gift-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.gift-card {
+  text-align: center;
+  padding: 2.2rem 1.6rem;
+}
+
+.gift-bank-logo {
+  font-family: var(--font-royal);
+  font-size: 1.55rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: var(--gold-prada);
+  margin-bottom: 0.85rem;
+  display: block;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.95);
+}
+
+.gift-account-number {
+  font-family: 'Courier New', monospace;
+  font-size: 1.45rem;
+  letter-spacing: 3px;
+  font-weight: 800;
+  color: #FFFFFF;
+  background: rgba(4, 11, 16, 0.72);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  padding: 0.65rem 1.15rem;
+  border-radius: 8px;
+  display: inline-block;
+  margin: 0.5rem 0 0.85rem;
+  border: 1px dashed rgba(245, 200, 66, 0.55);
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.95);
+}
+
+.gift-holder-name {
+  font-size: 0.94rem;
+  color: var(--text-body);
+  margin-bottom: 1.25rem;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+}
+
+.gift-holder-name strong {
+  color: #FFFFFF;
+  font-weight: 700;
+}
+
+.btn-copy-account {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: rgba(245, 200, 66, 0.15);
+  border: 1px solid var(--gold-prada);
+  color: var(--gold-light);
+  padding: 0.65rem 1.4rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-copy-account:hover {
+  background: var(--gold-prada);
+  color: #07121A;
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   RSVP & UCAPAN
+   ========================================================================== */
+.rsvp-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.rsvp-form-card, .wishes-card {
+  padding: 2.2rem;
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+  text-align: left;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--gold-prada);
+  margin-bottom: 0.45rem;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+}
+
+.form-control {
+  width: 100%;
+  background: rgba(6, 17, 25, 0.68);
+  border: 1px solid rgba(245, 200, 66, 0.45);
+  border-radius: 10px;
+  padding: 0.85rem 1rem;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  color: #FFFFFF;
+  transition: var(--transition);
+}
+
+.form-control::placeholder {
+  color: rgba(241, 245, 249, 0.6);
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--gold-prada);
+  box-shadow: 0 0 14px var(--glow-gold);
+  background: rgba(10, 26, 38, 0.85);
+}
+
+textarea.form-control {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.wishes-list {
+  max-height: 420px;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+}
+
+.wishes-list::-webkit-scrollbar {
+  width: 5px;
+}
+
+.wishes-list::-webkit-scrollbar-thumb {
+  background: var(--gold-bronze);
+  border-radius: 4px;
+}
+
+.wish-item {
+  background: rgba(6, 17, 25, 0.68);
+  border: 1px solid rgba(245, 200, 66, 0.35);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-radius: 12px;
+  padding: 1.1rem 1.25rem;
+  margin-bottom: 1rem;
+  text-align: left;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+}
+
+.wish-sender {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.4rem;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+}
+
+.wish-badge {
+  font-size: 0.72rem;
+  letter-spacing: 0.6px;
+  padding: 0.25rem 0.7rem;
+  border-radius: 50px;
+  background: rgba(245, 200, 66, 0.22);
+  color: var(--gold-prada);
+  font-family: var(--font-sans);
+  font-weight: 700;
+}
+
+.wish-badge.hadir {
+  background: rgba(16, 185, 129, 0.28);
+  color: #6EE7B7;
+}
+
+.wish-badge.tidak {
+  background: rgba(239, 68, 68, 0.25);
+  color: #FCA5A5;
+}
+
+.wish-text {
+  font-size: 0.92rem;
+  color: var(--text-body);
+  line-height: 1.68;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+}
+
+.wish-time {
+  font-size: 0.76rem;
+  color: var(--gold-light);
+  font-weight: 600;
+  margin-top: 0.45rem;
+}
+
+/* ==========================================================================
+   FOOTER SECTION
+   ========================================================================== */
+.footer-section {
+  padding: 4.5rem 0 7rem;
+  text-align: center;
+  position: relative;
+  background: linear-gradient(to top, rgba(4, 10, 15, 0.98), transparent);
+}
+
+.footer-curse {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  color: var(--gold-light);
+  font-style: italic;
+  margin-bottom: 0.65rem;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95);
+}
+
+.footer-names {
+  font-family: var(--font-serif);
+  font-size: 2.35rem;
+  color: #FFFFFF;
+  font-weight: 700;
+  margin: 1.15rem 0 0.35rem;
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.95);
+}
+
+.footer-copyright {
+  font-size: 0.84rem;
+  color: var(--text-body);
+  margin-top: 2rem;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+}
+
+/* ==========================================================================
+   FLOATING AUDIO BUTTON & BOTTOM NAVIGATION
+   ========================================================================== */
+.music-toggle-btn {
+  position: fixed;
+  bottom: 82px;
+  right: 20px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(8, 22, 33, 0.9);
+  border: 1px solid var(--gold-prada);
+  color: var(--gold-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.6);
+  transition: var(--transition);
+}
+
+.music-toggle-btn:hover {
+  transform: scale(1.08);
+  border-color: #FFF;
+}
+
+.music-toggle-btn.playing .disc-icon {
+  animation: spinDisc 5s linear infinite;
+}
+
+@keyframes spinDisc {
+  100% { transform: rotate(360deg); }
+}
+
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(7, 18, 26, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid var(--border-gold);
+  display: flex;
+  justify-content: space-around;
+  padding: 0.5rem 0.75rem calc(0.5rem + env(safe-area-inset-bottom, 0px));
+  z-index: 998;
+}
+
+.nav-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.68rem;
+  letter-spacing: 0.5px;
+  transition: var(--transition);
+  padding: 0.3rem 0.5rem;
+}
+
+.nav-link svg {
+  width: 20px;
+  height: 20px;
+  stroke: currentColor;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--gold-light);
+}
+
+.nav-link.active svg {
+  stroke: var(--gold-prada);
+}
+
+/* Scroll Reveal */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.8s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 868px) {
+  .couple-wrapper {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .couple-separator {
+    transform: rotate(90deg);
+    margin: -0.5rem 0;
+  }
+  .rsvp-wrapper {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 680px) {
+  html {
+    font-size: 15px;
+  }
+  .hero-title {
+    font-size: 2.6rem;
+  }
+  .hero-title .ampersand {
+    font-size: 2.8rem;
+  }
+  .section-title {
+    font-size: 1.85rem;
+  }
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.85rem;
+  }
+  .bulukumba-card {
+    padding: 1.6rem 1.25rem;
+  }
+  .cover-card {
+    padding: 2.25rem 1.35rem 1.85rem;
+  }
+  .countdown-box {
+    gap: 0.5rem;
+  }
+  .countdown-item {
+    min-width: 58px;
+    padding: 0.7rem 0.35rem;
+  }
+  .countdown-num {
+    font-size: 1.4rem;
+  }
+}

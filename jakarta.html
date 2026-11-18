@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Wedding of Nur Akbar &amp; Magfira — Modern Jakarta Editorial</title>
+  <meta name="description" content="Undangan Pernikahan Digital Modern Editorial Jakarta — Nur Akbar &amp; Magfira. Sabtu, 12 Desember 2026.">
+  <meta name="theme-color" content="#121110">
+
+  <!-- Google Fonts: Cormorant Garamond, Plus Jakarta Sans, Great Vibes, Amiri -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Great+Vibes&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/jakarta.css?v=4">
+  <link rel="stylesheet" href="css/switcher.css">
+  <script src="js/switcher.js" defer></script>
+</head>
+<body class="lock-scroll">
+
+  <!-- ==========================================================================
+       THEME SWITCHER FLOATING BUTTON & DROPDOWN
+       ========================================================================== -->
+  <div class="theme-switch-bar">
+    <button id="btnThemeSwitcher" class="btn-theme-switcher" aria-label="Ganti Tema Undangan">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path></svg>
+      Pilih Tema
+      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+    </button>
+
+    <div id="themeDropdown" class="theme-dropdown">
+      <a href="jakarta.html" class="theme-option active">
+        <span>✨</span>
+        <span>Modern Jakarta Editorial</span>
+        <span class="theme-badge" style="background:#DFC298;color:#121110;">Aktif</span>
+      </a>
+      <a href="recca.html" class="theme-option">
+        <span>👑</span>
+        <span>Adat Bugis Songko' Recca'</span>
+      </a>
+      <a href="bulukumba.html" class="theme-option">
+        <span>⛵</span>
+        <span>Adat Bugis Bulukumba</span>
+      </a>
+      <a href="jawa.html" class="theme-option">
+        <span>🏛️</span>
+        <span>Adat Jawa Klasik Modern</span>
+      </a>
+      <a href="donggia.html" class="theme-option">
+        <span>⛰️</span>
+        <span>Lembah Donggia Bulukumba</span>
+      </a>
+      <a href="islamic.html" class="theme-option">
+        <span>🕌</span>
+        <span>Islamic Emerald Modern</span>
+      </a>
+      <a href="bira.html" class="theme-option">
+        <span>🌊</span>
+        <span>Pantai Tanjung Bira</span>
+      </a>
+      <a href="kajang.html" class="theme-option">
+        <span>🌿</span>
+        <span>Adat Suku Kajang Ammatoa</span>
+      </a>
+      <a href="bugis.html" class="theme-option">
+        <span>👑</span>
+        <span>Adat Bugis Makassar Klasik</span>
+      </a>
+      <a href="toraja.html" class="theme-option">
+        <span>🏛️</span>
+        <span>Adat Toraja Tongkonan</span>
+      </a>
+      <a href="studio.html" class="theme-option">
+        <span>📸</span>
+        <span>Modern Studio Minimalis</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       OPENING COVER SCREEN (FULLSCREEN COUPLE BACKDROP + ZOOM OUTWARD)
+       ========================================================================== -->
+  <div id="openingCover" class="opening-cover" role="dialog" aria-modal="true" aria-label="Sampul Undangan Pernikahan">
+    <div class="cover-bg-wrapper">
+      <img src="assets/recca/gallery-1.jpeg" alt="Nur Akbar &amp; Magfira" class="cover-bg-img zoom-outward-continuous">
+    </div>
+    <div class="cover-scrim"></div>
+
+    <div class="cover-content">
+      <div class="cover-top">
+        <div class="monogram-pill">
+          <span>A</span>
+          <span class="monogram-sep">&amp;</span>
+          <span>M</span>
+        </div>
+        <p class="cover-kicker">THE WEDDING OF</p>
+        <h1 class="cover-names">Akbar <span>&amp;</span> Magfira</h1>
+        <p class="cover-date">Sabtu, 12 Desember 2026 &bull; Jakarta</p>
+      </div>
+
+      <div class="cover-bottom">
+        <div class="cover-guest-box">
+          <p class="cover-guest-label">Kepada Yth. Bapak/Ibu/Saudara/i</p>
+          <p class="cover-guest-name dynamic-guest-name">Tamu Undangan Yang Terhormat</p>
+          <p class="cover-guest-note">Tanpa mengurangi rasa hormat, kami mengundang Anda untuk hadir merayakan hari bahagia kami.</p>
+        </div>
+
+        <button id="btnOpenInvitation" class="btn-open-invitation" type="button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          <span>Buka Undangan</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MODERN JAKARTA SPLIT-SCREEN LAYOUT (DESKTOP STICKY SHOWCASE + EDITORIAL COLUMN)
+       ========================================================================== -->
+  <div class="jakarta-layout">
+
+    <!-- DESKTOP LEFT STICKY COUPLE SHOWCASE -->
+    <aside class="desktop-showcase" aria-hidden="true">
+      <div class="showcase-slides" id="desktopSlides">
+        <div class="showcase-slide active">
+          <img src="assets/recca/gallery-1.jpeg" alt="Akbar &amp; Magfira Golden Hour" style="object-position: center 22%;">
+        </div>
+        <div class="showcase-slide">
+          <img src="assets/recca/gallery-3.jpeg" alt="Akbar &amp; Magfira Architectural" style="object-position: center 25%;">
+        </div>
+        <div class="showcase-slide">
+          <img src="assets/recca/gallery-4.jpeg" alt="Akbar &amp; Magfira City Night" style="object-position: center 25%;">
+        </div>
+        <div class="showcase-slide">
+          <img src="assets/recca/gallery-6.jpeg" alt="Akbar &amp; Magfira Dance" style="object-position: center 20%;">
+        </div>
+      </div>
+
+      <div class="showcase-scrim"></div>
+
+      <div class="showcase-overlay">
+        <div class="showcase-top-bar">
+          <span class="showcase-monogram">A &amp; M</span>
+          <span class="showcase-edition">WEDDING INVITATION &mdash; JAKARTA</span>
+        </div>
+
+        <div class="showcase-caption">
+          <p class="showcase-kicker">THE WEDDING CELEBRATION OF</p>
+          <h2 class="showcase-title">Nur Akbar <span>&amp;</span> Magfira</h2>
+          <p class="showcase-sub">Sabtu, 12 Desember 2026 &bull; The Glass House Kemang, Jakarta Selatan</p>
+          <div class="showcase-indicators" id="desktopIndicators">
+            <span class="indicator active"></span>
+            <span class="indicator"></span>
+            <span class="indicator"></span>
+            <span class="indicator"></span>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- RIGHT SCROLLABLE INVITATION COLUMN (FULLSCREEN ON MOBILE/TABLET) -->
+    <main class="invitation-column" id="invitationMain">
+
+      <!-- ======================================================================
+           1. HERO SECTION (FULL-BLEED COUPLE SLIDESHOW + ZOOM OUTWARD)
+           ====================================================================== -->
+      <section id="hero" class="hero-section">
+        <div class="hero-slides" id="heroSlides">
+          <div class="hero-slide active">
+            <img src="assets/recca/gallery-1.jpeg" alt="Nur Akbar &amp; Magfira" style="object-position: center 22%;">
+          </div>
+          <div class="hero-slide">
+            <img src="assets/recca/gallery-3.jpeg" alt="Nur Akbar &amp; Magfira" style="object-position: center 25%;">
+          </div>
+          <div class="hero-slide">
+            <img src="assets/recca/gallery-6.jpeg" alt="Nur Akbar &amp; Magfira" style="object-position: center 22%;">
+          </div>
+        </div>
+        <div class="hero-scrim"></div>
+
+        <div class="hero-content">
+          <div class="hero-top-badge reveal-up">
+            <span>THE WEDDING OF</span>
+          </div>
+
+          <div class="hero-center-block">
+            <h1 class="hero-names reveal-up">Nur Akbar<span class="hero-amp">&amp;</span>Magfira</h1>
+            <div class="hero-divider reveal-up">
+              <span class="line"></span>
+              <span class="diamond"></span>
+              <span class="line"></span>
+            </div>
+            <p class="hero-date-text reveal-up">SABTU, 12 DESEMBER 2026</p>
+            <p class="hero-location-text reveal-up">The Glass House Ballroom &bull; Jakarta Selatan</p>
+
+            <a href="#ayat" class="hero-scroll-btn reveal-up" aria-label="Gulir ke bawah">
+              <span>Gulir ke Bawah</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================================================
+           2. AYAT SUCI & QUOTE PERNIKAHAN + FEATURED COUPLE PHOTO
+           ====================================================================== -->
+      <section id="ayat" class="section-ivory">
+        <div class="section-inner">
+          <div class="editorial-tag reveal-up">AWAL KISAH ABADI</div>
+          <p class="arabic-verse reveal-up" lang="ar" dir="rtl">
+            وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً
+          </p>
+          <blockquote class="verse-translation reveal-up">
+            &ldquo;Dan di antara tanda-tanda kebesaran-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang.&rdquo;
+          </blockquote>
+          <p class="verse-source reveal-up">&mdash; QS. Ar-Rum: 21</p>
+
+          <!-- Featured Wide Wedding Photo with Inside-to-Outside Zoom -->
+          <figure class="featured-photo-frame photo-zoom-box reveal-zoom">
+            <img src="assets/recca/gallery-4.jpeg" alt="Nur Akbar &amp; Magfira — Evening Portrait" class="zoom-outward-gentle" style="object-position: center 26%;">
+            <figcaption class="photo-caption-bar">
+              <span>AKBAR &amp; MAGFIRA</span>
+              <span>12 . 12 . 2026</span>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- ======================================================================
+           3. PROFIL KEDUA MEMPELAI (BRIDE & GROOM)
+           ====================================================================== -->
+      <section id="mempelai" class="section-white">
+        <div class="section-inner">
+          <header class="section-header reveal-up">
+            <p class="section-kicker">ASSALAMUALAIKUM WR. WB.</p>
+            <h2 class="section-title">Mempelai</h2>
+            <p class="section-desc">
+              Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud menyelenggarakan pernikahan putra-putri kami:
+            </p>
+          </header>
+
+          <!-- Mempelai Pria -->
+          <article class="profile-card reveal-up">
+            <div class="profile-arch-frame photo-zoom-box reveal-zoom">
+              <img src="assets/recca/groom.jpeg" alt="Mempelai Pria Nur Akbar" class="zoom-outward-gentle" style="object-position: center 18%;">
+            </div>
+            <div class="profile-info">
+              <span class="profile-role">THE GROOM</span>
+              <h3 class="profile-name">Nur Akbar</h3>
+              <p class="profile-parents">
+                Putra tercinta dari<br>
+                <strong>Bpk. H. Syamsuddin</strong> &amp; <strong>Ibu Hj. Rosdiana</strong>
+              </p>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="profile-social">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                <span>@nurakbar</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Editorial Ampersand Divider -->
+          <div class="couple-amp-divider reveal-up">
+            <span class="amp-line"></span>
+            <span class="amp-symbol">&amp;</span>
+            <span class="amp-line"></span>
+          </div>
+
+          <!-- Mempelai Wanita -->
+          <article class="profile-card reveal-up">
+            <div class="profile-arch-frame photo-zoom-box reveal-zoom">
+              <img src="assets/recca/bride.jpeg" alt="Mempelai Wanita Magfira" class="zoom-outward-gentle" style="object-position: center 18%;">
+            </div>
+            <div class="profile-info">
+              <span class="profile-role">THE BRIDE</span>
+              <h3 class="profile-name">Magfira</h3>
+              <p class="profile-parents">
+                Putri tercinta dari<br>
+                <strong>Bpk. H. Muhammad Idris</strong> &amp; <strong>Ibu Hj. Sitti Maryam</strong>
+              </p>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="profile-social">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                <span>@magfira</span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ======================================================================
+           4. SAVE THE DATE & COUNTDOWN BANNER (DARK COUPLE PHOTO BACKDROP)
+           ====================================================================== -->
+      <section id="countdown" class="countdown-banner">
+        <div class="banner-bg-wrap">
+          <img src="assets/recca/gallery-3.jpeg" alt="Save The Date Akbar &amp; Magfira" class="banner-bg-img zoom-outward-continuous" style="object-position: center 24%;">
+        </div>
+        <div class="banner-scrim"></div>
+
+        <div class="banner-content">
+          <p class="banner-kicker reveal-up">SAVE THE DATE</p>
+          <h2 class="banner-title reveal-up">Menuju Hari Bahagia</h2>
+          <p class="banner-subtitle reveal-up">Sabtu, 12 Desember 2026</p>
+
+          <div class="countdown-grid reveal-up" aria-label="Hitung mundur hari pernikahan">
+            <div class="cd-box">
+              <span id="cdDays" class="cd-num">00</span>
+              <span class="cd-label">Hari</span>
+            </div>
+            <div class="cd-box">
+              <span id="cdHours" class="cd-num">00</span>
+              <span class="cd-label">Jam</span>
+            </div>
+            <div class="cd-box">
+              <span id="cdMinutes" class="cd-num">00</span>
+              <span class="cd-label">Menit</span>
+            </div>
+            <div class="cd-box">
+              <span id="cdSeconds" class="cd-num">00</span>
+              <span class="cd-label">Detik</span>
+            </div>
+          </div>
+
+          <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Pernikahan+Nur+Akbar+%26+Magfira&dates=20261212T010000Z/20261212T070000Z&details=Akad+Nikah+%26+Resepsi+Pernikahan+Nur+Akbar+%26+Magfira+di+The+Glass+House+Ballroom+Kemang+Jakarta+Selatan&location=Kemang+Jakarta+Selatan" target="_blank" rel="noopener noreferrer" class="btn-champagne reveal-up">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            <span>Simpan ke Kalender</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- ======================================================================
+           5. RANGKAIAN ACARA (AKAD NIKAH & RESEPSI PERNIKAHAN)
+           ====================================================================== -->
+      <section id="acara" class="section-ivory">
+        <div class="section-inner">
+          <header class="section-header reveal-up">
+            <p class="section-kicker">WEDDING SCHEDULE</p>
+            <h2 class="section-title">Rangkaian Acara</h2>
+            <p class="section-desc">
+              Merupakan kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan doa restu.
+            </p>
+          </header>
+
+          <div class="events-stack">
+            <!-- Akad Nikah -->
+            <article class="event-card reveal-up">
+              <div class="event-card-top">
+                <span class="event-index">01</span>
+                <span class="event-pill">IKRAR SUCI</span>
+              </div>
+              <h3 class="event-name">Akad Nikah</h3>
+
+              <div class="event-date-strip">
+                <div class="event-day-num">12</div>
+                <div class="event-day-meta">
+                  <strong>Sabtu, Desember 2026</strong>
+                  <span>Pukul 08.00 &ndash; 10.00 WIB</span>
+                </div>
+              </div>
+
+              <div class="event-venue">
+                <p class="venue-name">The Glass House Chapel</p>
+                <p class="venue-address">Jl. Kemang Raya No. 88, Bangka, Kec. Mampang Prapatan, Jakarta Selatan 12730</p>
+              </div>
+
+              <a href="https://maps.google.com/?q=Kemang+Jakarta+Selatan" target="_blank" rel="noopener noreferrer" class="btn-dark-outline">
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                <span>Lihat Google Maps</span>
+              </a>
+            </article>
+
+            <!-- Resepsi Pernikahan -->
+            <article class="event-card reveal-up">
+              <div class="event-card-top">
+                <span class="event-index">02</span>
+                <span class="event-pill">WALIMATUL &lsquo;URSY</span>
+              </div>
+              <h3 class="event-name">Resepsi Pernikahan</h3>
+
+              <div class="event-date-strip">
+                <div class="event-day-num">12</div>
+                <div class="event-day-meta">
+                  <strong>Sabtu, Desember 2026</strong>
+                  <span>Pukul 11.00 &ndash; 14.00 WIB</span>
+                </div>
+              </div>
+
+              <div class="event-venue">
+                <p class="venue-name">Grand Ballroom The Glass House</p>
+                <p class="venue-address">Jl. Kemang Raya No. 88, Bangka, Kec. Mampang Prapatan, Jakarta Selatan 12730</p>
+              </div>
+
+              <a href="https://maps.google.com/?q=Kemang+Jakarta+Selatan" target="_blank" rel="noopener noreferrer" class="btn-dark-outline">
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                <span>Lihat Google Maps</span>
+              </a>
+            </article>
+          </div>
+
+          <!-- Dresscode Card (Signature Modern Jakarta Wedding Touch) -->
+          <div class="dresscode-card reveal-up">
+            <p class="dresscode-label">DRESSCODE</p>
+            <h4 class="dresscode-title">Modern Formal &bull; Monochrome &amp; Earth Tone</h4>
+            <p class="dresscode-desc">Kami sangat senang bila Bapak/Ibu/Saudara/i berkenan mengenakan busana bernuansa berikut:</p>
+            <div class="swatch-row" aria-label="Palet warna dresscode">
+              <span class="swatch" style="background:#1A1918;" title="Obsidian Black"></span>
+              <span class="swatch" style="background:#4A423B;" title="Espresso"></span>
+              <span class="swatch" style="background:#9E866B;" title="Warm Taupe"></span>
+              <span class="swatch" style="background:#D8C6B0;" title="Champagne Beige"></span>
+              <span class="swatch" style="background:#F5EFE6;border:1px solid #D9CFC1;" title="Soft Ivory"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================================================
+           6. KISAH CINTA (EDITORIAL PHOTO STORY TIMELINE)
+           ====================================================================== -->
+      <section id="kisah" class="section-white">
+        <div class="section-inner">
+          <header class="section-header reveal-up">
+            <p class="section-kicker">OUR JOURNEY</p>
+            <h2 class="section-title">Kisah Cinta</h2>
+            <p class="section-desc">
+              Setiap langkah kecil yang mempertemukan dua hati hingga tiba pada ikrar suci hari ini.
+            </p>
+          </header>
+
+          <div class="story-list">
+            <!-- Story 1 -->
+            <article class="story-card reveal-up">
+              <div class="story-photo photo-zoom-box reveal-zoom">
+                <img src="assets/recca/gallery-5.jpeg" alt="Pertemuan Pertama Akbar &amp; Magfira" class="zoom-outward-gentle" style="object-position: center 22%;">
+              </div>
+              <div class="story-body">
+                <span class="story-year">AGUSTUS 2022</span>
+                <h3 class="story-title">Pertemuan Pertama</h3>
+                <p class="story-text">
+                  Berawal dari sebuah pertemuan sederhana yang tak disangka menjadi awal percakapan hangat. Dari saling mengenal, tumbuh rasa nyaman dan kekaguman yang tulus.
+                </p>
+              </div>
+            </article>
+
+            <!-- Story 2 -->
+            <article class="story-card reveal-up">
+              <div class="story-photo photo-zoom-box reveal-zoom">
+                <img src="assets/recca/gallery-4.jpeg" alt="Komitmen &amp; Lamaran" class="zoom-outward-gentle" style="object-position: center 26%;">
+              </div>
+              <div class="story-body">
+                <span class="story-year">DESEMBER 2024</span>
+                <h3 class="story-title">Komitmen &amp; Lamaran</h3>
+                <p class="story-text">
+                  Setelah melangkah bersama melalui berbagai musim kehidupan, kami memantapkan niat untuk mengikat janji dalam prosesi lamaran yang hangat bersama kedua keluarga besar.
+                </p>
+              </div>
+            </article>
+
+            <!-- Story 3 -->
+            <article class="story-card reveal-up">
+              <div class="story-photo photo-zoom-box reveal-zoom">
+                <img src="assets/recca/gallery-6.jpeg" alt="Hari Pernikahan" class="zoom-outward-gentle" style="object-position: center 20%;">
+              </div>
+              <div class="story-body">
+                <span class="story-year">DESEMBER 2026</span>
+                <h3 class="story-title">Menuju Hari Bahagia</h3>
+                <p class="story-text">
+                  Kini dengan restu orang tua dan ridho Allah SWT, kami siap memulai lembaran baru sebagai pasangan suami istri dalam ikatan sakinah, mawaddah, warahmah.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================================================
+           7. GALERI FOTO WEDDING (EDITORIAL BENTO GRID + ZOOM OUTWARD + LIGHTBOX)
+           ====================================================================== -->
+      <section id="galeri" class="section-dark">
+        <div class="section-inner">
+          <header class="section-header header-light reveal-up">
+            <p class="section-kicker">CAPTURED MOMENTS</p>
+            <h2 class="section-title">Galeri Pernikahan</h2>
+            <p class="section-desc">
+              Rangkaian potret kebahagiaan kami. Ketuk foto untuk melihat tampilan layar penuh.
+            </p>
+          </header>
+
+          <div class="gallery-bento">
+            <!-- Photo 1: Wide Feature -->
+            <figure class="gallery-card gallery-wide photo-zoom-box reveal-zoom" data-index="0">
+              <img src="assets/recca/gallery-1.jpeg" alt="Kilau Senja — Nur Akbar &amp; Magfira" class="zoom-outward-gentle" style="object-position: center 22%;">
+              <figcaption class="gallery-cap">01 &mdash; Golden Hour</figcaption>
+            </figure>
+
+            <!-- Photo 2: Tall Left -->
+            <figure class="gallery-card gallery-tall photo-zoom-box reveal-zoom" data-index="1">
+              <img src="assets/recca/gallery-3.jpeg" alt="Langkah Bersama — Nur Akbar &amp; Magfira" class="zoom-outward-gentle" style="object-position: center 26%;">
+              <figcaption class="gallery-cap">02 &mdash; Langkah Bersama</figcaption>
+            </figure>
+
+            <!-- Photo 3: Tall Right -->
+            <figure class="gallery-card gallery-tall photo-zoom-box reveal-zoom" data-index="2">
+              <img src="assets/recca/gallery-5.jpeg" alt="Tatap Kasih — Nur Akbar &amp; Magfira" class="zoom-outward-gentle" style="object-position: center 24%;">
+              <figcaption class="gallery-cap">03 &mdash; Tatap Kasih</figcaption>
+            </figure>
+
+            <!-- Photo 4: Wide Feature -->
+            <figure class="gallery-card gallery-wide photo-zoom-box reveal-zoom" data-index="3">
+              <img src="assets/recca/gallery-4.jpeg" alt="Malam Romantis — Nur Akbar &amp; Magfira" class="zoom-outward-gentle" style="object-position: center 26%;">
+              <figcaption class="gallery-cap">04 &mdash; Urban Romance</figcaption>
+            </figure>
+
+            <!-- Photo 5: Tall Left -->
+            <figure class="gallery-card gallery-tall photo-zoom-box reveal-zoom" data-index="4">
+              <img src="assets/recca/gallery-6.jpeg" alt="Tarian Bahagia — Nur Akbar &amp; Magfira" class="zoom-outward-gentle" style="object-position: center 20%;">
+              <figcaption class="gallery-cap">05 &mdash; Tarian Bahagia</figcaption>
+            </figure>
+
+            <!-- Photo 6: Tall Right -->
+            <figure class="gallery-card gallery-tall photo-zoom-box reveal-zoom" data-index="5">
+              <img src="assets/recca/gallery-2.jpeg" alt="Bersanding Bahagia — Nur Akbar &amp; Magfira" class="zoom-outward-gentle" style="object-position: center 22%;">
+              <figcaption class="gallery-cap">06 &mdash; Forever Together</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================================================
+           8. WEDDING GIFT / KADO DIGITAL
+           ====================================================================== -->
+      <section id="kado" class="section-ivory">
+        <div class="section-inner">
+          <header class="section-header reveal-up">
+            <p class="section-kicker">WEDDING GIFT</p>
+            <h2 class="section-title">Tanda Kasih</h2>
+            <p class="section-desc">
+              Doa restu Anda merupakan karunia terindah bagi kami. Namun apabila Anda ingin memberikan tanda kasih secara digital, dapat melalui rekening berikut:
+            </p>
+          </header>
+
+          <div class="gift-stack">
+            <!-- Bank BCA Card -->
+            <div class="atm-card atm-obsidian reveal-up">
+              <div class="atm-top">
+                <span class="atm-chip" aria-hidden="true"></span>
+                <span class="atm-bank">BANK BCA</span>
+              </div>
+              <div class="atm-number">7901 4428 91</div>
+              <div class="atm-bottom">
+                <div>
+                  <span class="atm-holder-label">Atas Nama</span>
+                  <strong class="atm-holder">Magfira</strong>
+                </div>
+                <button class="btn-copy-pill" type="button" data-copy="7901442891" data-label="Nomor rekening BCA">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                  <span>Salin</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Bank BRI Card -->
+            <div class="atm-card atm-champagne reveal-up">
+              <div class="atm-top">
+                <span class="atm-chip" aria-hidden="true"></span>
+                <span class="atm-bank">BANK BRI</span>
+              </div>
+              <div class="atm-number">5076 0102 4891 538</div>
+              <div class="atm-bottom">
+                <div>
+                  <span class="atm-holder-label">Atas Nama</span>
+                  <strong class="atm-holder">Nur Akbar</strong>
+                </div>
+                <button class="btn-copy-pill btn-copy-dark" type="button" data-copy="507601024891538" data-label="Nomor rekening BRI">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                  <span>Salin</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Physical Gift Address -->
+            <div class="gift-address-card reveal-up">
+              <span class="gift-address-label">KIRIM KADO FISIK</span>
+              <p class="gift-address-name">Nur Akbar &amp; Magfira</p>
+              <p class="gift-address-text">Jl. Kemang Selatan VIII No. 24, Bangka, Jakarta Selatan 12730</p>
+              <button class="btn-copy-text" type="button" data-copy="Nur Akbar & Magfira - Jl. Kemang Selatan VIII No. 24, Bangka, Jakarta Selatan 12730" data-label="Alamat pengiriman kado">
+                Salin Alamat Pengiriman
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================================================
+           9. RSVP & UCAPAN DOA
+           ====================================================================== -->
+      <section id="rsvp" class="section-white">
+        <div class="section-inner">
+          <header class="section-header reveal-up">
+            <p class="section-kicker">RSVP &amp; WISHES</p>
+            <h2 class="section-title">Konfirmasi &amp; Ucapan</h2>
+            <p class="section-desc">
+              Konfirmasi kehadiran dan tuliskan doa terbaik Anda untuk kedua mempelai.
+            </p>
+          </header>
+
+          <!-- Attendance Counters -->
+          <div class="rsvp-stats reveal-up">
+            <div class="stat-pill">
+              <strong id="statHadir">0</strong>
+              <span>Hadir</span>
+            </div>
+            <div class="stat-pill">
+              <strong id="statRagu">0</strong>
+              <span>Belum Pasti</span>
+            </div>
+            <div class="stat-pill">
+              <strong id="statTidak">0</strong>
+              <span>Tidak Hadir</span>
+            </div>
+          </div>
+
+          <!-- Form -->
+          <form id="rsvpForm" class="rsvp-form reveal-up">
+            <div class="form-field">
+              <label for="rsvpName">Nama Lengkap</label>
+              <input type="text" id="rsvpName" placeholder="Masukkan nama Anda" required>
+            </div>
+
+            <div class="form-row-2">
+              <div class="form-field">
+                <label for="rsvpStatus">Kehadiran</label>
+                <select id="rsvpStatus">
+                  <option value="Hadir">Hadir</option>
+                  <option value="Belum Pasti">Belum Pasti</option>
+                  <option value="Tidak Hadir">Tidak Hadir</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label for="rsvpGuests">Jumlah Tamu</label>
+                <select id="rsvpGuests">
+                  <option value="1 Orang">1 Orang</option>
+                  <option value="2 Orang" selected>2 Orang</option>
+                  <option value="3 Orang">3 Orang</option>
+                  <option value="4 Orang">4 Orang</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label for="rsvpMessage">Ucapan &amp; Doa</label>
+              <textarea id="rsvpMessage" rows="3" placeholder="Tuliskan ucapan serta doa terbaik untuk Akbar &amp; Magfira..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit-dark">Kirim Konfirmasi &amp; Doa</button>
+          </form>
+
+          <!-- Guestbook List -->
+          <div class="wishes-section reveal-up">
+            <h3 class="wishes-heading">Ucapan &amp; Doa Tamu</h3>
+            <div id="wishesList" class="wishes-list">
+              <!-- Populated by js/jakarta.js -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================================================
+           10. PENUTUP / FOOTER (FULL-BLEED COUPLE PHOTO + ZOOM OUTWARD)
+           ====================================================================== -->
+      <footer id="penutup" class="closing-section">
+        <div class="closing-bg-wrap">
+          <img src="assets/recca/gallery-2.jpeg" alt="Terima Kasih — Nur Akbar &amp; Magfira" class="closing-bg-img zoom-outward-continuous" style="object-position: center 22%;">
+        </div>
+        <div class="closing-scrim"></div>
+
+        <div class="closing-content">
+          <p class="closing-kicker reveal-up">TERIMA KASIH</p>
+          <p class="closing-message reveal-up">
+            Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu bagi pernikahan kami.
+          </p>
+          <p class="closing-salam reveal-up">Wassalamualaikum Warahmatullahi Wabarakatuh</p>
+
+          <p class="closing-sign-label reveal-up">Kami yang berbahagia,</p>
+          <h2 class="closing-names reveal-up">Nur Akbar <span>&amp;</span> Magfira</h2>
+
+          <div class="closing-families reveal-up">
+            <p>Keluarga Besar Bpk. H. Syamsuddin &amp; Ibu Hj. Rosdiana</p>
+            <p>Keluarga Besar Bpk. H. Muhammad Idris &amp; Ibu Hj. Sitti Maryam</p>
+          </div>
+
+          <p class="closing-copyright">&copy; 2026 Nur Akbar &amp; Magfira &bull; Modern Jakarta Editorial</p>
+        </div>
+      </footer>
+
+    </main>
+  </div>
+
+  <!-- Background Audio Element -->
+  <audio id="weddingAudio" loop preload="auto">
+    <source src="assets/give-me-your-forever.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- ==========================================================================
+       FLOATING AUDIO BUTTON & BOTTOM NAVIGATION DOCK
+       ========================================================================== -->
+  <button id="musicToggleBtn" class="music-fab" type="button" aria-label="Putar atau jeda musik latar">
+    <svg class="music-icon-disc" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="3"></circle></svg>
+  </button>
+
+  <nav class="bottom-nav" aria-label="Navigasi Undangan">
+    <a href="#hero" class="nav-item active">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+      <span>Awal</span>
+    </a>
+    <a href="#mempelai" class="nav-item">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+      <span>Mempelai</span>
+    </a>
+    <a href="#acara" class="nav-item">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+      <span>Acara</span>
+    </a>
+    <a href="#galeri" class="nav-item">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+      <span>Galeri</span>
+    </a>
+    <a href="#rsvp" class="nav-item">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+      <span>RSVP</span>
+    </a>
+  </nav>
+
+  <!-- ==========================================================================
+       FULLSCREEN GALLERY LIGHTBOX MODAL
+       ========================================================================== -->
+  <div id="photoLightbox" class="lightbox-modal" aria-hidden="true" role="dialog" aria-label="Pratinjau Foto Galeri">
+    <button id="lightboxClose" class="lightbox-close" type="button" aria-label="Tutup pratinjau">&times;</button>
+    <button id="lightboxPrev" class="lightbox-nav lightbox-prev" type="button" aria-label="Foto sebelumnya">&#8249;</button>
+    <div class="lightbox-stage">
+      <img id="lightboxImg" src="" alt="Pratinjau foto pernikahan">
+      <div class="lightbox-meta">
+        <span id="lightboxCaption"></span>
+        <span id="lightboxCounter"></span>
+      </div>
+    </div>
+    <button id="lightboxNext" class="lightbox-nav lightbox-next" type="button" aria-label="Foto berikutnya">&#8250;</button>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toastNotification" class="toast-notification" role="status" aria-live="polite"></div>
+
+  <!-- Scripts -->
+  <script src="js/jakarta.js?v=2"></script>
+</body>
+</html>

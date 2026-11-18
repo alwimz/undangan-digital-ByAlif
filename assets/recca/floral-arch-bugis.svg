@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 200" fill="none">
+  <defs>
+    <linearGradient id="faGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFDF2" />
+      <stop offset="35%" stop-color="#FCE588" />
+      <stop offset="70%" stop-color="#D4A028" />
+      <stop offset="100%" stop-color="#8C6510" />
+    </linearGradient>
+    <linearGradient id="faWhite" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="65%" stop-color="#FFF8E8" />
+      <stop offset="100%" stop-color="#F5D061" />
+    </linearGradient>
+  </defs>
+
+  <!-- Cascading Arch Garland Curve -->
+  <path d="M20,180 Q300,-10 580,180" stroke="url(#faGold)" stroke-width="2.5" fill="none" opacity="0.85" />
+  <path d="M40,190 Q300,15 560,190" stroke="url(#faGold)" stroke-width="1.2" stroke-dasharray="4 4" fill="none" opacity="0.6" />
+
+  <!-- Center Top Crown: Big Jasmine Blossom & Gold Crest -->
+  <g transform="translate(300, 26)">
+    <!-- 12-Petal Royal Jasmine -->
+    <ellipse cx="0" cy="-16" rx="5" ry="12" fill="url(#faWhite)" stroke="#D4A028" stroke-width="0.8" />
+    <ellipse cx="0" cy="16" rx="5" ry="12" fill="url(#faWhite)" stroke="#D4A028" stroke-width="0.8" />
+    <ellipse cx="-16" cy="0" rx="12" ry="5" fill="url(#faWhite)" stroke="#D4A028" stroke-width="0.8" />
+    <ellipse cx="16" cy="0" rx="12" ry="5" fill="url(#faWhite)" stroke="#D4A028" stroke-width="0.8" />
+
+    <g transform="rotate(30)">
+      <ellipse cx="0" cy="-14" rx="4" ry="10" fill="url(#faWhite)" stroke="#D4A028" stroke-width="0.7" />
+      <ellipse cx="0" cy="14" rx="4" ry="10" fill="url(#faWhite)" stroke="#D4A028" stroke-width="0.7" />
+      <ellipse cx="-14" cy="0" rx="10" ry="4" fill="url(#faWhite)" stroke="#D4A028" stroke-width="0.7" />
+      <ellipse cx="14" cy="0" rx="10" ry="4" fill="url(#faWhite)" stroke="#D4A028" stroke-width="0.7" />
+    </g>
+    <g transform="rotate(60)">
+      <ellipse cx="0" cy="-14" rx="4" ry="10" fill="url(#faWhite)" stroke="#D4A028" stroke-width="0.7" />
+      <ellipse cx="0" cy="14" rx="4" ry="10" fill="url(#faWhite)" stroke="#D4A028" stroke-width="0.7" />
+      <ellipse cx="-14" cy="0" rx="10" ry="4" fill="url(#faWhite)" stroke="#D4A028" stroke-width="0.7" />
+      <ellipse cx="14" cy="0" rx="10" ry="4" fill="url(#faWhite)" stroke="#D4A028" stroke-width="0.7" />
+    </g>
+
+    <!-- Center Stamen -->
+    <circle cx="0" cy="0" r="6" fill="#F5D061" stroke="#8C6510" stroke-width="1.2" />
+    <circle cx="0" cy="0" r="2.8" fill="#FFFDF2" />
+
+    <!-- Sulapa Eppa Diamond Top -->
+    <polygon points="0,-28 6,-22 0,-16 -6,-22" stroke="url(#faGold)" stroke-width="1.2" fill="#0C0E12" />
+  </g>
+
+  <!-- Left & Right Symmetrical Jasmine Blossoms and Golden Leaves -->
+  <!-- Left Side Blossoms -->
+  <g transform="translate(240, 36)">
+    <circle cx="0" cy="0" r="10" fill="url(#faWhite)" stroke="#D4A028" stroke-width="0.8" />
+    <circle cx="0" cy="0" r="3.5" fill="#F5D061" />
+  </g>
+  <g transform="translate(180, 58)">
+    <circle cx="0" cy="0" r="11" fill="url(#faWhite)" stroke="#D4A028" stroke-width="0.8" />
+    <circle cx="0" cy="0" r="4" fill="#F5D061" />
+  </g>
+  <g transform="translate(120, 95)">
+    <circle cx="0" cy="0" r="12" fill="url(#faWhite)" stroke="#D4A028" stroke-width="0.8" />
+    <circle cx="0" cy="0" r="4.5" fill="#F5D061" />
+  </g>
+  <g transform="translate(65, 145)">
+    <circle cx="0" cy="0" r="11" fill="url(#faWhite)" stroke="#D4A028" stroke-width="0.8" />
+    <circle cx="0" cy="0" r="4" fill="#F5D061" />
+  </g>
+
+  <!-- Right Side Blossoms -->
+  <g transform="translate(360, 36)">
+    <circle cx="0" cy="0" r="10" fill="url(#faWhite)" stroke="#D4A028" stroke-width="0.8" />
+    <circle cx="0" cy="0" r="3.5" fill="#F5D061" />
+  </g>
+  <g transform="translate(420, 58)">
+    <circle cx="0" cy="0" r="11" fill="url(#faWhite)" stroke="#D4A028" stroke-width="0.8" />
+    <circle cx="0" cy="0" r="4" fill="#F5D061" />
+  </g>
+  <g transform="translate(480, 95)">
+    <circle cx="0" cy="0" r="12" fill="url(#faWhite)" stroke="#D4A028" stroke-width="0.8" />
+    <circle cx="0" cy="0" r="4.5" fill="#F5D061" />
+  </g>
+  <g transform="translate(535, 145)">
+    <circle cx="0" cy="0" r="11" fill="url(#faWhite)" stroke="#D4A028" stroke-width="0.8" />
+    <circle cx="0" cy="0" r="4" fill="#F5D061" />
+  </g>
+
+  <!-- Golden Foliage Sprigs along the arch -->
+  <path d="M210,42 C220,32 230,38 226,48 Z" fill="url(#faGold)" />
+  <path d="M150,72 C160,62 170,68 166,78 Z" fill="url(#faGold)" />
+  <path d="M90,118 C100,108 110,114 106,124 Z" fill="url(#faGold)" />
+  
+  <path d="M390,42 C380,32 370,38 374,48 Z" fill="url(#faGold)" />
+  <path d="M450,72 C440,62 430,68 434,78 Z" fill="url(#faGold)" />
+  <path d="M510,118 C500,108 490,114 494,124 Z" fill="url(#faGold)" />
+
+  <!-- Cascading Ronce Melati Garland Beads -->
+  <g fill="url(#faWhite)" stroke="#D4A028" stroke-width="0.6">
+    <circle cx="120" cy="115" r="3" /><circle cx="120" cy="126" r="2.5" /><circle cx="120" cy="135" r="2" />
+    <circle cx="180" cy="78" r="3" /><circle cx="180" cy="89" r="2.5" /><circle cx="180" cy="98" r="2" />
+    <circle cx="240" cy="54" r="3" /><circle cx="240" cy="65" r="2.5" /><circle cx="240" cy="74" r="2" />
+    
+    <circle cx="360" cy="54" r="3" /><circle cx="360" cy="65" r="2.5" /><circle cx="360" cy="74" r="2" />
+    <circle cx="420" cy="78" r="3" /><circle cx="420" cy="89" r="2.5" /><circle cx="420" cy="98" r="2" />
+    <circle cx="480" cy="115" r="3" /><circle cx="480" cy="126" r="2.5" /><circle cx="480" cy="135" r="2" />
+  </g>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" fill="none">
+  <defs>
+    <linearGradient id="cornerBira" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="50%" stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#F6E05E"/>
+    </linearGradient>
+  </defs>
+  <path d="M 6 45 L 6 10 C 6 7.8 7.8 6 10 6 L 45 6" stroke="url(#cornerBira)" stroke-width="2.2" stroke-linecap="round"/>
+  <circle cx="10" cy="10" r="2.5" fill="#38BDF8"/>
+  <circle cx="22" cy="10" r="1.5" fill="#D4AF37"/>
+  <circle cx="10" cy="22" r="1.5" fill="#D4AF37"/>
+</svg>

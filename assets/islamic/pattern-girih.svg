@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
+  <g stroke="#E6C67C" stroke-opacity="0.16" stroke-width="0.9">
+    <!-- Central 8-point Girih Star -->
+    <rect x="26" y="26" width="28" height="28" />
+    <rect x="26" y="26" width="28" height="28" transform="rotate(45 40 40)" />
+    <!-- Interlocking diagonal lattice lines -->
+    <path d="M0 40 L20 20 L40 0 L60 20 L80 40 L60 60 L40 80 L20 60 Z" />
+    <!-- Subtle inner ring -->
+    <circle cx="40" cy="40" r="8" stroke="#A7F3D0" stroke-opacity="0.18" />
+  </g>
+</svg>

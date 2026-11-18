@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 50" fill="none">
+  <defs>
+    <linearGradient id="divBiraGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0" />
+      <stop offset="25%" stop-color="#06B6D4" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#D4AF37" stop-opacity="1" />
+      <stop offset="75%" stop-color="#06B6D4" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#38BDF8" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+  <!-- Sleek lines -->
+  <line x1="20" y1="25" x2="215" y2="25" stroke="url(#divBiraGrad)" stroke-width="1.5" />
+  <line x1="285" y1="25" x2="480" y2="25" stroke="url(#divBiraGrad)" stroke-width="1.5" />
+
+  <!-- Center Modern Wave Motif -->
+  <path d="M 235 25 C 242 19, 246 31, 250 25 C 254 19, 258 31, 265 25" stroke="#D4AF37" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+  <circle cx="250" cy="15" r="2.5" fill="#FFF2A3"/>
+  <circle cx="230" cy="25" r="2" fill="#06B6D4"/>
+  <circle cx="270" cy="25" r="2" fill="#06B6D4"/>
+</svg>

@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adat Jawa Klasik Modern - Aswandi &amp; Wira | Pawiwahan Ageng</title>
+  <meta name="description" content="Undangan Pernikahan Digital Bernuansa Budaya Adat Jawa Klasik &amp; Modern - Aswandi Syam, S.T. &amp; Wira Kartika Putri, S.Pd.">
+  <meta name="theme-color" content="#1A0F08">
+
+  <!-- Google Fonts: Cinzel, Playfair Display, Great Vibes, Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Great+Vibes&family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Javanese Theme & Theme Switcher Stylesheets -->
+  <link rel="stylesheet" href="css/jawa.css">
+  <link rel="stylesheet" href="css/switcher.css">
+  <script src="js/switcher.js" defer></script>
+</head>
+<body class="lock-scroll">
+
+  <!-- ==========================================================================
+       THEME SWITCHER FLOATING BUTTON & DROPDOWN (8 PILIHAN TEMA)
+       ========================================================================== -->
+  <div class="theme-switch-bar">
+    <button id="btnThemeSwitcher" class="btn-theme-switcher" aria-label="Ganti Tema Undangan">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path></svg>
+      Pilih Tema
+      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+    </button>
+
+    <div id="themeDropdown" class="theme-dropdown">
+      <a href="recca.html" class="theme-option">
+        <span>👑</span>
+        <span>Adat Bugis Songko' Recca'</span>
+        <span class="theme-badge" style="background:#D4A028;color:#07080A;">Baru</span>
+      </a>
+
+      <a href="bulukumba.html" class="theme-option">
+        <span>⛵</span>
+        <span>Adat Bugis Bulukumba</span>
+      </a>
+
+      <a href="jawa.html" class="theme-option active">
+        <span>🏛️</span>
+        <span>Adat Jawa Klasik Modern</span>
+        <span class="theme-badge" style="background:#8B5A2B;color:#fff;">Aktif</span>
+      </a>
+      <a href="donggia.html" class="theme-option">
+        <span>⛰️</span>
+        <span>Pegunungan Donggia Bugis</span>
+      </a>
+      <a href="islamic.html" class="theme-option">
+        <span>🕌</span>
+        <span>Islamic Modern</span>
+      </a>
+      <a href="studio.html" class="theme-option">
+        <span>📸</span>
+        <span>Studio Adat Bugis</span>
+      </a>
+      <a href="bugis.html" class="theme-option">
+        <span>👑</span>
+        <span>Adat Bugis Klasik</span>
+      </a>
+      <a href="toraja.html" class="theme-option">
+        <span>🏛️</span>
+        <span>Adat Toraja Tongkonan</span>
+      </a>
+      <a href="kajang.html" class="theme-option">
+        <span>🖤</span>
+        <span>Adat Ammatoa Kajang</span>
+      </a>
+      <a href="bira.html" class="theme-option">
+        <span>⛵</span>
+        <span>Pantai Pasir Putih Bira</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Audio Backsound Element -->
+  <audio id="weddingAudio" loop preload="auto" src="assets/lagu.aac">
+    <source src="assets/lagu.aac" type="audio/aac">
+  </audio>
+
+  <!-- Ambient Backdrop Layers: Teak Joglo + Batik Motif Overlay -->
+  <div class="bg-jawa-ambient"></div>
+  <div class="bg-jawa-backdrop"></div>
+  <div class="bg-batik-overlay"></div>
+
+  <!-- ==========================================================================
+       COVER PEMBUKA (OPENING COVER)
+       ========================================================================== -->
+  <div id="openingCover">
+    <div class="cover-card">
+      <!-- Ornamen Sudut Gebyok Ukir Jepara -->
+      <img src="assets/jawa/corner-jawa.svg" alt="Ornamen" class="corner-ornament corner-tl">
+      <img src="assets/jawa/corner-jawa.svg" alt="Ornamen" class="corner-ornament corner-tr">
+      <img src="assets/jawa/corner-jawa.svg" alt="Ornamen" class="corner-ornament corner-bl">
+      <img src="assets/jawa/corner-jawa.svg" alt="Ornamen" class="corner-ornament corner-br">
+
+      <!-- Logo Gunungan Wayang & Joglo Heritage -->
+      <img src="assets/jawa/logo-jawa.png" alt="Logo Adat Jawa Gunungan" class="cover-logo-jawa">
+
+      <p class="cover-subheading">Pawiwahan Ageng • Serat Sedhahan</p>
+      <div class="cover-location-tag">SASANA KENCANA • BULUKUMBA</div>
+      <p class="aksara-jawa">ꦫꦸꦏꦸꦤ꧀ꦲꦒꦮꦺꦱꦤ꧀ꦠꦺꦴꦱ</p>
+
+      <h1 class="cover-title">Aswandi <span class="cover-ampersand">&amp;</span> Wira</h1>
+
+      <div class="guest-card">
+        <p class="guest-label">Katur Dhumateng Panjenengan:</p>
+        <p class="guest-name dynamic-guest-name">Tamu Undangan Yang Terhormat</p>
+      </div>
+
+      <p class="cover-invitation-text">
+        Kanthi nyenyuwun berkah sih wilasaning Gusti Kang Maha Agung, mugi kepareng rawuh paring berkah pangestu dhumateng pawiwahan ageng putra-putri kawula.
+      </p>
+
+      <button id="btnOpenInvitation" class="btn-open-invitation">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+        Buka Undangan
+      </button>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       FLOATING AUDIO BUTTON & BOTTOM NAVIGATION
+       ========================================================================== -->
+  <button id="musicToggleBtn" class="music-toggle-btn" aria-label="Toggle Musik">
+    <svg class="disc-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="3"></circle></svg>
+  </button>
+
+  <nav class="bottom-nav">
+    <a href="#hero" class="nav-link active">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+      <span>Awal</span>
+    </a>
+    <a href="#mempelai" class="nav-link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+      <span>Mempelai</span>
+    </a>
+    <a href="#adat" class="nav-link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
+      <span>Adat</span>
+    </a>
+    <a href="#acara" class="nav-link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+      <span>Acara</span>
+    </a>
+    <a href="#galeri" class="nav-link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+      <span>Galeri</span>
+    </a>
+    <a href="#rsvp" class="nav-link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+      <span>RSVP</span>
+    </a>
+  </nav>
+
+  <!-- ==========================================================================
+       HERO SECTION (WELCOME & COUNTDOWN)
+       ========================================================================== -->
+  <header id="hero">
+    <div class="hero-content reveal-on-scroll">
+      <img src="assets/jawa/logo-jawa.png" alt="Logo Gunungan Wayang Jawa" class="hero-logo-jawa">
+      
+      <span class="hero-subtitle">Pawiwahan Ageng • Adat Jawa</span>
+      <h1 class="hero-title">Aswandi <span class="ampersand">&amp;</span> Wira</h1>
+      
+      <p style="color: var(--text-detail); font-size: 1.05rem; max-width: 540px; margin: 0 auto; line-height: 1.7;">
+        Serat Sedhahan Dhaup Suci ing Ngarsaning Gusti Kang Maha Agung
+      </p>
+
+      <div class="hero-date-box">
+        AHAD, 28 JUNI 2026 • SASANA KENCANA
+      </div>
+
+      <!-- Countdown Timer Box -->
+      <div class="countdown-box">
+        <div class="countdown-item">
+          <span id="countDays" class="countdown-num">00</span>
+          <span class="countdown-label">Hari</span>
+        </div>
+        <div class="countdown-item">
+          <span id="countHours" class="countdown-num">00</span>
+          <span class="countdown-label">Jam</span>
+        </div>
+        <div class="countdown-item">
+          <span id="countMins" class="countdown-num">00</span>
+          <span class="countdown-label">Menit</span>
+        </div>
+        <div class="countdown-item">
+          <span id="countSecs" class="countdown-num">00</span>
+          <span class="countdown-label">Detik</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       AYAT SUCI & FILOSOFI BUDAYA JAWA
+       ========================================================================== -->
+  <section id="filosofi" class="section-wrapper">
+    <div class="container">
+      <div class="jawa-card quote-card reveal-on-scroll">
+        <img src="assets/jawa/corner-jawa.svg" alt="Ornamen" class="corner-ornament corner-tl">
+        <img src="assets/jawa/corner-jawa.svg" alt="Ornamen" class="corner-ornament corner-tr">
+        <img src="assets/jawa/corner-jawa.svg" alt="Ornamen" class="corner-ornament corner-bl">
+        <img src="assets/jawa/corner-jawa.svg" alt="Ornamen" class="corner-ornament corner-br">
+
+        <span class="section-subtitle">Kalam Ilahi • Ar-Rum: 21</span>
+        <img src="assets/jawa/divider-jawa.svg" alt="Pemisah Jawa" class="jawa-divider">
+
+        <p class="arabic-text">
+          وَمِنْ ءَايَٰتِهِۦٓ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَٰجًا لِّتَسْكُنُوٓا۟ إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً ۚ إِنَّ فِى ذَٰلِكَ لَءَايَٰتٍ لِّقَوْمٍ يَتَفَكَّرُونَ
+        </p>
+
+        <p class="quote-translation">
+          "Lan ing antarane tanda-tanda kuwasa-Ne, Panjenengane nyipta pasangan kanggo sira kabeh saka jinising sira dhewe, supaya sira rumangsa tentrem ana ing sandhinge, lan Panjenengane ndadekake rasa tresna lan welas asih ing antarane sira kabeh."
+        </p>
+
+        <p class="quote-source">— Q.S. Ar-Rum: 21 —</p>
+      </div>
+
+      <!-- Tiga Filosofi Luhur Pernikahan Jawa -->
+      <div class="philosophy-grid">
+        <div class="philosophy-item reveal-on-scroll">
+          <span class="philosophy-icon">🌿</span>
+          <h3 class="philosophy-title">Batik Truntum</h3>
+          <p class="philosophy-desc">
+            Pralambang katresnan sejati kang tansah semi, tuwuh kembang tanpa kendhat, sarta paring tuladha becik dhumateng brayat enggal.
+          </p>
+        </div>
+        <div class="philosophy-item reveal-on-scroll">
+          <span class="philosophy-icon">🏛️</span>
+          <h3 class="philosophy-title">Joglo &amp; Gebyok</h3>
+          <p class="philosophy-desc">
+            Saka Guru kang kokoh nglambangake jejeging tekad lan pandoming pagesangan rumah tangga kang ngayomi lan kebak katentreman.
+          </p>
+        </div>
+        <div class="philosophy-item reveal-on-scroll">
+          <span class="philosophy-icon">✨</span>
+          <h3 class="philosophy-title">Gunungan Kayon</h3>
+          <p class="philosophy-desc">
+            Simbol jagad raya sarta tancep kayon minangka purwaning babak anyar lelampahan suci nuntun kulawarga tumuju kamulyan sejati.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PROFIL MEMPELAI (TEMANTEN KEKALIH)
+       ========================================================================== -->
+  <section id="mempelai" class="section-wrapper">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-subtitle">Dhaup Suci Ingkang Rinengga</span>
+        <h2 class="section-title">Temanten Kekalih</h2>
+        <img src="assets/jawa/divider-jawa.svg" alt="Pemisah Jawa" class="jawa-divider">
+        <p>
+          Kanthi asihing Gusti Ingkang Maha Kuwasa, keparenga kawula ngaturaken wara-wara dhaupipun putra-putri kinasih:
+        </p>
+      </div>
+
+      <div class="couple-wrapper">
+        <!-- Mempelai Pria (Kakung) -->
+        <div class="jawa-card couple-card reveal-on-scroll">
+          <img src="assets/jawa/corner-jawa.svg" alt="Ornamen" class="corner-ornament corner-tl">
+          <img src="assets/jawa/corner-jawa.svg" alt="Ornamen" class="corner-ornament corner-tr">
+          
+          <div class="couple-photo-frame">
+            <img src="assets/images/groom.jpeg" alt="Aswandi Syam, S.T." class="couple-photo">
+          </div>
+
+          <span class="couple-role">Mempelai Kakung (Pria)</span>
+          <h3 class="couple-name">Aswandi Syam, S.T.</h3>
+          
+          <p class="couple-parents">
+            Putra kinasih saking pasangan:<br>
+            <strong>Bpk. Andi Muhammad Yusuf</strong><br>
+            &amp; <strong>Ibu Hj. Andi Sitti Aminah</strong><br>
+            <span style="font-size: 0.8rem; opacity: 0.85;">(Trahing Kulawarga Bone)</span>
+          </p>
+        </div>
+
+        <!-- Ampersand Centerpiece -->
+        <div class="couple-separator reveal-on-scroll">&amp;</div>
+
+        <!-- Mempelai Wanita (Putri) -->
+        <div class="jawa-card couple-card reveal-on-scroll">
+          <img src="assets/jawa/corner-jawa.svg" alt="Ornamen" class="corner-ornament corner-tl">
+          <img src="assets/jawa/corner-jawa.svg" alt="Ornamen" class="corner-ornament corner-tr">
+
+          <div class="couple-photo-frame">
+            <img src="assets/images/bride.jpeg" alt="Wira Kartika Putri, S.Pd." class="couple-photo">
+          </div>
+
+          <span class="couple-role">Mempelai Putri (Wanita)</span>
+          <h3 class="couple-name">Wira Kartika Putri, S.Pd.</h3>
+          
+          <p class="couple-parents">
+            Putri kinasih saking pasangan:<br>
+            <strong>Bpk. Ambo</strong><br>
+            &amp; <strong>Ibu Agustina</strong><br>
+            <span style="font-size: 0.8rem; opacity: 0.85;">(Trahing Kulawarga Bulukumba)</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       RANGKAIAN UPACARA ADAT PANGGIH JAWA
+       ========================================================================== -->
+  <section id="adat" class="section-wrapper">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-subtitle">Tata Upacara Tradisi</span>
+        <h2 class="section-title">Upacara Adat Panggih</h2>
+        <img src="assets/jawa/divider-jawa.svg" alt="Pemisah Jawa" class="jawa-divider">
+        <p>
+          Rerangkening tata cara adat Jawa pinangka pitedah luhur tumraping gesang bebrayan:
+        </p>
+      </div>
+
+      <div class="panggih-timeline">
+        <div class="panggih-step reveal-on-scroll">
+          <span class="panggih-num">01</span>
+          <h4 class="panggih-title">Balangan Gantal</h4>
+          <p class="panggih-desc">
+            Saling melempar sirih terikat benang putih melambangkan perjumpaan dua hati dan cinta suci lahir batin.
+          </p>
+        </div>
+
+        <div class="panggih-step reveal-on-scroll">
+          <span class="panggih-num">02</span>
+          <h4 class="panggih-title">Wiji Dadi / Ngidak Endhog</h4>
+          <p class="panggih-desc">
+            Mempelai pria menginjak telur dan dibasuh oleh mempelai wanita sebagai lambang kesetiaan dan bakti sejati.
+          </p>
+        </div>
+
+        <div class="panggih-step reveal-on-scroll">
+          <span class="panggih-num">03</span>
+          <h4 class="panggih-title">Sinduran</h4>
+          <p class="panggih-desc">
+            Dinaungi kain sindur merah putih oleh sang ayah menuju pelaminan lambang doa restu dan perlindungan orang tua.
+          </p>
+        </div>
+
+        <div class="panggih-step reveal-on-scroll">
+          <span class="panggih-num">04</span>
+          <h4 class="panggih-title">Kacar-Kucur</h4>
+          <p class="panggih-desc">
+            Mengucurkan biji-bijian dan koin lambang tanggung jawab suami dalam mencukupi nafkah berkah bagi keluarga.
+          </p>
+        </div>
+
+        <div class="panggih-step reveal-on-scroll">
+          <span class="panggih-num">05</span>
+          <h4 class="panggih-title">Dulang-Dulangan</h4>
+          <p class="panggih-desc">
+            Saling menyuapi nasi kuning lambang kerukunan, kebersamaan, dan saling melengkapi dalam suka dan duka.
+          </p>
+        </div>
+
+        <div class="panggih-step reveal-on-scroll">
+          <span class="panggih-num">06</span>
+          <h4 class="panggih-title">Sungkeman</h4>
+          <p class="panggih-desc">
+            Sujud memohon ampunan dan restu kepada kedua orang tua atas segala jasa dan doa tulus yang tak terbalaskan.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SERAT ACARA PAWIWAHAN (AKAD & RESEPSI)
+       ========================================================================== -->
+  <section id="acara" class="section-wrapper">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-subtitle">Wanci &amp; Papan Palenggahan</span>
+        <h2 class="section-title">Rangkaian Acara</h2>
+        <img src="assets/jawa/divider-jawa.svg" alt="Pemisah Jawa" class="jawa-divider">
+        <p>
+          Rinengga ing dinten ingkang pinilih, mugi Gusti paring kalancaran lan kaberkahan:
+        </p>
+      </div>
+
+      <div class="events-grid">
+        <!-- Akad Nikah / Ijab Qobul -->
+        <div class="jawa-card event-card reveal-on-scroll">
+          <img src="assets/jawa/corner-jawa.svg" alt="Ornamen" class="corner-ornament corner-tl">
+          <img src="assets/jawa/corner-jawa.svg" alt="Ornamen" class="corner-ornament corner-tr">
+          
+          <div class="event-icon-badge">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+          </div>
+
+          <h3 class="event-title">Akad Nikah / Ijab Qobul</h3>
+          
+          <div class="event-datetime">
+            <div class="event-day">AHAD / MINGGU</div>
+            <div class="event-date">28 JUNI 2026</div>
+            <div class="event-time">Pukul 09.00 - 11.00 WITA</div>
+          </div>
+
+          <p class="event-location">
+            <strong>Gedung Sasana Kencana</strong>
+            Jl. Sam Ratulangi No. 45, Caile, Kec. Ujung Bulu, Kabupaten Bulukumba, Sulawesi Selatan
+          </p>
+
+          <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="btn-jawa">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            Petunjuk Lokasi Maps
+          </a>
+        </div>
+
+        <!-- Pawiwahan Ageng & Resepsi -->
+        <div class="jawa-card event-card reveal-on-scroll">
+          <img src="assets/jawa/corner-jawa.svg" alt="Ornamen" class="corner-ornament corner-tl">
+          <img src="assets/jawa/corner-jawa.svg" alt="Ornamen" class="corner-ornament corner-tr">
+
+          <div class="event-icon-badge">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          </div>
+
+          <h3 class="event-title">Pawiwahan &amp; Resepsi</h3>
+
+          <div class="event-datetime">
+            <div class="event-day">AHAD / MINGGU</div>
+            <div class="event-date">28 JUNI 2026</div>
+            <div class="event-time">Pukul 11.00 WITA - Selesai</div>
+          </div>
+
+          <p class="event-location">
+            <strong>Gedung Sasana Kencana</strong>
+            Jl. Sam Ratulangi No. 45, Caile, Kec. Ujung Bulu, Kabupaten Bulukumba, Sulawesi Selatan
+          </p>
+
+          <a href="https://calendar.google.com" target="_blank" rel="noopener noreferrer" class="btn-jawa">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            Simpan di Kalender
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       KISAH KASIH (LOVE STORY)
+       ========================================================================== -->
+  <section id="cerita" class="section-wrapper">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-subtitle">Lelampahan Tresna</span>
+        <h2 class="section-title">Kisah Kasih Temanten</h2>
+        <img src="assets/jawa/divider-jawa.svg" alt="Pemisah Jawa" class="jawa-divider">
+        <p>
+          Untaian lakon katresnan kang rinonce dening takdiring Gusti:
+        </p>
+      </div>
+
+      <div class="story-timeline reveal-on-scroll">
+        <div class="story-item">
+          <div class="story-node"></div>
+          <div class="story-date">TAHUN 2022</div>
+          <h4 class="story-title">Awal Tepang (Pertemuan Pertama)</h4>
+          <p class="story-desc">
+            Kidung asih kawiwitan nalika pandulu loro manunggal ing satunggaling pepanggihan prasaja. Saka pitepangan punika thukul raos tresna kang tulus.
+          </p>
+        </div>
+
+        <div class="story-item">
+          <div class="story-node"></div>
+          <div class="story-date">TAHUN 2024</div>
+          <h4 class="story-title">Pralambang Prasetya (Komitmen)</h4>
+          <p class="story-desc">
+            Ngambah lampah sesarengan ing maneka werna coba lan suka, nyawijekake tekad kanggo ngudi gegayuhan suci bebrayan agung.
+          </p>
+        </div>
+
+        <div class="story-item">
+          <div class="story-node"></div>
+          <div class="story-date">TAHUN 2025</div>
+          <h4 class="story-title">Peminangan Resmi (Lamaran)</h4>
+          <p class="story-desc">
+            Kulawarga ageng kepareng pinanggih ing swasana kebak rasa paseduluran lan kabegjan, ngraketake tali kekeluargaan kanthi resmi.
+          </p>
+        </div>
+
+        <div class="story-item">
+          <div class="story-node"></div>
+          <div class="story-date">28 JUNI 2026</div>
+          <h4 class="story-title">Dhaup Suci (Ijab Qobul)</h4>
+          <p class="story-desc">
+            Janji suci kabeber ing sangareping para saksi lan ngarsaning Gusti Kang Maha Kuwasa, dadi pungkasaning penantian lan wiwitane pagesangan anyar.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       GALERI KENANGAN (FOTO POTRET 3:4)
+       ========================================================================== -->
+  <section id="galeri" class="section-wrapper">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-subtitle">Rerenggan Kenangan</span>
+        <h2 class="section-title">Galeri Potret Bahagia</h2>
+        <img src="assets/jawa/divider-jawa.svg" alt="Pemisah Jawa" class="jawa-divider">
+        <p>
+          Potret kenangan endah ingkang ngiringi saben jumangkahing katresnan kawula:
+        </p>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item reveal-on-scroll">
+          <img src="assets/images/couple.jpeg" alt="Potret Temanten 1" class="gallery-img">
+          <div class="gallery-overlay">
+            <span class="gallery-caption">Dhaup Kinasih</span>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal-on-scroll">
+          <img src="assets/images/gallery-1.jpeg" alt="Potret Temanten 2" class="gallery-img">
+          <div class="gallery-overlay">
+            <span class="gallery-caption">Rukun Agawe Santosa</span>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal-on-scroll">
+          <img src="assets/images/gallery-2.jpeg" alt="Potret Temanten 3" class="gallery-img">
+          <div class="gallery-overlay">
+            <span class="gallery-caption">Prasetyaning Ati</span>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal-on-scroll">
+          <img src="assets/images/gallery-3.jpeg" alt="Potret Temanten 4" class="gallery-img">
+          <div class="gallery-overlay">
+            <span class="gallery-caption">Lelampahan Asih</span>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal-on-scroll">
+          <img src="assets/images/gallery-4.jpeg" alt="Potret Temanten 5" class="gallery-img">
+          <div class="gallery-overlay">
+            <span class="gallery-caption">Tentreming Manah</span>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal-on-scroll">
+          <img src="assets/images/gallery-5.jpeg" alt="Potret Temanten 6" class="gallery-img">
+          <div class="gallery-overlay">
+            <span class="gallery-caption">Hayu Rahayu</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       TANDA KASIH / KADO DIGITAL
+       ========================================================================== -->
+  <section id="kado" class="section-wrapper">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-subtitle">Tanda Asih &amp; Kabingahan</span>
+        <h2 class="section-title">Kado Digital</h2>
+        <img src="assets/jawa/divider-jawa.svg" alt="Pemisah Jawa" class="jawa-divider">
+        <p>
+          Doa restu Panjenengan sedaya sampun dados berkah ingkang tanpa upami tumrap kawula. Nanging menawi kersa maringi tandha sih, keparenga lumantar:
+        </p>
+      </div>
+
+      <div class="gift-wrapper">
+        <!-- Rekening 1: Bank BRI (Aswandi) -->
+        <div class="jawa-card gift-card reveal-on-scroll">
+          <img src="assets/jawa/corner-jawa.svg" alt="Ornamen" class="corner-ornament corner-tl">
+          <img src="assets/jawa/corner-jawa.svg" alt="Ornamen" class="corner-ornament corner-tr">
+
+          <span class="gift-bank-logo">BANK BRI</span>
+          <div class="gift-account-number" id="accBRI">0234 0102 3456 508</div>
+          <div class="gift-holder-name">Atas Nama: <strong>Aswandi Syam</strong></div>
+
+          <button class="btn-copy-account" data-account="023401023456508">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+            Salin Nomor Rekening
+          </button>
+        </div>
+
+        <!-- Rekening 2: Bank BCA / Mandiri (Wira) -->
+        <div class="jawa-card gift-card reveal-on-scroll">
+          <img src="assets/jawa/corner-jawa.svg" alt="Ornamen" class="corner-ornament corner-tl">
+          <img src="assets/jawa/corner-jawa.svg" alt="Ornamen" class="corner-ornament corner-tr">
+
+          <span class="gift-bank-logo">BANK BCA</span>
+          <div class="gift-account-number" id="accBCA">8240 1928 3741</div>
+          <div class="gift-holder-name">Atas Nama: <strong>Wira Kartika Putri</strong></div>
+
+          <button class="btn-copy-account" data-account="824019283741">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+            Salin Nomor Rekening
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       BUKU TAMU & RSVP (KONFIRMASI KEHADIRAN)
+       ========================================================================== -->
+  <section id="rsvp" class="section-wrapper">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-subtitle">Doa Pangestu &amp; Rawuhipun Tamu</span>
+        <h2 class="section-title">Buku Tamu &amp; RSVP</h2>
+        <img src="assets/jawa/divider-jawa.svg" alt="Pemisah Jawa" class="jawa-divider">
+        <p>
+          Katuraken panyuwun agunging pangapunten, mugi kersa ngintunaken donga pangestu sarta konfirmasi rawuhipun panjenengan:
+        </p>
+      </div>
+
+      <div class="rsvp-wrapper">
+        <!-- Form RSVP -->
+        <div class="jawa-card rsvp-form-card reveal-on-scroll">
+          <img src="assets/jawa/corner-jawa.svg" alt="Ornamen" class="corner-ornament corner-tl">
+          <img src="assets/jawa/corner-jawa.svg" alt="Ornamen" class="corner-ornament corner-tr">
+
+          <h3 style="font-family: var(--font-serif); font-size: 1.4rem; color: #FFFFFF; font-weight: 700; margin-bottom: 1.4rem; text-shadow: 0 2px 6px rgba(0,0,0,0.95);">
+            Kirim Doa Restu &amp; Konfirmasi
+          </h3>
+
+          <form id="rsvpForm">
+            <div class="form-group">
+              <label for="rsvpName" class="form-label">Asma Panjenengan (Nama Lengkap)</label>
+              <input type="text" id="rsvpName" class="form-control" placeholder="Nama Anda / Keluarga" required>
+            </div>
+
+            <div class="form-group">
+              <label for="rsvpStatus" class="form-label">Konfirmasi Rawuh (Kehadiran)</label>
+              <select id="rsvpStatus" class="form-control" required>
+                <option value="hadir">Insya Allah Hadir</option>
+                <option value="ragu">Taksih Rangu-rangu / Belum Pasti</option>
+                <option value="tidak">Nyuwun Pangapunten, Berhalangan Hadir</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="rsvpMessage" class="form-label">Untaian Donga Pangestu (Doa &amp; Ucapan)</label>
+              <textarea id="rsvpMessage" class="form-control" placeholder="Serat donga pangestu panjenengan kagem temanten kekalih..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-jawa" style="width: 100%; border-radius: 10px; padding: 0.85rem; font-size: 0.95rem;">
+              Kirim Doa Restu
+            </button>
+          </form>
+        </div>
+
+        <!-- Feed Doa Tamu -->
+        <div class="jawa-card wishes-card reveal-on-scroll">
+          <img src="assets/jawa/corner-jawa.svg" alt="Ornamen" class="corner-ornament corner-tl">
+          <img src="assets/jawa/corner-jawa.svg" alt="Ornamen" class="corner-ornament corner-tr">
+
+          <h3 style="font-family: var(--font-serif); font-size: 1.4rem; color: #FFFFFF; font-weight: 700; margin-bottom: 1.4rem; text-shadow: 0 2px 6px rgba(0,0,0,0.95);">
+            Untaian Donga Para Tamu
+          </h3>
+
+          <div id="wishesList" class="wishes-list">
+            <!-- Diisi otomatis oleh js/jawa.js -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FOOTER PENUTUP & KELUARGA BESAR
+       ========================================================================== -->
+  <footer class="footer-section">
+    <div class="container">
+      <img src="assets/jawa/logo-jawa.png" alt="Logo Gunungan Jawa" style="width: 130px; height: auto; object-fit: contain; margin: 0 auto 1.35rem; display: block; filter: drop-shadow(0 4px 16px rgba(212, 175, 55, 0.45));">
+
+      <p class="footer-curse">
+        "Matur nuwun awit saking sih wilasa lan donga pangestunipun sedaya para pinisepuh sarta tamu undhangan ingkang kinurmatan."
+      </p>
+
+      <p class="aksara-jawa">ꦩꦸꦒꦶꦫꦲꦪꦸꦱꦒꦸꦁꦢꦸꦩꦢꦶ</p>
+
+      <div class="footer-names">Aswandi &amp; Wira</div>
+      <p style="color: var(--jawa-gold-prada); font-style: italic; font-size: 0.95rem;">
+        "Sasana Kencana • Bulukumba"
+      </p>
+
+      <div style="margin-top: 2rem; font-size: 0.95rem; line-height: 1.8;">
+        <span style="color: var(--jawa-gold-prada); font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; display: block; margin-bottom: 0.45rem; text-shadow: 0 1px 3px rgba(0,0,0,0.9);">Ingkang Hangayubagya Kulawarga Ageng:</span>
+        <span style="color: var(--text-detail); text-shadow: 0 1px 3px rgba(0,0,0,0.9);">
+          Kel. Besar Bpk. Andi Muhammad Yusuf &amp; Ibu Hj. Andi Sitti Aminah (Bone)<br>
+          Kel. Besar Bpk. Ambo &amp; Ibu Agustina (Bulukumba)
+        </span>
+      </div>
+
+      <p class="footer-copyright">
+        &copy; 2026 Pawiwahan Ageng Adat Jawa — Aswandi &amp; Wira. Sedaya Hak Kereksa.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/jawa.js"></script>
+</body>
+</html>

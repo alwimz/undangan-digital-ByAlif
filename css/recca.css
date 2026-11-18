@@ -1,0 +1,1445 @@
+/* ==========================================================================
+   TEMA 10: ADAT BUGIS MAKASSAR — SONGKO' RECCA' (HITAM KEEMASAN)
+   Pernikahan Nur Akbar & Magfira
+   Filosofi Songko' Pamiring To Bone, Ulaweng & Siri' na Pesse'
+   ========================================================================== */
+
+:root {
+  /* Palet Warna Hitam Keemasan (Songko' Recca' & Ulaweng) */
+  --bg-deep: #07080A;
+  --bg-obsidian: #0D0F13;
+  --bg-card: rgba(14, 16, 20, 0.82);
+  --bg-card-hover: rgba(20, 23, 29, 0.9);
+  
+  --gold-prada: #F5D061;
+  --gold-light: #FFF5D6;
+  --gold-deep: #D4A028;
+  --gold-dark: #8C6510;
+  --gold-border: rgba(245, 208, 97, 0.42);
+  --gold-glow: rgba(245, 208, 97, 0.35);
+
+  --silk-emerald: #163B2C;
+  --silk-emerald-border: rgba(31, 74, 56, 0.5);
+  
+  --text-main: #FFFFFF;
+  --text-body: #E8EAEE;
+  --text-muted: #A3AAB5;
+  --text-gold: #FCE588;
+
+  --font-serif: 'Cinzel', 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-royal: 'Cinzel', 'Trajan Pro', Georgia, serif;
+  --font-script: 'Great Vibes', 'Alex Brush', cursive;
+
+  --transition: all 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Base Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  background-color: var(--bg-deep);
+  color: var(--text-body);
+  font-family: var(--font-sans);
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
+  line-height: 1.7;
+  background-color: var(--bg-deep);
+}
+
+body.lock-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
+
+/* ==========================================================================
+   BACKGROUND & TEXTURE OVERLAYS (BINGKAI BUDAYA BUGIS SULAPA EPPA')
+   ========================================================================== */
+.bg-recca-fixed {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 50% 25%, #161A22 0%, #0D0F14 60%, #060709 100%);
+  z-index: -4;
+  will-change: transform;
+}
+
+.bg-recca-vignette {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 50% 30%, rgba(13, 15, 20, 0.4) 0%, rgba(6, 7, 9, 0.92) 80%, #060709 100%),
+              linear-gradient(180deg, rgba(6, 7, 9, 0.5) 0%, rgba(6, 7, 9, 0.88) 50%, #060709 100%);
+  z-index: -3;
+  pointer-events: none;
+}
+
+.bg-recca-pattern {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../assets/recca/pattern-recca.svg');
+  background-repeat: repeat;
+  background-size: 60px 60px;
+  opacity: 0.15;
+  z-index: -2;
+  pointer-events: none;
+}
+
+/* Watermark Filosofis Sulapa Eppa' di Tengah Latar Belakang */
+.bg-sulapa-center {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 580px;
+  max-width: 88vw;
+  height: 580px;
+  max-height: 88vw;
+  background: url('../assets/recca/bg-sulapa-watermark.svg') no-repeat center center;
+  background-size: contain;
+  opacity: 0.14;
+  filter: drop-shadow(0 0 35px rgba(245, 208, 97, 0.4));
+  z-index: -2;
+  animation: rotateSulapa 80s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes rotateSulapa {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+
+
+/* ==========================================================================
+   BINGKAI BUDAYA BUGIS (ROYAL VIEWPORT FRAME OVERLAY)
+   ========================================================================== */
+.bugis-viewport-frame {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 995;
+}
+
+/* 4 Sudut Sulapa Eppa' (4 Penjuru Angin & Sifat Luhur Bugis) */
+.frame-corner {
+  position: absolute;
+  width: 88px;
+  height: 88px;
+  background: url('../assets/recca/frame-corner-sulapa.svg') no-repeat;
+  background-size: contain;
+  filter: drop-shadow(0 3px 10px rgba(245, 208, 97, 0.55));
+  z-index: 5;
+}
+
+.frame-corner-tl { top: 0; left: 0; }
+.frame-corner-tr { top: 0; right: 0; transform: scaleX(-1); }
+.frame-corner-bl { bottom: 0; left: 0; transform: scaleY(-1); }
+.frame-corner-br { bottom: 0; right: 0; transform: scale(-1); }
+
+/* Bingkai Sisi Atas (Mahkota Timpa' Laja' & Ronce Melati) */
+.frame-border-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 52px;
+  background: url('../assets/recca/frame-top-bugis.svg') no-repeat center top;
+  background-size: contain;
+  filter: drop-shadow(0 4px 14px rgba(245, 208, 97, 0.45));
+}
+
+/* Bingkai Sisi Bawah (Lambang Badik Gecong & Sulapa Eppa') */
+.frame-border-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 44px;
+  background: url('../assets/recca/frame-bottom-bugis.svg') no-repeat center bottom;
+  background-size: contain;
+  filter: drop-shadow(0 -4px 14px rgba(245, 208, 97, 0.4));
+}
+
+/* Bingkai Sisi Kiri & Kanan (Anyaman Recca' & Rantai Pamiring Ulaweng) */
+.frame-border-left {
+  position: absolute;
+  top: 60px;
+  bottom: 50px;
+  left: 0;
+  width: 14px;
+  background: url('../assets/recca/frame-side-bugis.svg') repeat-y left center;
+  background-size: 14px auto;
+  opacity: 0.75;
+}
+
+.frame-border-right {
+  position: absolute;
+  top: 60px;
+  bottom: 50px;
+  right: 0;
+  width: 14px;
+  background: url('../assets/recca/frame-side-bugis.svg') repeat-y right center;
+  background-size: 14px auto;
+  opacity: 0.75;
+  transform: scaleX(-1);
+}
+
+/* ==========================================================================
+   CONTAINER & SECTION LAYOUT
+   ========================================================================== */
+.container {
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.section-wrapper {
+  padding: 5.5rem 0;
+  position: relative;
+}
+
+.section-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 3.5rem;
+}
+
+.section-subtitle {
+  display: inline-block;
+  font-family: var(--font-royal);
+  font-size: 0.84rem;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+  color: var(--gold-prada);
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95);
+}
+
+.section-title {
+  font-family: var(--font-serif);
+  font-size: 2.35rem;
+  color: var(--text-main);
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 1.25;
+  margin-bottom: 0.8rem;
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.95);
+}
+
+.recca-divider {
+  display: block;
+  width: 220px;
+  max-width: 80%;
+  height: auto;
+  margin: 0.9rem auto 1.4rem;
+  filter: drop-shadow(0 2px 8px rgba(245, 208, 97, 0.45));
+}
+
+.section-header p {
+  color: var(--text-body);
+  font-size: 1.02rem;
+  line-height: 1.8;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.95);
+}
+
+/* ==========================================================================
+   CARD DESIGN (DARK FROSTED GLASS & SULAPA EPPA ORNAMENTS)
+   ========================================================================== */
+.recca-card {
+  background: var(--bg-card);
+  border: 1px solid var(--gold-border);
+  border-radius: 20px;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.75), inset 0 1px 1px rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  position: relative;
+  transition: var(--transition);
+}
+
+.recca-card:hover {
+  background: var(--bg-card-hover);
+  border-color: rgba(245, 208, 97, 0.65);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.85), 0 0 20px var(--gold-glow);
+}
+
+/* Corner Ornaments (Bunga Melati & Sulur Emas Bugis) */
+.corner-ornament {
+  position: absolute;
+  width: 54px;
+  height: 54px;
+  pointer-events: none;
+  opacity: 0.92;
+  filter: drop-shadow(0 2px 8px rgba(245, 208, 97, 0.5));
+  transition: var(--transition);
+  z-index: 5;
+}
+
+.corner-tl { top: -2px; left: -2px; }
+.corner-tr { top: -2px; right: -2px; transform: scaleX(-1); }
+.corner-bl { bottom: -2px; left: -2px; transform: scaleY(-1); }
+.corner-br { bottom: -2px; right: -2px; transform: scale(-1); }
+
+.recca-card:hover .corner-ornament {
+  opacity: 1;
+  filter: drop-shadow(0 4px 12px rgba(245, 208, 97, 0.8));
+}
+
+/* ==========================================================================
+   COVER PEMBUKA (OPENING COVER SCREEN)
+   ========================================================================== */
+#openingCover {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-deep);
+  z-index: 9999;
+  padding: 1.5rem;
+  transition: opacity 0.9s cubic-bezier(0.77, 0, 0.175, 1), transform 0.9s cubic-bezier(0.77, 0, 0.175, 1), visibility 0.9s;
+}
+
+#openingCover.opened {
+  opacity: 0;
+  transform: translateY(-100%);
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.cover-card {
+  width: 100%;
+  max-width: 470px;
+  background: rgba(12, 14, 18, 0.85);
+  border: 1px solid var(--gold-border);
+  border-radius: 24px;
+  padding: 2.75rem 2rem 2.25rem;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.85), inset 0 1px 1px rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.cover-crest {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 0 auto 1.35rem;
+  display: block;
+  border: 2px solid var(--gold-prada);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.65), 0 0 22px var(--gold-glow);
+}
+
+.cover-subheading {
+  font-family: var(--font-royal);
+  font-size: 0.82rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold-prada);
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.95);
+}
+
+.cover-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, rgba(245, 208, 97, 0.25) 0%, rgba(22, 59, 44, 0.4) 100%);
+  border: 1px solid var(--gold-border);
+  padding: 0.35rem 1.1rem;
+  border-radius: 30px;
+  font-size: 0.74rem;
+  letter-spacing: 2px;
+  color: var(--gold-light);
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.95);
+}
+
+.lontara-script {
+  font-size: 1.15rem;
+  color: var(--gold-prada);
+  letter-spacing: 3.5px;
+  margin: 0.35rem 0 0.8rem;
+  opacity: 0.95;
+  text-shadow: 0 2px 8px rgba(245, 208, 97, 0.5);
+}
+
+.cover-title {
+  font-family: var(--font-serif);
+  font-size: 2.45rem;
+  color: var(--text-main);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.95);
+}
+
+.cover-ampersand {
+  font-family: var(--font-script);
+  font-size: 2.8rem;
+  color: var(--gold-prada);
+  vertical-align: middle;
+  margin: 0 0.3rem;
+  text-shadow: 0 2px 10px rgba(245, 208, 97, 0.6);
+}
+
+.guest-card {
+  background: rgba(18, 22, 28, 0.75);
+  border: 1px solid rgba(245, 208, 97, 0.35);
+  border-radius: 14px;
+  padding: 1.1rem 1rem;
+  margin-bottom: 1.4rem;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.guest-label {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 0.3rem;
+}
+
+.guest-name {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  color: var(--text-main);
+  font-weight: 700;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.9);
+}
+
+.cover-invitation-text {
+  font-size: 0.88rem;
+  color: var(--text-body);
+  line-height: 1.65;
+  margin-bottom: 1.75rem;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+}
+
+.btn-open-invitation {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  background: linear-gradient(135deg, #F5D061 0%, #D4A028 50%, #8C6510 100%);
+  color: #07080A;
+  border: none;
+  padding: 0.95rem 2.2rem;
+  border-radius: 40px;
+  font-family: var(--font-royal);
+  font-size: 0.88rem;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(245, 208, 97, 0.45);
+  transition: var(--transition);
+}
+
+.btn-open-invitation:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(245, 208, 97, 0.65);
+}
+
+/* ==========================================================================
+   FLOATING AUDIO & BOTTOM NAVIGATION
+   ========================================================================== */
+.music-toggle-btn {
+  position: fixed;
+  bottom: 5.5rem;
+  right: 1.4rem;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(14, 16, 20, 0.88);
+  border: 1.5px solid var(--gold-prada);
+  color: var(--gold-prada);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 998;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6), 0 0 14px var(--gold-glow);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: var(--transition);
+}
+
+.music-toggle-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 22px rgba(245, 208, 97, 0.55);
+}
+
+.music-toggle-btn.playing .disc-icon {
+  animation: spinDisc 4s linear infinite;
+}
+
+@keyframes spinDisc {
+  100% { transform: rotate(360deg); }
+}
+
+.bottom-nav {
+  position: fixed;
+  bottom: 1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 2.5rem);
+  max-width: 460px;
+  background: rgba(12, 14, 18, 0.92);
+  border: 1px solid var(--gold-border);
+  border-radius: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0.65rem 0.75rem;
+  z-index: 997;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.8), 0 0 18px rgba(245, 208, 97, 0.25);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.nav-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.68rem;
+  letter-spacing: 0.5px;
+  transition: var(--transition);
+  padding: 0.3rem 0.5rem;
+}
+
+.nav-link svg {
+  width: 20px;
+  height: 20px;
+  stroke: currentColor;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--gold-light);
+}
+
+.nav-link.active svg {
+  stroke: var(--gold-prada);
+}
+
+/* ==========================================================================
+   HERO SECTION
+   ========================================================================== */
+#hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 7rem 1.5rem 5rem;
+  position: relative;
+}
+
+.hero-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.hero-crest {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 0 auto 1.5rem;
+  display: block;
+  border: 2.5px solid var(--gold-prada);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7), 0 0 26px var(--gold-glow);
+}
+
+.hero-subtitle {
+  font-family: var(--font-royal);
+  font-size: 0.92rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--gold-prada);
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  display: block;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95);
+}
+
+.hero-title {
+  font-family: var(--font-serif);
+  font-size: 3.4rem;
+  color: var(--text-main);
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 1rem;
+  text-shadow: 0 4px 18px rgba(0, 0, 0, 0.95);
+}
+
+.hero-title .ampersand {
+  font-family: var(--font-script);
+  font-size: 3.8rem;
+  color: var(--gold-prada);
+  vertical-align: middle;
+  text-shadow: 0 2px 12px rgba(245, 208, 97, 0.6);
+}
+
+.hero-proverb {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--text-body);
+  font-style: italic;
+  max-width: 600px;
+  margin: 0 auto 1.75rem;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.95);
+}
+
+.hero-date-box {
+  display: inline-block;
+  background: rgba(14, 16, 20, 0.75);
+  border: 1px solid var(--gold-border);
+  padding: 0.6rem 1.6rem;
+  border-radius: 30px;
+  font-family: var(--font-royal);
+  font-size: 0.88rem;
+  letter-spacing: 2.5px;
+  color: var(--gold-light);
+  text-transform: uppercase;
+  font-weight: 700;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+  margin-bottom: 2.5rem;
+}
+
+/* Countdown Box */
+.countdown-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.countdown-item {
+  background: rgba(14, 18, 22, 0.82);
+  border: 1px solid var(--gold-border);
+  border-radius: 14px;
+  padding: 0.85rem 1.1rem;
+  min-width: 74px;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.countdown-num {
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--gold-prada);
+  display: block;
+  line-height: 1.1;
+  text-shadow: 0 2px 6px rgba(245, 208, 97, 0.4);
+}
+
+.countdown-label {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-top: 0.25rem;
+  display: block;
+}
+
+/* ==========================================================================
+   AYAT SUCI & FALSAFAH BUGIS MAKASSAR
+   ========================================================================== */
+.quote-card {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 3rem 2.25rem;
+}
+
+.arabic-text {
+  font-family: 'Amiri', 'Traditional Arabic', serif;
+  font-size: 1.85rem;
+  line-height: 2.2;
+  color: var(--gold-prada);
+  direction: rtl;
+  margin-bottom: 1.4rem;
+  text-shadow: 0 2px 8px rgba(245, 208, 97, 0.4);
+}
+
+.quote-translation {
+  font-size: 1.02rem;
+  line-height: 1.85;
+  color: var(--text-main);
+  font-style: italic;
+  margin-bottom: 1.25rem;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.95);
+}
+
+.quote-source {
+  font-family: var(--font-royal);
+  font-size: 0.88rem;
+  letter-spacing: 2.5px;
+  color: var(--gold-prada);
+  font-weight: 700;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+}
+
+/* 4 Pilar Falsafah Songko' Recca' */
+.philosophy-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.philosophy-item {
+  background: rgba(14, 18, 22, 0.75);
+  border: 1px solid var(--gold-border);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 1.75rem 1.4rem;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  transition: var(--transition);
+}
+
+.philosophy-item:hover {
+  transform: translateY(-4px);
+  border-color: var(--gold-prada);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7), 0 0 18px var(--gold-glow);
+}
+
+.philosophy-icon {
+  font-size: 2.1rem;
+  margin-bottom: 0.65rem;
+  display: inline-block;
+  filter: drop-shadow(0 2px 6px rgba(245, 208, 97, 0.4));
+}
+
+.philosophy-title {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  color: var(--text-main);
+  margin-bottom: 0.45rem;
+  font-weight: 700;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.95);
+}
+
+.philosophy-desc {
+  font-size: 0.92rem;
+  color: var(--text-body);
+  line-height: 1.7;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+}
+
+/* ==========================================================================
+   PROFIL MEMPELAI (BINGKAI BUNGA MELATI & NATURAL CIRCLE)
+   ========================================================================== */
+.couple-wrapper {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.couple-card {
+  text-align: center;
+  padding: 2.75rem 1.75rem;
+}
+
+.couple-photo-frame {
+  width: 180px;
+  height: 180px;
+  margin: 0 auto 1.4rem;
+  border-radius: 50%;
+  padding: 4px;
+  background: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.55);
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.couple-photo-frame:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.65);
+}
+
+.couple-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 22%;
+  border-radius: 50%;
+  display: block;
+}
+
+
+
+.couple-role {
+  font-family: var(--font-royal);
+  font-size: 0.84rem;
+  letter-spacing: 2.8px;
+  text-transform: uppercase;
+  color: var(--gold-prada);
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+}
+
+.couple-name {
+  font-family: var(--font-serif);
+  font-size: 1.85rem;
+  color: var(--text-main);
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.95);
+}
+
+.couple-parents {
+  font-size: 0.95rem;
+  color: var(--text-body);
+  line-height: 1.75;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+}
+
+.couple-parents strong {
+  color: #FFFFFF;
+  font-weight: 700;
+}
+
+.couple-separator {
+  text-align: center;
+  font-family: var(--font-script);
+  font-size: 4rem;
+  color: var(--gold-prada);
+  line-height: 1;
+  text-shadow: 0 2px 14px rgba(245, 208, 97, 0.6);
+}
+
+/* ==========================================================================
+   TATA CARA ADAT PERNIKAHAN BUGIS MAKASSAR
+   ========================================================================== */
+.adat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.adat-step {
+  background: rgba(14, 18, 22, 0.78);
+  border: 1px solid var(--gold-border);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 1.6rem 1.4rem;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
+  transition: var(--transition);
+}
+
+.adat-step:hover {
+  transform: translateY(-4px);
+  border-color: var(--gold-prada);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.65), 0 0 16px var(--gold-glow);
+}
+
+.adat-num {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  line-height: 34px;
+  border-radius: 50%;
+  border: 1.5px solid var(--gold-prada);
+  color: var(--gold-prada);
+  font-family: var(--font-royal);
+  font-size: 0.92rem;
+  font-weight: 800;
+  margin-bottom: 0.65rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.adat-title {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  color: var(--text-main);
+  margin-bottom: 0.4rem;
+  font-weight: 700;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.95);
+}
+
+.adat-desc {
+  font-size: 0.9rem;
+  color: var(--text-body);
+  line-height: 1.7;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+}
+
+/* ==========================================================================
+   ACARA & LOKASI
+   ========================================================================== */
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.event-card {
+  text-align: center;
+  padding: 2.75rem 2rem;
+}
+
+.event-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, rgba(245, 208, 97, 0.25) 0%, rgba(22, 59, 44, 0.4) 100%);
+  border: 1px solid var(--gold-border);
+  padding: 0.35rem 1.25rem;
+  border-radius: 20px;
+  font-family: var(--font-royal);
+  font-size: 0.78rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.event-title {
+  font-family: var(--font-serif);
+  font-size: 1.85rem;
+  color: var(--text-main);
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95);
+}
+
+.event-detail-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  margin-bottom: 0.8rem;
+  font-size: 0.98rem;
+  color: var(--text-body);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+}
+
+.event-detail-item svg {
+  width: 19px;
+  height: 19px;
+  stroke: var(--gold-prada);
+  flex-shrink: 0;
+}
+
+.event-venue-name {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  color: #FFFFFF;
+  font-weight: 700;
+  margin-top: 1.25rem;
+  margin-bottom: 0.35rem;
+}
+
+.event-address {
+  font-size: 0.92rem;
+  color: var(--text-body);
+  line-height: 1.65;
+  margin-bottom: 1.75rem;
+}
+
+.btn-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  background: linear-gradient(135deg, #F5D061 0%, #D4A028 50%, #8C6510 100%);
+  color: #07080A;
+  border: none;
+  padding: 0.85rem 1.85rem;
+  border-radius: 30px;
+  font-family: var(--font-royal);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(245, 208, 97, 0.4);
+  transition: var(--transition);
+}
+
+.btn-action:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 26px rgba(245, 208, 97, 0.6);
+}
+
+/* ==========================================================================
+   KISAH CINTA (LOVE STORY TIMELINE)
+   ========================================================================== */
+.timeline {
+  position: relative;
+  max-width: 680px;
+  margin: 2rem auto 0;
+  padding-left: 2.2rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 10px;
+  width: 2px;
+  background: linear-gradient(180deg, var(--gold-prada) 0%, rgba(245, 208, 97, 0.3) 100%);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -2.2rem;
+  top: 4px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--bg-deep);
+  border: 2px solid var(--gold-prada);
+  box-shadow: 0 0 10px var(--gold-glow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timeline-dot::after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--gold-prada);
+}
+
+.timeline-year {
+  font-family: var(--font-royal);
+  font-size: 0.82rem;
+  letter-spacing: 2px;
+  color: var(--gold-prada);
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+}
+
+.timeline-title {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  color: var(--text-main);
+  font-weight: 700;
+  margin-bottom: 0.45rem;
+}
+
+.timeline-desc {
+  font-size: 0.94rem;
+  color: var(--text-body);
+  line-height: 1.7;
+}
+
+/* ==========================================================================
+   GALERI PREWEDDING (6 FOTO HD & LIGHTBOX)
+   ========================================================================== */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.4rem;
+  margin-top: 1.5rem;
+}
+
+.gallery-item {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--gold-border);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.55);
+  aspect-ratio: 2 / 3;
+  background: rgba(14, 18, 22, 0.85);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.gallery-item:hover {
+  transform: translateY(-4px) scale(1.02);
+  border-color: var(--gold-prada);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.75), 0 0 22px var(--gold-glow);
+}
+
+.gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+  display: block;
+}
+
+.gallery-item:hover .gallery-img {
+  transform: scale(1.06);
+}
+
+.gallery-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 40%, rgba(7, 8, 10, 0.95) 100%);
+  display: flex;
+  align-items: flex-end;
+  padding: 1.25rem;
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.gallery-item:hover .gallery-overlay {
+  opacity: 1;
+}
+
+.gallery-caption {
+  color: var(--text-main);
+  font-size: 0.92rem;
+  font-weight: 600;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.95);
+}
+
+/* ==========================================================================
+   TANDA KASIH / KADO DIGITAL
+   ========================================================================== */
+.gift-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.75rem;
+  margin-top: 1.5rem;
+}
+
+.gift-card {
+  text-align: center;
+  padding: 2.25rem 1.75rem;
+}
+
+.bank-logo {
+  font-family: var(--font-royal);
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #FFFFFF;
+  margin-bottom: 0.8rem;
+  display: block;
+}
+
+.account-number {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--gold-prada);
+  letter-spacing: 2px;
+  margin-bottom: 0.45rem;
+}
+
+.account-holder {
+  font-size: 0.92rem;
+  color: var(--text-body);
+  margin-bottom: 1.25rem;
+}
+
+.btn-copy {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(18, 22, 28, 0.9);
+  border: 1px solid var(--gold-border);
+  color: var(--gold-light);
+  padding: 0.55rem 1.4rem;
+  border-radius: 20px;
+  font-size: 0.84rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-copy:hover {
+  background: var(--gold-prada);
+  color: #07080A;
+  border-color: var(--gold-prada);
+}
+
+/* ==========================================================================
+   RSVP & BUKU TAMU
+   ========================================================================== */
+.rsvp-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.rsvp-form-group {
+  margin-bottom: 1.25rem;
+  text-align: left;
+}
+
+.rsvp-form-group label {
+  display: block;
+  font-size: 0.86rem;
+  color: var(--gold-light);
+  font-weight: 700;
+  margin-bottom: 0.45rem;
+  letter-spacing: 1px;
+}
+
+.rsvp-input, .rsvp-select, .rsvp-textarea {
+  width: 100%;
+  background: rgba(10, 12, 16, 0.85);
+  border: 1px solid var(--gold-border);
+  border-radius: 12px;
+  padding: 0.8rem 1rem;
+  color: #FFFFFF;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  transition: var(--transition);
+}
+
+.rsvp-input:focus, .rsvp-select:focus, .rsvp-textarea:focus {
+  outline: none;
+  border-color: var(--gold-prada);
+  box-shadow: 0 0 14px var(--gold-glow);
+}
+
+.rsvp-textarea {
+  resize: vertical;
+  min-height: 110px;
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 0.95rem;
+  background: linear-gradient(135deg, #F5D061 0%, #D4A028 50%, #8C6510 100%);
+  color: #07080A;
+  border: none;
+  border-radius: 30px;
+  font-family: var(--font-royal);
+  font-size: 0.88rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(245, 208, 97, 0.4);
+  transition: var(--transition);
+}
+
+.btn-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(245, 208, 97, 0.6);
+}
+
+.wishes-list {
+  max-height: 480px;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.wish-item {
+  background: rgba(10, 12, 16, 0.75);
+  border: 1px solid rgba(245, 208, 97, 0.25);
+  border-radius: 12px;
+  padding: 1.1rem;
+  text-align: left;
+}
+
+.wish-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.4rem;
+}
+
+.wish-name {
+  font-weight: 700;
+  color: var(--gold-prada);
+  font-size: 0.95rem;
+}
+
+.wish-status {
+  font-size: 0.72rem;
+  padding: 0.2rem 0.65rem;
+  border-radius: 12px;
+  background: rgba(22, 59, 44, 0.6);
+  border: 1px solid var(--gold-border);
+  color: var(--gold-light);
+}
+
+.wish-message {
+  font-size: 0.92rem;
+  color: var(--text-body);
+  line-height: 1.6;
+}
+
+.wish-time {
+  font-size: 0.74rem;
+  color: var(--text-muted);
+  margin-top: 0.4rem;
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+.footer-section {
+  padding: 4.5rem 0 7rem;
+  text-align: center;
+  background: linear-gradient(180deg, transparent 0%, rgba(7, 8, 10, 0.95) 40%, #07080A 100%);
+  position: relative;
+}
+
+.footer-curse {
+  font-family: var(--font-royal);
+  font-size: 1.15rem;
+  color: var(--gold-prada);
+  font-style: italic;
+  margin-bottom: 0.75rem;
+  text-shadow: 0 2px 8px rgba(245, 208, 97, 0.45);
+}
+
+.footer-names {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  color: var(--text-main);
+  font-weight: 700;
+  margin: 0.8rem 0 0.35rem;
+}
+
+.footer-copyright {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-top: 2rem;
+}
+
+/* ==========================================================================
+   SCROLL REVEAL ANIMATIONS
+   ========================================================================== */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.8s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN
+   ========================================================================== */
+@media (max-width: 868px) {
+  .couple-wrapper {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .couple-separator {
+    transform: rotate(90deg);
+    margin: -0.5rem 0;
+  }
+  .rsvp-wrapper {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 680px) {
+  html {
+    font-size: 15px;
+  }
+  .hero-title {
+    font-size: 2.6rem;
+  }
+  .hero-title .ampersand {
+    font-size: 2.8rem;
+  }
+  .section-title {
+    font-size: 1.85rem;
+  }
+  .recca-card {
+    padding: 1.8rem 1.35rem;
+  }
+  .cover-card {
+    padding: 2.25rem 1.35rem 1.85rem;
+  }
+  .countdown-box {
+    gap: 0.5rem;
+  }
+  .countdown-item {
+    min-width: 64px;
+    padding: 0.7rem 0.8rem;
+  }
+  .countdown-num {
+    font-size: 1.45rem;
+  }
+
+  /* Responsive Viewport Frame Budaya Bugis */
+  .frame-corner {
+    width: 54px;
+    height: 54px;
+  }
+  .frame-border-top {
+    height: 36px;
+  }
+  .frame-border-bottom {
+    height: 32px;
+  }
+  .frame-border-left, .frame-border-right {
+    top: 48px;
+    bottom: 40px;
+    width: 10px;
+    background-size: 10px auto;
+  }
+  .bg-sulapa-center {
+    width: 320px;
+    height: 320px;
+  }
+}

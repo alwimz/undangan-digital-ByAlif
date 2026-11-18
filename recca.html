@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adat Bugis Songko' Recca' - Nur Akbar & Magfira | Pernikahan Hitam Keemasan</title>
+  <meta name="description" content="Undangan Pernikahan Digital Adat Bugis Makassar bertema Songko' Recca' (Songkok Pamiring) bernuansa Hitam Keemasan - Nur Akbar & Magfira.">
+  
+  <!-- Google Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Great+Vibes&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/recca.css?v=6">
+  <link rel="stylesheet" href="css/switcher.css">
+  <script src="js/switcher.js" defer></script>
+</head>
+<body class="lock-scroll">
+
+  <!-- ==========================================================================
+       THEME SWITCHER FLOATING BUTTON & DROPDOWN (10 PILIHAN TEMA)
+       ========================================================================== -->
+  <div class="theme-switch-bar">
+    <button id="btnThemeSwitcher" class="btn-theme-switcher" aria-label="Ganti Tema Undangan">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path></svg>
+      Pilih Tema
+      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+    </button>
+
+    <div id="themeDropdown" class="theme-dropdown">
+      <a href="jakarta.html" class="theme-option">
+        <span>✨</span>
+        <span>Modern Jakarta Editorial</span>
+        <span class="theme-badge" style="background:#DFC298;color:#121110;">Baru</span>
+      </a>
+      <a href="recca.html" class="theme-option active">
+        <span>👑</span>
+        <span>Adat Bugis Songko' Recca'</span>
+        <span class="theme-badge" style="background:#D4A028;color:#07080A;">Aktif</span>
+      </a>
+      <a href="bulukumba.html" class="theme-option">
+        <span>⛵</span>
+        <span>Adat Bugis Bulukumba</span>
+      </a>
+      <a href="jawa.html" class="theme-option">
+        <span>🏛️</span>
+        <span>Adat Jawa Klasik Modern</span>
+      </a>
+      <a href="donggia.html" class="theme-option">
+        <span>⛰️</span>
+        <span>Lembah Donggia Bulukumba</span>
+      </a>
+      <a href="islamic.html" class="theme-option">
+        <span>🕌</span>
+        <span>Islamic Emerald Modern</span>
+      </a>
+      <a href="bira.html" class="theme-option">
+        <span>🌊</span>
+        <span>Pantai Tanjung Bira</span>
+      </a>
+      <a href="kajang.html" class="theme-option">
+        <span>🌿</span>
+        <span>Adat Suku Kajang Ammatoa</span>
+      </a>
+      <a href="bugis.html" class="theme-option">
+        <span>👑</span>
+        <span>Adat Bugis Makassar Klasik</span>
+      </a>
+      <a href="toraja.html" class="theme-option">
+        <span>🏛️</span>
+        <span>Adat Toraja Tongkonan</span>
+      </a>
+      <a href="studio.html" class="theme-option">
+        <span>📸</span>
+        <span>Modern Studio Minimalis</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Background Tapestry, Cultural Watermark & Texture Overlays -->
+  <div class="bg-recca-fixed"></div>
+  <div class="bg-recca-vignette"></div>
+  <div class="bg-recca-pattern"></div>
+  <div class="bg-sulapa-center" aria-hidden="true"></div>
+
+  <!-- ==========================================================================
+       BINGKAI BUDAYA BUGIS (ROYAL VIEWPORT FRAME & SULAPA EPPA ORNAMENTS)
+       ========================================================================== -->
+  <div class="bugis-viewport-frame" aria-hidden="true">
+    <div class="frame-corner frame-corner-tl"></div>
+    <div class="frame-corner frame-corner-tr"></div>
+    <div class="frame-corner frame-corner-bl"></div>
+    <div class="frame-corner frame-corner-br"></div>
+
+    <div class="frame-border-top"></div>
+    <div class="frame-border-bottom"></div>
+    <div class="frame-border-left"></div>
+    <div class="frame-border-right"></div>
+  </div>
+
+  <!-- ==========================================================================
+       COVER PEMBUKA (OPENING COVER SCREEN)
+       ========================================================================== -->
+  <div id="openingCover">
+    <div class="cover-card">
+      <!-- Bingkai Sudut Bunga Melati & Sulur Emas Bugis -->
+      <img src="assets/recca/floral-corner-bugis.svg" alt="Ornamen Bunga Melati" class="corner-ornament corner-tl">
+      <img src="assets/recca/floral-corner-bugis.svg" alt="Ornamen Bunga Melati" class="corner-ornament corner-tr">
+      <img src="assets/recca/floral-corner-bugis.svg" alt="Ornamen Bunga Melati" class="corner-ornament corner-bl">
+      <img src="assets/recca/floral-corner-bugis.svg" alt="Ornamen Bunga Melati" class="corner-ornament corner-br">
+
+      <!-- Logo Songko' Recca' Pamiring -->
+      <img src="assets/recca/logo-recca.jpeg" alt="Logo Songko Recca Pamiring" class="cover-crest">
+
+      <p class="cover-subheading">Walimatul 'Ursy • Adat Bugis Makassar</p>
+      <div class="cover-badge">TEMA SONGKO' RECCA' • HITAM KEEMASAN</div>
+      <p class="lontara-script">ᨔᨗᨄᨀᨈᨕᨘ • ᨔᨗᨄᨀᨒᨛᨅᨗ • ᨔᨗᨄᨀᨕᨗᨂᨛ</p>
+
+      <h1 class="cover-title">Akbar <span class="cover-ampersand">&amp;</span> Magfira</h1>
+
+      <div class="guest-card">
+        <p class="guest-label">Kepada Yth. Bapak/Ibu/Saudara/i:</p>
+        <p class="guest-name dynamic-guest-name">Tamu Undangan Yang Terhormat</p>
+      </div>
+
+      <p class="cover-invitation-text">
+        Dengan penuh rasa syukur dan memohon ridho Allah SWT, kami mengundang Anda untuk hadir memberikan doa restu pada pernikahan adat Bugis Makassar kami.
+      </p>
+
+      <button id="btnOpenInvitation" class="btn-open-invitation">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+        Buka Undangan
+      </button>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       FLOATING AUDIO BUTTON & BOTTOM NAVIGATION
+       ========================================================================== -->
+  <button id="musicToggleBtn" class="music-toggle-btn" aria-label="Toggle Musik">
+    <svg class="disc-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="3"></circle></svg>
+  </button>
+
+  <nav class="bottom-nav">
+    <a href="#hero" class="nav-link active">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+      <span>Awal</span>
+    </a>
+    <a href="#mempelai" class="nav-link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+      <span>Mempelai</span>
+    </a>
+    <a href="#adat" class="nav-link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
+      <span>Adat</span>
+    </a>
+    <a href="#acara" class="nav-link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+      <span>Acara</span>
+    </a>
+    <a href="#galeri" class="nav-link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+      <span>Galeri</span>
+    </a>
+    <a href="#rsvp" class="nav-link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+      <span>RSVP</span>
+    </a>
+  </nav>
+
+  <!-- ==========================================================================
+       HERO SECTION (WELCOME & COUNTDOWN)
+       ========================================================================== -->
+  <header id="hero">
+    <div class="hero-content reveal-on-scroll">
+      <img src="assets/recca/logo-recca.jpeg" alt="Logo Songko Recca" class="hero-crest">
+      
+      <span class="hero-subtitle">The Royal Wedding of Adat Bugis Bone Makassar</span>
+      <h1 class="hero-title">Nur Akbar <span class="ampersand">&amp;</span> Magfira</h1>
+      
+      <p class="hero-proverb">
+        "Iyya ampe madecengnge, pada-padai ulaweng essona maccahaya, wengnginna mallinrunge."<br>
+        <span style="font-size: 0.88rem; color: var(--gold-prada); font-style: normal; display: block; margin-top: 0.35rem;">
+          (Budi pekerti luhur laksana emas pamiring; menerangi di kala siang, menaungi di kala malam)
+        </span>
+      </p>
+
+      <div class="hero-date-box">
+        AHAD, 28 JUNI 2026 • GEDUNG AMMATOA BULUKUMBA
+      </div>
+
+      <!-- Countdown Timer Box -->
+      <div class="countdown-box">
+        <div class="countdown-item">
+          <span id="countDays" class="countdown-num">00</span>
+          <span class="countdown-label">Hari</span>
+        </div>
+        <div class="countdown-item">
+          <span id="countHours" class="countdown-num">00</span>
+          <span class="countdown-label">Jam</span>
+        </div>
+        <div class="countdown-item">
+          <span id="countMinutes" class="countdown-num">00</span>
+          <span class="countdown-label">Menit</span>
+        </div>
+        <div class="countdown-item">
+          <span id="countSeconds" class="countdown-num">00</span>
+          <span class="countdown-label">Detik</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       AYAT SUCI & TUNTUNAN PERNIKAHAN
+       ========================================================================== -->
+  <section id="ayat" class="section-wrapper">
+    <div class="container">
+      <div class="recca-card quote-card reveal-on-scroll">
+        <img src="assets/recca/floral-corner-bugis.svg" alt="Ornamen" class="corner-ornament corner-tl">
+        <img src="assets/recca/floral-corner-bugis.svg" alt="Ornamen" class="corner-ornament corner-tr">
+        <img src="assets/recca/floral-corner-bugis.svg" alt="Ornamen" class="corner-ornament corner-bl">
+        <img src="assets/recca/floral-corner-bugis.svg" alt="Ornamen" class="corner-ornament corner-br">
+
+        <p class="arabic-text">
+          وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً ۚ إِنَّ فِي ذَٰلِكَ لَآيَاتٍ لِّقَوْمٍ يَتَفَكَّرُونَ
+        </p>
+
+        <p class="quote-translation">
+          "Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda bagi kaum yang berpikir."
+        </p>
+
+        <p class="quote-source">— QS. AR-RUM: 21 —</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PROFIL MEMPELAI (BOTTING BURANE & BOTTING MAKKUNRAI)
+       ========================================================================== -->
+  <section id="mempelai" class="section-wrapper">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-subtitle">Dua Hati Bersatu Dalam Kehormatan Adat</span>
+        <h2 class="section-title">Kedua Mempelai</h2>
+        <img src="assets/recca/divider-recca.svg" alt="Pemisah Songko Recca" class="recca-divider">
+        <p>
+          Dengan memohon rahmat dan ridho Allah Subhanahu wa Ta'ala, kami mengikat janji suci pernikahan putra-putri tercinta:
+        </p>
+      </div>
+
+      <div class="couple-wrapper">
+        <!-- Mempelai Pria (Nur Akbar) -->
+        <div class="recca-card couple-card reveal-on-scroll">
+          <img src="assets/recca/floral-corner-bugis.svg" alt="Ornamen" class="corner-ornament corner-tl">
+          <img src="assets/recca/floral-corner-bugis.svg" alt="Ornamen" class="corner-ornament corner-tr">
+          
+          <!-- Natural Circle Photo -->
+          <div class="couple-photo-frame">
+            <img src="assets/recca/groom.jpeg" alt="Nur Akbar" class="couple-photo">
+          </div>
+
+          <span class="couple-role">Mempelai Pria (Botting Burane)</span>
+          <h3 class="couple-name">Nur Akbar</h3>
+          
+          <p class="couple-parents">
+            Putra tercinta dari pasangan:<br>
+            <strong>Keluarga Bpk. H. Syamsuddin</strong><br>
+            &amp; <strong>Ibu Hj. Rosdiana</strong><br>
+            <span style="font-size: 0.85rem; color: var(--gold-prada);">(Kabupaten Bulukumba)</span>
+          </p>
+        </div>
+
+        <!-- Ampersand Centerpiece -->
+        <div class="couple-separator reveal-on-scroll">&amp;</div>
+
+        <!-- Mempelai Wanita (Magfira) -->
+        <div class="recca-card couple-card reveal-on-scroll">
+          <img src="assets/recca/floral-corner-bugis.svg" alt="Ornamen" class="corner-ornament corner-tl">
+          <img src="assets/recca/floral-corner-bugis.svg" alt="Ornamen" class="corner-ornament corner-tr">
+
+          <!-- Natural Circle Photo -->
+          <div class="couple-photo-frame">
+            <img src="assets/recca/bride.jpeg" alt="Magfira" class="couple-photo">
+          </div>
+
+          <span class="couple-role">Mempelai Wanita (Botting Makkunrai)</span>
+          <h3 class="couple-name">Magfira</h3>
+          
+          <p class="couple-parents">
+            Putri tercinta dari pasangan:<br>
+            <strong>Keluarga Bpk. H. Muhammad Idris</strong><br>
+            &amp; <strong>Ibu Hj. Sitti Maryam</strong><br>
+            <span style="font-size: 0.85rem; color: var(--gold-prada);">(Kabupaten Bulukumba)</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       ADAT & FILOSOFI BUGIS (SONGKO' RECCA' & TATA UPACARA)
+       ========================================================================== -->
+  <section id="adat" class="section-wrapper">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-subtitle">Warisan Luhur Butta Panrita &amp; To Bone</span>
+        <h2 class="section-title">Filosofi Songko' Recca'</h2>
+        <img src="assets/recca/divider-recca.svg" alt="Pemisah Songko Recca" class="recca-divider">
+        <p>
+          Songko' Recca' (Songkok Pamiring) bukan sekadar mahkota adat Bugis Makassar, melainkan simbol luhur falsafah hidup yang menyatukan dua insan dalam keanggunan hitam dan emas:
+        </p>
+      </div>
+
+      <div class="philosophy-grid">
+        <div class="philosophy-item reveal-on-scroll">
+          <span class="philosophy-icon">🌿</span>
+          <h3 class="philosophy-title">Serat Lontar (Getteng)</h3>
+          <p class="philosophy-desc">
+            Serat pelepah lontar hitam yang kokoh melambangkan <em>Getteng</em> — keteguhan prinsip, ketegaran mengarungi bahtera rumah tangga, dan janji suci yang tak goyah oleh badai zaman.
+          </p>
+        </div>
+
+        <div class="philosophy-item reveal-on-scroll">
+          <span class="philosophy-icon">✨</span>
+          <h3 class="philosophy-title">Pamiring Ulaweng (Lempu')</h3>
+          <p class="philosophy-desc">
+            Anyaman benang emas murni melambangkan <em>Lempu'</em> — kejujuran budi, ketulusan niat, dan kemuliaan martabat keluarga yang bersinar laksana emas murni di mata masyarakat.
+          </p>
+        </div>
+
+        <div class="philosophy-item reveal-on-scroll">
+          <span class="philosophy-icon">🧵</span>
+          <h3 class="philosophy-title">Anyaman Rapat (Sipakalebbi')</h3>
+          <p class="philosophy-desc">
+            Anyaman yang saling mengunci rapat melambangkan persatuan dua rumpun keluarga besar dalam ikatan <em>Sipakalebbi'</em> — saling memuliakan, menjaga aib, dan mempererat silaturahmi.
+          </p>
+        </div>
+
+        <div class="philosophy-item reveal-on-scroll">
+          <span class="philosophy-icon">🛡️</span>
+          <h3 class="philosophy-title">Siri' na Pesse'</h3>
+          <p class="philosophy-desc">
+            Falsafah tertinggi Bugis Makassar — menegakkan marwah kehormatan (<em>Siri'</em>) dan rasa empati kasih sayang mendalam (<em>Pesse'</em>) sebagai pondasi keluarga sakinah.
+          </p>
+        </div>
+      </div>
+
+      <!-- Rangkaian Prosesi Adat Bugis Makassar -->
+      <div class="section-header reveal-on-scroll" style="margin-top: 4.5rem;">
+        <span class="section-subtitle">Tata Upacara Sakral</span>
+        <h3 class="section-title" style="font-size: 2.1rem;">Rangkaian Adat Pernikahan</h3>
+        <img src="assets/recca/divider-recca.svg" alt="Pemisah Songko Recca" class="recca-divider">
+        <p>
+          Rangkaian prosesi agung perkawinan adat Bugis Makassar yang sarat doa, restu, dan keluhuran martabat:
+        </p>
+      </div>
+
+      <div class="adat-grid">
+        <div class="adat-step reveal-on-scroll">
+          <span class="adat-num">1</span>
+          <h3 class="adat-title">Mappettu Ada</h3>
+          <p class="adat-desc">
+            Musyawarah mufakat dua keluarga besar menetapkan uang panai', sompa (mahar), dan hari baik pernikahan dengan penuh kehormatan.
+          </p>
+        </div>
+
+        <div class="adat-step reveal-on-scroll">
+          <span class="adat-num">2</span>
+          <h3 class="adat-title">Mappenre' Botting</h3>
+          <p class="adat-desc">
+            Arak-arakan mempelai pria mengenakan Songko' Recca' Pamiring dan Jas Tutu' Bugis diantar keluarga menuju kediaman mempelai wanita.
+          </p>
+        </div>
+
+        <div class="adat-step reveal-on-scroll">
+          <span class="adat-num">3</span>
+          <h3 class="adat-title">Mappacci (Pembersihan Jiwa)</h3>
+          <p class="adat-desc">
+            Malam bertabur daun pacci yang diusapkan para sesepuh sebagai lambang kesucian hati dan doa restu sebelum melangkah ke gerbang pernikahan.
+          </p>
+        </div>
+
+        <div class="adat-step reveal-on-scroll">
+          <span class="adat-num">4</span>
+          <h3 class="adat-title">Akad Nikah (Ijab Qabul)</h3>
+          <p class="adat-desc">
+            Ikrar suci di hadapan penghulu, saksi, dan para malaikat, mengikat dua jiwa dalam tali mitsaqan ghalizha yang diridhoi Allah SWT.
+          </p>
+        </div>
+
+        <div class="adat-step reveal-on-scroll">
+          <span class="adat-num">5</span>
+          <h3 class="adat-title">Mappasikarawa</h3>
+          <p class="adat-desc">
+            Prosesi sentuhan pertama antara suami dan istri yang telah sah secara agama, melambangkan penyerahan diri dan kelembutan cinta kasih.
+          </p>
+        </div>
+
+        <div class="adat-step reveal-on-scroll">
+          <span class="adat-num">6</span>
+          <h3 class="adat-title">Walimatul 'Ursy (Resepsi)</h3>
+          <p class="adat-desc">
+            Perjamuan kebahagiaan para tamu terhormat, saling menyapa, mendoakan, dan menyantap jamuan hidangan khas Bugis Makassar.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       AGENDA ACARA & LOKASI
+       ========================================================================== -->
+  <section id="acara" class="section-wrapper">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-subtitle">Waktu &amp; Tempat Bersejarah</span>
+        <h2 class="section-title">Agenda Pernikahan</h2>
+        <img src="assets/recca/divider-recca.svg" alt="Pemisah Songko Recca" class="recca-divider">
+        <p>
+          Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir pada:
+        </p>
+      </div>
+
+      <div class="events-grid">
+        <!-- Akad Nikah Card -->
+        <div class="recca-card event-card reveal-on-scroll">
+          <img src="assets/recca/floral-corner-bugis.svg" alt="Ornamen" class="corner-ornament corner-tl">
+          <img src="assets/recca/floral-corner-bugis.svg" alt="Ornamen" class="corner-ornament corner-tr">
+          
+          <div class="event-badge">IKRAR SUCI</div>
+          <h3 class="event-title">Akad Nikah</h3>
+
+          <div class="event-detail-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            <span>Ahad, 28 Juni 2026</span>
+          </div>
+
+          <div class="event-detail-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            <span>Pukul 09.00 - 11.00 WITA</span>
+          </div>
+
+          <div class="event-venue-name">Gedung Ammatoa Bulukumba</div>
+          <p class="event-address">
+            Jl. Sam Ratulangi No. 12, Caile, Kec. Ujung Bulu, Kabupaten Bulukumba, Sulawesi Selatan
+          </p>
+
+          <a href="https://maps.google.com/?q=Gedung+Ammatoa+Bulukumba" target="_blank" rel="noopener noreferrer" class="btn-action">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            Petunjuk Lokasi Google Maps
+          </a>
+        </div>
+
+        <!-- Resepsi Pernikahan Card -->
+        <div class="recca-card event-card reveal-on-scroll">
+          <img src="assets/recca/floral-corner-bugis.svg" alt="Ornamen" class="corner-ornament corner-tl">
+          <img src="assets/recca/floral-corner-bugis.svg" alt="Ornamen" class="corner-ornament corner-tr">
+
+          <div class="event-badge">WALIMATUL 'URSY</div>
+          <h3 class="event-title">Resepsi Adat</h3>
+
+          <div class="event-detail-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            <span>Ahad, 28 Juni 2026</span>
+          </div>
+
+          <div class="event-detail-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            <span>Pukul 11.30 WITA - Selesai</span>
+          </div>
+
+          <div class="event-venue-name">Grand Ball Room Ammatoa</div>
+          <p class="event-address">
+            Jl. Sam Ratulangi No. 12, Caile, Kec. Ujung Bulu, Kabupaten Bulukumba, Sulawesi Selatan
+          </p>
+
+          <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Pernikahan+Nur+Akbar+%26+Magfira+(Adat+Bugis+Songko+Recca)&dates=20260628T010000Z/20260628T090000Z&details=Pernikahan+Adat+Bugis+Makassar+Nur+Akbar+%26+Magfira+bertempat+di+Gedung+Ammatoa+Bulukumba&location=Gedung+Ammatoa+Bulukumba" target="_blank" rel="noopener noreferrer" class="btn-action">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+            Simpan ke Kalender
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       KISAH CINTA (LOVE STORY TIMELINE)
+       ========================================================================== -->
+  <section id="kisah" class="section-wrapper">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-subtitle">Jejak Takdir Dua Hati</span>
+        <h2 class="section-title">Kisah Cinta Kami</h2>
+        <img src="assets/recca/divider-recca.svg" alt="Pemisah Songko Recca" class="recca-divider">
+        <p>
+          Untaian takdir yang mempertemukan Akbar dan Magfira dalam rajutan kasih suci:
+        </p>
+      </div>
+
+      <div class="recca-card reveal-on-scroll" style="padding: 3rem 2rem;">
+        <img src="assets/recca/floral-corner-bugis.svg" alt="Ornamen" class="corner-ornament corner-tl">
+        <img src="assets/recca/floral-corner-bugis.svg" alt="Ornamen" class="corner-ornament corner-tr">
+        <img src="assets/recca/floral-corner-bugis.svg" alt="Ornamen" class="corner-ornament corner-bl">
+        <img src="assets/recca/floral-corner-bugis.svg" alt="Ornamen" class="corner-ornament corner-br">
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-year">AGUSTUS 2022</div>
+            <h3 class="timeline-title">Pertemuan Pertama (Mappasituju)</h3>
+            <p class="timeline-desc">
+              Di tanah Butta Panrita Lopi yang sejuk, takdir mempertemukan kami dalam sebuah kegiatan kemasyarakatan. Senyuman sederhana menjadi awal mula terukirnya rasa saling mengagumi.
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-year">DESEMBER 2024</div>
+            <h3 class="timeline-title">Ikrar Lamaran (Mappettu Ada)</h3>
+            <p class="timeline-desc">
+              Dengan restu penuh dari kedua orang tua dan sanak keluarga, niat tulus diresmikan dalam musyawarah adat Bugis yang penuh kehangatan dan rasa hormat.
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-year">JUNI 2026</div>
+            <h3 class="timeline-title">Menuju Mahligai Suci (Mappabotting)</h3>
+            <p class="timeline-desc">
+              Kini, di bawah naungan adat Bugis Songko' Recca' yang mulia, kami siap mengikrarkan akad suci, menyatukan dua jiwa untuk melangkah bersama menggapai ridho Illahi.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       GALERI FOTO PREWEDDING (6 FOTO ASLI HD)
+       ========================================================================== -->
+  <section id="galeri" class="section-wrapper">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-subtitle">Potret Keindahan Hitam &amp; Emas</span>
+        <h2 class="section-title">Galeri Prewedding</h2>
+        <img src="assets/recca/divider-recca.svg" alt="Pemisah Songko Recca" class="recca-divider">
+        <p>
+          Potret kenangan manis Nur Akbar &amp; Magfira dalam balutan busana hitam elegan yang menyatu dengan kemuliaan Songko' Recca':
+        </p>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item reveal-on-scroll">
+          <img src="assets/recca/gallery-1.jpeg" alt="Kilau Senja Akbar & Magfira" class="gallery-img">
+          <div class="gallery-overlay">
+            <span class="gallery-caption">Kilau Kasih di Senja Bulukumba</span>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal-on-scroll">
+          <img src="assets/recca/gallery-2.jpeg" alt="Akbar & Magfira di Gedung Ammatoa" class="gallery-img">
+          <div class="gallery-overlay">
+            <span class="gallery-caption">Bersanding di Gedung Ammatoa</span>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal-on-scroll">
+          <img src="assets/recca/gallery-3.jpeg" alt="Pose Tangga Arsitektural" class="gallery-img">
+          <div class="gallery-overlay">
+            <span class="gallery-caption">Langkah Menuju Masa Depan</span>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal-on-scroll">
+          <img src="assets/recca/gallery-4.jpeg" alt="Pose Romantis Mobil Hitam" class="gallery-img">
+          <div class="gallery-overlay">
+            <span class="gallery-caption">Menyusuri Jalan Kehidupan</span>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal-on-scroll">
+          <img src="assets/recca/gallery-5.jpeg" alt="Tatap Asih Kedua Mempelai" class="gallery-img">
+          <div class="gallery-overlay">
+            <span class="gallery-caption">Ikrar Setia Dua Hati</span>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal-on-scroll">
+          <img src="assets/recca/gallery-6.jpeg" alt="Tarian Kasih Akbar & Magfira" class="gallery-img">
+          <div class="gallery-overlay">
+            <span class="gallery-caption">Tarian Kasih &amp; Kebahagiaan</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       TANDA KASIH / KADO DIGITAL
+       ========================================================================== -->
+  <section id="kado" class="section-wrapper">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-subtitle">Tanda Kasih &amp; Doa Berkah</span>
+        <h2 class="section-title">Kado Digital</h2>
+        <img src="assets/recca/divider-recca.svg" alt="Pemisah Songko Recca" class="recca-divider">
+        <p>
+          Doa restu Anda merupakan karunia terindah bagi kami. Bagi keluarga dan sahabat yang ingin memberikan tanda kasih secara digital, dapat disalurkan melalui:
+        </p>
+      </div>
+
+      <div class="gift-grid">
+        <!-- Rekening BRI -->
+        <div class="recca-card gift-card reveal-on-scroll">
+          <img src="assets/recca/floral-corner-bugis.svg" alt="Ornamen" class="corner-ornament corner-tl">
+          <img src="assets/recca/floral-corner-bugis.svg" alt="Ornamen" class="corner-ornament corner-tr">
+          
+          <span class="bank-logo">BANK BRI</span>
+          <div class="account-number">5076-01-024891-53-8</div>
+          <div class="account-holder">a.n. Nur Akbar</div>
+
+          <button class="btn-copy" data-account="507601024891538">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+            Salin Nomor Rekening
+          </button>
+        </div>
+
+        <!-- Rekening BCA -->
+        <div class="recca-card gift-card reveal-on-scroll">
+          <img src="assets/recca/floral-corner-bugis.svg" alt="Ornamen" class="corner-ornament corner-tl">
+          <img src="assets/recca/floral-corner-bugis.svg" alt="Ornamen" class="corner-ornament corner-tr">
+
+          <span class="bank-logo">BANK BCA</span>
+          <div class="account-number">7901-4428-91</div>
+          <div class="account-holder">a.n. Magfira</div>
+
+          <button class="btn-copy" data-account="7901442891">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+            Salin Nomor Rekening
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       RSVP & BUKU TAMU DOA
+       ========================================================================== -->
+  <section id="rsvp" class="section-wrapper">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-subtitle">Konfirmasi Kehadiran &amp; Doa</span>
+        <h2 class="section-title">Buku Tamu &amp; Ucapan</h2>
+        <img src="assets/recca/divider-recca.svg" alt="Pemisah Songko Recca" class="recca-divider">
+        <p>
+          Kehadiran dan untaian doa Anda merupakan berkah kehormatan yang amat bermakna bagi kami berdua:
+        </p>
+      </div>
+
+      <div class="rsvp-wrapper">
+        <!-- Form RSVP -->
+        <div class="recca-card reveal-on-scroll">
+          <img src="assets/recca/floral-corner-bugis.svg" alt="Ornamen" class="corner-ornament corner-tl">
+          <img src="assets/recca/floral-corner-bugis.svg" alt="Ornamen" class="corner-ornament corner-tr">
+
+          <h3 style="font-family: var(--font-serif); font-size: 1.4rem; color: #FFFFFF; font-weight: 700; margin-bottom: 1.4rem;">
+            Kirim Ucapan &amp; Konfirmasi
+          </h3>
+
+          <form id="rsvpForm">
+            <div class="rsvp-form-group">
+              <label for="rsvpName">Nama Lengkap</label>
+              <input type="text" id="rsvpName" class="rsvp-input" placeholder="Masukkan nama Anda" required>
+            </div>
+
+            <div class="rsvp-form-group">
+              <label for="rsvpStatus">Konfirmasi Kehadiran</label>
+              <select id="rsvpStatus" class="rsvp-select">
+                <option value="Hadir">Insya Allah Hadir</option>
+                <option value="Belum Pasti">Masih Ragu / Belum Pasti</option>
+                <option value="Tidak Hadir">Mohon Maaf Tidak Bisa Hadir</option>
+              </select>
+            </div>
+
+            <div class="rsvp-form-group">
+              <label for="rsvpMessage">Untaian Doa &amp; Ucapan</label>
+              <textarea id="rsvpMessage" class="rsvp-textarea" placeholder="Tuliskan ucapan dan doa terbaik Anda untuk kedua mempelai..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit">
+              Kirim Ucapan Doa
+            </button>
+          </form>
+        </div>
+
+        <!-- Daftar Doa Para Tamu -->
+        <div class="recca-card reveal-on-scroll">
+          <img src="assets/recca/floral-corner-bugis.svg" alt="Ornamen" class="corner-ornament corner-tl">
+          <img src="assets/recca/floral-corner-bugis.svg" alt="Ornamen" class="corner-ornament corner-tr">
+
+          <h3 style="font-family: var(--font-serif); font-size: 1.4rem; color: #FFFFFF; font-weight: 700; margin-bottom: 1.4rem;">
+            Untaian Doa Para Tamu
+          </h3>
+
+          <div id="wishesList" class="wishes-list">
+            <!-- Diisi otomatis oleh js/recca.js -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FOOTER PENUTUP & KELUARGA BESAR
+       ========================================================================== -->
+  <footer class="footer-section">
+    <div class="container">
+      <img src="assets/recca/divider-recca.svg" alt="Ornamen Songko Recca" style="width: 240px; height: auto; margin: 0 auto 1.5rem; display: block; opacity: 0.95;">
+
+      <p class="footer-curse">
+        "Kurru sumange', Salama' ki tapada salama'"
+      </p>
+
+      <p class="lontara-script">ᨔᨗᨄᨀᨈᨕᨘ • ᨔᨗᨄᨀᨒᨛᨅᨗ • ᨔᨗᨄᨀᨕᨗᨂᨛ</p>
+
+      <div class="footer-names">Nur Akbar &amp; Magfira</div>
+      <p style="color: var(--gold-prada); font-style: italic; font-size: 0.98rem; font-weight: 600;">
+        "Mahkota Adat Bugis Songko' Recca' • Siri' na Pesse'"
+      </p>
+
+      <div style="margin-top: 2rem; font-size: 0.95rem; line-height: 1.8;">
+        <span style="color: var(--gold-prada); font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; display: block; margin-bottom: 0.45rem;">Turut Mengundang Keluarga Besar:</span>
+        <span style="color: var(--text-body);">
+          Kel. Besar Bpk. H. Syamsuddin &amp; Ibu Hj. Rosdiana (Bulukumba)<br>
+          Kel. Besar Bpk. H. Muhammad Idris &amp; Ibu Hj. Sitti Maryam (Bulukumba)
+        </span>
+      </div>
+
+      <p class="footer-copyright">
+        &copy; 2026 Pernikahan Adat Bugis Makassar Songko' Recca' — Nur Akbar &amp; Magfira. Seluruh Hak Cipta Dilindungi.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/recca.js?v=2"></script>
+</body>
+</html>

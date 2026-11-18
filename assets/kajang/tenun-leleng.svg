@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
+  <defs>
+    <pattern id="weavePattern" width="60" height="60" patternUnits="userSpaceOnUse">
+      <rect width="60" height="60" fill="transparent"/>
+      <!-- Subtle woven thread texture -->
+      <line x1="0" y1="15" x2="60" y2="15" stroke="#D9B876" stroke-width="0.6" stroke-opacity="0.12"/>
+      <line x1="0" y1="30" x2="60" y2="30" stroke="#D9B876" stroke-width="0.8" stroke-opacity="0.18"/>
+      <line x1="0" y1="45" x2="60" y2="45" stroke="#D9B876" stroke-width="0.6" stroke-opacity="0.12"/>
+      <line x1="15" y1="0" x2="15" y2="60" stroke="#D9B876" stroke-width="0.6" stroke-opacity="0.12"/>
+      <line x1="30" y1="0" x2="30" y2="60" stroke="#D9B876" stroke-width="0.8" stroke-opacity="0.18"/>
+      <line x1="45" y1="0" x2="45" y2="60" stroke="#D9B876" stroke-width="0.6" stroke-opacity="0.12"/>
+      <!-- Diamond cross dots -->
+      <polygon points="30,28 32,30 30,32 28,30" fill="#D9B876" fill-opacity="0.25"/>
+      <polygon points="0,0 2,0 0,2" fill="#D9B876" fill-opacity="0.2"/>
+      <polygon points="60,0 58,0 60,2" fill="#D9B876" fill-opacity="0.2"/>
+      <polygon points="0,60 2,60 0,58" fill="#D9B876" fill-opacity="0.2"/>
+      <polygon points="60,60 58,60 60,58" fill="#D9B876" fill-opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="60" height="60" fill="url(#weavePattern)"/>
+</svg>

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 50" fill="none">
+  <defs>
+    <linearGradient id="divIslGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6EE7B7" stop-opacity="0" />
+      <stop offset="25%" stop-color="#D4AF37" stop-opacity="0.75" />
+      <stop offset="50%" stop-color="#F5E1A4" stop-opacity="1" />
+      <stop offset="75%" stop-color="#D4AF37" stop-opacity="0.75" />
+      <stop offset="100%" stop-color="#6EE7B7" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+  <!-- Horizontal champagne hairlines -->
+  <line x1="20" y1="25" x2="212" y2="25" stroke="url(#divIslGrad)" stroke-width="1.35" />
+  <line x1="288" y1="25" x2="480" y2="25" stroke="url(#divIslGrad)" stroke-width="1.35" />
+
+  <!-- Subtle outer diamonds -->
+  <polygon points="222,25 227,21 232,25 227,29" stroke="#A7F3D0" stroke-width="1.2" fill="none" />
+  <polygon points="268,25 273,21 278,25 273,29" stroke="#A7F3D0" stroke-width="1.2" fill="none" />
+
+  <!-- Central 8-pointed Rub el Hizb Star -->
+  <g transform="translate(250, 25)">
+    <rect x="-11" y="-11" width="22" height="22" stroke="#F5E1A4" stroke-width="1.6" fill="none" />
+    <rect x="-11" y="-11" width="22" height="22" transform="rotate(45)" stroke="#E6C67C" stroke-width="1.6" fill="none" />
+    <circle cx="0" cy="0" r="3.2" fill="#A7F3D0" />
+    <circle cx="0" cy="0" r="6" stroke="#D4AF37" stroke-width="0.9" fill="none" opacity="0.8" />
+  </g>
+</svg>

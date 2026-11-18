@@ -1,0 +1,103 @@
+/* Theme Switcher Shared Component */
+.theme-switch-bar {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-theme-switcher {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(17, 22, 33, 0.95);
+  border: 1.5px solid #fbbf24;
+  color: #fde68a;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 8px 16px;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+}
+
+.btn-theme-switcher:hover {
+  background: #fbbf24;
+  color: #0b0d13;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(251, 191, 36, 0.4);
+}
+
+.theme-dropdown {
+  position: absolute;
+  top: 115%;
+  right: 0;
+  background: #11141d;
+  border: 1.5px solid rgba(251, 191, 36, 0.4);
+  border-radius: 14px;
+  padding: 8px;
+  min-width: 230px;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.85);
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  backdrop-filter: blur(12px);
+  z-index: 10001;
+}
+
+.theme-dropdown.show {
+  display: flex;
+  animation: fadeInDown 0.25s ease-out;
+}
+
+.theme-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 12px;
+  border-radius: 8px;
+  color: #f8fafc;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.theme-option:hover {
+  background: rgba(251, 191, 36, 0.15);
+  color: #fde68a;
+  transform: translateX(4px);
+}
+
+.theme-option.active {
+  background: linear-gradient(135deg, rgba(251, 191, 36, 0.25), rgba(217, 119, 6, 0.25));
+  border-left: 3px solid #fbbf24;
+  color: #fbbf24;
+  font-weight: 700;
+}
+
+.theme-badge {
+  font-size: 0.7rem;
+  padding: 2px 7px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  margin-left: auto;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <defs>
+    <linearGradient id="cornerGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF5D6" />
+      <stop offset="45%" stop-color="#F5D061" />
+      <stop offset="85%" stop-color="#D4A028" />
+      <stop offset="100%" stop-color="#875E0E" />
+    </linearGradient>
+  </defs>
+
+  <!-- Outer corner borders with woven stepped geometry -->
+  <path d="M4,96 L4,24 Q4,4 24,4 L96,4" stroke="url(#cornerGold)" stroke-width="2.2" stroke-linecap="round" fill="none" />
+  <path d="M12,96 L12,28 Q12,12 28,12 L96,12" stroke="url(#cornerGold)" stroke-width="1.2" stroke-dasharray="3 3" opacity="0.8" fill="none" />
+  
+  <!-- Sulapa Eppa Diamond Corner Nodes -->
+  <polygon points="24,24 32,16 40,24 32,32" stroke="url(#cornerGold)" stroke-width="1.4" fill="#0C0E12" />
+  <circle cx="32" cy="24" r="2.5" fill="#FFF5D6" />
+
+  <!-- Diagonal woven filigree flourishes -->
+  <path d="M24,40 L40,24 M28,52 L52,28 M32,64 L64,32" stroke="url(#cornerGold)" stroke-width="1" opacity="0.5" />
+  
+  <!-- Corner Tip Crest -->
+  <circle cx="10" cy="10" r="3" fill="#F5D061" />
+  <polygon points="10,4 14,10 10,16 6,10" fill="#FFF5D6" />
+</svg>

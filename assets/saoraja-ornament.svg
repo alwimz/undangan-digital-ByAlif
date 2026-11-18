@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 240" fill="none">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#BF953F" />
+      <stop offset="25%" stop-color="#FCF6BA" />
+      <stop offset="50%" stop-color="#B38728" />
+      <stop offset="75%" stop-color="#FBF5B7" />
+      <stop offset="100%" stop-color="#AA771C" />
+    </linearGradient>
+    <linearGradient id="deepRedGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#800a16" />
+      <stop offset="100%" stop-color="#4a040b" />
+    </linearGradient>
+    <filter id="goldGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Central Crown / Finial (Mustaka Saoraja) -->
+  <g transform="translate(300, 30)">
+    <path d="M0,-25 L8,-12 L4,-12 L9,5 L4,5 L7,20 L-7,20 L-4,5 L-9,5 L-4,-12 L-8,-12 Z" fill="url(#goldGrad)" filter="url(#goldGlow)"/>
+    <circle cx="0" cy="-28" r="4" fill="url(#goldGrad)"/>
+    <circle cx="0" cy="10" r="3" fill="#FFEAA7"/>
+  </g>
+
+  <!-- Gable Triangle / Timpa Laja' Tiers (5 Tingkat Kehormatan Bugis) -->
+  <!-- Tier 1 (Top) -->
+  <polygon points="300,50 340,80 260,80" fill="url(#deepRedGrad)" stroke="url(#goldGrad)" stroke-width="2"/>
+  <circle cx="300" cy="68" r="3" fill="url(#goldGrad)"/>
+  
+  <!-- Tier 2 -->
+  <polygon points="255,83 345,83 370,110 230,110" fill="url(#deepRedGrad)" stroke="url(#goldGrad)" stroke-width="2"/>
+  <line x1="280" y1="96" x2="320" y2="96" stroke="url(#goldGrad)" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <circle cx="300" cy="96" r="3.5" fill="url(#goldGrad)"/>
+
+  <!-- Tier 3 -->
+  <polygon points="225,113 375,113 400,140 200,140" fill="url(#deepRedGrad)" stroke="url(#goldGrad)" stroke-width="2"/>
+  <line x1="260" y1="126" x2="340" y2="126" stroke="url(#goldGrad)" stroke-width="1.5"/>
+  <circle cx="300" cy="126" r="4" fill="url(#goldGrad)"/>
+  <circle cx="270" cy="126" r="2.5" fill="url(#goldGrad)"/>
+  <circle cx="330" cy="126" r="2.5" fill="url(#goldGrad)"/>
+
+  <!-- Tier 4 -->
+  <polygon points="195,143 405,143 430,170 170,170" fill="url(#deepRedGrad)" stroke="url(#goldGrad)" stroke-width="2"/>
+  <circle cx="300" cy="156" r="4" fill="url(#goldGrad)"/>
+  <circle cx="260" cy="156" r="3" fill="url(#goldGrad)"/>
+  <circle cx="340" cy="156" r="3" fill="url(#goldGrad)"/>
+  <circle cx="220" cy="156" r="2" fill="url(#goldGrad)"/>
+  <circle cx="380" cy="156" r="2" fill="url(#goldGrad)"/>
+
+  <!-- Tier 5 (Base) -->
+  <polygon points="165,173 435,173 465,200 135,200" fill="url(#deepRedGrad)" stroke="url(#goldGrad)" stroke-width="2"/>
+  <path d="M 180,186 Q 300,192 420,186" stroke="url(#goldGrad)" stroke-width="1.5" fill="none"/>
+  <circle cx="300" cy="186" r="4.5" fill="url(#goldGrad)"/>
+  <circle cx="250" cy="186" r="3" fill="url(#goldGrad)"/>
+  <circle cx="350" cy="186" r="3" fill="url(#goldGrad)"/>
+  <circle cx="200" cy="186" r="2.5" fill="url(#goldGrad)"/>
+  <circle cx="400" cy="186" r="2.5" fill="url(#goldGrad)"/>
+
+  <!-- Left Symmetrical Wing Horn (Anjong Saoraja / Tanduk Ukiran Khas) -->
+  <path d="M 260,80 C 210,60 140,50 80,85 C 60,97 50,115 55,130 C 60,140 75,135 78,125 C 85,100 130,80 225,113" 
+        fill="url(#goldGrad)" stroke="#664614" stroke-width="1"/>
+  <path d="M 140,70 C 110,60 80,75 70,100 C 65,110 50,110 55,90 C 65,65 110,45 180,60" 
+        fill="url(#goldGrad)" opacity="0.85"/>
+
+  <!-- Right Symmetrical Wing Horn (Anjong Saoraja) -->
+  <path d="M 340,80 C 390,60 460,50 520,85 C 540,97 550,115 545,130 C 540,140 525,135 522,125 C 515,100 470,80 375,113" 
+        fill="url(#goldGrad)" stroke="#664614" stroke-width="1"/>
+  <path d="M 460,70 C 490,60 520,75 530,100 C 535,110 550,110 545,90 C 535,65 490,45 420,60" 
+        fill="url(#goldGrad)" opacity="0.85"/>
+
+  <!-- Lower Beam & Carvings -->
+  <rect x="120" y="202" width="360" height="12" rx="4" fill="url(#goldGrad)"/>
+  <g fill="#4a040b">
+    <circle cx="150" cy="208" r="2.5"/>
+    <circle cx="180" cy="208" r="2.5"/>
+    <circle cx="210" cy="208" r="2.5"/>
+    <circle cx="240" cy="208" r="2.5"/>
+    <circle cx="270" cy="208" r="2.5"/>
+    <circle cx="300" cy="208" r="3"/>
+    <circle cx="330" cy="208" r="2.5"/>
+    <circle cx="360" cy="208" r="2.5"/>
+    <circle cx="390" cy="208" r="2.5"/>
+    <circle cx="420" cy="208" r="2.5"/>
+    <circle cx="450" cy="208" r="2.5"/>
+  </g>
+</svg>

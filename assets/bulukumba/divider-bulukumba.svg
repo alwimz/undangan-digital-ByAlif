@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 50" fill="none">
+  <defs>
+    <linearGradient id="bugisGoldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#E5C579" stop-opacity="0" />
+      <stop offset="25%" stop-color="#F5D061" stop-opacity="0.7" />
+      <stop offset="50%" stop-color="#FFF0BA" stop-opacity="1" />
+      <stop offset="75%" stop-color="#F5D061" stop-opacity="0.7" />
+      <stop offset="100%" stop-color="#E5C579" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+
+  <!-- Horizontal divider lines -->
+  <line x1="25" y1="25" x2="210" y2="25" stroke="url(#bugisGoldGrad)" stroke-width="1.4" />
+  <line x1="290" y1="25" x2="475" y2="25" stroke="url(#bugisGoldGrad)" stroke-width="1.4" />
+
+  <!-- Bugis Sulapa Eppa Diamonds -->
+  <polygon points="218,25 224,19 230,25 224,31" stroke="#F5D061" stroke-width="1.2" fill="none" />
+  <circle cx="224" cy="25" r="1.8" fill="#FFF0BA" />
+
+  <polygon points="270,25 276,19 282,25 276,31" stroke="#F5D061" stroke-width="1.2" fill="none" />
+  <circle cx="276" cy="25" r="1.8" fill="#FFF0BA" />
+
+  <!-- Centerpiece: Bugis Timpa' Laja & Sulapa Eppa Diamond Crest (Tanpa Perahu Pinisi) -->
+  <g transform="translate(250, 25)">
+    <!-- Central diamond -->
+    <polygon points="0,-16 14,0 0,16 -14,0" stroke="#FFF0BA" stroke-width="1.5" fill="#07141E" fill-opacity="0.85" />
+    <polygon points="0,-10 9,0 0,10 -9,0" stroke="#F5D061" stroke-width="1.2" fill="none" />
+    <circle cx="0" cy="0" r="2.5" fill="#FFF0BA" />
+    <!-- Flourishes top and bottom -->
+    <circle cx="0" cy="-19" r="1.6" fill="#F5D061" />
+    <circle cx="0" cy="19" r="1.6" fill="#F5D061" />
+  </g>
+</svg>

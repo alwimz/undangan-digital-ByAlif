@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rampanan Kapa' - Aswandi & Wira | Undangan Pernikahan Adat Toraja</title>
+  <meta name="description" content="Undangan Pernikahan Adat Toraja (Rampanan Kapa') Aswandi Syam & Wira Kartika Putri. Nuansa Rumah Adat Tongkonan dan Makna Sosial Adat Suku Toraja.">
+  <meta name="theme-color" content="#35110a">
+
+  <!-- Google Fonts: Cinzel, Playfair Display, Great Vibes, Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Great+Vibes&family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Toraja Custom Stylesheet -->
+  <link rel="stylesheet" href="css/toraja.css">
+  <link rel="stylesheet" href="css/switcher.css">
+  <script src="js/switcher.js" defer></script>
+</head>
+<body class="lock-scroll">
+
+  <!-- ==========================================================================
+       THEME SWITCHER FLOATING BUTTON & DROPDOWN (5 PILIHAN TEMA)
+       ========================================================================== -->
+  <div class="theme-switch-bar">
+    <button id="btnThemeSwitcher" class="btn-theme-switcher" aria-label="Ganti Tema Undangan">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path></svg>
+      Pilih Tema
+      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+    </button>
+
+    <div id="themeDropdown" class="theme-dropdown">
+      <a href="bulukumba.html" class="theme-option">
+        <span>⛵</span>
+        <span>Adat Bugis Bulukumba</span>
+        <span class="theme-badge" style="background:#0ea5e9;color:#fff;">Baru</span>
+      </a>
+
+      <a href="jawa.html" class="theme-option">
+        <span>🏛️</span>
+        <span>Adat Jawa Klasik Modern</span>
+        <span class="theme-badge" style="background:#8b5a2b;color:#fff;">Baru</span>
+      </a>
+
+      <a href="studio.html" class="theme-option">
+        <span>📸</span>
+        <span>Studio Adat Bugis</span>
+        <span class="theme-badge" style="background:#fbbf24;color:#000;">Baru</span>
+      </a>
+      <a href="bugis.html" class="theme-option">
+        <span>👑</span>
+        <span>Adat Bugis Klasik</span>
+      </a>
+      <a href="toraja.html" class="theme-option active">
+        <span>🏛️</span>
+        <span>Adat Toraja Tongkonan</span>
+        <span class="theme-badge" style="background:#b91c1c;color:#fff;">Aktif</span>
+      </a>
+      <a href="kajang.html" class="theme-option">
+        <span>🖤</span>
+        <span>Adat Ammatoa Kajang</span>
+      </a>
+      <a href="bira.html" class="theme-option">
+        <span>⛵</span>
+        <span>Pantai Pasir Putih Bira</span>
+      </a>
+      <a href="islamic.html" class="theme-option">
+        <span>🕌</span>
+        <span>Islamic Modern</span>
+      </a>
+      <a href="donggia.html" class="theme-option">
+        <span>⛰️</span>
+        <span>Pegunungan Donggia Bugis</span>
+        <span class="theme-badge" style="background:#2d6a4f;color:#fff;">Baru</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Audio Backsound Element (Lagu / Suling Toraja) -->
+  <audio id="weddingAudio" loop preload="auto" src="assets/lagu.aac">
+    <source src="assets/lagu.aac" type="audio/aac">
+  </audio>
+
+  <!-- Background Ambient Layar Lebar (Auto-Responsive Desktop) -->
+  <div class="bg-tongkonan-ambient"></div>
+
+  <!-- Background Utama Auto-Responsive Toraja (Mobile & Desktop) -->
+  <div class="bg-tongkonan-backdrop"></div>
+
+  <!-- Pola Tekstur Ukiran Kayu Toraja Pa'ssura' -->
+  <div class="bg-passura-overlay"></div>
+
+  <!-- ==========================================================================
+       COVER PEMBUKA UNDANGAN TORAJA (AMPELOP SAKRAL RAMBU TUKA')
+       ========================================================================== -->
+  <div id="openingCover">
+    <div class="cover-card">
+      <!-- Ornamen Sudut Ukiran Khas Toraja -->
+      <img src="assets/toraja/corner-toraja.svg" alt="Ornamen Toraja" class="corner-ornament corner-tl">
+      <img src="assets/toraja/corner-toraja.svg" alt="Ornamen Toraja" class="corner-ornament corner-tr">
+      <img src="assets/toraja/corner-toraja.svg" alt="Ornamen Toraja" class="corner-ornament corner-bl">
+      <img src="assets/toraja/corner-toraja.svg" alt="Ornamen Toraja" class="corner-ornament corner-br">
+
+      <!-- Logo Rumah Adat Pilihan di Desktop -->
+      <img src="assets/toraja/logo-rumah-adat.png" alt="Rumah Adat Tongkonan Toraja" class="cover-tongkonan">
+
+      <p class="cover-subheading">Upacara Pernikahan Adat Toraja (Rambu Tuka')</p>
+      <div class="cover-salutation">RAMPANAN KAPA'</div>
+      <p class="cover-quote">
+        "Misa' kada dipotuo, pantan kada dipomate"
+      </p>
+      
+      <h1 class="cover-title">Aswandi <span class="cover-ampersand">&amp;</span> Wira</h1>
+      
+      <div class="guest-card">
+        <p class="guest-label">Kurre Sumanga' Datu / Yth. Bapak/Ibu/Saudara/i:</p>
+        <p class="guest-name dynamic-guest-name">Tamu Undangan Yang Terhormat</p>
+      </div>
+
+      <p class="cover-invitation-text">
+        Dengan segala kerendahan hati, kami mengundang kehadiran Bapak/Ibu/Saudara/i untuk melimpahkan doa dan restu pada ikatan suci kami di hadapan Tongkonan keluarga besar.
+      </p>
+
+      <button id="btnOpenInvitation" class="btn-open-invitation">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+        Buka Undangan Adat
+      </button>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       FLOATING AUDIO BUTTON & BOTTOM NAVIGATION
+       ========================================================================== -->
+  <button id="musicToggleBtn" class="music-toggle-btn" aria-label="Putar Musik">
+    <div class="sound-waves">
+      <div class="wave-bar"></div>
+      <div class="wave-bar"></div>
+      <div class="wave-bar"></div>
+    </div>
+    <!-- Ikon Piringan Gendang / Gong Toraja -->
+    <svg class="disc-icon" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="3"></circle></svg>
+  </button>
+
+  <nav class="bottom-nav">
+    <a href="#hero" class="nav-link active">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
+      <span>Awal</span>
+    </a>
+    <a href="#couple" class="nav-link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+      <span>Mempelai</span>
+    </a>
+    <a href="#adat" class="nav-link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+      <span>Adat</span>
+    </a>
+    <a href="#acara" class="nav-link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+      <span>Acara</span>
+    </a>
+    <a href="#galeri" class="nav-link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+      <span>Galeri</span>
+    </a>
+    <a href="#rsvp" class="nav-link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+      <span>RSVP</span>
+    </a>
+  </nav>
+
+  <!-- ==========================================================================
+       HERO SECTION (BANNER UTAMA TORAJA)
+       ========================================================================== -->
+  <section id="hero" class="hero-section">
+    <div class="container hero-content">
+      <!-- Logo Rumah Adat Pilihan di Desktop -->
+      <img src="assets/toraja/logo-rumah-adat.png" alt="Tongkonan Toraja" class="hero-tongkonan">
+
+      <span class="gold-badge">RAMPANAN KAPA' • TORAJA WEDDING</span>
+
+      <h1 class="hero-names">Aswandi Syam &amp; Wira Kartika</h1>
+      <p style="font-family: var(--font-serif); font-size: 1.15rem; color: #fff2a3; letter-spacing: 2px;">
+        SALAMA' SITAMMU RARA BUKU
+      </p>
+
+      <!-- Falsafah Luhur Suku Toraja -->
+      <div class="hero-salutation-box reveal-on-scroll">
+        <p class="toraja-aphorism">
+          "Misa' kada dipotuo, pantan kada dipomate"
+        </p>
+        <p class="toraja-meaning">
+          (Satu kata kita teguh hidup bersama, berselisih kita binasa. Saling merawat layaknya benih kehidupan, saling memuliakan martabat layaknya butiran emas.)
+        </p>
+      </div>
+
+      <!-- Firman Tuhan / Makna Sakral Kasih -->
+      <div class="toraja-card reveal-on-scroll" style="padding: 1.25rem 1.5rem; margin: 1.5rem auto 2.5rem; max-width: 650px;">
+        <p style="font-size: 0.95rem; font-style: italic; color: #fef3c7; line-height: 1.8;">
+          "Demikianlah mereka bukan lagi dua, melainkan satu. Karena itu, apa yang telah dipersatukan Allah, tidak boleh diceraikan manusia."
+        </p>
+        <p style="font-weight: 700; color: var(--toraja-gold-light); font-size: 0.85rem; margin-top: 0.4rem;">
+          — Matius 19:6
+        </p>
+      </div>
+
+      <div class="hero-date-highlight">
+        SABTU, 12 DESEMBER 2026
+      </div>
+
+      <!-- COUNTDOWN TIMER -->
+      <div class="countdown-box reveal-on-scroll">
+        <div class="time-card">
+          <span id="cdDays" class="time-num">00</span>
+          <span class="time-label">Hari</span>
+        </div>
+        <div class="time-card">
+          <span id="cdHours" class="time-num">00</span>
+          <span class="time-label">Jam</span>
+        </div>
+        <div class="time-card">
+          <span id="cdMinutes" class="time-num">00</span>
+          <span class="time-label">Menit</span>
+        </div>
+        <div class="time-card">
+          <span id="cdSeconds" class="time-num">00</span>
+          <span class="time-label">Detik</span>
+        </div>
+      </div>
+
+      <!-- Simpan ke Google Calendar -->
+      <div style="margin-top: 2rem;">
+        <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Pernikahan+Adat+Toraja+Aswandi+Syam+%26+Wira+Kartika+Putri&dates=20261212T010000Z/20261212T140000Z&details=Undangan+Pernikahan+Adat+Toraja+Rampanan+Kapa+Aswandi+%26+Wira+di+Toraja+Misiliana+Ballroom+Rantepao&location=Toraja+Misiliana+Hotel+Rantepao" target="_blank" rel="noopener noreferrer" class="btn-gold-outline">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+          Simpan ke Google Calendar
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PROFIL MEMPELAI (TO SIKALAO / THE HAPPY COUPLE)
+       ========================================================================== -->
+  <section id="couple" class="section-wrapper">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-subtitle">Mempelai Pengantin</span>
+        <h2 class="section-title">Sang Mempelai (To Sikalao)</h2>
+        <img src="assets/toraja/divider-toraja.svg" alt="Pemisah Toraja" class="toraja-divider">
+        <p style="color: var(--text-muted); font-size: 0.95rem; max-width: 640px; margin: 0.5rem auto 0;">
+          Dengan penuh rasa syukur dan hormat kepada Sang Pencipta (Puang Matua), kami menyatukan dua rumpun keluarga besar Tongkonan dalam ikatan suci Rampanan Kapa':
+        </p>
+      </div>
+
+      <div class="couple-showcase">
+        <!-- Mempelai Pria -->
+        <div class="toraja-card mempelai-card reveal-on-scroll">
+          <img src="assets/toraja/corner-toraja.svg" alt="Ornamen" class="corner-ornament corner-tl">
+          <img src="assets/toraja/corner-toraja.svg" alt="Ornamen" class="corner-ornament corner-tr">
+          
+          <div class="mempelai-photo-frame">
+            <img src="assets/images/groom.jpeg" alt="Aswandi Syam">
+          </div>
+          
+          <h3 class="mempelai-nama">Aswandi Syam</h3>
+          <p class="mempelai-title">Mempelai Pria (Muane)</p>
+          
+          <p class="mempelai-parents">
+            Putra pertama dari:<br>
+            <strong>Bpk. Andi Muhammad Yusuf, S.Sos.</strong><br>
+            &amp; <strong>Ibu Hj. Andi Sitti Aminah</strong><br>
+            <span style="font-size: 0.8rem; color: var(--toraja-gold-light);">(Rumpun Keluarga Besar Tana Toraja)</span>
+          </p>
+
+          <div class="mempelai-social">
+            <a href="https://instagram.com/aswandi.syam" target="_blank" rel="noopener noreferrer" class="social-badge">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+              @aswandi.syam
+            </a>
+          </div>
+        </div>
+
+        <!-- Center Ampersand -->
+        <div class="couple-center-divider reveal-on-scroll">
+          <span class="ampersand-big">&amp;</span>
+          <img src="assets/toraja/divider-toraja.svg" alt="Pemisah" style="width: 140px; transform: rotate(90deg); margin: 1rem 0;">
+        </div>
+
+        <!-- Mempelai Wanita -->
+        <div class="toraja-card mempelai-card reveal-on-scroll">
+          <img src="assets/toraja/corner-toraja.svg" alt="Ornamen" class="corner-ornament corner-tl">
+          <img src="assets/toraja/corner-toraja.svg" alt="Ornamen" class="corner-ornament corner-tr">
+          
+          <div class="mempelai-photo-frame">
+            <img src="assets/images/bride.jpeg" alt="Wira Kartika Putri">
+          </div>
+          
+          <h3 class="mempelai-nama">Wira Kartika Putri</h3>
+          <p class="mempelai-title">Mempelai Wanita (Baine)</p>
+          
+          <p class="mempelai-parents">
+            Putri tercinta dari:<br>
+            <strong>Bpk. Ambo</strong><br>
+            &amp; <strong>Ibu Agustina</strong><br>
+            <span style="font-size: 0.8rem; color: var(--toraja-gold-light);">(Rumpun Keluarga Besar Toraja Utara)</span>
+          </p>
+
+          <div class="mempelai-social">
+            <a href="https://instagram.com/wirakartikaputri_" target="_blank" rel="noopener noreferrer" class="social-badge">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+              @wirakartikaputri_
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Foto Pasangan Couple -->
+      <div class="couple-photo-box reveal-on-scroll">
+        <h4 style="font-family: var(--font-serif); font-size: 1.35rem; color: #fff2a3; margin-bottom: 0.35rem;">
+          Ikatan Kasih Dua Insan (Rampanan Kapa')
+        </h4>
+        <p style="font-size: 0.85rem; color: #fce7f3; margin-bottom: 1.25rem;">
+          "Saling menjaga harkat dan martabat laksana tiang agung Tulak Somba Tongkonan."
+        </p>
+        <img src="assets/images/couple.jpeg" alt="Foto Pasangan Kedua Mempelai Aswandi & Wira">
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       MAKNA SOSIAL & ADAT SUKU TORAJA
+       ========================================================================== -->
+  <section id="adat" class="section-wrapper">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-subtitle">Filosofi &amp; Tatanan Leluhur</span>
+        <h2 class="section-title">Makna Sosial &amp; Adat Toraja</h2>
+        <img src="assets/toraja/divider-toraja.svg" alt="Pemisah Toraja" class="toraja-divider">
+        <p style="color: var(--text-muted); font-size: 0.95rem; max-width: 660px; margin: 0.5rem auto 0;">
+          Pernikahan adat Toraja bukan semata pertemuan dua pribadi, melainkan penyatuan dua rumpun Tongkonan (*pa'rapuan*) yang sarat akan nilai musyawarah, martabat, dan gotong royong:
+        </p>
+      </div>
+
+      <div class="adat-grid">
+        <!-- 1. Tongkonan -->
+        <div class="toraja-card adat-card reveal-on-scroll">
+          <div class="adat-icon-wrapper">
+            <img src="assets/toraja/logo-rumah-adat.png" alt="Tongkonan" style="width: 75px; height: auto;">
+          </div>
+          <h3 class="adat-title">Filosofi Tongkonan</h3>
+          <p class="adat-subtitle">Pusat Ikatan Kekerabatan (Pa'rapuan)</p>
+          <p class="adat-desc">
+            Tongkonan (dari kata <em>tongkon</em>: duduk bermusyawarah) adalah rahim sosial masyarakat Toraja. Menjadi simbol asal-usul darah, pemersatu rumpun keluarga besar, serta perlindungan martabat leluhur yang abadi.
+          </p>
+        </div>
+
+        <!-- 2. Rampanan Kapa' -->
+        <div class="toraja-card adat-card reveal-on-scroll">
+          <div class="adat-icon-wrapper">
+            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#e5a93b" stroke-width="1.8"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
+          </div>
+          <h3 class="adat-title">Rampanan Kapa'</h3>
+          <p class="adat-subtitle">Hukum Pernikahan Adat yang Sakral</p>
+          <p class="adat-desc">
+            Janji suci pernikahan yang diikrarkan di hadapan para pemangku adat. Mengandung sumpah kesetiaan, hak dan kewajiban moral, serta denda adat (<em>Kapa'</em>) yang menjaga agar cinta tak mudah terombang-ambing oleh keangkuhan.
+          </p>
+        </div>
+
+        <!-- 3. Pa'tedong -->
+        <div class="toraja-card adat-card reveal-on-scroll">
+          <div class="adat-icon-wrapper">
+            <img src="assets/toraja/patedong-icon.svg" alt="Pa'tedong" style="width: 65px; height: 65px;">
+          </div>
+          <h3 class="adat-title">Pa'tedong (Kerbau Sakral)</h3>
+          <p class="adat-subtitle">Simbol Kemakmuran &amp; Kehormatan</p>
+          <p class="adat-desc">
+            Kerbau adalah hewan paling mulia dalam adat Toraja. Melambangkan kerja keras ksatria, status sosial terhormat, ketabahan, serta lambang pengorbanan suci dalam menjalin persaudaraan antarkeluarga.
+          </p>
+        </div>
+
+        <!-- 4. 4 Warna Sakral Adat (Mata Allo) -->
+        <div class="toraja-card adat-card reveal-on-scroll">
+          <div class="adat-icon-wrapper">
+            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#e5a93b" stroke-width="1.8"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a10 10 0 0 1 10 10H12V2z"></path><path d="M12 12v10a10 10 0 0 1-10-10h10z" fill="#991b1b"></path></svg>
+          </div>
+          <h3 class="adat-title">Empat Warna Sakral</h3>
+          <p class="adat-subtitle">Marrung, Meballo, Malotong, Mabusa</p>
+          <p class="adat-desc">
+            <strong>Merah</strong> (keberanian &amp; darah kehidupan), <strong>Kuning</strong> (anugerah Ilahi &amp; kemuliaan), <strong>Hitam</strong> (keteguhan iman leluhur), dan <strong>Putih</strong> (kesucian hati kedua mempelai).
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       RANGKAIAN ACARA (EVENT SCHEDULE & LOCATIONS)
+       ========================================================================== -->
+  <section id="acara" class="section-wrapper">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-subtitle">Waktu &amp; Tempat</span>
+        <h2 class="section-title">Rangkaian Acara Pernikahan</h2>
+        <img src="assets/toraja/divider-toraja.svg" alt="Pemisah Toraja" class="toraja-divider">
+      </div>
+
+      <div class="events-grid">
+        <!-- Acara 1: Ibadah Pemberkatan Nikah -->
+        <div class="toraja-card event-card reveal-on-scroll">
+          <img src="assets/toraja/corner-toraja.svg" alt="Ornamen" class="corner-ornament corner-tl">
+          <img src="assets/toraja/corner-toraja.svg" alt="Ornamen" class="corner-ornament corner-tr">
+          
+          <div class="event-icon-badge">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="12" y1="18" x2="12" y2="12"></line><line x1="9" y1="15" x2="15" y2="15"></line></svg>
+          </div>
+
+          <span class="gold-badge">SAKRAL &amp; KHIDMAT</span>
+          <h3 class="event-title">Pemberkatan Nikah</h3>
+          <p style="font-size: 0.85rem; color: #fce7f3; margin-bottom: 0.5rem;">(Peneguhan Janji Suci Pernikahan)</p>
+          
+          <div class="event-date">Sabtu, 12 Desember 2026</div>
+          <div class="event-time">Pukul 09.00 - 11.00 WITA</div>
+
+          <div class="event-venue">Gereja Toraja Jemaat Rantepao</div>
+          <p class="event-address">
+            Jl. Sam Ratulangi No. 12, Rantepao, Kabupaten Toraja Utara, Sulawesi Selatan
+          </p>
+
+          <a href="https://maps.google.com/?q=Rantepao+Toraja+Utara" target="_blank" rel="noopener noreferrer" class="btn-gold-outline">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg>
+            Petunjuk Arah Lokasi
+          </a>
+        </div>
+
+        <!-- Acara 2: Resepsi Adat Rampanan Kapa' -->
+        <div class="toraja-card event-card reveal-on-scroll">
+          <img src="assets/toraja/corner-toraja.svg" alt="Ornamen" class="corner-ornament corner-tl">
+          <img src="assets/toraja/corner-toraja.svg" alt="Ornamen" class="corner-ornament corner-tr">
+          
+          <div class="event-icon-badge">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          </div>
+
+          <span class="gold-badge">JAMUAN SUKACITA (RAMBU TUKA')</span>
+          <h3 class="event-title">Resepsi Adat Toraja</h3>
+          <p style="font-size: 0.85rem; color: #fce7f3; margin-bottom: 0.5rem;">(Tarian Pa'gellu &amp; Jamuan Pa'piong)</p>
+          
+          <div class="event-date">Sabtu, 12 Desember 2026</div>
+          <div class="event-time">Sesi 1: 12.00 - 15.00 WITA | Sesi 2: 18.30 - 22.00 WITA</div>
+
+          <div class="event-venue">Grand Ballroom Toraja Misiliana</div>
+          <p class="event-address">
+            Jl. Pongtiku No. 27, Rantepao, Kabupaten Toraja Utara, Sulawesi Selatan
+          </p>
+
+          <a href="https://maps.google.com/?q=Toraja+Misiliana+Hotel" target="_blank" rel="noopener noreferrer" class="btn-gold-outline">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg>
+            Petunjuk Arah Lokasi
+          </a>
+        </div>
+      </div>
+
+      <!-- PETA GOOGLE MAPS -->
+      <div class="map-container reveal-on-scroll">
+        <iframe 
+          title="Lokasi Pernikahan Adat Toraja Misiliana Hotel"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3985.3444778749845!2d119.88241477586566!3d-3.0016016969743787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2d93e17cf6d7b4db%3A0xe78198f828551a3a!2sToraja%20Misiliana%20Hotel!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PERJALANAN KASIH (TIMELINE RAMPANAN KAPA')
+       ========================================================================== -->
+  <section id="story" class="section-wrapper">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-subtitle">Perjalanan Kasih</span>
+        <h2 class="section-title">Kisah Cinta &amp; Pinangan</h2>
+        <img src="assets/toraja/divider-toraja.svg" alt="Pemisah Toraja" class="toraja-divider">
+      </div>
+
+      <div class="timeline">
+        <!-- 2022 -->
+        <div class="timeline-item left reveal-on-scroll">
+          <div class="timeline-content">
+            <span class="timeline-year">2022</span>
+            <h4 class="timeline-title">Sitammu Rara (Pertemuan Awal)</h4>
+            <p class="timeline-desc">
+              Di tanah sejuk berlatar pegunungan kapur Toraja, takdir mempertemukan pandang pertama. Berawal dari komunikasi santun dan saling menghargai nilai adat, tumbuhlah benih cinta yang berlandaskan niat tulus.
+            </p>
+          </div>
+        </div>
+
+        <!-- 2024 -->
+        <div class="timeline-item right reveal-on-scroll">
+          <div class="timeline-content">
+            <span class="timeline-year">2024</span>
+            <h4 class="timeline-title">Ma'parampo (Pinangan Resmi)</h4>
+            <p class="timeline-desc">
+              Pihak keluarga pria mengutus tetua adat menghadap orang tua wanita di pelataran Tongkonan. Membawa sirih pinang (*kombong*) dan permohonan restu secara adat penuh hormat.
+            </p>
+          </div>
+        </div>
+
+        <!-- Awal 2026 -->
+        <div class="timeline-item left reveal-on-scroll">
+          <div class="timeline-content">
+            <span class="timeline-year">Awal 2026</span>
+            <h4 class="timeline-title">Kombong Kalua' (Musyawarah Besar)</h4>
+            <p class="timeline-desc">
+              Kedua rumpun keluarga besar Tongkonan duduk bersama menyatukan mufakat, menetapkan hari baik pernikahan, serta menyepakati adat Rampanan Kapa'.
+            </p>
+          </div>
+        </div>
+
+        <!-- 12 Desember 2026 -->
+        <div class="timeline-item right reveal-on-scroll">
+          <div class="timeline-content">
+            <span class="timeline-year">12 Desember 2026</span>
+            <h4 class="timeline-title">Rampanan Kapa' (Penyatuan Abadi)</h4>
+            <p class="timeline-desc">
+              Mengucap sumpah setia sehidup semati di hadapan altar Tuhan dan para saksi adat, melangkah bersama mengarungi bahtera rumah tangga yang kokoh.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       GALERI FOTO PREWEDDING
+       ========================================================================== -->
+  <section id="galeri" class="section-wrapper">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-subtitle">Momen Bahagia</span>
+        <h2 class="section-title">Galeri Prewedding</h2>
+        <img src="assets/toraja/divider-toraja.svg" alt="Pemisah Toraja" class="toraja-divider">
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item reveal-on-scroll">
+          <img src="assets/images/gallery-1.jpeg" alt="Galeri Foto 1">
+          <div class="gallery-overlay">
+            <span class="gallery-caption">Keagungan Arsitektur Adat</span>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal-on-scroll">
+          <img src="assets/images/gallery-2.jpeg" alt="Galeri Foto 2">
+          <div class="gallery-overlay">
+            <span class="gallery-caption">Senyuman Kasih Sejati</span>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal-on-scroll">
+          <img src="assets/images/gallery-3.jpeg" alt="Galeri Foto 3">
+          <div class="gallery-overlay">
+            <span class="gallery-caption">Ikatan Suci Dua Insan</span>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal-on-scroll">
+          <img src="assets/images/gallery-4.jpeg" alt="Galeri Foto 4">
+          <div class="gallery-overlay">
+            <span class="gallery-caption">Harmoni &amp; Kebersamaan</span>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal-on-scroll">
+          <img src="assets/images/gallery-5.jpeg" alt="Galeri Foto 5">
+          <div class="gallery-overlay">
+            <span class="gallery-caption">Kemesraan Penuh Kasih</span>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal-on-scroll">
+          <img src="assets/images/gallery-6.jpeg" alt="Galeri Foto 6">
+          <div class="gallery-overlay">
+            <span class="gallery-caption">Meniti Janji Suci Pernikahan</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal Lightbox Galeri -->
+  <div id="galleryModal" class="lightbox-modal">
+    <div class="lightbox-content">
+      <button id="closeLightbox" class="lightbox-close" aria-label="Tutup Galeri">&times;</button>
+      <img id="lightboxImg" src="" alt="Pratinjau Foto">
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       AMPLOP DIGITAL & WEDDING GIFT
+       ========================================================================== -->
+  <section id="kado" class="section-wrapper">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-subtitle">Tanda Kasih</span>
+        <h2 class="section-title">Amplop Digital &amp; Hadiah</h2>
+        <img src="assets/toraja/divider-toraja.svg" alt="Pemisah Toraja" class="toraja-divider">
+        <p style="color: var(--text-muted); font-size: 0.95rem; max-width: 620px; margin: 0.5rem auto 0;">
+          Kehadiran serta doa restu Anda adalah karunia yang teramat bernilai bagi kami. Namun apabila Anda berkehendak mengirimkan tanda kasih digital, dapat disalurkan melalui rekening berikut:
+        </p>
+      </div>
+
+      <div class="gift-grid">
+        <!-- Rekening 1: BCA -->
+        <div class="toraja-card bank-card reveal-on-scroll">
+          <img src="assets/toraja/corner-toraja.svg" alt="Ornamen" class="corner-ornament corner-tl">
+          <img src="assets/toraja/corner-toraja.svg" alt="Ornamen" class="corner-ornament corner-tr">
+          
+          <div style="font-weight: 800; font-size: 1.5rem; color: #60a5fa; letter-spacing: 2px; margin-bottom: 0.75rem;">
+            BANK BCA
+          </div>
+          <div class="account-number">8735091244</div>
+          <div class="account-holder">a.n. Aswandi Syam</div>
+
+          <button class="btn-copy" data-account="8735091244">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+            Salin Nomor Rekening
+          </button>
+        </div>
+
+        <!-- Rekening 2: Mandiri -->
+        <div class="toraja-card bank-card reveal-on-scroll">
+          <img src="assets/toraja/corner-toraja.svg" alt="Ornamen" class="corner-ornament corner-tl">
+          <img src="assets/toraja/corner-toraja.svg" alt="Ornamen" class="corner-ornament corner-tr">
+          
+          <div style="font-weight: 800; font-size: 1.5rem; color: #fbbf24; letter-spacing: 2px; margin-bottom: 0.75rem;">
+            BANK MANDIRI
+          </div>
+          <div class="account-number">1520038912771</div>
+          <div class="account-holder">a.n. Wira Kartika Putri</div>
+
+          <button class="btn-copy" data-account="1520038912771">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+            Salin Nomor Rekening
+          </button>
+        </div>
+
+        <!-- Kirim Hadiah Fisik -->
+        <div class="toraja-card bank-card reveal-on-scroll">
+          <img src="assets/toraja/corner-toraja.svg" alt="Ornamen" class="corner-ornament corner-tl">
+          <img src="assets/toraja/corner-toraja.svg" alt="Ornamen" class="corner-ornament corner-tr">
+          
+          <div style="font-weight: 800; font-size: 1.5rem; color: #f472b6; letter-spacing: 2px; margin-bottom: 0.75rem;">
+            KIRIM KADO FISIK
+          </div>
+          <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 0.8rem;">
+            Kediaman Rumpun Tongkonan Mempelai<br>
+            Jl. Sam Ratulangi No. 18, Rantepao 91831, Toraja Utara, Sulawesi Selatan
+          </p>
+          <div class="account-holder">Penerima: Wira Kartika Putri (0812-4455-6677)</div>
+
+          <button class="btn-copy" data-account="Jl. Sam Ratulangi No. 18, Rantepao 91831, Toraja Utara, Sulawesi Selatan">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            Salin Alamat Kirim
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       BUKU TAMU & RSVP (KONFIRMASI KEHADIRAN)
+       ========================================================================== -->
+  <section id="rsvp" class="section-wrapper">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-subtitle">Doa &amp; Konfirmasi</span>
+        <h2 class="section-title">Buku Tamu &amp; RSVP</h2>
+        <img src="assets/toraja/divider-toraja.svg" alt="Pemisah Toraja" class="toraja-divider">
+        <p style="color: var(--text-muted); font-size: 0.95rem; max-width: 600px; margin: 0.5rem auto 0;">
+          Kehadiran dan doa restu Bapak/Ibu/Saudara/i sekalian adalah kehormatan serta kebahagiaan terbesar bagi kami sekeluarga:
+        </p>
+      </div>
+
+      <div class="rsvp-wrapper">
+        <div class="toraja-card rsvp-form-card reveal-on-scroll">
+          <form id="rsvpForm">
+            <div class="form-group">
+              <label for="rsvpName">Nama Lengkap</label>
+              <input type="text" id="rsvpName" class="form-control" placeholder="Contoh: Puang Pongtambing / Ne' Sambo" required>
+            </div>
+
+            <div class="form-group">
+              <label for="rsvpAttendance">Konfirmasi Kehadiran</label>
+              <select id="rsvpAttendance" class="form-control" required>
+                <option value="hadir">✓ Puji Tuhan, Saya Akan Hadir</option>
+                <option value="ragu">? Masih Ragu / Menyesuaikan</option>
+                <option value="tidak">✗ Maaf, Belum Dapat Hadir</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="rsvpGuests">Jumlah Tamu</label>
+              <select id="rsvpGuests" class="form-control">
+                <option value="1">1 Orang</option>
+                <option value="2">2 Orang</option>
+                <option value="3">3 Orang</option>
+                <option value="4">4 Orang (Sekeluarga)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="rsvpMessage">Doa &amp; Ucapan Restu</label>
+              <textarea id="rsvpMessage" class="form-control" rows="4" placeholder="Tuliskan ucapan selamat dan doa restu Anda..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-open-invitation" style="width: 100%; border-radius: 12px; margin-top: 0.5rem;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+              Kirim Doa Restu &amp; RSVP
+            </button>
+          </form>
+        </div>
+
+        <div class="toraja-card wishes-card reveal-on-scroll">
+          <h3 style="font-family: var(--font-serif); font-size: 1.35rem; color: #fff2a3; border-bottom: 1px solid rgba(229, 169, 59, 0.3); padding-bottom: 0.75rem;">
+            Doa Restu Tamu Undangan
+          </h3>
+          <div id="wishesList" class="wishes-list">
+            <!-- Diisi secara dinamis oleh JavaScript -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FOOTER PENUTUP
+       ========================================================================== -->
+  <footer class="footer-section">
+    <div class="container">
+      <img src="assets/toraja/logo-rumah-adat.png" alt="Tongkonan" style="width: 170px; height: auto; margin: 0 auto 1.5rem; display: block; opacity: 0.95; filter: drop-shadow(0 4px 12px rgba(0,0,0,0.8));">
+      
+      <p class="footer-curse">
+        "Kurre Sumanga', Salama' Sola Nasang"
+      </p>
+      <p style="color: var(--text-muted); font-size: 0.95rem; max-width: 660px; margin: 0 auto; line-height: 1.8;">
+        Merupakan suatu sukacita dan kehormatan yang teramat besar bagi kami sekeluarga, atas kehadiran serta limpahan doa restu Bapak/Ibu/Saudara/i kepada kedua mempelai.
+      </p>
+
+      <div class="footer-names">Aswandi &amp; Wira</div>
+      <p style="font-family: var(--font-serif); font-size: 1.1rem; color: #fde68a; letter-spacing: 3px;">
+        RAMPANAN KAPA'
+      </p>
+
+      <div style="margin-top: 2rem; font-size: 0.9rem; color: #fef08a;">
+        <strong>Turut Mengundang Rumpun Tongkonan &amp; Keluarga Besar:</strong><br>
+        Rumpun Tongkonan Bpk. Andi Muhammad Yusuf &amp; Hj. Andi Sitti Aminah (Tana Toraja)<br>
+        Rumpun Tongkonan Bpk. Ambo &amp; Ibu Agustina (Toraja Utara)
+      </div>
+
+      <p class="footer-copyright">
+        &copy; 2026 Rampanan Kapa' Aswandi &amp; Wira. Undangan Pernikahan Adat Suku Toraja.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/toraja-audio.js"></script>
+  <script src="js/toraja.js"></script>
+</body>
+</html>

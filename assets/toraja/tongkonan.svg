@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 360" fill="none">
+  <defs>
+    <!-- Terracotta Red to Deep Mahogany -->
+    <linearGradient id="roofWood" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4a150c"/>
+      <stop offset="50%" stop-color="#2a0a05"/>
+      <stop offset="100%" stop-color="#140502"/>
+    </linearGradient>
+    <!-- Warm Toraja Gold -->
+    <linearGradient id="tGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDE68A"/>
+      <stop offset="35%" stop-color="#E5A93B"/>
+      <stop offset="70%" stop-color="#C27813"/>
+      <stop offset="100%" stop-color="#784008"/>
+    </linearGradient>
+    <!-- Red Ocher -->
+    <linearGradient id="ocherRed" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#991b1b"/>
+      <stop offset="50%" stop-color="#b91c1c"/>
+      <stop offset="100%" stop-color="#7f1d1d"/>
+    </linearGradient>
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#softShadow)">
+    <!-- SWEEPING TONGKONAN ROOF (LONGA MELENGKUNG PERAHU LELUHUR) -->
+    <!-- Outer Upper Curve -->
+    <path d="M 40 40 
+             C 180 180, 260 210, 350 210 
+             C 440 210, 520 180, 660 40 
+             C 570 140, 480 170, 350 170 
+             C 220 170, 130 140, 40 40 Z" 
+          fill="url(#roofWood)" stroke="url(#tGold)" stroke-width="3"/>
+
+    <!-- Bamboo/Wood Thatch Layers (Susunan Bambu Atap Tongkonan) -->
+    <path d="M 60 70 C 200 175, 270 195, 350 195 C 430 195, 500 175, 640 70" 
+          stroke="url(#tGold)" stroke-width="1.8" fill="none" opacity="0.8"/>
+    <path d="M 90 100 C 210 170, 275 185, 350 185 C 425 185, 490 170, 610 100" 
+          stroke="url(#tGold)" stroke-width="1.2" stroke-dasharray="6,4" fill="none" opacity="0.6"/>
+
+    <!-- Roof Ridges (Tanduk Ujung Atap Longa Prow) -->
+    <!-- Haluan Utara (North Facing / Puang Matua Blessing) -->
+    <path d="M 40 40 L 25 10 L 50 32 Z" fill="url(#tGold)"/>
+    <!-- Haluan Selatan -->
+    <path d="M 660 40 L 675 10 L 650 32 Z" fill="url(#tGold)"/>
+
+    <!-- BADAN RUMAH TONGKONAN (KALE BANUA / DINDING KAYU BERUKIR) -->
+    <rect x="230" y="210" width="240" height="90" rx="3" fill="#1c0704" stroke="url(#tGold)" stroke-width="2"/>
+
+    <!-- Ukiran Dinding Khas Toraja (Pa'ssura' Geometris) -->
+    <!-- Panel Merah & Hitam Dinding -->
+    <rect x="240" y="220" width="220" height="70" fill="url(#ocherRed)" stroke="url(#tGold)" stroke-width="1.2"/>
+
+    <!-- Motif Matahari Pa'barre Allo di Tengah Dinding -->
+    <g transform="translate(350, 255)">
+      <circle cx="0" cy="0" r="18" fill="#1c0704" stroke="url(#tGold)" stroke-width="2"/>
+      <circle cx="0" cy="0" r="10" fill="url(#tGold)"/>
+      <circle cx="0" cy="0" r="4" fill="#991b1b"/>
+      <!-- Sinar Matahari Memancar (Pa'barre Allo Rays) -->
+      <line x1="0" y1="-26" x2="0" y2="-18" stroke="url(#tGold)" stroke-width="2.5"/>
+      <line x1="0" y1="18" x2="0" y2="26" stroke="url(#tGold)" stroke-width="2.5"/>
+      <line x1="-26" y1="0" x2="-18" y2="0" stroke="url(#tGold)" stroke-width="2.5"/>
+      <line x1="18" y1="0" x2="26" y2="0" stroke="url(#tGold)" stroke-width="2.5"/>
+      <line x1="-18" y1="-18" x2="-12" y2="-12" stroke="url(#tGold)" stroke-width="2"/>
+      <line x1="12" y1="12" x2="18" y2="18" stroke="url(#tGold)" stroke-width="2"/>
+      <line x1="-18" y1="18" x2="-12" y2="12" stroke="url(#tGold)" stroke-width="2"/>
+      <line x1="12" y1="-12" x2="18" y2="-18" stroke="url(#tGold)" stroke-width="2"/>
+    </g>
+
+    <!-- Panel Kiri & Kanan (Motif Pa'tedong Kepala Kerbau) -->
+    <g transform="translate(285, 255)">
+      <polygon points="0,-12 12,10 -12,10" fill="#1c0704" stroke="url(#tGold)" stroke-width="1.5"/>
+      <path d="M -16,-6 Q 0,-20 16,-6" stroke="url(#tGold)" stroke-width="2" fill="none"/>
+    </g>
+    <g transform="translate(415, 255)">
+      <polygon points="0,-12 12,10 -12,10" fill="#1c0704" stroke="url(#tGold)" stroke-width="1.5"/>
+      <path d="M -16,-6 Q 0,-20 16,-6" stroke="url(#tGold)" stroke-width="2" fill="none"/>
+    </g>
+
+    <!-- TIANG-TIANG PENYANGGA (A'RIRI TONGKONAN PANGGUNG) -->
+    <g fill="#140502" stroke="url(#tGold)" stroke-width="1.2">
+      <!-- Tiang Utama Depan (Tulak Somba) -->
+      <rect x="342" y="170" width="16" height="180" rx="2" fill="#240804" stroke="url(#tGold)" stroke-width="2"/>
+      <!-- Tiang-Tiang Dasar Lainnya -->
+      <rect x="250" y="300" width="14" height="50"/>
+      <rect x="290" y="300" width="14" height="50"/>
+      <rect x="395" y="300" width="14" height="50"/>
+      <rect x="435" y="300" width="14" height="50"/>
+    </g>
+
+    <!-- DERETAN TANDUK KERBAU (KABONGO' & TANDUK TEDONG KEBANGGAAN SOSIAL) -->
+    <!-- Kepala Kerbau Utama (Kabongo' Kayu) -->
+    <g transform="translate(350, 185)">
+      <polygon points="0,-12 14,8 -14,8" fill="#140502" stroke="url(#tGold)" stroke-width="1.5"/>
+      <!-- Tanduk Lengkung Besar -->
+      <path d="M -18,-2 Q -28,-22 0,-30 Q 28,-22 18,-2" stroke="url(#tGold)" stroke-width="3.5" fill="none"/>
+      <circle cx="0" cy="2" r="3" fill="url(#tGold)"/>
+    </g>
+
+    <!-- Deretan Tanduk Kerbau Bertingkat di Tiang Tulak Somba (Simbol Kekayaan & Upacara Adat) -->
+    <path d="M 334 210 Q 350 200 366 210" stroke="url(#tGold)" stroke-width="2.5" fill="none"/>
+    <path d="M 335 230 Q 350 220 365 230" stroke="url(#tGold)" stroke-width="2.5" fill="none"/>
+    <path d="M 336 250 Q 350 240 364 250" stroke="url(#tGold)" stroke-width="2.5" fill="none"/>
+    <path d="M 337 270 Q 350 260 363 270" stroke="url(#tGold)" stroke-width="2.5" fill="none"/>
+    <path d="M 338 290 Q 350 280 362 290" stroke="url(#tGold)" stroke-width="2.5" fill="none"/>
+    <path d="M 339 310 Q 350 300 361 310" stroke="url(#tGold)" stroke-width="2.5" fill="none"/>
+
+    <!-- PONDASI BATU ALAM (BATU SIMBUANG) -->
+    <ellipse cx="350" cy="352" rx="140" ry="8" fill="#140502" stroke="url(#tGold)" stroke-width="1" opacity="0.6"/>
+  </g>
+</svg>

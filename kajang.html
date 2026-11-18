@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pa'buntingan Adat Kajang Ammatoa - Aswandi &amp; Wira | Undangan Pernikahan</title>
+  <meta name="description" content="Undangan Pernikahan Adat Suku Kajang (Ammatoa) Bulukumba - Aswandi Syam &amp; Wira Kartika Putri. Kesederhanaan, Kejujuran, dan Keagungan Budaya Sakral Sulawesi Selatan.">
+  <meta name="theme-color" content="#141211">
+
+  <!-- Google Fonts: Cinzel, Playfair Display, Great Vibes, Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Great+Vibes&family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Kajang Custom Stylesheet -->
+  <link rel="stylesheet" href="css/kajang.css">
+  <link rel="stylesheet" href="css/switcher.css">
+  <script src="js/switcher.js" defer></script>
+</head>
+<body class="lock-scroll">
+
+  <!-- ==========================================================================
+       THEME SWITCHER FLOATING BUTTON & DROPDOWN (5 PILIHAN TEMA)
+       ========================================================================== -->
+  <div class="theme-switch-bar">
+    <button id="btnThemeSwitcher" class="btn-theme-switcher" aria-label="Ganti Tema Undangan">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path></svg>
+      Pilih Tema
+      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+    </button>
+
+    <div id="themeDropdown" class="theme-dropdown">
+      <a href="bulukumba.html" class="theme-option">
+        <span>⛵</span>
+        <span>Adat Bugis Bulukumba</span>
+        <span class="theme-badge" style="background:#0ea5e9;color:#fff;">Baru</span>
+      </a>
+
+      <a href="jawa.html" class="theme-option">
+        <span>🏛️</span>
+        <span>Adat Jawa Klasik Modern</span>
+        <span class="theme-badge" style="background:#8b5a2b;color:#fff;">Baru</span>
+      </a>
+
+      <a href="studio.html" class="theme-option">
+        <span>📸</span>
+        <span>Studio Adat Bugis</span>
+        <span class="theme-badge" style="background:#fbbf24;color:#000;">Baru</span>
+      </a>
+      <a href="bugis.html" class="theme-option">
+        <span>👑</span>
+        <span>Adat Bugis Klasik</span>
+      </a>
+      <a href="toraja.html" class="theme-option">
+        <span>🏛️</span>
+        <span>Adat Toraja Tongkonan</span>
+      </a>
+      <a href="kajang.html" class="theme-option active">
+        <span>🖤</span>
+        <span>Adat Ammatoa Kajang</span>
+        <span class="theme-badge" style="background:#4b5563;color:#fff;">Aktif</span>
+      </a>
+      <a href="bira.html" class="theme-option">
+        <span>⛵</span>
+        <span>Pantai Pasir Putih Bira</span>
+      </a>
+      <a href="islamic.html" class="theme-option">
+        <span>🕌</span>
+        <span>Islamic Modern</span>
+      </a>
+      <a href="donggia.html" class="theme-option">
+        <span>⛰️</span>
+        <span>Pegunungan Donggia Bugis</span>
+        <span class="theme-badge" style="background:#2d6a4f;color:#fff;">Baru</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Audio Backsound Element (Lagu Pernikahan / Suling Tradisional) -->
+  <audio id="weddingAudio" loop preload="auto" src="assets/lagu.aac">
+    <source src="assets/lagu.aac" type="audio/aac">
+  </audio>
+
+  <!-- Background Ambient Layar Lebar (Auto-Responsive Desktop) -->
+  <div class="bg-kajang-ambient"></div>
+
+  <!-- Background Utama Auto-Responsive Rumah Adat Kajang (Mobile & Desktop) -->
+  <div class="bg-kajang-backdrop"></div>
+
+  <!-- Pola Tekstur Kain Tenun Hitam Le'leng Kajang -->
+  <div class="bg-tenun-overlay"></div>
+
+  <!-- ==========================================================================
+       COVER PEMBUKA UNDANGAN KAJANG (WELCOME GATEWAY)
+       ========================================================================== -->
+  <div id="openingCover">
+    <div class="cover-card">
+      <!-- Ornamen Sudut Emas Khas Pusaka Adat -->
+      <img src="assets/kajang/corner-kajang.svg" alt="Ornamen" class="corner-ornament corner-tl">
+      <img src="assets/kajang/corner-kajang.svg" alt="Ornamen" class="corner-ornament corner-tr">
+      <img src="assets/kajang/corner-kajang.svg" alt="Ornamen" class="corner-ornament corner-bl">
+      <img src="assets/kajang/corner-kajang.svg" alt="Ornamen" class="corner-ornament corner-br">
+
+      <!-- Logo Rumah Adat Kajang Pilihan -->
+      <img src="assets/logo-kajang.png" alt="Logo Rumah Adat Kajang" class="cover-logo-kajang">
+
+      <p class="cover-subheading">Pa'buntingan Adat Sakral Suku Kajang</p>
+      <div class="cover-salutation">AMMATOA BULUKUMBA</div>
+      <p class="cover-quote">"Tallasa' Kamase-masea &amp; Kalambusang"</p>
+      
+      <h1 class="cover-title">Aswandi <span class="cover-ampersand">&amp;</span> Wira</h1>
+      
+      <div class="guest-card">
+        <p class="guest-label">Kepada Yth. Bapak/Ibu/Saudara/i:</p>
+        <p class="guest-name dynamic-guest-name">Tamu Undangan Yang Terhormat</p>
+      </div>
+
+      <p class="cover-invitation-text">
+        Tanpa mengurangi rasa hormat, kami mengundang Anda untuk hadir serta melimpahkan doa restu dalam ikrar suci pernikahan adat kami.
+      </p>
+
+      <button id="btnOpenInvitation" class="btn-open-invitation">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+        Buka Undangan Adat
+      </button>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       FLOATING AUDIO BUTTON & BOTTOM NAVIGATION
+       ========================================================================== -->
+  <button id="musicToggleBtn" class="music-toggle-btn" aria-label="Toggle Musik">
+    <div class="sound-waves">
+      <span></span><span></span><span></span>
+    </div>
+    <svg class="disc-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="3"></circle></svg>
+  </button>
+
+  <nav class="bottom-nav">
+    <a href="#hero" class="nav-link active">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+      <span>Awal</span>
+    </a>
+    <a href="#couple" class="nav-link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+      <span>Mempelai</span>
+    </a>
+    <a href="#adat" class="nav-link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+      <span>Adat</span>
+    </a>
+    <a href="#acara" class="nav-link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+      <span>Acara</span>
+    </a>
+    <a href="#galeri" class="nav-link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+      <span>Galeri</span>
+    </a>
+    <a href="#rsvp" class="nav-link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+      <span>RSVP</span>
+    </a>
+  </nav>
+
+  <!-- ==========================================================================
+       HERO SECTION (BANNER UTAMA)
+       ========================================================================== -->
+  <section id="hero" class="hero-section">
+    <div class="container hero-content">
+      <!-- Logo Rumah Adat Kajang (Bola Ammatoa) -->
+      <img src="assets/logo-kajang.png" alt="Logo Rumah Adat Kajang" class="hero-logo-kajang">
+
+      <p class="hero-bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
+      <span class="gold-badge">PA'BUNTINGAN ADAT SAKRAL AMMATOA KAJANG</span>
+
+      <h1 class="hero-names">Aswandi Syam &amp; Wira Kartika</h1>
+      <p class="kajang-script">"Ammenteng ko kalambusang, a'muntulu' ko katongorang"</p>
+
+      <!-- Falsafah Luhur Suku Kajang Ammatoa -->
+      <div class="hero-quote-box reveal-on-scroll">
+        <p class="kajang-aphorism">
+          "Tallasa' kamase-masea, anre kalambusang anre katongorang."
+        </p>
+        <p class="kajang-meaning">
+          (Berdirilah tegak di atas kejujuran, niscaya engkau mendapati kebenaran. Hiduplah bersahaja dalam kesucian niat, saling mengasihi dan setia menjaga ikatan suci lahir dan batin.)
+        </p>
+      </div>
+
+      <!-- Firman Allah QS Ar-Rum 21 -->
+      <div class="kajang-card" style="padding: 1.5rem 1.8rem; margin: 1.5rem auto; max-width: 680px;">
+        <p style="font-size: 0.95rem; font-style: italic; color: #fae8b4; line-height: 1.8;">
+          "Dan di antara tanda-tanda kebesaran-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda bagi kaum yang berpikir."
+        </p>
+        <p style="font-weight: 700; color: var(--kajang-gold-light); font-size: 0.85rem; margin-top: 0.6rem;">
+          — QS. Ar-Rum: 21
+        </p>
+      </div>
+
+      <div class="hero-date-highlight">
+        MINGGU, 28 JUNI 2026
+      </div>
+
+      <!-- Hitung Mundur Waktu Menuju Hari H -->
+      <div class="countdown-box reveal-on-scroll">
+        <div class="time-card">
+          <span id="cdDays" class="time-num">00</span>
+          <span class="time-label">Hari</span>
+        </div>
+        <div class="time-card">
+          <span id="cdHours" class="time-num">00</span>
+          <span class="time-label">Jam</span>
+        </div>
+        <div class="time-card">
+          <span id="cdMinutes" class="time-num">00</span>
+          <span class="time-label">Menit</span>
+        </div>
+        <div class="time-card">
+          <span id="cdSeconds" class="time-num">00</span>
+          <span class="time-label">Detik</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PROFIL MEMPELAI (THE COUPLE)
+       ========================================================================== -->
+  <section id="couple" class="section-wrapper">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-subtitle">Dua Hati Bersatu Dalam Kejujuran Adat</span>
+        <h2 class="section-title">Pasangan Mempelai</h2>
+        <img src="assets/kajang/divider-kajang.svg" alt="Pemisah Kajang" class="kajang-divider">
+        <p style="color: var(--text-muted); font-size: 0.95rem; max-width: 650px; margin: 0.5rem auto 0;">
+          Dengan memohon rahmat dan ridho Allah Subhanahu Wa Ta'ala serta doa restu para tetua adat, kami bermaksud mengikrarkan ikatan suci pernikahan:
+        </p>
+      </div>
+
+      <div class="couple-showcase">
+        <!-- Mempelai Pria -->
+        <div class="kajang-card mempelai-card reveal-on-scroll">
+          <img src="assets/kajang/corner-kajang.svg" alt="Ornamen" class="corner-ornament corner-tl">
+          <img src="assets/kajang/corner-kajang.svg" alt="Ornamen" class="corner-ornament corner-tr">
+          
+          <div class="mempelai-photo-frame">
+            <img src="assets/images/groom.jpeg" alt="Aswandi Syam">
+          </div>
+          <h3 class="mempelai-name">Aswandi Syam, S.T.</h3>
+          <p class="mempelai-title">Mempelai Pria</p>
+          <p class="mempelai-parents">
+            Putra Pertama dari Pasangan Tercinta:<br>
+            <strong>Bpk. Andi Muhammad Yusuf</strong><br>
+            &amp; <strong>Ibu Hj. Andi Sitti Aminah</strong><br>
+            <span style="font-size: 0.85rem; color: var(--kajang-gold-light);">(Keluarga Besar Bone)</span>
+          </p>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="mempelai-social">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            @aswandi_syam
+          </a>
+        </div>
+
+        <!-- Pusat Simbol Ampersand Penyatuan -->
+        <div class="couple-center-divider reveal-on-scroll">
+          <div class="ampersand-circle">&amp;</div>
+          <img src="assets/kajang/divider-kajang.svg" alt="Pemisah" style="width: 140px; transform: rotate(90deg); margin: 1rem 0;">
+        </div>
+
+        <!-- Mempelai Wanita -->
+        <div class="kajang-card mempelai-card reveal-on-scroll">
+          <img src="assets/kajang/corner-kajang.svg" alt="Ornamen" class="corner-ornament corner-tl">
+          <img src="assets/kajang/corner-kajang.svg" alt="Ornamen" class="corner-ornament corner-tr">
+
+          <div class="mempelai-photo-frame">
+            <img src="assets/images/bride.jpeg" alt="Wira Kartika Putri">
+          </div>
+          <h3 class="mempelai-name">Wira Kartika Putri, S.Pd.</h3>
+          <p class="mempelai-title">Mempelai Wanita</p>
+          <p class="mempelai-parents">
+            Putri Kedua dari Pasangan Tercinta:<br>
+            <strong>Bpk. Ambo</strong><br>
+            &amp; <strong>Ibu Agustina</strong><br>
+            <span style="font-size: 0.85rem; color: var(--kajang-gold-light);">(Keluarga Besar Bulukumba)</span>
+          </p>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="mempelai-social">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            @wirakartika
+          </a>
+        </div>
+      </div>
+
+      <!-- Foto Pasangan Bersama -->
+      <div class="kajang-card reveal-on-scroll" style="margin-top: 3rem; padding: 1.5rem; text-align: center;">
+        <img src="assets/images/couple.jpeg" alt="Foto Pasangan Pengantin Aswandi &amp; Wira" style="max-width: 360px; width: 100%; height: auto; margin: 0 auto; display: block; border-radius: 12px; border: 1.5px solid var(--kajang-gold);">
+        <p style="margin-top: 1rem; font-style: italic; color: var(--kajang-gold-light); font-size: 0.95rem;">
+          "Dua jiwa ditakdirkan bersatu, melangkah bersama dalam jalan kejujuran, kesederhanaan budi, dan cinta yang abadi."
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       MAKNA SOSIAL & ADAT SUKU KAJANG (AMMATOA BULUKUMBA)
+       ========================================================================== -->
+  <section id="adat" class="section-wrapper">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-subtitle">Kearifan Budaya Suku Kajang (Ammatoa)</span>
+        <h2 class="section-title">Nilai Luhur &amp; Adat Kajang</h2>
+        <img src="assets/kajang/divider-kajang.svg" alt="Pemisah Kajang" class="kajang-divider">
+        <p style="color: var(--text-muted); font-size: 0.95rem; max-width: 680px; margin: 0.5rem auto 0;">
+          Masyarakat Adat Ammatoa Kajang di Kabupaten Bulukumba menjunjung tinggi tatanan hidup selaras alam, ketulusan budi, serta sumpah suci yang dijaga turun-temurun:
+        </p>
+      </div>
+
+      <div class="adat-grid">
+        <!-- 1. Pasang ri Kajang -->
+        <div class="kajang-card adat-card reveal-on-scroll">
+          <div class="adat-icon-wrapper">
+            <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+          </div>
+          <h3 class="adat-title">Pasang ri Kajang</h3>
+          <p class="adat-subtitle">Pesan Sakral Leluhur</p>
+          <p class="adat-desc">
+            Kumpulan amanat luhur leluhur yang mengatur hubungan manusia dengan Sang Pencipta (<em>Turie' A'ra'na</em>), sesama manusia, serta hutan keramat (<em>Borong Karama'</em>) agar senantiasa lestari dan damai.
+          </p>
+        </div>
+
+        <!-- 2. Tallasa' Kamase-masea -->
+        <div class="kajang-card adat-card reveal-on-scroll">
+          <div class="adat-icon-wrapper">
+            <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
+          </div>
+          <h3 class="adat-title">Tallasa' Kamase-masea</h3>
+          <p class="adat-subtitle">Kesahajaan &amp; Ketulusan Hati</p>
+          <p class="adat-desc">
+            Prinsip hidup bersahaja tanpa serakah duniawi. Dalam mahligai rumah tangga, mengajarkan kedua mempelai untuk saling mengasihi, bersyukur, dan menomorsatukan ketentraman jiwa di atas materi.
+          </p>
+        </div>
+
+        <!-- 3. Busana Hitam Le'leng -->
+        <div class="kajang-card adat-card reveal-on-scroll">
+          <div class="adat-icon-wrapper">
+            <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="2" x2="12" y2="22"></line><line x1="2" y1="12" x2="22" y2="12"></line></svg>
+          </div>
+          <h3 class="adat-title">Busana Hitam Le'leng</h3>
+          <p class="adat-subtitle">Simbol Kesetaraan Mutlak</p>
+          <p class="adat-desc">
+            Pakaian hitam tradisional tenun Kajang melambangkan kesetaraan semua manusia di hadapan Tuhan, penolak marabahaya, serta pengingat bahwa manusia berawal dari kegelapan rahim dan akan kembali ke tanah.
+          </p>
+        </div>
+
+        <!-- 4. Bola Ammatoa (Rumah Adat) -->
+        <div class="kajang-card adat-card reveal-on-scroll">
+          <div class="adat-icon-wrapper">
+            <img src="assets/logo-kajang.png" alt="Rumah Adat Kajang" style="width: 55px; height: auto;">
+          </div>
+          <h3 class="adat-title">Bola Adat Ammatoa</h3>
+          <p class="adat-subtitle">Kejujuran &amp; Keharmonisan</p>
+          <p class="adat-desc">
+            Rumah panggung kayu beratap rumbia yang selalu menghadap ke barat. Tiang-tiangnya tegak lurus melambangkan <em>kalambusang</em> (kejujuran lurus yang kokoh tak tergoyahkan oleh zaman).
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       RANGKAIAN ACARA (EVENTS & CEREMONIES)
+       ========================================================================== -->
+  <section id="acara" class="section-wrapper">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-subtitle">Waktu &amp; Tempat Pelaksanaan Acara</span>
+        <h2 class="section-title">Agenda Prosesi Sakral</h2>
+        <img src="assets/kajang/divider-kajang.svg" alt="Pemisah Kajang" class="kajang-divider">
+        <p style="color: var(--text-muted); font-size: 0.95rem; max-width: 650px; margin: 0.5rem auto 0;">
+          Rangkaian prosesi pernikahan adat Suku Kajang yang khidmat, sakral, dan penuh keberkahan:
+        </p>
+      </div>
+
+      <div class="events-grid">
+        <!-- Acara 1: Doa Restu & Adat Kajang -->
+        <div class="kajang-card event-card reveal-on-scroll">
+          <img src="assets/kajang/corner-kajang.svg" alt="Ornamen" class="corner-ornament corner-tl">
+          <img src="assets/kajang/corner-kajang.svg" alt="Ornamen" class="corner-ornament corner-tr">
+          <span class="event-badge">RITUAL ADAT</span>
+          <h3 class="event-title">Prosesi Doa Adat Ammatoa</h3>
+          
+          <div class="event-datetime">
+            <div class="datetime-row">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+              <span>Sabtu Malam, 27 Juni 2026</span>
+            </div>
+            <div class="datetime-row">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              <span>Pukul 19.30 WITA - Selesai</span>
+            </div>
+          </div>
+
+          <div class="event-venue">Kediaman Mempelai Wanita (Rumah Adat)</div>
+          <div class="event-address">
+            Kawasan Adat Ammatoa Kajang, Desa Tana Toa, Kec. Kajang, Kab. Bulukumba, Sulawesi Selatan
+          </div>
+
+          <a href="https://calendar.google.com" target="_blank" rel="noopener noreferrer" class="btn-calendar">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            Simpan ke Kalender
+          </a>
+        </div>
+
+        <!-- Acara 2: Akad Nikah -->
+        <div class="kajang-card event-card reveal-on-scroll">
+          <img src="assets/kajang/corner-kajang.svg" alt="Ornamen" class="corner-ornament corner-tl">
+          <img src="assets/kajang/corner-kajang.svg" alt="Ornamen" class="corner-ornament corner-tr">
+          <span class="event-badge">AKAD NIKAH</span>
+          <h3 class="event-title">Ijab &amp; Qabul</h3>
+          
+          <div class="event-datetime">
+            <div class="datetime-row">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+              <span>Minggu Pagi, 28 Juni 2026</span>
+            </div>
+            <div class="datetime-row">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              <span>Pukul 09.00 - 11.00 WITA</span>
+            </div>
+          </div>
+
+          <div class="event-venue">Masjid Jami' Tana Toa</div>
+          <div class="event-address">
+            Kawasan Adat Kajang Ammatoa, Kab. Bulukumba, Sulawesi Selatan
+          </div>
+
+          <a href="https://calendar.google.com" target="_blank" rel="noopener noreferrer" class="btn-calendar">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            Simpan ke Kalender
+          </a>
+        </div>
+
+        <!-- Acara 3: Resepsi Adat Suku Kajang -->
+        <div class="kajang-card event-card reveal-on-scroll">
+          <img src="assets/kajang/corner-kajang.svg" alt="Ornamen" class="corner-ornament corner-tl">
+          <img src="assets/kajang/corner-kajang.svg" alt="Ornamen" class="corner-ornament corner-tr">
+          <span class="event-badge">RESEPSI ADAT</span>
+          <h3 class="event-title">Walimatul 'Ursy &amp; Jamuan Adat</h3>
+          
+          <div class="event-datetime">
+            <div class="datetime-row">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+              <span>Minggu Siang, 28 Juni 2026</span>
+            </div>
+            <div class="datetime-row">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              <span>Pukul 11.30 WITA - Selesai</span>
+            </div>
+          </div>
+
+          <div class="event-venue">Pelataran Bola Ammatoa Kajang</div>
+          <div class="event-address">
+            Desa Tana Toa, Kec. Kajang, Kab. Bulukumba, Sulawesi Selatan
+          </div>
+
+          <a href="https://calendar.google.com" target="_blank" rel="noopener noreferrer" class="btn-calendar">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            Simpan ke Kalender
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       LOVE STORY (TIMELINE KISAH CINTA)
+       ========================================================================== -->
+  <section id="story" class="section-wrapper">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-subtitle">Perjalanan Cinta &amp; Kesetiaan</span>
+        <h2 class="section-title">Kisah Cinta Kami</h2>
+        <img src="assets/kajang/divider-kajang.svg" alt="Pemisah Kajang" class="kajang-divider">
+        <p style="color: var(--text-muted); font-size: 0.95rem; max-width: 650px; margin: 0.5rem auto 0;">
+          Sebuah perjalanan rasa yang dipandu oleh ketulusan budi dan kesederhanaan niat suci:
+        </p>
+      </div>
+
+      <div class="timeline">
+        <!-- Titik 1 -->
+        <div class="timeline-item left reveal-on-scroll">
+          <div class="kajang-card timeline-content">
+            <span class="timeline-year">2021 — Awal Pertemuan</span>
+            <h4 class="timeline-heading">Tatap Muka Pertama</h4>
+            <p class="timeline-desc">
+              Pertemuan tanpa sengaja di tanah Bulukumba yang sarat ketenangan. Dari percakapan sederhana, tumbuh rasa saling menghargai dan benih kekaguman yang tulus.
+            </p>
+          </div>
+        </div>
+
+        <!-- Titik 2 -->
+        <div class="timeline-item right reveal-on-scroll">
+          <div class="kajang-card timeline-content">
+            <span class="timeline-year">2023 — Menjaga Komitmen</span>
+            <h4 class="timeline-heading">Ikatan Hati &amp; Lamaran</h4>
+            <p class="timeline-desc">
+              Dengan niat yang lurus (<em>kalambusang</em>), kami membawa ikatan ini ke hadapan kedua keluarga besar. Sebuah komitmen untuk saling melengkapi dan menjaga kehormatan adat.
+            </p>
+          </div>
+        </div>
+
+        <!-- Titik 3 -->
+        <div class="timeline-item left reveal-on-scroll">
+          <div class="kajang-card timeline-content">
+            <span class="timeline-year">2026 — Menuju Sakral</span>
+            <h4 class="timeline-heading">Ikrar Janji Suci Pernikahan</h4>
+            <p class="timeline-desc">
+              Di hadapan Sang Maha Kuasa, alam semesta, dan restu tetua adat Ammatoa, kami mengikrarkan janji suci untuk sehidup sesurga dalam naungan cinta yang bersahaja.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       GALERI FOTO PREWEDDING
+       ========================================================================== -->
+  <section id="galeri" class="section-wrapper">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-subtitle">Momen Bahagia Abadi</span>
+        <h2 class="section-title">Galeri Foto Prewedding</h2>
+        <img src="assets/kajang/divider-kajang.svg" alt="Pemisah Kajang" class="kajang-divider">
+        <p style="color: var(--text-muted); font-size: 0.95rem; max-width: 650px; margin: 0.5rem auto 0;">
+          Setiap bingkai foto adalah saksi ketulusan cinta dan keindahan busana sakral nusantara:
+        </p>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item reveal-on-scroll">
+          <img src="assets/images/gallery-1.jpeg" alt="Galeri Foto Prewedding 1">
+          <div class="gallery-overlay">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+          </div>
+        </div>
+        <div class="gallery-item reveal-on-scroll">
+          <img src="assets/images/gallery-2.jpeg" alt="Galeri Foto Prewedding 2">
+          <div class="gallery-overlay">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+          </div>
+        </div>
+        <div class="gallery-item reveal-on-scroll">
+          <img src="assets/images/gallery-3.jpeg" alt="Galeri Foto Prewedding 3">
+          <div class="gallery-overlay">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+          </div>
+        </div>
+        <div class="gallery-item reveal-on-scroll">
+          <img src="assets/images/gallery-4.jpeg" alt="Galeri Foto Prewedding 4">
+          <div class="gallery-overlay">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+          </div>
+        </div>
+        <div class="gallery-item reveal-on-scroll">
+          <img src="assets/images/gallery-5.jpeg" alt="Galeri Foto Prewedding 5">
+          <div class="gallery-overlay">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+          </div>
+        </div>
+        <div class="gallery-item reveal-on-scroll">
+          <img src="assets/images/gallery-6.jpeg" alt="Galeri Foto Prewedding 6">
+          <div class="gallery-overlay">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal Lightbox Pratinjau Foto -->
+  <div id="galleryLightbox" class="lightbox-modal">
+    <button id="lightboxClose" class="lightbox-close">&times;</button>
+    <img id="lightboxImg" src="" alt="Pratinjau Foto">
+  </div>
+
+  <!-- ==========================================================================
+       LOKASI ACARA & PETA
+       ========================================================================== -->
+  <section id="lokasi" class="section-wrapper">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-subtitle">Petunjuk Arah &amp; Navigasi</span>
+        <h2 class="section-title">Peta Lokasi Acara</h2>
+        <img src="assets/kajang/divider-kajang.svg" alt="Pemisah Kajang" class="kajang-divider">
+        <p style="color: var(--text-muted); font-size: 0.95rem; max-width: 650px; margin: 0.5rem auto 0;">
+          Kami menyambut kedatangan Bapak/Ibu/Saudara/i di kawasan sakral Desa Tana Toa, Bulukumba:
+        </p>
+      </div>
+
+      <div class="kajang-card location-card reveal-on-scroll">
+        <h3 style="font-family: var(--font-serif); font-size: 1.45rem; color: #ffffff; margin-bottom: 0.5rem;">
+          Kawasan Adat Ammatoa Kajang (Desa Tana Toa)
+        </h3>
+        <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">
+          Kecamatan Kajang, Kabupaten Bulukumba, Sulawesi Selatan
+        </p>
+
+        <div class="map-wrapper">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127110.82914392437!2d120.3013838!3d-5.3211516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dbc27d727b3b4bf%3A0x6e2df8a69d129759!2sKawasan%20Adat%20Ammatoa%20Kajang!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+
+        <a href="https://maps.google.com/?q=Kawasan+Adat+Ammatoa+Kajang+Bulukumba" target="_blank" rel="noopener noreferrer" class="btn-primary-gold">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          Buka di Google Maps
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       TANDA KASIH & AMPLOP DIGITAL
+       ========================================================================== -->
+  <section id="kado" class="section-wrapper">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-subtitle">Tanda Kasih &amp; Doa Restu</span>
+        <h2 class="section-title">Amplop Digital</h2>
+        <img src="assets/kajang/divider-kajang.svg" alt="Pemisah Kajang" class="kajang-divider">
+        <p style="color: var(--text-muted); font-size: 0.95rem; max-width: 650px; margin: 0.5rem auto 0;">
+          Doa restu Anda merupakan karunia yang paling berarti bagi kami. Namun jika Anda berkehendak memberikan tanda kasih, dapat melalui rekening berikut:
+        </p>
+      </div>
+
+      <div class="gift-grid">
+        <!-- Rekening BCA -->
+        <div class="kajang-card gift-card reveal-on-scroll">
+          <div class="bank-logo">BANK BCA</div>
+          <div class="account-num">1234567890</div>
+          <div class="account-holder">a.n. Aswandi Syam</div>
+          <button class="btn-copy" data-copy="1234567890">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+            Salin Nomor Rekening
+          </button>
+        </div>
+
+        <!-- Rekening BNI -->
+        <div class="kajang-card gift-card reveal-on-scroll">
+          <div class="bank-logo">BANK BNI</div>
+          <div class="account-num">0987654321</div>
+          <div class="account-holder">a.n. Wira Kartika Putri</div>
+          <button class="btn-copy" data-copy="0987654321">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+            Salin Nomor Rekening
+          </button>
+        </div>
+
+        <!-- Pengiriman Kado Fisik -->
+        <div class="kajang-card gift-card reveal-on-scroll">
+          <div class="bank-logo" style="font-size: 1.35rem;">KIRIM KADO FISIK</div>
+          <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 0.8rem;">
+            Kediaman Mempelai (Desa Tana Toa, Kawasan Adat Ammatoa Kajang, Kec. Kajang, Kab. Bulukumba)
+          </p>
+          <button class="btn-copy" data-copy="Desa Tana Toa, Kawasan Adat Ammatoa Kajang, Kec. Kajang, Kab. Bulukumba, Sulawesi Selatan">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            Salin Alamat Kirim
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       BUKU TAMU & RSVP (KONFIRMASI KEHADIRAN)
+       ========================================================================== -->
+  <section id="rsvp" class="section-wrapper">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-subtitle">Konfirmasi Kehadiran &amp; Doa Restu</span>
+        <h2 class="section-title">Buku Tamu &amp; RSVP</h2>
+        <img src="assets/kajang/divider-kajang.svg" alt="Pemisah Kajang" class="kajang-divider">
+        <p style="color: var(--text-muted); font-size: 0.95rem; max-width: 650px; margin: 0.5rem auto 0;">
+          Kehadiran dan untaian doa Anda merupakan kehormatan tak ternilai bagi kami sekeluarga:
+        </p>
+      </div>
+
+      <div class="rsvp-wrapper">
+        <!-- Form Konfirmasi Kehadiran -->
+        <div class="kajang-card rsvp-form-card reveal-on-scroll">
+          <h3 style="font-family: var(--font-serif); font-size: 1.4rem; color: #ffffff; margin-bottom: 1.5rem;">
+            Kirim Ucapan &amp; Konfirmasi
+          </h3>
+          <form id="rsvpForm">
+            <div class="form-group">
+              <label for="rsvpName" class="form-label">Nama Lengkap</label>
+              <input type="text" id="rsvpName" class="form-control" placeholder="Nama Anda / Keluarga" required>
+            </div>
+
+            <div class="form-group">
+              <label for="rsvpStatus" class="form-label">Konfirmasi Kehadiran</label>
+              <select id="rsvpStatus" class="form-control" required>
+                <option value="hadir">Insya Allah Hadir</option>
+                <option value="ragu">Masih Ragu / Belum Pasti</option>
+                <option value="tidak">Mohon Maaf, Berhalangan Hadir</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="rsvpMessage" class="form-label">Ucapan &amp; Doa Restu</label>
+              <textarea id="rsvpMessage" class="form-control" placeholder="Tuliskan ucapan dan doa terbaik Anda untuk kedua mempelai..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary-gold" style="width: 100%; border-radius: 10px; padding: 0.85rem;">
+              Kirim Ucapan Doa
+            </button>
+          </form>
+        </div>
+
+        <!-- Daftar Doa & Ucapan Tamu -->
+        <div class="kajang-card wishes-card reveal-on-scroll">
+          <h3 style="font-family: var(--font-serif); font-size: 1.4rem; color: #ffffff; margin-bottom: 1.5rem;">
+            Untaian Doa Tamu Undangan
+          </h3>
+          <div id="wishesList" class="wishes-list">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PROTOKOL & ADAT KESOPANAN
+       ========================================================================== -->
+  <section class="section-wrapper" style="padding-top: 2rem;">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-subtitle">Ketertiban &amp; Kesopanan Adat</span>
+        <h2 class="section-title">Himbauan Para Tamu</h2>
+        <img src="assets/kajang/divider-kajang.svg" alt="Pemisah Kajang" class="kajang-divider">
+      </div>
+
+      <div class="protocols-grid">
+        <div class="kajang-card protocol-card reveal-on-scroll">
+          <div class="protocol-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          </div>
+          <h4 class="protocol-title">Pakaian Sopan</h4>
+          <p class="protocol-desc">
+            Disarankan mengenakan busana bernuansa gelap atau hitam yang sopan demi menghormati tatanan sakral adat suku Kajang.
+          </p>
+        </div>
+
+        <div class="kajang-card protocol-card reveal-on-scroll">
+          <div class="protocol-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+          </div>
+          <h4 class="protocol-title">Menjaga Kebersihan</h4>
+          <p class="protocol-desc">
+            Senantiasa menjaga kelestarian dan kebersihan alam sekitar kawasan adat Ammatoa dengan tidak membuang sampah sembarangan.
+          </p>
+        </div>
+
+        <div class="kajang-card protocol-card reveal-on-scroll">
+          <div class="protocol-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          </div>
+          <h4 class="protocol-title">Ketepatan Waktu</h4>
+          <p class="protocol-desc">
+            Hadir tepat waktu sesuai jadwal acara demi kelancaran dan kekhidmatan prosesi sakral adat.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FOOTER PENUTUP & KELUARGA BESAR
+       ========================================================================== -->
+  <footer class="footer-section">
+    <div class="container">
+      <img src="assets/logo-kajang.png" alt="Logo Kajang" style="width: 170px; height: auto; object-fit: contain; margin: 0 auto 1.5rem; display: block; opacity: 0.95; filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.85));">
+      
+      <p class="footer-curse">
+        "Tabe' Kipakaraja, Salama' ki tapada salama'"
+      </p>
+      <p style="color: var(--text-muted); font-size: 0.95rem; max-width: 650px; margin: 0 auto; line-height: 1.8;">
+        Merupakan suatu kehormatan dan kebahagiaan yang tak terhingga bagi kami sekeluarga, apabila Bapak/Ibu/Saudara/i berkenan hadir serta melimpahkan doa restu kepada kedua mempelai.
+      </p>
+
+      <div class="footer-names">Aswandi &amp; Wira</div>
+      <p class="kajang-script">"Ammenteng ko kalambusang, a'muntulu' ko katongorang"</p>
+
+      <div style="margin-top: 2rem; font-size: 0.9rem; color: var(--kajang-gold-light);">
+        <strong>Turut Mengundang Keluarga Besar:</strong><br>
+        Kel. Besar Bpk. Andi Muhammad Yusuf &amp; Hj. Andi Sitti Aminah (Bone)<br>
+        Kel. Besar Bpk. Ambo &amp; Ibu Agustina (Bulukumba)<br>
+        Pemangku Adat Kawasan Ammatoa Kajang
+      </div>
+
+      <p class="footer-copyright">
+        &copy; 2026 Pa'buntingan Adat Sakral Suku Kajang - Aswandi &amp; Wira.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/kajang.js"></script>
+</body>
+</html>

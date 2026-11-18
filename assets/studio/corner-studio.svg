@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <!-- Modern Luxury Studio Framing Corner -->
+  <path d="M4 35V14C4 8.47715 8.47715 4 14 4H35" stroke="#FBBF24" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M12 45V18C12 14.6863 14.6863 12 18 12H45" stroke="#FDE68A" stroke-width="1.5" stroke-linecap="round" stroke-opacity="0.85"/>
+  <circle cx="14" cy="14" r="3" fill="#FBBF24"/>
+  <circle cx="28" cy="14" r="1.5" fill="#FDE68A"/>
+  <circle cx="14" cy="28" r="1.5" fill="#FDE68A"/>
+  <line x1="4" y1="4" x2="10" y2="10" stroke="#FBBF24" stroke-width="2"/>
+</svg>

@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 60" fill="none">
+  <defs>
+    <linearGradient id="goldBeam" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#E5B842" stop-opacity="0" />
+      <stop offset="30%" stop-color="#F5D061" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#FFF5D6" stop-opacity="1" />
+      <stop offset="70%" stop-color="#F5D061" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#E5B842" stop-opacity="0" />
+    </linearGradient>
+    <linearGradient id="reccaGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#241E15" />
+      <stop offset="60%" stop-color="#12100C" />
+      <stop offset="100%" stop-color="#080705" />
+    </linearGradient>
+    <linearGradient id="pamiringGold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#D4A028" />
+      <stop offset="35%" stop-color="#FCE588" />
+      <stop offset="50%" stop-color="#FFFDF2" />
+      <stop offset="65%" stop-color="#FCE588" />
+      <stop offset="100%" stop-color="#D4A028" />
+    </linearGradient>
+  </defs>
+
+  <!-- Left & Right Divider Lines -->
+  <line x1="20" y1="30" x2="215" y2="30" stroke="url(#goldBeam)" stroke-width="1.5" />
+  <line x1="325" y1="30" x2="520" y2="30" stroke="url(#goldBeam)" stroke-width="1.5" />
+
+  <!-- Bugis Sulapa Eppa Diamonds on sides -->
+  <g transform="translate(225, 30)">
+    <polygon points="0,-8 6,0 0,8 -6,0" stroke="#F5D061" stroke-width="1.2" fill="#14171C" />
+    <circle cx="0" cy="0" r="1.8" fill="#FFF5D6" />
+  </g>
+  <g transform="translate(315, 30)">
+    <polygon points="0,-8 6,0 0,8 -6,0" stroke="#F5D061" stroke-width="1.2" fill="#14171C" />
+    <circle cx="0" cy="0" r="1.8" fill="#FFF5D6" />
+  </g>
+
+  <!-- Centerpiece: Stylized Songko' Recca' / Songkok Pamiring Silhouette -->
+  <g transform="translate(270, 30)">
+    <!-- Base Cap Shape (Songkok Dome) -->
+    <path d="M-28,12 C-28,4 -24,-16 0,-16 C24,-16 28,4 28,12 Z" fill="url(#reccaGrad)" stroke="#E5B842" stroke-width="1.2" />
+
+    <!-- Woven Lontar Texture Pattern Overlay (Recca' Crosshatch) -->
+    <path d="M-18,-8 L-10,12 M-8,-14 L2,12 M4,-15 L14,12 M14,-10 L24,12" stroke="#4A3D28" stroke-width="0.7" opacity="0.6" />
+    <path d="M18,-8 L10,12 M8,-14 L-2,12 M-4,-15 L-14,12 M-14,-10 L-24,12" stroke="#4A3D28" stroke-width="0.7" opacity="0.6" />
+
+    <!-- Pamiring Ulaweng (Gold Rim Band at Bottom) -->
+    <path d="M-28,6 L28,6 L28,13 L-28,13 Z" fill="url(#pamiringGold)" />
+    <line x1="-28" y1="6" x2="28" y2="6" stroke="#9E7314" stroke-width="0.8" />
+    <line x1="-28" y1="13" x2="28" y2="13" stroke="#9E7314" stroke-width="0.8" />
+
+    <!-- Pamiring Gold Filigree Nodes (Sulapa Eppa diamonds on rim) -->
+    <polygon points="-20,9.5 -18,7.5 -16,9.5 -18,11.5" fill="#875E0E" />
+    <polygon points="-10,9.5 -8,7.5 -6,9.5 -8,11.5" fill="#875E0E" />
+    <polygon points="0,9.5 2,7.5 4,9.5 2,11.5" fill="#875E0E" />
+    <polygon points="10,9.5 12,7.5 14,9.5 12,11.5" fill="#875E0E" />
+    <polygon points="20,9.5 22,7.5 24,9.5 22,11.5" fill="#875E0E" />
+
+    <!-- Crown Jewel / Top Finial (Ulaweng Crest) -->
+    <circle cx="0" cy="-18" r="3" fill="url(#pamiringGold)" stroke="#875E0E" stroke-width="0.6" />
+    <polygon points="0,-23 2.5,-18 0,-15 -2.5,-18" fill="#FFF5D6" />
+  </g>
+</svg>

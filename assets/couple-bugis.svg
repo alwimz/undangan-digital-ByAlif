@@ -1,0 +1,185 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 650" width="100%" height="100%">
+  <defs>
+    <!-- Gold Gradient -->
+    <linearGradient id="cGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFEAA7" />
+      <stop offset="35%" stop-color="#D4AF37" />
+      <stop offset="70%" stop-color="#AA771C" />
+      <stop offset="100%" stop-color="#5B4010" />
+    </linearGradient>
+
+    <!-- Silk Velvet Maroon -->
+    <linearGradient id="maroonSuit" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#831826" />
+      <stop offset="50%" stop-color="#5b0d18" />
+      <stop offset="100%" stop-color="#34060d" />
+    </linearGradient>
+
+    <!-- Bride Red Scarlet Baju Bodo -->
+    <linearGradient id="bodoRed" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d6223a" />
+      <stop offset="60%" stop-color="#991124" />
+      <stop offset="100%" stop-color="#640915" />
+    </linearGradient>
+
+    <!-- Songkok Recca Gold-Black Weave -->
+    <pattern id="reccaWeave" width="8" height="8" patternUnits="userSpaceOnUse">
+      <rect width="8" height="8" fill="#1f1807"/>
+      <path d="M0 0L8 8M8 0L0 8" stroke="#D4AF37" stroke-width="1.2"/>
+    </pattern>
+
+    <!-- Sarung Sabbe Bugis Silk Pattern -->
+    <pattern id="lipaSabbe" width="20" height="20" patternUnits="userSpaceOnUse">
+      <rect width="20" height="20" fill="#4a040b"/>
+      <path d="M0 10 L20 10 M10 0 L10 20" stroke="#d4af37" stroke-width="1" opacity="0.6"/>
+      <circle cx="10" cy="10" r="1.5" fill="#fcf6ba"/>
+    </pattern>
+
+    <!-- Shadow -->
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#softGlow)">
+    <!-- Aura Ring Backdrop -->
+    <circle cx="300" cy="330" r="230" fill="#4a040b" opacity="0.4" stroke="url(#cGold)" stroke-width="3"/>
+    <circle cx="300" cy="330" r="215" fill="none" stroke="url(#cGold)" stroke-width="1" stroke-dasharray="6,4" opacity="0.7"/>
+
+    <!-- ==================== GROOM (LEFT) ==================== -->
+    <g id="groom" transform="translate(40, 20)">
+      <!-- Groom Body / Jas Tutu' -->
+      <path d="M120 280 L230 280 L250 560 L100 560 Z" fill="url(#maroonSuit)" stroke="url(#cGold)" stroke-width="2"/>
+      
+      <!-- Jas Tutu' Gold Embroidered Lapel & Collar (Leher Tertutup) -->
+      <path d="M150 250 L200 250 L205 285 L145 285 Z" fill="url(#cGold)"/>
+      <line x1="175" y1="285" x2="175" y2="450" stroke="url(#cGold)" stroke-width="3"/>
+      <!-- Gold Buttons (Kancing Emas Jas Tutu') -->
+      <circle cx="175" cy="310" r="4.5" fill="url(#cGold)"/>
+      <circle cx="175" cy="340" r="4.5" fill="url(#cGold)"/>
+      <circle cx="175" cy="370" r="4.5" fill="url(#cGold)"/>
+      <circle cx="175" cy="400" r="4.5" fill="url(#cGold)"/>
+      <circle cx="175" cy="430" r="4.5" fill="url(#cGold)"/>
+
+      <!-- Selempang / Rantai Manuk-manuk Emas (Sash) -->
+      <path d="M135 270 Q180 370 230 450" stroke="url(#cGold)" stroke-width="6" fill="none"/>
+      <path d="M135 270 Q180 370 230 450" stroke="#FFEAA7" stroke-width="2" stroke-dasharray="4,3" fill="none"/>
+
+      <!-- Keris Kawali / Badik Bugis di Pinggang -->
+      <g transform="translate(195, 430) rotate(-25)">
+        <rect x="0" y="-8" width="55" height="16" rx="4" fill="url(#cGold)"/>
+        <path d="M50 -5 L70 -12 L65 5 Z" fill="#643b0f" stroke="url(#cGold)" stroke-width="1.5"/>
+        <!-- Rumbai Hiasan Emas -->
+        <circle cx="10" cy="15" r="4" fill="url(#cGold)"/>
+        <line x1="10" y1="15" x2="10" y2="35" stroke="url(#cGold)" stroke-width="2"/>
+      </g>
+
+      <!-- Sarung Lipa' Sabbe Bagian Bawah -->
+      <path d="M100 450 L250 450 L245 590 L105 590 Z" fill="url(#lipaSabbe)" stroke="url(#cGold)" stroke-width="2"/>
+      <!-- Tepi bawah renda emas sarung -->
+      <rect x="105" y="575" width="140" height="15" fill="url(#cGold)"/>
+
+      <!-- Groom Neck & Face -->
+      <rect x="160" y="225" width="30" height="30" rx="4" fill="#E8B58E"/>
+      <ellipse cx="175" cy="195" rx="36" ry="42" fill="#F3C39D"/>
+      <!-- Hair sideburns -->
+      <path d="M139 180 C139 170 148 160 175 160 C202 160 211 170 211 180 Z" fill="#1b120c"/>
+      <path d="M139 185 L143 205 L146 185 Z" fill="#1b120c"/>
+      
+      <!-- Groom Eyes, Eyebrows, Smile -->
+      <path d="M152 185 Q160 182 167 185" stroke="#4a2511" stroke-width="2.5" fill="none"/>
+      <path d="M183 185 Q190 182 198 185" stroke="#4a2511" stroke-width="2.5" fill="none"/>
+      <circle cx="160" cy="192" r="3" fill="#301505"/>
+      <circle cx="190" cy="192" r="3" fill="#301505"/>
+      <path d="M167 215 Q175 224 183 215" stroke="#994433" stroke-width="2.5" fill="none"/>
+
+      <!-- Songkok Recca / Pamiring (Peci Bugis Khas Bone Anyaman Serat Lontar Emas) -->
+      <!-- Songkok Dome -->
+      <path d="M140 175 C140 125 210 125 210 175 Z" fill="url(#reccaWeave)" stroke="#a67c1e" stroke-width="2"/>
+      <!-- Golden Brim (Pamiring Emas) -->
+      <rect x="138" y="165" width="74" height="12" rx="3" fill="url(#cGold)"/>
+      <rect x="150" y="145" width="50" height="8" rx="2" fill="url(#cGold)" opacity="0.9"/>
+      <circle cx="175" cy="130" r="4" fill="url(#cGold)"/>
+    </g>
+
+    <!-- ==================== BRIDE (RIGHT) ==================== -->
+    <g id="bride" transform="translate(190, 20)">
+      <!-- Bride Body / Baju Bodo Luwes Mengembang -->
+      <!-- Sleeves (Khas Baju Bodo Lebar Berisi) -->
+      <path d="M175 285 C95 330 90 410 120 460 C150 430 180 390 190 350 Z" fill="url(#bodoRed)"/>
+      <path d="M255 285 C335 330 340 410 310 460 C280 430 250 390 240 350 Z" fill="url(#bodoRed)"/>
+
+      <!-- Baju Bodo Main Dress (Bentuk Segiempat Khas) -->
+      <path d="M150 280 Q215 260 280 280 L295 470 L135 470 Z" fill="url(#bodoRed)" stroke="url(#cGold)" stroke-width="1.8"/>
+
+      <!-- Kalung Bersusun Khas Bugis (Geno Ma'bule) -->
+      <path d="M190 280 Q215 315 240 280" stroke="url(#cGold)" stroke-width="4.5" fill="none"/>
+      <path d="M180 285 Q215 335 250 285" stroke="url(#cGold)" stroke-width="5" fill="none"/>
+      <path d="M170 290 Q215 360 260 290" stroke="url(#cGold)" stroke-width="5.5" fill="none"/>
+      <circle cx="215" cy="365" r="7" fill="url(#cGold)"/>
+      <circle cx="215" cy="365" r="3" fill="#800a16"/>
+
+      <!-- Gelang Ponto Naga Emas di Lengan -->
+      <rect x="105" y="440" width="22" height="12" rx="3" fill="url(#cGold)"/>
+      <rect x="303" y="440" width="22" height="12" rx="3" fill="url(#cGold)"/>
+
+      <!-- Sarung Sutra Bugis Lagosi (Lipa' Sabbe) Mempelai Wanita -->
+      <path d="M140 465 L290 465 L305 590 L125 590 Z" fill="url(#lipaSabbe)" stroke="url(#cGold)" stroke-width="2"/>
+      <rect x="125" y="575" width="180" height="15" fill="url(#cGold)"/>
+
+      <!-- Bride Neck & Face -->
+      <rect x="202" y="235" width="26" height="30" rx="4" fill="#F8CDB0"/>
+      <ellipse cx="215" cy="198" rx="33" ry="38" fill="#FDE2D0"/>
+      
+      <!-- Sanggul / Rambut Rapi -->
+      <ellipse cx="215" cy="180" rx="38" ry="30" fill="#1b120c"/>
+
+      <!-- Bride Eyes, Long Lashes, Blush & Lips -->
+      <!-- Eyebrows -->
+      <path d="M194 186 Q202 181 209 184" stroke="#4a2511" stroke-width="2.5" fill="none"/>
+      <path d="M221 184 Q228 181 236 186" stroke="#4a2511" stroke-width="2.5" fill="none"/>
+      <!-- Eyes & Lashes -->
+      <path d="M195 194 Q202 199 209 194" stroke="#1b120c" stroke-width="2.5" fill="none"/>
+      <path d="M221 194 Q228 199 235 194" stroke="#1b120c" stroke-width="2.5" fill="none"/>
+      <!-- Soft Blush -->
+      <circle cx="194" cy="204" r="6" fill="#f87171" opacity="0.35"/>
+      <circle cx="236" cy="204" r="6" fill="#f87171" opacity="0.35"/>
+      <!-- Red Lipstick -->
+      <path d="M208 217 Q215 224 222 217" stroke="#b91c1c" stroke-width="3" fill="#b91c1c"/>
+
+      <!-- MAHKOTA SALOKO (Mahkota Emas Bugis-Makassar) -->
+      <path d="M175 178 C185 140 245 140 255 178 Z" fill="url(#cGold)"/>
+      <rect x="172" y="174" width="86" height="8" rx="2" fill="url(#cGold)"/>
+
+      <!-- Kembang Goyang Saloko (Tusuk Konde Kembang Bunga Emas) -->
+      <!-- Center Pin -->
+      <line x1="215" y1="150" x2="215" y2="105" stroke="url(#cGold)" stroke-width="2.5"/>
+      <polygon points="215,95 223,105 215,115 207,105" fill="url(#cGold)"/>
+      <circle cx="215" cy="105" r="3.5" fill="#FFEAA7"/>
+
+      <!-- Left Pins -->
+      <line x1="198" y1="155" x2="185" y2="115" stroke="url(#cGold)" stroke-width="2"/>
+      <polygon points="185,108 191,117 185,124 179,117" fill="url(#cGold)"/>
+      <line x1="184" y1="165" x2="165" y2="135" stroke="url(#cGold)" stroke-width="2"/>
+      <polygon points="165,128 171,136 165,143 159,136" fill="url(#cGold)"/>
+
+      <!-- Right Pins -->
+      <line x1="232" y1="155" x2="245" y2="115" stroke="url(#cGold)" stroke-width="2"/>
+      <polygon points="245,108 251,117 245,124 239,117" fill="url(#cGold)"/>
+      <line x1="246" y1="165" x2="265" y2="135" stroke="url(#cGold)" stroke-width="2"/>
+      <polygon points="265,128 271,136 265,143 259,136" fill="url(#cGold)"/>
+
+      <!-- Rumbai Rantai Emas Melati di Sisi Kiri & Kanan (Kompang-Kompang) -->
+      <g stroke="url(#cGold)" stroke-width="1.8" fill="#FFFBEB">
+        <circle cx="170" cy="190" r="3"/>
+        <circle cx="168" cy="205" r="3.5"/>
+        <circle cx="166" cy="222" r="4"/>
+        <circle cx="165" cy="240" r="4.5"/>
+        <circle cx="260" cy="190" r="3"/>
+        <circle cx="262" cy="205" r="3.5"/>
+        <circle cx="264" cy="222" r="4"/>
+        <circle cx="265" cy="240" r="4.5"/>
+      </g>
+    </g>
+  </g>
+</svg>

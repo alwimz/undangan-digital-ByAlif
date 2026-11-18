@@ -1,0 +1,1675 @@
+/* ==========================================================================
+   TEMA 5: MODERN ISLAMIC ELEGANCE (WALIMATUL 'URSY)
+   Style: Modern Islamic Sanctuary, Moroccan/Nabawi Arch & Subtle Girih Geometry
+   Palet: Restful Emerald Sanctuary (#041f18), Champagne Brass (#e6c67c),
+          Soft Mint Pearl (#a7f3d0), Warm Luminous Ivory (#f8f5ec).
+   ========================================================================== */
+
+:root {
+  --islamic-bg-deep: #031914;
+  --islamic-emerald-dark: #062820;
+  --islamic-emerald-mid: #0a3a2f;
+  --islamic-card: rgba(5, 30, 24, 0.90);
+  --islamic-card-hover: rgba(8, 42, 34, 0.96);
+
+  --islamic-gold: #d4af37;
+  --islamic-gold-soft: #e6c67c;
+  --islamic-gold-pearl: #f5e1a4;
+  --islamic-mint: #a7f3d0;
+  --islamic-mint-soft: #6ee7b7;
+
+  /* Tipografi Hangat & Nyaman Dipandang (High Detail & Soft Contrast) */
+  --text-ivory: #f8f5ec;
+  --text-detail: #e8efec;
+  --text-subtle: #b7ccc3;
+
+  --font-arabic: 'Amiri', 'Scheherazade New', serif;
+  --font-serif: 'Cinzel', 'Playfair Display', serif;
+  --font-script: 'Great Vibes', cursive;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, sans-serif;
+
+  --islamic-title-grad: linear-gradient(135deg, #faf6ee 0%, #f5e1a4 35%, #e6c67c 65%, #faf6ee 100%);
+  --islamic-btn-grad: linear-gradient(135deg, #c59b38 0%, #e6c67c 50%, #f5e1a4 100%);
+  --islamic-emerald-grad: linear-gradient(135deg, #065f46 0%, #059669 50%, #10b981 100%);
+  --card-shadow: 0 18px 42px rgba(0, 0, 0, 0.78), 0 0 22px rgba(110, 231, 183, 0.12);
+}
+
+/* Reset & Base */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--islamic-bg-deep);
+  color: var(--text-ivory);
+  line-height: 1.65;
+  overflow-x: hidden;
+  position: relative;
+}
+
+body.lock-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
+
+/* ==========================================================================
+   DUAL-LAYER RESPONSIVE BACKGROUND: SANCTUARY MASJID MODERN
+   ========================================================================== */
+
+/* 1. Ambient Blur untuk layar desktop / monitor lebar */
+.bg-islamic-ambient {
+  position: fixed;
+  inset: -30px;
+  width: calc(100vw + 60px);
+  height: calc(100vh + 60px);
+  background-image: url('../assets/islamic/bg-islamic.jpeg');
+  background-size: cover;
+  background-position: center center;
+  filter: blur(36px) brightness(0.28) saturate(1.15);
+  transform: scale(1.08);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* 2. Backdrop Utama Islami: Presisi 9:16 tanpa terpotong di HP maupun PC */
+.bg-islamic-backdrop {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 540px;
+  height: 100vh;
+  background-image:
+    linear-gradient(180deg, rgba(3, 25, 20, 0.56) 0%, rgba(5, 32, 25, 0.36) 45%, rgba(2, 18, 14, 0.74) 100%),
+    url('../assets/islamic/bg-islamic.jpeg');
+  background-size: 100% 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.98;
+  box-shadow: 0 0 55px rgba(0, 0, 0, 0.88);
+  border-left: 1px solid rgba(230, 198, 124, 0.24);
+  border-right: 1px solid rgba(230, 198, 124, 0.24);
+}
+
+/* Lapisan Tekstur Geometri Girih Sangat Halus */
+.bg-girih-overlay {
+  position: fixed;
+  inset: 0;
+  background-image: url('../assets/islamic/pattern-girih.svg');
+  background-size: 110px 110px;
+  opacity: 0.25;
+  pointer-events: none;
+  z-index: 1;
+}
+
+@media (max-width: 580px) {
+  .bg-islamic-ambient {
+    display: none;
+  }
+  .bg-islamic-backdrop {
+    max-width: 100vw;
+    width: 100vw;
+    height: 100vh;
+    background-size: 100% 100%;
+    box-shadow: none;
+    border-left: none;
+    border-right: none;
+  }
+}
+
+/* ==========================================================================
+   COVER PEMBUKA UNDANGAN (ARCH MIHRAB GATEWAY)
+   ========================================================================== */
+#openingCover {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background:
+    linear-gradient(180deg, rgba(3, 25, 20, 0.72), rgba(2, 18, 14, 0.92)),
+    url('../assets/islamic/bg-islamic.jpeg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.95rem;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  transition: transform 1.05s cubic-bezier(0.77, 0, 0.175, 1), opacity 0.8s ease;
+}
+
+#openingCover.opened {
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Kartu Cover dengan Sentuhan Lengkungan Arsitektur Mihrab Modern */
+.cover-card {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+  max-height: 95vh;
+  margin: auto;
+  background:
+    linear-gradient(180deg, rgba(6, 34, 27, 0.95) 0%, rgba(4, 23, 18, 0.96) 100%);
+  border: 1.5px solid rgba(230, 198, 124, 0.55);
+  border-radius: 175px 175px 26px 26px / 95px 95px 26px 26px;
+  padding: 2rem 1.35rem 1.5rem;
+  text-align: center;
+  box-shadow:
+    inset 0 0 0 4px rgba(4, 23, 18, 0.85),
+    inset 0 0 0 5px rgba(230, 198, 124, 0.25),
+    0 24px 55px rgba(0, 0, 0, 0.88),
+    0 0 28px rgba(212, 175, 55, 0.18);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cover-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('../assets/islamic/pattern-girih.svg');
+  background-size: 95px 95px;
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+.corner-ornament {
+  position: absolute;
+  width: 42px;
+  height: 42px;
+  pointer-events: none;
+  opacity: 0.9;
+  z-index: 2;
+}
+
+.corner-tl { top: 10px; left: 10px; }
+.corner-tr { top: 10px; right: 10px; transform: scaleX(-1); }
+.corner-bl { bottom: 10px; left: 10px; transform: scaleY(-1); }
+.corner-br { bottom: 10px; right: 10px; transform: scale(-1, -1); }
+
+.cover-logo-islamic {
+  position: relative;
+  z-index: 2;
+  width: 98px;
+  height: 98px;
+  object-fit: contain;
+  margin: 0 auto 0.45rem;
+  display: block;
+  filter: drop-shadow(0 4px 14px rgba(230, 198, 124, 0.45));
+  animation: floatSubtle 4.5s ease-in-out infinite;
+}
+
+.cover-arabic-salam {
+  position: relative;
+  z-index: 2;
+  font-family: var(--font-arabic);
+  font-size: 1.25rem;
+  color: var(--islamic-gold-pearl);
+  line-height: 1.7;
+  margin-bottom: 0.15rem;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.9);
+}
+
+.cover-subheading {
+  position: relative;
+  z-index: 2;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--islamic-mint);
+  margin-bottom: 0.25rem;
+  font-weight: 700;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+}
+
+.cover-title {
+  position: relative;
+  z-index: 2;
+  font-family: var(--font-serif);
+  font-size: 1.9rem;
+  background: var(--islamic-title-grad);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.95));
+  line-height: 1.2;
+  margin-bottom: 0.2rem;
+  letter-spacing: 0.8px;
+}
+
+.cover-ampersand {
+  font-family: var(--font-script);
+  font-size: 2.2rem;
+  color: var(--islamic-gold-soft);
+  -webkit-text-fill-color: var(--islamic-gold-soft);
+  display: inline-block;
+  line-height: 1;
+  margin: 0 0.15rem;
+  text-shadow: 0 2px 10px rgba(230, 198, 124, 0.55);
+}
+
+.cover-date-mini {
+  position: relative;
+  z-index: 2;
+  font-size: 0.78rem;
+  color: var(--islamic-gold-pearl);
+  letter-spacing: 1.6px;
+  font-weight: 600;
+  margin-bottom: 0.45rem;
+}
+
+.guest-card {
+  position: relative;
+  z-index: 2;
+  margin: 0.5rem auto 0.75rem;
+  width: 100%;
+  max-width: 360px;
+  padding: 0.65rem 1rem;
+  background: rgba(3, 19, 15, 0.88);
+  border: 1px solid rgba(230, 198, 124, 0.45);
+  border-radius: 14px;
+  backdrop-filter: blur(10px);
+}
+
+.guest-card .guest-label {
+  font-size: 0.75rem;
+  color: var(--islamic-mint);
+  letter-spacing: 0.6px;
+  margin-bottom: 0.15rem;
+  font-weight: 600;
+}
+
+.guest-card .guest-name {
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: var(--text-ivory);
+  font-family: var(--font-serif);
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.9);
+}
+
+.cover-invitation-text {
+  position: relative;
+  z-index: 2;
+  font-size: 0.8rem;
+  color: var(--text-detail);
+  margin-bottom: 0.9rem;
+  font-style: italic;
+  line-height: 1.5;
+  max-width: 360px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+}
+
+.btn-open-invitation {
+  position: relative;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  background: var(--islamic-btn-grad);
+  color: #041f18;
+  font-weight: 700;
+  font-size: 0.86rem;
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+  padding: 0.78rem 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6), 0 0 18px rgba(230, 198, 124, 0.4);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.btn-open-invitation:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7), 0 0 24px rgba(230, 198, 124, 0.65);
+}
+
+.btn-open-invitation::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(60deg, transparent, rgba(255, 255, 255, 0.45), transparent);
+  transform: rotate(25deg);
+  animation: shine 3.5s infinite;
+}
+
+@media (max-height: 700px) {
+  .cover-card {
+    padding: 1.2rem 1rem 1rem;
+    border-radius: 130px 130px 22px 22px / 70px 70px 22px 22px;
+  }
+  .cover-logo-islamic {
+    width: 72px;
+    height: 72px;
+    margin-bottom: 0.25rem;
+  }
+  .cover-arabic-salam {
+    font-size: 1.05rem;
+  }
+  .cover-title {
+    font-size: 1.55rem;
+  }
+  .guest-card {
+    margin: 0.35rem auto 0.5rem;
+    padding: 0.45rem 0.75rem;
+  }
+  .cover-invitation-text {
+    font-size: 0.74rem;
+    margin-bottom: 0.55rem;
+  }
+  .btn-open-invitation {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.8rem;
+  }
+}
+
+/* ==========================================================================
+   FLOATING AUDIO PLAYER & BOTTOM NAVIGATION
+   ========================================================================== */
+.music-toggle-btn {
+  position: fixed;
+  bottom: 85px;
+  right: 20px;
+  z-index: 900;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #09352a, #031914);
+  border: 1.8px solid var(--islamic-gold-soft);
+  color: var(--islamic-gold-pearl);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.75), 0 0 16px rgba(230, 198, 124, 0.32);
+  transition: all 0.3s ease;
+}
+
+.music-toggle-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 25px rgba(230, 198, 124, 0.55);
+}
+
+.music-toggle-btn.playing .disc-icon {
+  animation: spinDisc 4s linear infinite;
+}
+
+.sound-waves {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  position: absolute;
+  top: -12px;
+  right: 6px;
+}
+
+.sound-waves span {
+  width: 3px;
+  height: 8px;
+  background-color: var(--islamic-mint);
+  border-radius: 2px;
+  animation: wave 1.2s ease-in-out infinite;
+}
+
+.sound-waves span:nth-child(2) { animation-delay: 0.2s; }
+.sound-waves span:nth-child(3) { animation-delay: 0.4s; }
+
+.bottom-nav {
+  position: fixed;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 890;
+  background: rgba(4, 25, 20, 0.94);
+  border: 1.5px solid rgba(230, 198, 124, 0.45);
+  border-radius: 40px;
+  padding: 0.5rem 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.15rem;
+  backdrop-filter: blur(14px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.85), 0 0 18px rgba(167, 243, 208, 0.14);
+  max-width: 95vw;
+}
+
+.nav-link {
+  color: var(--text-subtle);
+  text-decoration: none;
+  font-size: 0.73rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  transition: all 0.25s ease;
+  font-weight: 500;
+}
+
+.nav-link svg {
+  width: 18px;
+  height: 18px;
+  stroke: var(--text-subtle);
+  transition: all 0.25s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--islamic-gold-pearl);
+}
+
+.nav-link:hover svg, .nav-link.active svg {
+  stroke: var(--islamic-gold-soft);
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   GENERAL CONTAINER & TYPOGRAPHY
+   ========================================================================== */
+.container {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  position: relative;
+  z-index: 2;
+}
+
+.section-wrapper {
+  padding: 4.5rem 0;
+  position: relative;
+}
+
+.section-header {
+  text-align: center;
+  margin: 0 auto 2.8rem;
+  max-width: 680px;
+  background: rgba(5, 30, 24, 0.91);
+  border: 1.5px solid rgba(230, 198, 124, 0.42);
+  border-radius: 24px;
+  padding: 1.65rem 1.75rem 1.45rem;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: var(--card-shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+.section-header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('../assets/islamic/pattern-girih.svg');
+  background-size: 105px 105px;
+  opacity: 0.22;
+  pointer-events: none;
+}
+
+.section-header > * {
+  position: relative;
+  z-index: 2;
+}
+
+.section-subtitle {
+  font-family: var(--font-sans);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 0.8rem;
+  color: var(--islamic-mint);
+  margin-bottom: 0.4rem;
+  display: block;
+  font-weight: 700;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+}
+
+.section-title {
+  font-family: var(--font-serif);
+  font-size: 2.05rem;
+  background: var(--islamic-title-grad);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.95));
+  line-height: 1.25;
+  margin-bottom: 0.5rem;
+}
+
+.section-header p {
+  color: var(--text-detail);
+  font-size: 0.93rem;
+  line-height: 1.7;
+  font-weight: 450;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.85);
+}
+
+.islamic-divider {
+  width: 240px;
+  max-width: 72%;
+  height: 26px;
+  margin: 0.25rem auto 0.65rem;
+  display: block;
+}
+
+/* Detail Cards (Sakinah Sanctuary Glass) */
+.islamic-card {
+  background: var(--islamic-card);
+  border: 1.5px solid rgba(230, 198, 124, 0.38);
+  border-radius: 22px;
+  box-shadow:
+    inset 0 0 0 1px rgba(167, 243, 208, 0.08),
+    var(--card-shadow);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.35s ease;
+}
+
+.islamic-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('../assets/islamic/pattern-girih.svg');
+  background-size: 115px 115px;
+  opacity: 0.16;
+  pointer-events: none;
+}
+
+.islamic-card > * {
+  position: relative;
+  z-index: 2;
+}
+
+.islamic-card:hover {
+  background: var(--islamic-card-hover);
+  border-color: rgba(230, 198, 124, 0.72);
+  box-shadow: 0 22px 46px rgba(0, 0, 0, 0.85), 0 0 26px rgba(230, 198, 124, 0.22);
+}
+
+.modern-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: rgba(16, 185, 129, 0.16);
+  border: 1px solid rgba(167, 243, 208, 0.55);
+  color: var(--islamic-mint);
+  padding: 0.38rem 1.15rem;
+  border-radius: 30px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+}
+
+/* ==========================================================================
+   HERO SECTION (SANCTUARY BANNER)
+   ========================================================================== */
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4.5rem 1.25rem 5.5rem;
+  position: relative;
+}
+
+.hero-content {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.hero-arch-panel {
+  background: rgba(5, 30, 24, 0.88);
+  border: 1.5px solid rgba(230, 198, 124, 0.48);
+  border-radius: 220px 220px 28px 28px / 115px 115px 28px 28px;
+  padding: 2.8rem 1.8rem 2.2rem;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow:
+    inset 0 0 0 4px rgba(3, 22, 17, 0.8),
+    inset 0 0 0 5px rgba(230, 198, 124, 0.22),
+    0 20px 50px rgba(0, 0, 0, 0.85);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-arch-panel::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('../assets/islamic/pattern-girih.svg');
+  background-size: 110px 110px;
+  opacity: 0.22;
+  pointer-events: none;
+}
+
+.hero-arch-panel > * {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-logo-islamic {
+  width: 145px;
+  height: 145px;
+  object-fit: contain;
+  margin: 0 auto 1rem;
+  display: block;
+  filter: drop-shadow(0 6px 18px rgba(230, 198, 124, 0.45));
+  animation: floatSubtle 4.5s ease-in-out infinite;
+}
+
+.hero-bismillah {
+  font-family: var(--font-arabic);
+  font-size: 2.35rem;
+  color: var(--islamic-gold-pearl);
+  margin-bottom: 0.65rem;
+  line-height: 1.6;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.95), 0 0 18px rgba(230, 198, 124, 0.35);
+}
+
+.hero-names {
+  font-family: var(--font-serif);
+  font-size: 3.1rem;
+  background: var(--islamic-title-grad);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 3px 10px rgba(0, 0, 0, 0.95));
+  line-height: 1.2;
+  margin: 0.9rem 0 0.45rem;
+}
+
+.hero-doa-arabic {
+  font-family: var(--font-arabic);
+  font-size: 1.38rem;
+  color: var(--islamic-gold-pearl);
+  line-height: 1.9;
+  margin-bottom: 0.4rem;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.9);
+}
+
+.hero-quote-box {
+  background: rgba(3, 20, 16, 0.85);
+  border-left: 3px solid var(--islamic-gold-soft);
+  border-right: 3px solid var(--islamic-gold-soft);
+  padding: 1.15rem 1.4rem;
+  border-radius: 16px;
+  margin: 1.25rem auto;
+  max-width: 640px;
+}
+
+.hero-date-highlight {
+  display: inline-block;
+  background: rgba(4, 24, 19, 0.92);
+  border: 1.5px solid var(--islamic-gold-soft);
+  color: var(--text-ivory);
+  padding: 0.65rem 1.75rem;
+  border-radius: 40px;
+  font-size: 0.98rem;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+  margin-top: 0.8rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7), 0 0 14px rgba(230, 198, 124, 0.25);
+}
+
+.hero-hijri-sub {
+  display: block;
+  font-size: 0.82rem;
+  color: var(--islamic-mint);
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-top: 0.25rem;
+}
+
+/* ==========================================================================
+   COUNTDOWN TIMER
+   ========================================================================== */
+.countdown-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.1rem;
+  margin: 2rem auto 0;
+  flex-wrap: wrap;
+}
+
+.time-card {
+  background: rgba(5, 30, 24, 0.92);
+  border: 1.5px solid rgba(230, 198, 124, 0.5);
+  border-radius: 16px;
+  padding: 0.95rem 1.2rem;
+  min-width: 84px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.55);
+  transition: all 0.3s ease;
+}
+
+.time-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--islamic-mint);
+}
+
+.time-num {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 2.15rem;
+  font-weight: 700;
+  line-height: 1;
+  background: var(--islamic-title-grad);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.9));
+}
+
+.time-label {
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  color: var(--islamic-mint);
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  margin-top: 0.35rem;
+  display: block;
+}
+
+/* ==========================================================================
+   PROFIL MEMPELAI (THE COUPLE)
+   ========================================================================== */
+.couple-showcase {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.mempelai-card {
+  padding: 2.5rem 1.75rem;
+  text-align: center;
+}
+
+/* Bingkai Foto Berbentuk Kubah Mihrab Islami */
+.mempelai-photo-frame {
+  width: 175px;
+  height: 205px;
+  margin: 0 auto 1.5rem;
+  border-radius: 95px 95px 22px 22px;
+  padding: 5px;
+  background: linear-gradient(145deg, #f5e1a4, #059669, #e6c67c);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.65), 0 0 22px rgba(230, 198, 124, 0.3);
+  position: relative;
+}
+
+.mempelai-photo-frame img {
+  width: 100%;
+  height: 100%;
+  border-radius: 90px 90px 18px 18px;
+  object-fit: cover;
+  object-position: center top;
+  border: 3px solid var(--islamic-bg-deep);
+}
+
+.mempelai-name {
+  font-family: var(--font-serif);
+  font-size: 1.8rem;
+  color: var(--text-ivory);
+  margin-bottom: 0.4rem;
+  font-weight: 700;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.9);
+}
+
+.mempelai-title {
+  color: var(--islamic-gold-pearl);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+  margin-bottom: 1.15rem;
+}
+
+.mempelai-parents {
+  font-size: 0.94rem;
+  color: var(--text-detail);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.mempelai-parents strong {
+  color: var(--text-ivory);
+  font-weight: 700;
+}
+
+.mempelai-social {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--islamic-mint);
+  text-decoration: none;
+  font-size: 0.85rem;
+  padding: 0.45rem 1.25rem;
+  border: 1px solid rgba(167, 243, 208, 0.45);
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  background: rgba(3, 20, 16, 0.72);
+}
+
+.mempelai-social:hover {
+  background: var(--islamic-mint);
+  color: #031914;
+  border-color: var(--islamic-mint);
+}
+
+.couple-center-divider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.ampersand-circle {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  border: 2px solid var(--islamic-gold-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-script);
+  font-size: 3rem;
+  color: var(--islamic-gold-pearl);
+  background: rgba(5, 30, 24, 0.94);
+  box-shadow: 0 0 22px rgba(230, 198, 124, 0.35);
+}
+
+/* ==========================================================================
+   FILOSOFI PERNIKAHAN ISLAMI (PILAR SAKINAH)
+   ========================================================================== */
+.pilar-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
+  gap: 1.65rem;
+  margin-top: 2.2rem;
+}
+
+.pilar-card {
+  padding: 2.1rem 1.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pilar-icon-wrapper {
+  width: 82px;
+  height: 82px;
+  border-radius: 50%;
+  background: rgba(16, 185, 129, 0.14);
+  border: 1.5px solid rgba(230, 198, 124, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  color: var(--islamic-gold-pearl);
+  box-shadow: 0 0 18px rgba(230, 198, 124, 0.22);
+}
+
+.pilar-arabic {
+  font-family: var(--font-arabic);
+  font-size: 1.45rem;
+  color: var(--islamic-gold-pearl);
+  margin-bottom: 0.2rem;
+}
+
+.pilar-title {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  color: var(--text-ivory);
+  margin-bottom: 0.35rem;
+  font-weight: 700;
+}
+
+.pilar-subtitle {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--islamic-mint);
+  margin-bottom: 0.85rem;
+  font-weight: 700;
+}
+
+.pilar-desc {
+  font-size: 0.91rem;
+  color: var(--text-detail);
+  line-height: 1.7;
+}
+
+/* ==========================================================================
+   RANGKAIAN ACARA (WALIMATUL 'URSY EVENTS)
+   ========================================================================== */
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(305px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.event-card {
+  padding: 2.4rem 1.8rem;
+  text-align: center;
+  position: relative;
+}
+
+.event-badge {
+  display: inline-block;
+  background: var(--islamic-btn-grad);
+  color: #031914;
+  font-weight: 700;
+  font-size: 0.78rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 0.42rem 1.45rem;
+  border-radius: 30px;
+  margin-bottom: 1.35rem;
+}
+
+.event-title {
+  font-family: var(--font-serif);
+  font-size: 1.7rem;
+  color: var(--text-ivory);
+  margin-bottom: 1.15rem;
+  font-weight: 700;
+}
+
+.event-datetime {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 1.4rem;
+}
+
+.datetime-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  font-size: 0.98rem;
+  color: var(--text-ivory);
+  font-weight: 600;
+}
+
+.datetime-row svg {
+  width: 20px;
+  height: 20px;
+  stroke: var(--islamic-gold-soft);
+}
+
+.event-venue {
+  font-size: 1.12rem;
+  font-weight: 700;
+  color: var(--islamic-gold-pearl);
+  margin-bottom: 0.35rem;
+}
+
+.event-address {
+  font-size: 0.91rem;
+  color: var(--text-detail);
+  line-height: 1.65;
+  margin-bottom: 1.7rem;
+}
+
+.btn-calendar {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.6rem;
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid var(--islamic-gold-soft);
+  color: var(--islamic-gold-pearl);
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.btn-calendar:hover {
+  background: var(--islamic-gold-soft);
+  color: #031914;
+}
+
+.adab-walimah-card {
+  margin-top: 2.2rem;
+  padding: 1.65rem 1.8rem;
+  text-align: center;
+}
+
+.adab-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.85rem;
+  margin-top: 1rem;
+}
+
+.adab-pill {
+  background: rgba(3, 20, 16, 0.85);
+  border: 1px solid rgba(167, 243, 208, 0.38);
+  color: var(--text-detail);
+  padding: 0.45rem 1rem;
+  border-radius: 30px;
+  font-size: 0.84rem;
+  font-weight: 500;
+}
+
+/* ==========================================================================
+   LOVE STORY (TIMELINE TA'ARUF HINGGA AKAD)
+   ========================================================================== */
+.timeline {
+  position: relative;
+  max-width: 820px;
+  margin: 2.8rem auto 0;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  background: linear-gradient(180deg, var(--islamic-mint), var(--islamic-gold-soft));
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.55;
+}
+
+.timeline-item {
+  padding: 1rem 2.5rem;
+  position: relative;
+  width: 50%;
+}
+
+.timeline-item.left {
+  left: 0;
+  text-align: right;
+}
+
+.timeline-item.right {
+  left: 50%;
+  text-align: left;
+}
+
+.timeline-item::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  right: -8px;
+  background: var(--islamic-bg-deep);
+  border: 2.5px solid var(--islamic-gold-soft);
+  top: 24px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.timeline-item.right::after {
+  left: -8px;
+}
+
+.timeline-content {
+  padding: 1.5rem;
+}
+
+.timeline-year {
+  display: inline-block;
+  font-weight: 700;
+  color: var(--islamic-mint);
+  font-size: 0.88rem;
+  margin-bottom: 0.35rem;
+  letter-spacing: 1px;
+}
+
+.timeline-heading {
+  font-family: var(--font-serif);
+  font-size: 1.24rem;
+  color: var(--islamic-gold-pearl);
+  margin-bottom: 0.45rem;
+  font-weight: 700;
+}
+
+.timeline-desc {
+  font-size: 0.91rem;
+  color: var(--text-detail);
+  line-height: 1.68;
+}
+
+/* ==========================================================================
+   GALERI FOTO PREWEDDING (FORMAT POTRET 3:4)
+   ========================================================================== */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+
+.gallery-item {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  height: auto;
+  border-radius: 18px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 1.5px solid rgba(230, 198, 124, 0.48);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.55);
+  transition: all 0.35s ease;
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px) scale(1.02);
+  border-color: var(--islamic-gold-pearl);
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.78), 0 0 22px rgba(230, 198, 124, 0.35);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.07);
+}
+
+.gallery-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(3, 25, 20, 0.72);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+  opacity: 1;
+}
+
+.gallery-overlay svg {
+  width: 38px;
+  height: 38px;
+  stroke: var(--islamic-gold-pearl);
+}
+
+/* Lightbox Modal */
+.lightbox-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.92);
+  z-index: 10000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.lightbox-modal.active {
+  display: flex;
+}
+
+.lightbox-modal img {
+  max-width: 90%;
+  max-height: 85vh;
+  border-radius: 16px;
+  border: 2px solid var(--islamic-gold-soft);
+  box-shadow: 0 0 38px rgba(0, 0, 0, 0.9);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 25px;
+  right: 35px;
+  background: transparent;
+  border: none;
+  color: var(--text-ivory);
+  font-size: 2.5rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.lightbox-close:hover {
+  color: var(--islamic-gold-soft);
+}
+
+/* ==========================================================================
+   LOKASI & PETA ACARA
+   ========================================================================== */
+.location-card {
+  max-width: 850px;
+  margin: 2rem auto 0;
+  padding: 2.4rem 2rem;
+  text-align: center;
+}
+
+.map-wrapper {
+  margin: 1.7rem 0;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1.5px solid rgba(230, 198, 124, 0.48);
+  height: 350px;
+}
+
+.map-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.btn-primary-islamic {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  background: var(--islamic-btn-grad);
+  color: #031914;
+  font-weight: 700;
+  font-size: 0.92rem;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  padding: 0.85rem 2.2rem;
+  border: none;
+  border-radius: 50px;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.35);
+  transition: all 0.3s ease;
+}
+
+.btn-primary-islamic:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(212, 175, 55, 0.58);
+}
+
+/* ==========================================================================
+   TANDA KASIH & AMPLOP DIGITAL
+   ========================================================================== */
+.gift-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
+  gap: 1.85rem;
+  margin-top: 2.2rem;
+}
+
+.gift-card {
+  padding: 2.2rem 1.7rem;
+  text-align: center;
+}
+
+.bank-logo {
+  font-family: var(--font-serif);
+  font-size: 1.55rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: var(--islamic-gold-pearl);
+  margin-bottom: 1rem;
+}
+
+.account-num {
+  font-family: monospace;
+  font-size: 1.35rem;
+  letter-spacing: 2px;
+  color: var(--islamic-mint);
+  background: rgba(2, 16, 13, 0.85);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: 1.5px dashed rgba(230, 198, 124, 0.65);
+  margin-bottom: 0.55rem;
+  display: inline-block;
+  font-weight: 700;
+}
+
+.account-holder {
+  font-size: 0.94rem;
+  color: var(--text-detail);
+  margin-bottom: 1.25rem;
+  font-weight: 500;
+}
+
+.btn-copy {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 1.4rem;
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid var(--islamic-gold-soft);
+  color: var(--islamic-gold-pearl);
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-copy:hover {
+  background: var(--islamic-gold-soft);
+  color: #031914;
+}
+
+.btn-copy.copied {
+  background: #059669;
+  border-color: #34d399;
+  color: #ffffff;
+}
+
+/* ==========================================================================
+   BUKU TAMU & RSVP
+   ========================================================================== */
+.rsvp-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.25rem;
+  margin-top: 2rem;
+}
+
+.rsvp-form-card {
+  padding: 2.4rem 1.9rem;
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+  text-align: left;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.86rem;
+  color: var(--islamic-mint);
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  background: rgba(2, 17, 14, 0.88);
+  border: 1.5px solid rgba(230, 198, 124, 0.4);
+  border-radius: 10px;
+  color: var(--text-ivory);
+  font-family: inherit;
+  font-size: 0.94rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--islamic-mint);
+  box-shadow: 0 0 12px rgba(110, 231, 183, 0.35);
+}
+
+textarea.form-control {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.wishes-card {
+  padding: 2.4rem 1.9rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.wishes-list {
+  max-height: 380px;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.wish-item {
+  background: rgba(3, 20, 16, 0.84);
+  border-left: 3.5px solid var(--islamic-gold-soft);
+  padding: 1rem 1.2rem;
+  border-radius: 10px;
+  text-align: left;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.45);
+}
+
+.wish-sender {
+  font-weight: 700;
+  color: var(--islamic-gold-pearl);
+  font-size: 0.95rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.wish-badge {
+  font-size: 0.7rem;
+  padding: 0.2rem 0.65rem;
+  border-radius: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.wish-badge.hadir { background: rgba(16, 185, 129, 0.22); color: #a7f3d0; border: 1px solid rgba(110, 231, 183, 0.45); }
+.wish-badge.ragu { background: rgba(230, 198, 124, 0.22); color: #f5e1a4; border: 1px solid rgba(230, 198, 124, 0.45); }
+.wish-badge.tidak { background: rgba(239, 68, 68, 0.2); color: #fca5a5; border: 1px solid rgba(239, 68, 68, 0.4); }
+
+.wish-text {
+  font-size: 0.91rem;
+  color: var(--text-detail);
+  margin-top: 0.4rem;
+  line-height: 1.62;
+}
+
+.wish-time {
+  font-size: 0.73rem;
+  color: var(--text-subtle);
+  margin-top: 0.5rem;
+  display: block;
+}
+
+/* ==========================================================================
+   FOOTER PENUTUP & KELUARGA BESAR
+   ========================================================================== */
+.footer-section {
+  padding: 4.5rem 0 7rem;
+  text-align: center;
+  position: relative;
+  background: linear-gradient(180deg, transparent 0%, rgba(2, 18, 14, 0.95) 20%, rgba(2, 14, 11, 0.98) 100%);
+}
+
+.footer-section .container {
+  background: rgba(5, 30, 24, 0.92);
+  border: 1.5px solid rgba(230, 198, 124, 0.45);
+  border-radius: 26px;
+  padding: 3rem 1.5rem 2.5rem;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.85);
+}
+
+.footer-salam-arabic {
+  font-family: var(--font-arabic);
+  font-size: 1.45rem;
+  color: var(--islamic-gold-pearl);
+  margin-bottom: 0.35rem;
+}
+
+.footer-salam-latin {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-style: italic;
+  color: var(--islamic-mint);
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.footer-names {
+  font-family: var(--font-serif);
+  font-size: 2.55rem;
+  background: var(--islamic-title-grad);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.95));
+  margin: 1.4rem 0 0.45rem;
+}
+
+.footer-copyright {
+  margin-top: 2.5rem;
+  font-size: 0.84rem;
+  color: var(--text-subtle);
+}
+
+/* ==========================================================================
+   ANIMATIONS & KEYFRAMES
+   ========================================================================== */
+@keyframes spinDisc {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes wave {
+  0%, 100% { height: 6px; }
+  50% { height: 18px; }
+}
+
+@keyframes floatSubtle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes shine {
+  0% { transform: translateX(-150%) rotate(25deg); }
+  100% { transform: translateX(150%) rotate(25deg); }
+}
+
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN (MOBILE & TABLET)
+   ========================================================================== */
+@media (max-width: 900px) {
+  .couple-showcase {
+    grid-template-columns: 1fr;
+    gap: 2.2rem;
+  }
+
+  .couple-center-divider {
+    order: 2;
+  }
+
+  .mempelai-card:first-child {
+    order: 1;
+  }
+
+  .mempelai-card:last-child {
+    order: 3;
+  }
+
+  .rsvp-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline::after {
+    left: 20px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 15px;
+    text-align: left !important;
+  }
+
+  .timeline-item.right {
+    left: 0%;
+  }
+
+  .timeline-item::after {
+    left: 12px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .section-wrapper {
+    padding: 3.5rem 0;
+  }
+
+  .hero-arch-panel {
+    border-radius: 145px 145px 22px 22px / 85px 85px 22px 22px;
+    padding: 2.2rem 1.2rem 1.8rem;
+  }
+
+  .hero-bismillah {
+    font-size: 1.9rem;
+  }
+
+  .hero-names {
+    font-size: 2.25rem;
+  }
+
+  .section-header {
+    padding: 1.35rem 1.15rem 1.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .section-title {
+    font-size: 1.65rem;
+  }
+
+  .cover-title {
+    font-size: 1.65rem;
+  }
+
+  /* Galeri Foto Potret 2 Kolom di HP */
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.85rem;
+  }
+
+  .gallery-item {
+    border-radius: 14px;
+    aspect-ratio: 3 / 4;
+  }
+
+  .bottom-nav {
+    gap: 0.72rem;
+    padding: 0.42rem 0.85rem;
+  }
+
+  .nav-link {
+    font-size: 0.68rem;
+  }
+}
