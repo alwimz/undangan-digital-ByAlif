@@ -48,31 +48,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (btnOpenInvitation && coverScreen) {
     btnOpenInvitation.addEventListener('click', () => {
-      // Unlock Scroll
-      document.body.classList.remove('lock-scroll');
+      // Prevent repeated triggers
+      coverScreen.style.pointerEvents = 'none';
+
+      // Start silky cover zoom-out dismiss
       coverScreen.classList.add('opened');
 
-      // Add dynamic zoom-out reveal animations to container & hero
-      const appContainer = document.querySelector('.app-container');
+      // Add silky smooth zoom-out reveal animations to hero
+      const hero = document.getElementById('hero');
       const heroCard = document.querySelector('.hero-inner-card');
 
-      if (appContainer) {
-        appContainer.classList.add('opening-zoom-out');
-        setTimeout(() => appContainer.classList.remove('opening-zoom-out'), 1500);
+      if (hero) {
+        hero.classList.add('hero-opening-active');
+        setTimeout(() => hero.classList.remove('hero-opening-active'), 1600);
       }
       if (heroCard) {
         heroCard.classList.add('hero-zoom-reveal');
         setTimeout(() => heroCard.classList.remove('hero-zoom-reveal'), 1600);
       }
 
+      // Smoothly unlock document scroll
+      document.body.classList.remove('lock-scroll');
+
       // Play Background Audio
       playAudio();
 
-      // Trigger Hero in-view reveal after cover opens
+      // Trigger Hero in-view reveal gracefully
       setTimeout(() => {
         const heroReveals = document.querySelectorAll('#hero .reveal-zoom-out, #hero .reveal-up');
         heroReveals.forEach(el => el.classList.add('is-visible'));
-      }, 350);
+      }, 300);
     });
   }
 
