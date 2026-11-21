@@ -583,128 +583,124 @@ a {
 }
 
 .hero-tag {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  padding: 7px 22px;
-  background: linear-gradient(135deg, rgba(184, 13, 34, 0.92) 0%, rgba(143, 0, 16, 0.96) 100%);
-  border: 1.5px solid rgba(255, 255, 255, 0.85);
-  color: #FFFFFF;
-  font-size: 0.8rem;
-  font-weight: 800;
-  letter-spacing: 3px;
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 4px;
   text-transform: uppercase;
-  border-radius: var(--radius-full);
-  margin-bottom: 16px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.55), 0 0 14px rgba(184, 13, 34, 0.4);
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+  color: #FFFFFF;
+  margin-bottom: 14px;
+  background: none;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
+  text-shadow: 
+    0 2px 6px rgba(0, 0, 0, 0.95),
+    0 0 16px rgba(0, 0, 0, 0.8);
 }
 
 .hero-names {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 2px 10px;
+  gap: 2px;
+  margin-bottom: 14px;
+}
+
+.hero-name-groom,
+.hero-name-bride {
   font-family: var(--font-serif);
-  font-size: clamp(2.1rem, 6.8vw, 3.2rem);
+  font-size: clamp(2.4rem, 8vw, 3.5rem);
   font-weight: 700;
-  line-height: 1.15;
+  line-height: 1.12;
   color: #FFFFFF;
-  margin-bottom: 12px;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
   text-shadow: 
     0 2px 4px rgba(0, 0, 0, 0.85),
     0 4px 18px rgba(0, 0, 0, 0.92),
     0 0 35px rgba(0, 0, 0, 0.75);
 }
 
-.hero-name-part {
-  display: inline-block;
-  white-space: nowrap;
-}
-
 .hero-amp {
   font-family: var(--font-script);
-  font-size: 2.6rem;
+  font-size: 2.3rem;
   color: #FFDF78;
   font-weight: 400;
-  margin: 0 4px;
+  line-height: 1;
+  margin: 3px 0;
   text-shadow: 
     0 2px 6px rgba(0, 0, 0, 0.85),
-    0 0 22px rgba(255, 223, 120, 0.6);
+    0 0 20px rgba(255, 223, 120, 0.6);
 }
 
 .hero-divider {
-  width: 240px;
-  max-width: 80%;
+  width: 200px;
+  max-width: 70%;
   height: auto;
-  margin: 6px auto 16px;
-  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.95)) brightness(1.3);
-}
-
-.hero-date-wrapper {
-  display: block;
-  margin-bottom: 10px;
+  margin: 8px auto 14px;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.95)) brightness(1.25);
 }
 
 .hero-date-badge {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
   font-family: var(--font-sans);
   font-size: 0.95rem;
   font-weight: 700;
-  letter-spacing: 3px;
+  letter-spacing: 3.5px;
   text-transform: uppercase;
   color: #FFFFFF;
-  padding: 7px 22px;
-  background: rgba(0, 0, 0, 0.42);
-  border: 1.2px solid rgba(255, 255, 255, 0.65);
-  border-radius: var(--radius-full);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.9);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
+  margin-bottom: 8px;
+  background: none;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  text-shadow: 
+    0 2px 8px rgba(0, 0, 0, 0.95),
+    0 0 16px rgba(0, 0, 0, 0.8);
 }
 
 .hero-venue-text {
-  font-size: 0.92rem;
-  font-weight: 600;
+  font-size: 0.9rem;
+  font-weight: 500;
   letter-spacing: 1.2px;
-  color: #FFFFFF;
+  color: rgba(255, 255, 255, 0.95);
   margin-bottom: 24px;
   text-shadow: 
     0 2px 6px rgba(0, 0, 0, 0.95),
-    0 0 18px rgba(0, 0, 0, 0.75);
+    0 0 16px rgba(0, 0, 0, 0.75);
 }
 
 .hero-scroll-link {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  padding: 11px 26px;
-  background: rgba(255, 255, 255, 0.22);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1.5px solid rgba(255, 255, 255, 0.75);
+  padding: 10px 24px;
+  background: rgba(0, 0, 0, 0.32);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: var(--radius-full);
   color: #FFFFFF;
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
-  transition: all 0.35s ease;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+  transition: all 0.3s ease;
 }
 
 .hero-scroll-link:hover {
-  background: rgba(184, 13, 34, 0.92);
-  border-color: #FFFFFF;
+  background: rgba(184, 13, 34, 0.88);
+  border-color: rgba(255, 255, 255, 0.8);
   transform: translateY(-2px);
-  box-shadow: 0 12px 30px rgba(184, 13, 34, 0.55);
+  box-shadow: 0 8px 24px rgba(184, 13, 34, 0.5);
 }
 
 /* ============================================================================
