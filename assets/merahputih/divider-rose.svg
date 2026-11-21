@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 40" fill="none">
+  <defs>
+    <radialGradient id="divRedRose" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#FF4D6D" />
+      <stop offset="35%" stop-color="#DC2626" />
+      <stop offset="80%" stop-color="#990011" />
+      <stop offset="100%" stop-color="#5B000B" />
+    </radialGradient>
+    <radialGradient id="divWhiteRose" cx="45%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="60%" stop-color="#FFF1F2" />
+      <stop offset="100%" stop-color="#E2A6B0" />
+    </radialGradient>
+    <linearGradient id="divGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8C6510" stop-opacity="0" />
+      <stop offset="25%" stop-color="#C59B27" />
+      <stop offset="50%" stop-color="#FFF2B2" />
+      <stop offset="75%" stop-color="#C59B27" />
+      <stop offset="100%" stop-color="#8C6510" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+
+  <!-- Left Line -->
+  <line x1="10" y1="20" x2="135" y2="20" stroke="url(#divGold)" stroke-width="1.2" />
+  <circle cx="120" cy="20" r="2" fill="#D4AF37" />
+  <circle cx="100" cy="20" r="1.5" fill="#D4AF37" opacity="0.6" />
+
+  <!-- Right Line -->
+  <line x1="185" y1="20" x2="310" y2="20" stroke="url(#divGold)" stroke-width="1.2" />
+  <circle cx="200" cy="20" r="2" fill="#D4AF37" />
+  <circle cx="220" cy="20" r="1.5" fill="#D4AF37" opacity="0.6" />
+
+  <!-- Left White Rose -->
+  <g transform="translate(148, 20)">
+    <circle cx="0" cy="0" r="7.5" fill="url(#divWhiteRose)" stroke="#E2A6B0" stroke-width="0.6" />
+    <circle cx="0" cy="0" r="2" fill="#DC2626" />
+  </g>
+
+  <!-- Center Diamond -->
+  <polygon points="160,13 167,20 160,27 153,20" fill="url(#divRedRose)" stroke="#E5C378" stroke-width="0.8" />
+  <circle cx="160" cy="20" r="1.5" fill="#FFFFFF" />
+
+  <!-- Right Red Rose -->
+  <g transform="translate(172, 20)">
+    <circle cx="0" cy="0" r="7.5" fill="url(#divRedRose)" stroke="#E5C378" stroke-width="0.6" />
+    <circle cx="0" cy="0" r="2" fill="#FFFDF2" />
+  </g>
+</svg>

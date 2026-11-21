@@ -34,6 +34,7 @@ const server = http.createServer((req, res) => {
   if (reqPath === '/recca' || reqPath === '/songkorecca') reqPath = '/recca.html';
   if (reqPath === '/jakarta') reqPath = '/jakarta.html';
   if (reqPath === '/cinematic' || reqPath === '/drama') reqPath = '/cinematic.html';
+  if (reqPath === '/merahputih' || reqPath === '/redwhite' || reqPath === '/ruby') reqPath = '/merahputih.html';
 
   const filePath = path.join(__dirname, reqPath);
   const ext = path.extname(filePath).toLowerCase();
