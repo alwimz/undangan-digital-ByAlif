@@ -56,15 +56,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Add silky smooth zoom-out reveal animations to hero
       const hero = document.getElementById('hero');
-      const heroCard = document.querySelector('.hero-inner-card');
 
       if (hero) {
-        hero.classList.add('hero-opening-active');
-        setTimeout(() => hero.classList.remove('hero-opening-active'), 1600);
-      }
-      if (heroCard) {
-        heroCard.classList.add('hero-zoom-reveal');
-        setTimeout(() => heroCard.classList.remove('hero-zoom-reveal'), 1600);
+        hero.classList.add('is-opened');
       }
 
       // Smoothly unlock document scroll
