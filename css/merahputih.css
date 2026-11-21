@@ -340,15 +340,51 @@ a {
   transition: transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-/* Hero Section Silky Zoom-Out Arrival (Zero Layout Jump) */
-.hero-section .hero-bg-img {
+/* Hero Background Slideshow & Zoom-Out Engine */
+.hero-bg-frame {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 2s cubic-bezier(0.25, 1, 0.35, 1),
+              visibility 2s cubic-bezier(0.25, 1, 0.35, 1);
+  will-change: opacity;
+}
+
+.hero-slide.active {
+  opacity: 1;
+  visibility: visible;
+  z-index: 2;
+}
+
+.hero-slide .hero-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.98) saturate(1.08);
   transform: scale(1.18);
-  transition: transform 2.4s cubic-bezier(0.22, 1, 0.36, 1);
+  transform-origin: center center;
   will-change: transform;
 }
 
-.hero-section.is-opened .hero-bg-img {
-  transform: scale(1);
+.hero-section.is-opened .hero-slide.active .hero-bg-img {
+  animation: heroSlideZoomOut 7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes heroSlideZoomOut {
+  0% {
+    transform: scale(1.18);
+  }
+  100% {
+    transform: scale(1.0);
+  }
 }
 
 .hero-inner-card {
@@ -532,23 +568,10 @@ a {
   overflow: hidden;
 }
 
-.hero-bg-frame {
-  position: absolute;
-  inset: 0;
-  overflow: hidden;
-}
-
-.hero-bg-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 25%;
-  filter: brightness(0.98) saturate(1.08);
-}
-
 .hero-scrim {
   position: absolute;
   inset: 0;
+  z-index: 3;
   background: radial-gradient(
     circle at center,
     rgba(30, 2, 4, 0.0) 0%,

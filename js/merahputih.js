@@ -46,6 +46,27 @@ document.addEventListener('DOMContentLoaded', () => {
     if (musicFab) musicFab.classList.remove('playing');
   }
 
+  // Background Slideshow Controller for Hero Section
+  const heroSlides = document.querySelectorAll('#heroSlideshow .hero-slide');
+  let currentHeroSlide = 0;
+  let heroSlideInterval = null;
+
+  function nextHeroSlide() {
+    if (!heroSlides || heroSlides.length <= 1) return;
+    const prevSlide = heroSlides[currentHeroSlide];
+    prevSlide.classList.remove('active');
+
+    currentHeroSlide = (currentHeroSlide + 1) % heroSlides.length;
+    const nextSlide = heroSlides[currentHeroSlide];
+    nextSlide.classList.add('active');
+  }
+
+  function startHeroSlideshow() {
+    if (heroSlideInterval || !heroSlides || heroSlides.length <= 1) return;
+    // Rotate slide smoothly every 5.5 seconds
+    heroSlideInterval = setInterval(nextHeroSlide, 5500);
+  }
+
   if (btnOpenInvitation && coverScreen) {
     btnOpenInvitation.addEventListener('click', () => {
       // Prevent repeated triggers
@@ -60,6 +81,9 @@ document.addEventListener('DOMContentLoaded', () => {
       if (hero) {
         hero.classList.add('is-opened');
       }
+
+      // Start background photo slideshow
+      startHeroSlideshow();
 
       // Smoothly unlock document scroll
       document.body.classList.remove('lock-scroll');
